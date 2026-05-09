@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import Script from 'next/script';
 import { routing } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -51,23 +50,8 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
-  const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
-  const plausibleSrc =
-    process.env.NEXT_PUBLIC_PLAUSIBLE_SCRIPT_SRC ??
-    'https://plausible.io/js/script.js';
-
   return (
     <html lang={locale}>
-      <head>
-        {plausibleDomain && (
-          <Script
-            defer
-            data-domain={plausibleDomain}
-            src={plausibleSrc}
-            strategy="afterInteractive"
-          />
-        )}
-      </head>
       <body className="min-h-screen bg-white text-gray-900 antialiased">
         <NextIntlClientProvider messages={messages}>
           <div className="flex min-h-screen flex-col">

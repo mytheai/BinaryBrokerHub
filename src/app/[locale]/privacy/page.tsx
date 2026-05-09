@@ -45,8 +45,9 @@ export default function PrivacyPolicyPage() {
           </h2>
           <ul className="mt-3 list-disc space-y-1 pl-5">
             <li>
-              We use Plausible Analytics, which is cookieless and does not
-              identify you personally.
+              We do not run any on-site analytics tracking (no Google
+              Analytics, no Plausible, no cross-site pixels). We rely on
+              Google Search Console for aggregate search-side data only.
             </li>
             <li>
               When you click an affiliate link, we log a hashed IP address,
@@ -95,24 +96,28 @@ export default function PrivacyPolicyPage() {
 
         <h2>2. What data we collect, and why</h2>
 
-        <h3>2.1 Analytics data (Plausible)</h3>
+        <h3>2.1 On-site analytics</h3>
         <p>
-          We use{' '}
-          <a href="https://plausible.io/data-policy">Plausible Analytics</a>{' '}
-          to understand how readers find and use our content. Plausible is
-          cookieless and does not identify visitors. The data Plausible
-          collects on our behalf includes: page URL, HTTP referrer,
-          anonymised browser type, anonymised device type, country (derived
-          from IP at request time, IP itself is not stored), and a
-          rotating-daily-hash visitor identifier that does not persist
-          across days.
+          <strong>
+            We do not run any on-site analytics tracking on
+            BinaryBrokerHub.
+          </strong>{' '}
+          There is no Google Analytics, no Plausible, no Mixpanel, no
+          Segment, no cross-site pixels, and no fingerprinting. We do not
+          measure individual page-view behaviour, scroll depth, time on
+          page, or session duration.
         </p>
         <p>
-          Plausible does not use cookies. There is no cross-site tracking.
-          Plausible cannot identify individual visitors and does not enable
-          us to identify individual visitors. Lawful basis under GDPR:
-          legitimate interest (Article 6(1)(f)) — measuring readership of
-          our editorial content.
+          For aggregate search-side data — what queries surface our pages,
+          what countries our impressions come from, and what our search
+          ranking looks like — we rely on{' '}
+          <a href="https://search.google.com/search-console">
+            Google Search Console
+          </a>
+          . Search Console data comes from Google&rsquo;s own infrastructure
+          and reflects search behaviour, not on-site behaviour. We do not
+          place any Google Search Console code on the site itself; the
+          property is verified via DNS TXT record only.
         </p>
 
         <h3>2.2 Affiliate click logs (Supabase)</h3>
@@ -193,9 +198,9 @@ export default function PrivacyPolicyPage() {
         <h2>3. Cookies</h2>
         <p>
           <strong>BinaryBrokerHub itself does not set any cookies on your
-          browser.</strong> Plausible Analytics is cookieless. Our affiliate
-          click-log mechanism uses a server-side database write, not a
-          browser cookie.
+          browser.</strong> We do not run any client-side analytics, so
+          there are no analytics cookies. Our affiliate click-log mechanism
+          uses a server-side database write, not a browser cookie.
         </p>
         <p>
           When you click an affiliate link and are redirected to a broker
@@ -230,10 +235,10 @@ export default function PrivacyPolicyPage() {
             <a href="https://supabase.com/privacy">Supabase privacy policy</a>
           </li>
           <li>
-            <strong>Plausible Analytics</strong> (privacy-friendly,
-            cookieless analytics) —{' '}
-            <a href="https://plausible.io/privacy">
-              Plausible privacy policy
+            <strong>Google Search Console</strong> (aggregate search-side
+            data, verified via DNS TXT — no on-site code) —{' '}
+            <a href="https://policies.google.com/privacy">
+              Google privacy policy
             </a>
           </li>
           <li>
