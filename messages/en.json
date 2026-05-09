@@ -1,0 +1,38 @@
+{
+  "site": {
+    "name": "BinaryBrokerHub",
+    "tagline": "Honest Binary Options Broker Reviews"
+  },
+  "home": {
+    "title": "Honest Binary Options Broker Reviews",
+    "subtitle": "Independent rankings, transparent methodology, no pay-for-placement.",
+    "cta": "See our methodology"
+  },
+  "nav": {
+    "home": "Home",
+    "brokers": "Brokers",
+    "compare": "Compare",
+    "methodology": "Methodology",
+    "editorialTeam": "Editorial Team"
+  },
+  "footer": {
+    "tagline": "Independent binary options broker reviews. No pay-for-placement.",
+    "sections": {
+      "rankings": "Rankings",
+      "about": "About",
+      "legal": "Legal"
+    },
+    "links": {
+      "bestForBeginners": "Best for Beginners",
+      "bestRegulated": "Best Regulated",
+      "allBrokers": "All Brokers",
+      "methodology": "Methodology",
+      "editorialTeam": "Editorial Team",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "riskDisclosure": "Risk Disclosure"
+    },
+    "affiliateDisclosure": "We may earn a commission when you sign up with brokers through links on this site. This does not influence our scoring.",
+    "riskWarning": "Binary options are high-risk speculative products. Most retail accounts lose money. Restricted or prohibited in many jurisdictions. We do not provide trading advice."
+  }
+}

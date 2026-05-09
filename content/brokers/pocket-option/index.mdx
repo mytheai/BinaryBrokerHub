@@ -1,0 +1,396 @@
+export const frontmatter = {
+  slug: 'pocket-option',
+  name: 'Pocket Option',
+  country: 'global',
+  websiteUrl: 'https://pocketoption.com',
+  affiliateUrl: 'https://pocketoption.com/?ref=PLACEHOLDER',
+  regulators: [
+    {
+      name: 'Mwali International Services Authority',
+      authority: 'MISA (Comoros)',
+      license: 'T2022086 (PO Trade Ltd)',
+      tier: 'offshore',
+      verifiedOn: '2026-05-09',
+    },
+  ],
+  minDeposit: 5,
+  minDepositCurrency: 'USD',
+  payoutMax: 92,
+  payoutMin: 79,
+  paymentMethods: [
+    'Visa / Mastercard',
+    'Skrill',
+    'Neteller',
+    'Perfect Money',
+    'Bitcoin (BTC)',
+    'Ethereum (ETH)',
+    'USDT (TRC-20)',
+    'M-Pesa',
+    'Apple Pay',
+    'Bank Transfer',
+  ],
+  withdrawalTimeBusinessDays: '0–3 (advertised); often longer for $500+',
+  demoAccount: true,
+  scores: {
+    bestRegulated: null,
+    bestForBeginners: 6.4,
+    methodologyVersion: '1.0',
+  },
+  ranks: {
+    bestRegulated: null,
+    bestForBeginners: { position: 2, outOf: 3 },
+  },
+  warnings: [
+    'no-tier1-license',
+    'offshore-only',
+    'fca-warning-list',
+    'cftc-red-list',
+    'entity-shuffle',
+  ],
+  oneLinerVerdict:
+    'Pocket Option offers the lowest entry barrier in the binary options space ($5 deposit, $1 trade) and a generous demo, but it carries an FCA Warning List entry, a CFTC RED List entry, and an unusually layered corporate structure that has cycled through multiple offshore licenses — read the Regulation section before depositing.',
+  pros: [
+    '$5 minimum deposit and $1 minimum trade — the lowest barrier in our coverage',
+    'Unlimited, refillable $50,000 demo account',
+    'Crypto deposit and withdrawal (BTC, ETH, USDT TRC-20) — useful for traders without card access',
+    '180+ assets including OTC weekend markets and 30-second Quick Trades',
+    'Regional payment methods most competitors lack (M-Pesa, Apple Pay)',
+  ],
+  cons: [
+    'No Tier-1 or Tier-2 regulator. Operates under a Mwali (MISA) offshore license held by PO Trade Ltd. A prior MISA license (T2023322, Infinite Trade LLC) was suspended for non-payment of annual fees.',
+    'Listed on the UK FCA Warning List (entry first published Sep 2021, last updated Feb 2026, four domains flagged).',
+    'Listed on the US CFTC RED List (added 6 July 2022) for soliciting US clients without registration.',
+    'The broker operates under multiple legal entities (Gembell Limited, PO Trade Ltd, FX Trading LLC, Pocket Investments LLC) across Marshall Islands, Saint Lucia/SVG, Comoros, and Costa Rica — discrepancy not explained on the broker site.',
+    'Trustpilot scores diverge sharply across the broker’s mirror domains (1.2/5 on pocketoptions.com vs 4.0/5 on pocketoption.app), suggesting selective review-domain promotion.',
+    'Recurring user reports of withdrawal delays beyond the advertised 3 business days on amounts over ~$500–$1,000, often paired with looped KYC re-verification.',
+    'Bonus turnover is x50 of the bonus amount before any bonus-derived funds can be withdrawn — common but easily missed by beginners.',
+  ],
+  scoreHistory: [
+    {
+      date: '2026-05-09',
+      methodologyVersion: '1.0',
+      bestRegulated: null,
+      bestForBeginners: 6.4,
+      note: 'Initial review under methodology v1.0. Score reduced from preliminary 8.1 to 6.4 after research surfaced FCA Warning List + CFTC RED List entries and the multi-entity corporate structure (Gembell / PO Trade / FX Trading / Infinite Trade). Withdrawal-delay complaint pattern at the $500+ threshold also weighed on the score. Not eligible for Best Regulated ranking.',
+    },
+    {
+      date: '2026-05-09',
+      methodologyVersion: '1.0',
+      bestRegulated: null,
+      bestForBeginners: 6.4,
+      note: 'Rank field updated from "#2 of 3" to "#1 of 2" after Quotex review (score 6.0) was published the same day. Score itself unchanged — the "of 3" placeholder anticipating IQ Option was inaccurate, and we now show ranks based only on currently-published brokers. Ranks will update again when IQ Option goes live.',
+    },
+    {
+      date: '2026-05-09',
+      methodologyVersion: '1.0',
+      bestRegulated: null,
+      bestForBeginners: 6.4,
+      note: 'Rank updated from "#1 of 2" to "#2 of 3" after IQ Option review (score 6.5) was published the same day. Score itself unchanged. IQ Option ranks #1 due to CySEC sister-entity trust signal and lower complaint volume; Pocket Option remains #2 due to lowest minimum deposit and lower regulatory warning footprint than Quotex.',
+    },
+  ],
+  lastReviewed: '2026-05-09',
+  publishedAt: '2026-05-09',
+};
+
+# Pocket Option Review 2026 — Honest Analysis
+
+> **Read this first.** Pocket Option is **not** a Tier-1 regulated broker. It is on the **UK FCA Warning List** and the **US CFTC RED List**. It operates through several different legal entities across at least four offshore jurisdictions. None of those facts make it impossible to use safely with small capital — but they change what "safely" means. The rest of this review walks through exactly what we found, with sources, so you can decide for yourself.
+
+## Regulation & Safety
+
+**This is the section that should drive your decision.** Skip the rest if it does not satisfy you here.
+
+### What licenses does Pocket Option actually hold?
+
+The honest answer is: it depends on which page you look at, and when.
+
+- The current "Regulatory Environment" page on Pocket Option's mobile site names **FX Trading LLC**, registered in **San Jose, Costa Rica**, with administrative number **4062001339764**. Costa Rica does not regulate forex or binary options brokers in any meaningful sense — it issues this number as a generic business registration, not a financial license.
+- Multiple third-party broker directories cite **PO Trade Ltd** (registered in Saint Vincent and the Grenadines or Saint Lucia, depending on source) as the holder of **Mwali International Services Authority (MISA) license T2022086**. MISA is the offshore regulator of the Comoros archipelago. It does not maintain a publicly searchable license register, has no investor-compensation scheme, and does not enforce dispute resolution between brokers and clients.
+- A previous MISA license, **T2023322** under **Infinite Trade LLC**, was reported **suspended for non-payment of annual fees** before being replaced by the current arrangement.
+- The **Google Play Store** lists the publisher of the Pocket Option Android app as **Pocket Investments LLC**, a fourth distinct entity name.
+- Historically, the operator has been linked to **Gembell Limited (Marshall Islands)** — the entity name that appears on the **CFTC RED List** entry (more on that below).
+- Older third-party citations also reference **IFMRRC**, the International Financial Market Relations Regulation Center — a self-declared self-regulatory body, not a government regulator. IFMRRC has no enforcement power and is widely treated as a "trust badge" rather than a license.
+
+So, depending on which broker page or directory you trust, Pocket Option is operated by FX Trading LLC, PO Trade Ltd, Pocket Investments LLC, or Gembell Limited — across Costa Rica, Comoros, Saint Lucia/SVG, the Marshall Islands, or Saint Vincent. The site does not explain the discrepancy.
+
+**This pattern is not unique to Pocket Option.** Many offshore binary options brokers shuffle entity names every few years — usually when a license lapses, a regulator issues a warning, or a class of complaints starts to accumulate. The new entity launches with a clean Trustpilot page; complaints from the old name remain attached to the old name. Whether that pattern is happening here is a judgment call, but the evidence — multiple entity names, a suspended prior MISA license, four FCA-flagged domains, and a sister brand (po.trade) launched in parallel — is consistent with it.
+
+### Regulator warnings (verified)
+
+We treat regulator warnings as the highest-weight evidence in our scoring. Two are active against Pocket Option:
+
+- **UK Financial Conduct Authority (FCA) Warning List** — Pocket Option was first added on **2021-09-22** and the entry was last updated **2026-02-13** at the time of writing. The FCA flags **four separate domains** under the Pocket Option umbrella (`pocketoption.com`, `m.pocketoption.com`, `potrade.com`, `trader-pockethub.com`) and additional clones such as "Pocket Exchange Option" and "Pocket Option FX". The FCA's warning means the firm is not authorised to do business in the UK, UK consumers using it have **no Financial Ombudsman or Financial Services Compensation Scheme recourse**, and the firm is solicitating UK consumers despite the lack of authorisation. Source: fca.org.uk/news/warnings/pocketoption.
+- **US Commodity Futures Trading Commission (CFTC) RED List** — Pocket Option was added on **2022-07-06** for **soliciting US clients without CFTC registration**. The RED List entry states the origin as **Marshall Islands** (i.e., Gembell Limited). US residents using Pocket Option are doing so against US federal law and have no CFTC dispute mechanism. Source: cftc.gov/REDlist.
+
+We have not, in the course of this review, surfaced entries on the CySEC blacklist, the ASIC warning list, the RBI Alert List, or the ESMA / Italian CONSOB lists — but **absence of a result in our search is not proof of absence**, and we recommend that traders in those jurisdictions check their local regulator's warning list directly before depositing.
+
+### Restricted countries
+
+According to Pocket Option's own "Regulatory Environment" page, the platform "**does not provide service to residents of the EEA countries, USA, Israel, UK, Philippines, Japan and Brazil**." Some third-party reviews additionally list Canada, France, Cyprus, and Germany as unavailable; we treat that wider list as unverified pending direct confirmation from the live ToS at the time you read this review. Geographic restriction lists change. **Verify before depositing**, especially if you live in a borderline jurisdiction.
+
+### What does this mean in practice?
+
+- **If you live in a country covered by the broker's restriction list**, you should not be opening an account there — and the broker is not obliged to honour withdrawals if you do.
+- **If you live anywhere else**, you are operating under offshore self-regulation only. There is no Tier-1 investor-compensation scheme, no independent ombudsman, and no Tier-1 conduct regulator overseeing trade execution. Disputes are resolved by the broker's own customer support team.
+- **In all cases**, deposit only what you are willing to lose entirely. We mean that literally — not as a hedge.
+
+## Trading Platform & Features
+
+Pocket Option runs a **proprietary browser-based platform** with native iOS and Android apps. The Android app is published by Pocket Investments LLC and currently holds a **3.7-star rating across approximately 61,300 reviews** on Google Play. The iOS app's current App Store status changes periodically; check the App Store directly before assuming availability on iPhone.
+
+### What you actually get on the platform
+
+- **180+ tradable assets** advertised, comprising forex pairs, commodities, equity indices, individual stocks, and synthetic OTC instruments.
+- **OTC weekend markets** — when traditional forex and stock markets are closed, Pocket Option offers synthetic versions traded against the broker's own price feed. Note: OTC instruments carry **higher manipulation risk** than markets traded against an external benchmark, because the broker is the counterparty and the price feed source. Trade them with that in mind.
+- **Trade types**: classic Higher/Lower binary options, plus **Quick Trading** with expiries from **30 seconds to 5 minutes**, and longer-dated expiries up to end-of-day. There is no Touch / No-Touch or range-bound option type at the level of detail offered by some Tier-1 brokers (Nadex, IG).
+- **Charting**: roughly 30 indicators and a handful of drawing tools. Adequate for entry-level technical analysis; not competitive with TradingView or MT5 for serious chart work. **MT5 is offered as a separate forex platform**, not as the binary options platform itself.
+- **Demo account**: **$50,000 virtual balance**, **unlimited time**, **refillable** when the balance drops too low. This is genuinely one of the better demo offerings in the segment.
+- **Languages**: 14+ interface languages.
+- **Tournaments and "social trading"** features are heavily promoted on the broker's marketing pages. We treat tournament leaderboard prizes and copy-trading profits as **unverified** for the purposes of scoring — these features are gamified and the broker controls the price feed.
+
+### What the platform lacks
+
+- No independent third-party price feed for OTC assets.
+- No published execution reports or trade-quality statistics.
+- No two-factor authentication enforcement on smaller account tiers (configurable in settings, not mandatory).
+- No native dark mode at the time of review (cosmetic but commonly requested).
+
+## Account Types & Bonuses
+
+Third-party reviews report three account tiers, with deposit thresholds that have shifted over the past two years. **Verify the current tiers on the live broker site before depositing** — these figures are reasonable approximations as of 2026-05:
+
+| Tier | Min deposit | Headline perks |
+|---|---|---|
+| Standard | $50 | All binary instruments, demo access, basic support |
+| Pro | $2,500 | Priority withdrawals, deeper analytics, higher payouts on selected assets |
+| VIP | $5,000 | Personal account manager, payouts up to ~95%, premium tournaments |
+
+The base **minimum-deposit** figure for opening any account remains **$5**. The $50 / $2,500 / $5,000 thresholds above are tier-specific and unlock additional features — they are not gates to using the platform.
+
+### Bonuses and the turnover trap
+
+Pocket Option offers deposit bonuses and "free bonus" promotional accounts at varying frequency. **All bonus-derived funds are subject to a turnover requirement before withdrawal**, and the standard formula is **x50 of the bonus amount**.
+
+A worked example, taken from the broker's own knowledge base: if you accept a **$50 deposit bonus**, you must execute **$2,500 in trade volume** before any bonus-derived funds can be withdrawn. At a typical trade size of $10, that is **250 trades** of round-trip volume on bonus money. At a 50% binary win rate (the long-run expectation in a fair market with 80% payouts and no edge), you will lose money before you ever clear turnover.
+
+**Pocket Option permits you to cancel an active bonus**, which reverts your balance to the deposit-only amount — that portion is then withdrawable. We **strongly recommend declining or cancelling deposit bonuses** unless you have a specific, tested edge that justifies the turnover requirement. The math is structurally unfavourable to most retail accounts.
+
+## Deposits & Withdrawals
+
+### Deposit
+
+- **Minimum**: $5.
+- **Methods**: Visa, Mastercard, Skrill, Neteller, Perfect Money, Bitcoin, Ethereum, USDT (TRC-20), M-Pesa (East Africa), Apple Pay, regional bank transfer.
+- **Processing**: card and crypto are typically near-instant; bank transfer takes 1–3 business days.
+- **Fees on the broker's side**: none. Third-party costs (network fees on crypto, currency-conversion spreads on cards) apply normally.
+
+### Withdrawal — read this section twice
+
+This is where the gap between Pocket Option's marketing and user reports is widest.
+
+- **Minimum withdrawal**: $10.
+- **Advertised processing time**: "a few minutes to 3 business days" depending on method.
+- **Reported reality on amounts above ~$500–$1,000**: frequently longer than 3 business days, with looped requests for additional KYC documentation that delay payout. We have catalogued credible user reports including a **2026-03-19 case of $12,000 USDT (TRC-20) held past the advertised window**, and a **June 2025 Pakistan-based case** in which a trader reported a frozen account and unauthorised trading on Forex Peace Army involving losses of approximately ₨1,033,000 (~$3,700 USD).
+- **KYC**: required before first withdrawal. Documents typically include government ID and proof-of-address. **Multiple users describe being asked for additional documentation after the first KYC pass succeeded**, used as a stalling tactic. We cannot verify intent — but the pattern is recurrent enough across independent sources to warrant a warning.
+
+If you do trade here, we recommend the following risk-mitigation steps:
+
+1. **Withdraw early and often.** Do not let an account balance accumulate beyond what you would be comfortable losing in a frozen-account scenario.
+2. **Use crypto withdrawal where possible.** USDT TRC-20 withdrawals under ~$200 reportedly clear within hours. Card withdrawals route through more intermediaries and have a worse track record at higher amounts.
+3. **Keep your KYC documentation ready and consistent.** Mismatches between deposit-method name and ID name are a common pretext for delay.
+4. **Do not deposit a large amount expecting to withdraw it quickly.** The withdrawal track record on amounts above ~$1,000 is materially worse than at smaller amounts.
+
+## Payout Rates & Trade Types
+
+**Advertised maximum payout: up to 92% on Standard tier**, up to ~95% for VIP-tier accounts on selected OTC pairs at peak hours. The realistic range across major pairs and timeframes is **79%–92%** on Standard accounts.
+
+A few notes on how payouts actually work:
+
+- The **highest payout rates** are reserved for **OTC synthetic instruments** (e.g., EUR/USD OTC) during the broker's defined peak hours. Real-market instruments traded against an external feed (during forex market hours) typically pay 78–85%.
+- **Payout rates change in real time.** A pair quoted at 92% when you click "Buy" may settle at 88% if the broker's payout matrix updates between click and execution. Pocket Option's interface displays the current payout, so check it immediately before each trade.
+- We do not have an independent observed-average payout study to cite. The 92% figure is a maximum, not a typical fill, and traders should plan their expected value calculations around 80–85% as a working assumption.
+
+### Trade types in detail
+
+- **Quick Trading**: 30 s, 60 s, 120 s, 180 s, 300 s expiries. The short expiries are popular but mathematically punishing — at 80% payout, your win rate must exceed **55.6%** to break even, before fees or slippage.
+- **Standard Higher/Lower**: variable expiries from 5 minutes to end-of-day.
+- **Longer-dated expiries**: available on selected assets, useful for swing-style binary trading.
+
+There is **no early-close (settle-now) feature** on most contracts in our testing window — once you enter, you are typically locked in until expiry. Verify this on the live platform if early close matters to your strategy.
+
+## Customer Support
+
+Support is offered via **24/7 live chat**, **email**, and **a help centre** on the broker's site. Response time on routine queries (login issues, deposit confirmation) is reportedly fast — often within minutes. Response time on the queries that actually matter — withdrawal disputes, frozen accounts, KYC re-verification stand-offs — is reportedly substantially worse, with users describing days of escalation cycles before substantive replies.
+
+This is a recurring pattern in the offshore binary segment and not unique to Pocket Option, but it is worth being aware of. **Live chat speed on easy questions is not a meaningful trust signal**; broker support quality is measured at the moment of dispute, not at onboarding.
+
+## Education & Demo Account
+
+The **demo account** is genuinely useful: $50,000 virtual balance, unlimited time, mirror of the live platform's price feed and asset set. Refillable when the balance drops too low. This is among the better demos in the binary segment and is a legitimate reason to consider Pocket Option for **practice purposes** even if you intend to trade with capital elsewhere.
+
+The **education content** on the broker's blog covers the basics — what binary options are, how Higher/Lower works, simple chart-reading. It does **not** address the structural disadvantage of binary options as an instrument class, the long-run negative expected value at typical payout rates, or the regulatory restrictions on the product in most major jurisdictions. Educational content from a counterparty broker should be read with that conflict of interest in mind.
+
+For a more honest grounding in the instrument, we recommend reading the **ESMA 2018 product intervention measures on binary options** and the **CFTC consumer alerts on binary options fraud** before opening any account at any broker in this segment.
+
+## User Complaints — What We Found
+
+We synthesized public complaints from **Trustpilot**, **Reddit** (`r/binaryoptions`, `r/Forex`, others), **Forex Peace Army**, and a handful of independent broker-review aggregators. We are deliberately surfacing both signal and noise, because the volume of complaints in this segment is itself a finding.
+
+### Trustpilot — review-domain divergence
+
+Pocket Option operates several distinct mirror domains, and Trustpilot scores diverge sharply across them:
+
+| Domain | Trustpilot score | Review count |
+|---|---|---|
+| pocketoptions.com | 1.2 / 5 | ~107 (85% one-star) |
+| pocketoption.co.uk | 1.3 / 5 | ~234 |
+| m.pocketoption.com | mixed | ~122 |
+| pocketoption.app | 4.0 / 5 | ~17–42 |
+| po.trade (sister brand) | 3.5 / 5 | ~886 |
+
+The contrast between **1.2/5 on the long-running domain** and **4.0/5 on a smaller, newer mirror with very few reviews** is the kind of signal that, in our experience, indicates active review-domain promotion. We cannot prove the smaller domain's reviews are curated — but the asymmetry should be treated as a finding, not background noise.
+
+### Recurring complaint themes
+
+Across Reddit and Forex Peace Army threads in the prior 12 months, three patterns dominate:
+
+1. **Withdrawal delay or denial above ~$500–$1,000**, often paired with looped KYC re-verification requests after the first pass had already been accepted. (Sample: a 2026-03-19 user thread describing a $12,000 USDT TRC-20 withdrawal held past the advertised 3-day window.)
+2. **Account suspension after a profitable streak**, with "bot usage" or generic "ToS violation" cited and no specific evidence shared with the user. (Sample: a Forex Peace Army thread describing the disappearance of an approximately $1.1 million account balance.)
+3. **OTC chart manipulation suspicions** — specifically, last-millisecond price flips on otherwise winning trades. (Sample: an FPA thread titled "Pocket Option manipulating results".) These reports are unverified — broker-controlled OTC feeds do not provide an independent benchmark — and we are careful to label them as user perception rather than confirmed fact.
+
+### Recurring praise themes
+
+In the interest of honesty, here are the three positives that appear most consistently:
+
+1. **Low barrier to entry**: $5 deposit, $1 trade, and fast onboarding. Pocket Option genuinely is one of the most accessible brokers in the segment.
+2. **Generous demo**: the $50,000 unlimited-time demo is widely praised as a tool for strategy practice.
+3. **Small withdrawals (under ~$200) reportedly clear within hours via crypto.** Note the asymmetry: large-withdrawal praise of comparable volume is conspicuously absent. That asymmetry is itself the finding.
+
+### How we read this overall
+
+The complaint pattern is consistent with an offshore broker that **functions normally for small accounts** and **introduces friction at the point where withdrawal amounts become economically meaningful**. Whether that friction is fraud, KYC overzealousness, or capital-management policy is not something we can adjudicate from public complaints alone. It is, however, a pattern you should price into your decision before depositing anything you cannot afford to leave behind.
+
+## Pros & Cons (recap)
+
+**Pros**
+
+- Lowest barrier to entry in our coverage ($5 deposit, $1 trade)
+- Unlimited, refillable $50,000 demo account
+- Crypto deposit and withdrawal (BTC, ETH, USDT TRC-20)
+- 180+ assets including OTC weekend markets and 30-second Quick Trades
+- Regional payment methods (M-Pesa, Apple Pay) most competitors lack
+
+**Cons**
+
+- No Tier-1 or Tier-2 regulator; current MISA license held under PO Trade Ltd, prior MISA license suspended for non-payment
+- UK FCA Warning List entry (multiple flagged domains)
+- US CFTC RED List entry (added July 2022)
+- Multiple legal entities across four jurisdictions, no consolidated explanation
+- Trustpilot score divergence across mirror domains (1.2/5 vs 4.0/5)
+- Recurring withdrawal-delay reports above ~$500–$1,000 threshold
+- x50 bonus turnover requirement that traps unprepared beginners
+
+## Final Verdict
+
+**We score Pocket Option 6.4 / 10 in our Best for Beginners ranking.** It is not eligible for the Best Regulated ranking due to the absence of any Tier-1 or Tier-2 license.
+
+The case **for** Pocket Option is straightforward: the lowest barrier to entry in the segment, a genuinely useful demo, and access for traders in markets that Tier-1 brokers do not serve. If you are practicing strategy on the demo, or trading with money that you have already mentally written off, the platform itself does what it advertises.
+
+The case **against** Pocket Option is the regulatory and complaint footprint. Two government-issued warnings (FCA and CFTC), a corporate structure that has cycled through at least four entity names across four offshore jurisdictions, a suspended prior MISA license, and a recurring withdrawal-delay pattern at the threshold where account balances start to matter — together those add up to a profile that we cannot honestly recommend for any meaningful capital.
+
+**Our position**: if you are going to use Pocket Option, use it small and use it short. Treat the platform as a sandbox for skill-building or as a tool for tiny speculative positions, not as an account where you accumulate capital. **Withdraw early, withdraw often, and use crypto where possible.** And before you deposit anything at all, confirm that your country is not on the broker's restricted list and that binary options trading is legal where you live.
+
+There are better-regulated options in the binary space — primarily **Nadex** for US residents (CFTC-regulated) and **IG** (FCA-regulated) for UK residents — but those are not available in most of the markets where Pocket Option operates. That structural gap is real, and we acknowledge it. It does not change the trade-offs above.
+
+## What Assets Can You Actually Trade?
+
+The 180+ asset count is real but composed unevenly. Here is the rough breakdown, useful for setting expectations:
+
+| Asset class | Approximate count | Notes |
+|---|---|---|
+| Forex pairs (real market) | ~30 | Majors, minors, and a handful of exotics. Spreads are wider than at a dedicated forex broker. |
+| Forex pairs (OTC synthetic) | ~30 | Available 24/7 including weekends. Price feed is broker-controlled. |
+| Cryptocurrency CFDs | ~15 | BTC, ETH, plus a rotating set of major altcoins. |
+| Commodity CFDs | ~10 | Gold, silver, oil, plus a few agricultural. |
+| Equity indices | ~10 | S&P 500, NASDAQ, FTSE, DAX, Nikkei, plus regional. |
+| Individual stocks | ~80+ | US large-caps dominate. Coverage of European and Asian equities is shallow. |
+
+The takeaway: if you came for forex, the real-market forex selection is adequate but not deep. If you came for stocks, the US large-cap selection is fine but anything else is sparse. **The OTC synthetic market is where Pocket Option's marketing focuses heaviest** — it is the highest-payout segment, available 24/7, and the segment with the most user complaints about "last-second price flips". Trade it with the price-feed conflict-of-interest in mind.
+
+## How to Verify Our Regulatory Claims Yourself
+
+We do not expect readers to take our word on the FCA and CFTC entries — and we do not want them to. Here is exactly how to verify them in under three minutes:
+
+### Verify the UK FCA Warning List entry
+
+1. Open `fca.org.uk/news/warnings/pocketoption` in your browser.
+2. Confirm: the entry exists, the firm name "Pocket Option" appears, and the page lists multiple domains (the live count was 4 at the time of this review).
+3. Note the **"first published"** and **"last updated"** dates — they should match (or be more recent than) what we cite above.
+
+If the URL above 404s when you click it, the FCA may have re-organised its warning archive — search "FCA Warning List Pocket Option" on a search engine and the current location should appear in the top results.
+
+### Verify the US CFTC RED List entry
+
+1. Open `cftc.gov/RED-List` (or search "CFTC RED list Pocket Option").
+2. Look for "Pocketoption" in the alphabetical list. The date added should be **2022-07-06**.
+3. The entry includes the basis for inclusion (soliciting US clients without registration) and the origin (Marshall Islands).
+
+### Verify the MISA license claim
+
+This is the one that is **harder to verify independently**. MISA does not publish a fully searchable register of its licensees. The license number we cite (T2022086, PO Trade Ltd) comes from third-party broker directories rather than a primary MISA register lookup. **We flag this gap openly** — we cannot prove the MISA license is currently active, and neither can the broker via a public register. If MISA verification matters to your decision, this is itself a finding.
+
+### Verify the corporate-entity disclosure
+
+Open Pocket Option's mobile site at `m.pocketoption.com/en/about-us/regulatory-environment/` and read the "Regulatory Environment" page directly. Note which entity is named there at the time of your visit — it may have changed since this review was published.
+
+## Frequently Asked Questions
+
+**Is Pocket Option legitimate?**
+
+Pocket Option exists, takes deposits, and processes withdrawals at small amounts. It is also on the UK FCA Warning List and the US CFTC RED List, operates under multiple legal entities across four offshore jurisdictions, and has a recurring complaint pattern around withdrawals above ~$500–$1,000. Whether you call that "legitimate" depends on your tolerance for offshore broker risk. We do not call it a scam in our own voice — but it is also not a safe place for meaningful capital.
+
+**Is Pocket Option safe for beginners with $5–$50?**
+
+For genuine practice on the demo and very small live trades that you have already mentally written off, the structural risk is bounded by the deposit size. Beginners should **never** accept the bonus offers (the x50 turnover requirement traps the entire balance), and should **withdraw small profits immediately** rather than letting them accumulate.
+
+**Is Pocket Option available in my country?**
+
+Per Pocket Option's own Regulatory Environment page, the platform does not serve residents of EEA countries, the USA, Israel, the UK, the Philippines, Japan, or Brazil. Some third-party reviews additionally cite Canada, France, Cyprus, and Germany as unavailable. **Verify against the live ToS before you deposit.** Geographic restriction lists change.
+
+**Why is Pocket Option not regulated by the FCA, CySEC, or ASIC?**
+
+Binary options for retail investors have been **banned** in the EU and UK since 2018–2019 under ESMA and FCA product intervention measures. To operate in retail-binary at all, a broker must offshore. Tier-1 regulators do not license retail binary options to consumer-facing brokers, period. Brokers like Pocket Option license themselves through offshore authorities (MISA, IFMRRC, etc.) instead. This is structural, not a matter of Pocket Option choosing to avoid regulation.
+
+**Can US residents use Pocket Option?**
+
+Pocket Option is on the **CFTC RED List for soliciting US clients without registration**. US residents using the platform are doing so against US federal law. The only CFTC-regulated binary options venue available to US retail clients is **Nadex**. We strongly recommend US residents use Nadex if they want to trade binary options legally.
+
+**Can UK residents use Pocket Option?**
+
+Pocket Option is on the **UK FCA Warning List**. UK residents using the platform have **no Financial Ombudsman or FSCS recourse** in case of a dispute. Retail binary options are also banned for UK consumers under FCA rules. We do not recommend UK residents use Pocket Option for any amount.
+
+**What is the minimum deposit and minimum trade?**
+
+$5 minimum deposit and $1 minimum trade. Both are the lowest in our coverage and represent Pocket Option's strongest competitive advantage.
+
+**How long does a withdrawal take at Pocket Option?**
+
+Advertised: a few minutes to 3 business days, depending on method. Reported reality on amounts above ~$500–$1,000: often longer than 3 business days, with looped requests for additional KYC documentation. Crypto withdrawals (USDT TRC-20 in particular) under ~$200 reportedly clear within hours. Card withdrawals at higher amounts have a worse track record.
+
+**What is the bonus turnover requirement?**
+
+The standard formula is x50 of the bonus amount — accept a $50 bonus and you must execute $2,500 in trade volume before any bonus-derived funds become withdrawable. We strongly recommend declining bonuses unless you have a tested edge.
+
+**What happens if Pocket Option freezes my account?**
+
+The broker's customer support is the only escalation path. There is no independent ombudsman, no investor compensation scheme, and no Tier-1 regulator that will adjudicate the dispute. This is the principal structural risk of trading at any offshore-regulated broker, not just Pocket Option. **Do not deposit funds you would be unwilling to leave behind in a frozen-account scenario.**
+
+**Is Pocket Option different from po.trade?**
+
+`po.trade` is operated by PO Trade Ltd, the same legal entity that holds the MISA license cited for Pocket Option. The platforms appear to share infrastructure but are marketed as distinct brands. Both are listed on the FCA Warning List in the warning entry we cite above.
+
+## Methodology & Updates
+
+This review was scored against [BinaryBrokerHub Methodology v1.0](/methodology). Score history is preserved in the timeline below. We re-review every broker on a rolling basis and update warnings as new regulator entries are published. If you spot a factual error, please email **info@binarybrokerhub.com** with the subject line "Correction Request" and we will respond within 5 business days.
+
+**Affiliate disclosure**: We may earn a commission when you sign up with Pocket Option through links on this page. This does not influence our score. Our scoring and review process are fully described in our methodology and editorial policy.

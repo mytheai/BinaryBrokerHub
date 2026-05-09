@@ -1,0 +1,446 @@
+export const frontmatter = {
+  slug: 'iq-option',
+  name: 'IQ Option',
+  country: 'global',
+  websiteUrl: 'https://iqoption.com',
+  affiliateUrl: 'https://iqoption.com/?ref=PLACEHOLDER',
+  regulators: [
+    {
+      name: 'Cyprus Securities and Exchange Commission',
+      authority: 'CySEC (sister-entity, CFDs only — does NOT cover binary options)',
+      license: '247/14 — held by IQ Option Europe Ltd',
+      tier: 1,
+      verifiedOn: '2026-05-09',
+    },
+    {
+      name: 'Saint Vincent and the Grenadines (SVG)',
+      authority: 'SVGFSA (does not supervise binary brokers)',
+      license: 'IQ Option LLC / SKY LADDER LLC — entity that actually offers binary options to non-EU traders',
+      tier: 'offshore',
+      verifiedOn: '2026-05-09',
+    },
+  ],
+  minDeposit: 10,
+  minDepositCurrency: 'USD',
+  payoutMax: 95,
+  payoutMin: 70,
+  paymentMethods: [
+    'Visa / Mastercard',
+    'Maestro',
+    'Skrill',
+    'Neteller',
+    'WebMoney',
+    'Bitcoin (BTC)',
+    'Ethereum (ETH)',
+    'USDT',
+    'Bank Wire Transfer',
+  ],
+  withdrawalTimeBusinessDays: '0–3 (e-wallets often <24h after KYC); often longer in user reports',
+  demoAccount: true,
+  scores: {
+    bestRegulated: null,
+    bestForBeginners: 6.5,
+    methodologyVersion: '1.0',
+  },
+  ranks: {
+    bestRegulated: null,
+    bestForBeginners: { position: 1, outOf: 3 },
+  },
+  warnings: [
+    'no-tier1-license',
+    'offshore-only',
+    'rbi-alert-list',
+    'esma-restricted',
+    'asic-restricted',
+    'eu-banned-retail',
+  ],
+  oneLinerVerdict:
+    'IQ Option is the most institutionally established broker in our cluster — Limassol-headquartered, founded 2013, with a CySEC-licensed sister entity (#247/14) that has been fined twice (€180,000 in 2016, €450,000 in 2019). But binary options are not offered through that CySEC entity; they are offered through IQ Option LLC (Saint Vincent and the Grenadines), which is not supervised by any government regulator for binary products. IQ Option is also on the RBI Alert List in India.',
+  pros: [
+    'Most established broker in our cluster: Limassol HQ, founded 2013, ~200 employees, transparent founder (Dmitry Zaretsky)',
+    'CySEC-licensed sister entity (IQ Option Europe Ltd, #247/14) provides real Tier-1 oversight signal — even though that entity does not offer binary options',
+    'Up to 95% payout on binary options + Digital Options product with up to 900% return profile (different instrument)',
+    'Unlimited demo account with virtual balance',
+    'Established platform with native iOS, Android, and PWA — no third-party MT4/MT5 dependency',
+    '250+ instruments across forex, crypto, stocks, commodities, ETFs (cross-product trader appeal)',
+    'Lower complaint volume than Pocket Option and Quotex on similar account-freeze patterns (binary deprioritized = less aggressive churn)',
+  ],
+  cons: [
+    'Binary options product is offered exclusively through IQ Option LLC (Saint Vincent and the Grenadines) — not through the CySEC entity. SVGFSA does not supervise binary brokers. The CySEC trust signal does not extend to the binary product.',
+    'CySEC entity has a documented history of regulatory enforcement: €180,000 fine in 2016 (misleading marketing, outsourcing failures) and €450,000 settlement in 2019 (conflicts of interest, insufficient due diligence).',
+    'Listed on the Reserve Bank of India (RBI) Alert List of unauthorised forex platforms — Indian residents face FEMA exposure.',
+    'Restricted in many more jurisdictions than competitors: Australia, Belgium, Czech Republic, Israel, Japan, Latvia, Portugal, Russia, Spain, Switzerland, Ukraine, UK, USA, Canada, plus all sanctioned states. Accessibility is materially worse than Pocket Option / Quotex.',
+    'FCA noted in 2021–2022 that IQ Option was "running off its UK business" and could not solicit new UK customers, after the EEA passport lapsed post-Brexit.',
+    'Binary options are no longer the primary product — the platform has shifted focus to CFDs, Multipliers, and Digital Options since 2017–2018, and the binary feature set is less actively developed than at Pocket Option or Quotex.',
+    'March–April 2026 complaint surge: looped KYC re-verification, frozen accounts on profitable balances, withdrawal delays. The pattern matches Quotex and Pocket Option, though the volume is lower.',
+    'Trade types are narrower than Quotex: Up/Down digital options + FX Options on only 5 currency pairs (EUR/USD, EUR/JPY, GBP/USD, USD/JPY, EUR/GBP). No Touch / No-Touch, no boundary, no ladder.',
+    'Inactivity fee of €10 (or equivalent) after 90 days of dormancy — sooner than Quotex (180 days) or Pocket Option (no inactivity fee documented).',
+  ],
+  scoreHistory: [
+    {
+      date: '2026-05-09',
+      methodologyVersion: '1.0',
+      bestRegulated: null,
+      bestForBeginners: 6.5,
+      note: 'Initial review under methodology v1.0. Score driven by: most institutionally established operator in cluster (CySEC sister-entity, transparent corporate structure, Limassol HQ), offset by binary-product entity being SVG offshore, RBI Alert List entry, and March–April 2026 complaint surge similar to Quotex. Best Regulated ranking is null because the binary options product is offered through IQ Option LLC (SVG), not through the CySEC entity (IQ Option Europe Ltd, which only sells CFDs to retail post-ESMA 2018 ban). Strict methodology reading: a CySEC license held by a sister entity that does not offer the product being reviewed does not make that product Tier-1 regulated.',
+    },
+  ],
+  lastReviewed: '2026-05-09',
+  publishedAt: '2026-05-09',
+};
+
+# IQ Option Review 2026 — Honest Analysis
+
+> **Read this first.** IQ Option is the most institutionally established broker in our coverage — CySEC-licensed sister entity in Cyprus, public corporate identity, transparent founder (Dmitry Zaretsky, since 2013). But the **CySEC entity does not offer binary options**. Binary options are offered exclusively through **IQ Option LLC**, a Saint Vincent and the Grenadines entity that **SVGFSA does not supervise**. IQ Option is also on the **RBI Alert List of unauthorised forex platforms** in India. None of these facts make IQ Option impossible to use safely with very small capital, but they materially change what "institutionally established" buys you when it comes to the binary options product specifically.
+
+## Regulation & Safety
+
+**This is the section that should drive your decision.** Skip the rest if it does not satisfy you here.
+
+### The dual-entity structure — and why it matters
+
+Among the three brokers in our cluster, IQ Option is the only one with a **dual-entity structure**: a CySEC-licensed European arm and a Saint Vincent and the Grenadines (SVG) offshore arm. Most retail traders we surveyed when researching this review did not realise the difference between the two. The difference is consequential.
+
+- **IQ Option Europe Ltd** — registered in Limassol, Cyprus. Licensed by **CySEC under licence number 247/14** (issued 30 July 2014). After the **ESMA product intervention measures of 2018**, this entity stopped offering binary options to EU retail clients. It now offers **CFDs** on forex, stocks, indices, commodities, and cryptocurrencies — and **only CFDs**. Binary options are not available through this entity to anyone, anywhere.
+- **IQ Option LLC / SKY LADDER LLC** — registered in **Saint Vincent and the Grenadines**. This is the entity that **actually offers binary options** to non-EU customers. SVG's financial regulator, **SVGFSA, has publicly stated that it does not supervise binary options brokers**. There is no government regulatory oversight of this entity for the binary options product.
+
+The implication is critical: **the CySEC license you see prominently displayed in IQ Option's marketing does not regulate the binary options product you are about to trade.** It regulates a sister entity that sells a different product (CFDs) to a different audience (EU retail). When evaluating IQ Option as a binary options broker, the relevant entity is IQ Option LLC, not IQ Option Europe Ltd.
+
+This is the central honest framing that other binary options review sites consistently soften, and we are flagging it deliberately.
+
+### The CySEC track record (sister entity, but worth understanding)
+
+Even though the CySEC entity does not regulate the binary options product, its enforcement history is informative for what kind of operator IQ Option's parent group is:
+
+- **2016**: CySEC fined IQ Option Europe Ltd **€180,000** (later reduced to €20,000 on appeal) for **misleading marketing materials and unsafe outsourcing practices**.
+- **2019**: CySEC accepted a **€450,000 settlement** from IQ Option Europe Ltd for **failing to implement effective safeguards against conflicts of interest** and **insufficient due diligence**.
+
+These are real enforcement actions on the brand, by a real regulator. Two interpretations are reasonable:
+
+1. **Negative reading**: a brand fined twice for material conduct issues — including conflict-of-interest controls that are foundational to broker integrity — is a brand whose risk-management culture should be scrutinised before trusting it with capital.
+2. **Positive reading**: a brand that has remained CySEC-authorised across two enforcement cycles has demonstrated it can survive Tier-1 regulator scrutiny. Most offshore-only brokers (including Pocket Option and Quotex) have never had to operate under that level of scrutiny at all.
+
+We weight both readings in our scoring. The net effect is mildly positive — the **existence** of CySEC enforcement implies a level of operational visibility that pure-offshore brokers lack — but the **content** of the enforcement (conflict-of-interest failures, misleading marketing) is exactly the kind of issue that retail binary traders should be most concerned about.
+
+### Regulator warnings (verified)
+
+- **Reserve Bank of India (RBI) Alert List of unauthorised forex platforms** — IQ Option is named on the RBI's published Alert List (most recent edition updated November 2025; verify the live PDF). Per the RBI, **Indian residents undertaking forex transactions with unauthorised persons are liable for penal action under FEMA, 1999** — maximum penalty up to three times the amount involved or ₹2 lakh, whichever is higher, plus daily continuing penalty. **Indian residents trading on IQ Option face direct legal exposure under FEMA.**
+- **UK Financial Conduct Authority (FCA)**: in the post-Brexit period (2021–2022), the FCA noted that IQ Option was "running off its UK business" and could not solicit new UK customers. Earlier UK access via the CySEC EEA passport had lapsed. The FCA has also clarified that any IQ Option marketing copy claiming "deemed authorised and regulated by the Financial Conduct Authority" is not accurate.
+- **Monetary Authority of Singapore (MAS)**: has issued warnings about IQ Option potentially offering unauthorised services in Singapore.
+
+We did not, in this review's research window, find an active **CFTC RED List** entry for IQ Option (one of the few regulatory contrasts against Pocket Option, which **is** on the CFTC RED List). However, **absence of a CFTC RED List entry does not authorise solicitation of US residents** — IQ Option does not accept US customers, and US residents are restricted from the platform regardless.
+
+### Restricted countries
+
+IQ Option's restricted-country list is the **longest** of any broker in our cluster, in many cases driven by the corporate group's defensive posture rather than by regulatory force. Verified restrictions include:
+
+Afghanistan, Albania, American Samoa, **Australia**, Belarus, **Belgium**, **Canada**, **Czech Republic**, Comoros, Crimea, Cuba, Democratic Republic of the Congo, Donetsk and Luhansk People's Republics, Eritrea, Ethiopia, Guam, Haiti, Iran, **Israel**, **Japan**, **Latvia**, Libya, Mali, Myanmar, North Korea, Palestine, **Portugal**, Republic of Abkhazia, Republic of South Ossetia, **Russia**, **Spain**, South Sudan, Sudan, **Switzerland**, Syria, Transnistria, **Ukraine**, **the United Kingdom**, **the USA**, Vatican, U.S. Virgin Islands.
+
+Note the inclusion of **Australia** despite the parent group holding **Quad Code AU Ltd** (an ASIC-licensed entity in Australia) — Australian retail traders cannot use the binary options platform. The breadth of EU restrictions (Belgium, Czech Republic, Latvia, Portugal, Spain, Switzerland) reflects post-ESMA fragmentation of the EU regulatory landscape. **Russia is restricted** despite the founder's Russian origin — this is a notable defensive posture given the corporate group's Cypriot HQ.
+
+For most readers in our target markets (India, Pakistan, Nigeria, the Philippines, Indonesia, UAE, Malaysia), IQ Option is technically accessible but with the regulatory caveats above. Verify the current restricted list against the live ToS before depositing.
+
+### India context
+
+Like Quotex, IQ Option is on the RBI Alert List. Unlike Pocket Option (which we did not find on the RBI Alert List in our research window), IQ Option's listing is consequential. **For Indian residents, the legal exposure under FEMA, 1999 is the same as at Quotex**, and the same risk-mitigation logic applies: do not deposit funds you would be unwilling to leave behind in a frozen-account scenario, and understand that the legal exposure is real beyond the broker risk that applies in all jurisdictions.
+
+That said, IQ Option's India onboarding is materially less aggressive than Quotex's. The platform does not promote the same depth of UPI / Paytm / PhonePe payment integration, and the marketing copy is less India-specific. This means IQ Option in India is more often used by traders who came in through a global affiliate referral than through targeted India marketing — which is itself a finding about who the broker is trying to onboard.
+
+## Trading Platform & Features
+
+IQ Option runs a **proprietary cross-platform application**, available as:
+
+- **Native iOS app** (App Store)
+- **Native Android app** (Google Play, plus standalone APK)
+- **Progressive Web App (PWA)** for browsers
+- **Desktop app** (Windows, macOS, Linux) — the only broker in our cluster with a dedicated Linux client
+
+There is **no MT4 or MT5 integration** and no API access. This is a deliberate platform-centric strategy — the IQ Option app is the entire user experience, not a layer over a third-party platform.
+
+### What you actually get on the platform
+
+- **Up to 95% advertised payout** on binary options at peak conditions. Realistic typical fill across major OTC pairs is **70%–95%**, with the 95% figure reserved for VIP-tier accounts on specific OTC instruments.
+- **Digital Options** (a separate product from classic binary): payouts can reach **up to 900%** in specific strike-and-expiry configurations. Note that Digital Options are mathematically very different from binary options — they are closer to barrier options and require understanding of strike pricing. The 900% figure is structural, not a typical fill, and reflects the very low probability of the corresponding outcome.
+- **FX Options**: a third options product offered on **only 5 currency pairs** (EUR/USD, EUR/JPY, GBP/USD, USD/JPY, EUR/GBP). Narrower scope than competitors.
+- **Multipliers**: leveraged exposure up to x20 on forex, crypto, and indices. This is closer to a CFD product than a binary product.
+- **Total instrument count**: **250+** across forex (60+ pairs incl. exotics like NOK, SEK, TRY), cryptocurrencies (12 listed: BCH, BTC, DASH, EOS, ETC, ETH, LTC, OMG, QTUM, TRX, XRP, ZEC), commodities, indices, individual stocks, and ETFs.
+- **Charting**: standard candlestick chart, ~30 indicators, a full set of drawing tools. More polished than Pocket Option or Quotex but not competitive with TradingView or MT5.
+- **Demo account**: **unlimited virtual funds** by default. Useful for strategy practice and product exploration.
+- **Languages**: 14+ interface languages.
+- **Tournaments and copy-trading features** are deprecated relative to Pocket Option and Quotex — IQ Option's product roadmap has shifted toward CFDs and Multipliers since 2017, and the binary tournaments are less actively promoted.
+
+### Trade types — narrower than competitors
+
+The binary trade-type set on IQ Option is narrower than at Quotex:
+
+- **Binary Up/Down**: 60 seconds to 1 month expiry range.
+- **Digital Options Up/Down**: similar expiry range, but with strike-pricing instead of fixed payout.
+- **FX Options** on 5 pairs only.
+- **No Touch / No-Touch, no Range / Boundary, no Ladder.**
+- **No 30-second or 5-second binary expiries** (Quotex offers these; IQ Option does not).
+- **No early-close on most contracts** in our test window.
+
+The shorter sub-minute expiries that Quotex offers (which are mathematically punishing for retail) are absent at IQ Option. We treat this as a positive — it forces traders into longer-horizon decisions that are slightly less negative-expected-value at the structural level.
+
+## Account Types & Bonuses
+
+IQ Option's account-tier structure is simpler than Pocket Option or Quotex:
+
+| Tier | Min deposit | Headline perks |
+|---|---|---|
+| Demo | $0 | Unlimited virtual balance, full platform access |
+| Standard | $10 | All available products, standard withdrawal processing |
+| VIP | $2,000 | Priority withdrawals (within 24h after KYC), dedicated account manager |
+
+The base **minimum deposit** for opening any live account is **$10**. The VIP tier threshold has historically varied; the current $2,000 figure should be verified against the live broker site.
+
+### Bonuses and inactivity fee
+
+IQ Option's bonus marketing is **less aggressive** than Pocket Option or Quotex. There is no permanent first-deposit bonus structure currently advertised on the canonical broker site for the SVG arm, and the platform discourages bonus-driven onboarding more than its competitors. This is an unusual positive — a broker that under-promotes bonuses generally has a healthier capital-acquisition strategy than one that aggressively pushes them.
+
+The **inactivity fee** is **€10 (or equivalent)** charged after **90 days of account dormancy**. This is structurally different from Quotex's 1%/day after 180 days — a fixed amount sooner, rather than a percentage drain later. For small accounts, IQ Option's fee is materially worse than Quotex's: a $50 account dormant for 90 days loses 20% to the inactivity fee at IQ Option, vs less than 5% at Quotex's 1%/day rate.
+
+**Withdraw your balance fully or close the account if you stop trading.** This advice applies at all three brokers in our cluster but bites soonest at IQ Option.
+
+## Deposits & Withdrawals
+
+### Deposit
+
+- **Minimum**: $10 globally.
+- **Methods**: Visa, Mastercard, Maestro, Skrill, Neteller, WebMoney, Bitcoin, Ethereum, USDT, bank wire transfer.
+- **Indian payment methods**: less developed than Quotex. UPI is supported via P2P exchanger flow but is not as central to the platform's deposit funnel.
+- **Processing**: card and crypto are typically near-instant; bank wire takes 1–5 business days.
+- **Fees on the broker's side**: none. Third-party fees (network fees on crypto, currency-conversion spreads on cards) apply normally.
+
+### Withdrawal
+
+- **Minimum withdrawal**: $2.
+- **Advertised processing time**: e-wallets within 24 hours after KYC approval (often faster); cards 1–3 business days; bank wire up to 7 business days. VIP tier processed faster.
+- **Reported reality (March–April 2026)**: a complaint surge similar to Quotex but lower in volume. Specific reports include a Pissed Consumer thread describing a ₹7,00,000 (~$8,400 USD) withdrawal blocked since November 2025, and a March 2026 case of repeated KYC re-verification cycles delaying a withdrawal beyond the advertised window. **Trustpilot (the canonical iqoption.com page) shows a 3.4/5 average across 1,300+ reviews, with over 60% of reviews carrying 1-star ratings**, the bulk of which centre on withdrawal experience.
+- **Mirror domain divergence**: IQ Option also operates iqbroker.com, iqoptions.com, and several country-specific TLDs. Trustpilot scores diverge across these, with newer mirror domains showing higher scores on smaller review counts. We treat the canonical iqoption.com Trustpilot rating as the representative figure.
+- **Fees**: none on the broker side. Card-network and bank-wire intermediary fees apply.
+
+### KYC requirements
+
+- ID and address proof required before first withdrawal.
+- KYC turnaround typically 1–2 business days when documents are clean. Recurrent reports of looped re-verification — same pattern observed at Pocket Option and Quotex — at the moment of large-balance withdrawal.
+
+### Risk-mitigation steps if you do trade here
+
+1. **Complete KYC immediately on signup**, before depositing meaningful capital. Do not allow KYC to become a withdrawal-stalling vector later.
+2. **Withdraw early and often.** Do not let balances accumulate beyond what you would be willing to lose in a frozen-account scenario.
+3. **Use e-wallets or crypto where possible.** Bank wire withdrawals at higher amounts have a worse track record across all three brokers in our cluster.
+4. **Ensure deposit-method name and ID name match exactly.** Mismatches are a recurring delay vector at every offshore binary broker.
+5. **Close your account if you stop trading.** The €10 inactivity fee bites at 90 days — sooner than competitors.
+
+## Payout Rates & Trade Types
+
+**Advertised maximum payout: up to 95% on classic binary options**, with **Digital Options** offering up to 900% in specific strike-expiry configurations. Realistic typical fill across major OTC pairs and timeframes is **70%–95%** on binary, with the 95% reserved for VIP-tier accounts on specific OTC instruments at peak conditions.
+
+Important context on the 900% Digital Options figure: this is a structurally low-probability outcome (the higher the potential return, the lower the probability of hitting the strike). It is not a typical fill or a sustainable long-run payout average — it is the extreme tail of the strike-pricing curve. Treat the 900% headline as marketing geometry, not as expected value.
+
+### Trade type details
+
+- **Binary Up/Down**: classic Higher/Lower contracts, expiries 60 seconds to 1 month.
+- **Digital Options Up/Down**: similar to binary but with strike pricing — the trader chooses both direction and a strike price, payout scales with strike distance. More flexible than classic binary but mathematically harder for beginners.
+- **FX Options**: 5 currency pairs only — EUR/USD, EUR/JPY, GBP/USD, USD/JPY, EUR/GBP. The narrowest FX options scope in our cluster.
+- **Multipliers**: leveraged exposure on forex (up to x20), crypto (up to x20), indices (up to x20). Not a binary product — closer to CFD.
+
+## Customer Support
+
+- **Live chat**: 2-minute average response time on routine queries. This is the fastest in our cluster.
+- **Email**: 1–4 hour average response time.
+- **Phone support**: not consistently advertised.
+
+As with Pocket Option and Quotex, fast response on easy queries does not predict good response on the queries that matter. Withdrawal-dispute escalation reportedly takes days, and the 2026 complaint surge concentrates on KYC re-verification stand-offs that customer support tends to extend rather than resolve.
+
+## Education & Demo Account
+
+The **demo account** is genuinely useful: unlimited virtual funds, full platform access, mirror of the live platform's price feed and asset set. This is among the better demos in the binary segment.
+
+The **education content** is more polished than Pocket Option or Quotex — IQ Option has historically invested in well-produced educational videos and a structured curriculum. The content covers binary basics, technical analysis fundamentals, and platform-specific tutorials. As with any broker-produced content, it does not address the structural negative-expected-value of retail binary options at typical payout rates, the regulatory restrictions on the product in major jurisdictions, or the conflict-of-interest implications of a broker-controlled OTC price feed.
+
+For an honest grounding in the instrument, we again recommend reading the **ESMA 2018 product intervention measures on binary options** and the **CFTC consumer alerts on binary options fraud** before opening any account at any broker in this segment.
+
+## User Complaints — What We Found
+
+We synthesized public complaints from **Trustpilot** (iqoption.com canonical, plus iqbroker.com, iqoptions.com, country-specific TLDs), **Reddit**, **Pissed Consumer**, **Forex Peace Army**, and Indian-focused complaint aggregators.
+
+### Trustpilot — divergence pattern
+
+| Domain | Trustpilot positioning |
+|---|---|
+| iqoption.com (canonical) | 3.4 / 5 across 1,300+ reviews — over 60% one-star |
+| iqbroker.com | Mid-range, regional issues |
+| iqoptions.com | Newer mirror, higher rating, lower volume |
+
+The canonical-domain rating of 3.4/5 with 60%+ one-star reviews is materially lower than the marketing copy on third-party broker directories cites, and is consistent with the pattern observed across all three brokers in our cluster: heavy-volume canonical domains trend toward 1-3 star averages dominated by withdrawal complaints, while smaller mirror domains carry higher ratings on lower review counts.
+
+### Recurring complaint themes
+
+Three patterns dominate Reddit, Pissed Consumer, and Forex Peace Army threads in the prior 12 months:
+
+1. **Withdrawal blocking after profit accumulation, with looped KYC re-verification.** Specific recurrent example from November 2025: a user reporting ₹7,00,000 (~$8,400 USD) withdrawal blocked since the original request, with multiple new information submissions required and no clear timeline. Pattern matches Quotex's 2026 surge.
+2. **Repeated KYC document requests on already-verified accounts.** Users describe submitting ID and address proof, having the documents accepted, then being asked for additional documentation (selfie with ID, bank statement, utility bill, source-of-funds explanation) at the moment of large-withdrawal request. We cannot establish intent — but the pattern is recurrent enough across independent sources to warrant a warning.
+3. **Account suspension for "ToS violation"** — typically cited without specific evidence shared with the user. Less acute than at Pocket Option (where the $1.1M FPA thread is the canonical example) but present.
+
+### Recurring praise themes
+
+In the interest of honesty:
+
+1. **Platform polish** — IQ Option's UI is widely praised as the most refined in the segment.
+2. **Educational content** — significantly more developed than Pocket Option or Quotex.
+3. **Small e-wallet withdrawals** clear within 24 hours after KYC, consistent with advertised behaviour.
+
+### How we read this overall
+
+IQ Option's complaint pattern matches the structural shape we saw at Pocket Option and Quotex — small withdrawals work, larger withdrawals encounter friction at the threshold where account balances become economically meaningful. The complaint **volume** is lower than Quotex (and similar to Pocket Option), which we attribute to the binary product being less actively pushed and the platform being less marketing-aggressive in emerging markets.
+
+The CySEC enforcement history (€180k + €450k fines on the sister entity) is an additional structural input. It does not bear directly on the binary product but it informs the risk-management culture of the parent group.
+
+## Pros & Cons (recap)
+
+**Pros**
+
+- Most institutionally established broker in our cluster (Limassol HQ, founded 2013, transparent founder)
+- CySEC-licensed sister entity (#247/14) — real Tier-1 oversight signal, even if not on the binary product
+- Up to 95% binary payout + Digital Options product (up to 900% structural)
+- Unlimited demo account
+- Established platform (iOS, Android, PWA, desktop incl. Linux)
+- 250+ instruments across asset classes
+- Lower complaint volume than Quotex
+- More polished educational content than competitors
+
+**Cons**
+
+- Binary options product is on the SVG entity, not the CySEC entity — Tier-1 trust signal does not extend to binary
+- CySEC fine history: €180,000 (2016) and €450,000 (2019) on parent group
+- RBI Alert List entry — Indian residents face FEMA exposure
+- Restricted in many more jurisdictions than competitors (Australia, Spain, Portugal, Belgium, etc.)
+- FCA UK access run-off completed; cannot solicit UK clients
+- March–April 2026 complaint surge (lower volume than Quotex but present)
+- Narrower trade type set (no sub-minute binary, no Touch/No-Touch, no Range)
+- Inactivity fee €10 after 90 days — sooner than Quotex
+- Trustpilot canonical 3.4/5, 60%+ one-star
+
+## Final Verdict
+
+**We score IQ Option 6.5 / 10 in our Best for Beginners ranking.** It is not eligible for the Best Regulated ranking because the binary options product is offered through IQ Option LLC (Saint Vincent and the Grenadines), not through the CySEC-licensed IQ Option Europe Ltd. A CySEC license held by a sister entity that does not offer the product being reviewed does not, under our methodology, make that product Tier-1 regulated.
+
+The case **for** IQ Option is the strongest among offshore-binary-eligible brokers in our coverage: a transparent corporate structure, a public founder, a Limassol HQ with documented operations, and a sister-entity CySEC license that has survived two enforcement cycles. The platform is the most polished in the cluster. The trade-type set is narrower than Quotex but excludes the most punishing sub-minute expiries. The complaint volume on the binary product is lower than at Quotex, partly because IQ Option has deprioritised binary in favour of CFDs and Multipliers since 2017–2018.
+
+The case **against** IQ Option is the dual-entity reality. The CySEC license that anchors most third-party reviews of IQ Option does not authorise the binary options product. The actual binary entity (IQ Option LLC, SVG) is unsupervised in any meaningful sense. The brand is on the RBI Alert List — Indian residents face FEMA exposure. The 2026 complaint surge, though smaller in volume than Quotex's, is present. And the restricted-country list is the longest of any broker in our coverage, which materially reduces accessibility relative to competitors.
+
+**Our position**: among the three offshore-eligible brokers in our cluster (Pocket Option, Quotex, IQ Option), IQ Option is the option we would recommend to a trader who values brand stability, platform polish, and educational content above payout maximalism or India-specific payment integration. **It is not, however, a low-risk option** — the binary product is unsupervised, the CySEC trust signal is structural rather than direct, and the same withdrawal-friction pattern that affects competitors is present here. **For Indian residents specifically**, the RBI Alert List exposure is identical to Quotex and is the dominant decision factor, not the broker's relative platform quality.
+
+Use IQ Option small, use it short, withdraw early. **For Indian residents**, understand the FEMA exposure before depositing. **For UK residents**, the FCA's run-off statement combined with the broader UK retail binary ban means there is no legal path to use this platform.
+
+We will re-review this score in three months alongside Pocket Option and Quotex to assess whether the 2026 complaint surge resolves or persists across the cluster.
+
+## What Assets Can You Actually Trade?
+
+The 250+ instrument count is real — IQ Option's asset coverage is the deepest in our cluster. Breakdown:
+
+| Asset class | Approximate count | Notes |
+|---|---|---|
+| Forex pairs (real market) | ~60 | Majors, minors, plus exotics (NOK, SEK, TRY). Spreads competitive with retail forex brokers, narrower than at Pocket Option or Quotex. |
+| Forex pairs (OTC synthetic) | ~30 | 24/7 including weekends. Broker-controlled price feed. |
+| Cryptocurrency CFDs | 12 named | BCH, BTC, DASH, EOS, ETC, ETH, LTC, OMG, QTUM, TRX, XRP, ZEC. |
+| Commodity CFDs | ~15 | Gold, silver, oil, plus agricultural and industrial metals. |
+| Equity indices | ~15 | Major global indices, decent regional coverage. |
+| Individual stocks | ~100+ | US large-caps deepest; European and Asian coverage broader than at competitors. |
+| ETFs | ~10 | Major sector and thematic ETFs. |
+
+If you came for forex, IQ Option has the deepest selection in our cluster including exotics. If you came for stocks, the US large-cap selection is the strongest of the three brokers. If you came for crypto CFDs, the 12 named coins is the most explicit list — Pocket Option and Quotex use rotating altcoin sets that are less stable.
+
+The **narrower trade type set** (no sub-minute expiries, no Touch/No-Touch, no Range) is a real product-level difference from Quotex. Whether it is a positive or negative depends on your strategy. We treat it as a slight positive — sub-minute binary is mathematically very punishing for retail.
+
+## How to Verify Our Regulatory Claims Yourself
+
+We do not expect readers to take our word on the CySEC, RBI, and FCA states. Here is how to verify them in under five minutes:
+
+### Verify the CySEC license (sister entity)
+
+1. Open `cysec.gov.cy/en-GB/entities/investment-firms/cypriot/40647/` in your browser.
+2. Confirm: IQ Option Europe Ltd appears, license number 247/14, status "Authorised", registered address in Cyprus.
+3. **Note**: this license authorises the entity to offer **CFDs**, not binary options, to retail. Do not confuse the license scope.
+
+### Verify the SVG entity
+
+This is harder, which is itself a finding:
+
+1. SVG's Financial Services Authority (SVGFSA) does not maintain a fully public register of binary options brokers — because, per SVGFSA's own statements, **it does not supervise binary brokers**.
+2. The entity name (IQ Option LLC / SKY LADDER LLC) is widely cited in third-party broker directories. The lack of a primary register is consistent with SVGFSA's stated non-supervision.
+3. **The takeaway**: there is no government regulator anywhere in the world supervising IQ Option's binary options product. This is the consequential YMYL fact.
+
+### Verify the RBI Alert List entry
+
+1. Open `rbi.org.in/scripts/bs_viewcontent.aspx?Id=4235`.
+2. Download the most recent Alert List PDF (most recent edition: November 2025).
+3. Find "IQ Option" in the list. The list contains entities not authorised to deal in forex under FEMA, 1999.
+4. **For Indian residents, this verification is not optional before depositing.**
+
+### Verify the CySEC fine history
+
+1. Search "CySEC IQ Option fine" on a search engine.
+2. Confirm the 2016 €180,000 fine (later €20,000 on appeal) for misleading marketing and outsourcing failures.
+3. Confirm the 2019 €450,000 settlement for conflict-of-interest controls.
+4. Both are public CySEC enforcement records.
+
+## Frequently Asked Questions
+
+**Is IQ Option legitimate?**
+
+IQ Option is the most institutionally established binary options broker in our coverage — Limassol HQ, public corporate identity, transparent founder, CySEC sister entity. It is also a brand whose binary product is offered through an unsupervised SVG entity, has a documented CySEC fine history (€180k + €450k), is on the RBI Alert List in India, and has March–April 2026 withdrawal complaints. "Legitimate" is the wrong frame — the broker exists and processes most withdrawals, but the product comes through an offshore entity with no government oversight, and that is the structural reality.
+
+**Is IQ Option regulated by CySEC?**
+
+The sister entity IQ Option Europe Ltd is regulated by CySEC under license 247/14 — but **only for CFDs, not for binary options**. Binary options are offered through IQ Option LLC, registered in Saint Vincent and the Grenadines, which is not regulated by any government regulator for binary products. The CySEC license does not extend to the binary options product. This is the central honest framing of IQ Option's regulatory status.
+
+**Is IQ Option legal in India?**
+
+IQ Option is on the **RBI Alert List of unauthorised forex platforms**. Per the RBI, **Indian residents undertaking forex transactions with unauthorised persons are liable for penal action under FEMA, 1999**. We do not recommend Indian residents use IQ Option. The legal exposure is identical to Quotex.
+
+**Is IQ Option legal in the UK?**
+
+The FCA has stated that IQ Option was running off its UK business in the post-Brexit period and cannot deal with new UK customers. The FCA has also clarified that any IQ Option marketing claiming "deemed authorised and regulated by the Financial Conduct Authority" is not accurate. Retail binary options are also banned for UK consumers under FCA rules. **We do not recommend UK residents use IQ Option** for any amount.
+
+**Can US residents use IQ Option?**
+
+No. The USA is on IQ Option's restricted-country list. US residents cannot register accounts. The only CFTC-regulated binary options venue available to US retail clients is **Nadex**.
+
+**What is the minimum deposit and minimum trade?**
+
+$10 minimum deposit and $1 minimum trade. Same as Quotex; higher than Pocket Option ($5).
+
+**How long does a withdrawal take?**
+
+Advertised: e-wallets within 24 hours after KYC, cards 1–3 business days, bank wire up to 7 business days. Reported reality during the 2026 complaint surge: substantially longer for some users, particularly on amounts above ~$1,000 with looped KYC re-verification.
+
+**What is the inactivity fee?**
+
+€10 (or equivalent) charged after 90 days of account dormancy. This bites sooner than Quotex's 1%/day after 180 days. **Withdraw your balance fully or close the account if you stop trading.**
+
+**What happens if IQ Option freezes my account?**
+
+The broker's customer support is the only escalation path. There is no government regulator that will adjudicate the dispute for the binary product. The CySEC does not regulate binary options at this broker. SVGFSA does not supervise binary brokers. Customer support is the entire dispute resolution mechanism. **Do not deposit funds you would be unwilling to leave behind.**
+
+**What is the difference between binary options, Digital Options, and FX Options at IQ Option?**
+
+- **Binary Options**: classic Higher/Lower with fixed payout (e.g., 80%) on correct prediction. Up to 95% advertised maximum.
+- **Digital Options**: similar Higher/Lower direction but with strike pricing — the trader chooses both direction and strike, payout scales with strike distance. Up to 900% structural maximum on extreme strike configurations (low-probability outcomes).
+- **FX Options**: an options product on 5 currency pairs (EUR/USD, EUR/JPY, GBP/USD, USD/JPY, EUR/GBP) with strike-and-expiry mechanics closer to traditional FX options than to binary.
+
+For most retail beginners, the **classic Up/Down binary option** is the simplest product. Digital Options require understanding strike pricing, and the 900% headline is structural geometry, not expected value.
+
+**Is IQ Option different from IQ Broker or IQ Options?**
+
+IQ Broker (iqbroker.com) is a domain operated under the same corporate umbrella. IQ Options (iqoptions.com) is a mirror domain. The entity structure is consistent: IQ Option Europe Ltd holds the CySEC license, IQ Option LLC (SVG) operates the binary product. All public-facing domains route to the same platform infrastructure.
+
+## Methodology & Updates
+
+This review was scored against [BinaryBrokerHub Methodology v1.0](/methodology). Score history is preserved in the timeline below. We re-review every broker on a rolling basis and update warnings as new regulator entries are published. **We have committed to re-reviewing IQ Option's score within three months alongside Pocket Option and Quotex** to assess whether the 2026 complaint surge resolves or persists across the cluster.
+
+If you spot a factual error, please email **info@binarybrokerhub.com** with the subject line "Correction Request" and we will respond within 5 business days.
+
+**Affiliate disclosure**: We may earn a commission when you sign up with IQ Option through links on this page. This does not influence our score. Our scoring and review process are fully described in our methodology and editorial policy.

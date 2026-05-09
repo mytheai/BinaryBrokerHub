@@ -1,0 +1,449 @@
+export const frontmatter = {
+  slug: 'quotex',
+  name: 'Quotex',
+  country: 'global',
+  websiteUrl: 'https://quotex.io',
+  affiliateUrl: 'https://quotex.io/?ref=PLACEHOLDER',
+  regulators: [
+    {
+      name: 'International Financial Market Relations Regulation Center',
+      authority: 'IFMRRC (non-governmental, Seychelles)',
+      license: 'TSRF RU 0395 AA V0161 — held by Awesomo Limited; license expired in 2021',
+      tier: 'offshore',
+      verifiedOn: '2026-05-09',
+    },
+  ],
+  minDeposit: 10,
+  minDepositCurrency: 'USD',
+  payoutMax: 98,
+  payoutMin: 70,
+  paymentMethods: [
+    'Visa / Mastercard',
+    'Skrill',
+    'Neteller',
+    'Bitcoin (BTC)',
+    'Ethereum (ETH)',
+    'USDT (TRC-20)',
+    'UPI / Paytm / PhonePe / Google Pay (India)',
+    'IMPS / Bank Transfer (India)',
+    'M-Pesa (East Africa)',
+    'Bank Transfer',
+  ],
+  withdrawalTimeBusinessDays: '1–5 (Standard); often longer in user reports',
+  demoAccount: true,
+  scores: {
+    bestRegulated: null,
+    bestForBeginners: 6.0,
+    methodologyVersion: '1.0',
+  },
+  ranks: {
+    bestRegulated: null,
+    bestForBeginners: { position: 3, outOf: 3 },
+  },
+  warnings: [
+    'no-tier1-license',
+    'offshore-only',
+    'fca-warning-list',
+    'rbi-alert-list',
+    'esma-restricted',
+    'entity-shuffle',
+  ],
+  oneLinerVerdict:
+    'Quotex offers the highest advertised payout in our coverage (up to 98%) and the deepest Indian payment integration (UPI, PhonePe, Paytm), but its only cited license — IFMRRC, a non-governmental body — expired in 2021, and it sits on the UK FCA Warning List and the RBI Alert List. For Indian residents in particular, trading through Quotex carries direct legal exposure under FEMA.',
+  pros: [
+    'Up to 98% advertised payout on selected OTC pairs — highest in our coverage',
+    'Native Indian payment rails: UPI, PhonePe, Paytm, Google Pay, IMPS — most competitors lack these',
+    '$10 minimum deposit and $1 minimum trade — accessible barrier to entry',
+    'Unlimited demo account with virtual balance',
+    '5-second to 4-hour expiry range covers scalping through swing-style binary trading',
+    'Crypto deposit and withdrawal (BTC, ETH, USDT TRC-20) supported',
+  ],
+  cons: [
+    'Only cited license is IFMRRC (non-governmental, Seychelles-based) — and the license held by Awesomo Limited expired in 2021. The broker continues to operate without a current valid license.',
+    'Listed on the UK FCA Warning List as an unauthorised firm.',
+    'Listed on the RBI Alert List of unauthorised forex platforms — Indian residents using Quotex are exposed to penal action under FEMA, 1999.',
+    'Listed on European regulator warning pages (CySEC, CMVM Portugal, CNMV Spain, CONSOB Italy).',
+    'Quotex.io currently redirects to market-quotex.trade — multiple Trustpilot review pages exist across mirror domains (qxbroker.com, market-quotex.io, quotex.tr, quotex.com.pk) with diverging ratings.',
+    'Operating entity is "Awesomo Ltd" (registration jurisdiction conflicts across sources: Seychelles vs Saint Vincent and the Grenadines), reportedly managed by "ON SPOT LLC GROUP" (Saint Kitts and Nevis). The broker site does not consolidate these entities into a single transparent disclosure.',
+    'Surge of withdrawal-blocking and account-freeze complaints in March–April 2026, with users reporting "withdrawal status: Successful" but funds never arriving.',
+    'Mandatory deposit-withdrawal method matching: if you deposit by UPI you must withdraw by bank transfer rather than UPI in many cases — adds friction unique to Quotex.',
+    'Inactivity fee of 1% of daily balance (minimum $1/day) after 180 days — uncommon and easily missed.',
+  ],
+  scoreHistory: [
+    {
+      date: '2026-05-09',
+      methodologyVersion: '1.0',
+      bestRegulated: null,
+      bestForBeginners: 6.0,
+      note: 'Initial review under methodology v1.0. Score driven primarily by: expired IFMRRC license (2021), RBI Alert List entry (India regulatory exposure under FEMA), UK FCA Warning List entry, multi-domain redirect pattern, and the surge of withdrawal-blocking complaints in March–April 2026. Score offset upward by: highest advertised payout in coverage (98%), native Indian payment rails, $10 entry barrier. Not eligible for Best Regulated ranking. Currently ranked #2 of 2 published brokers in Best for Beginners; ranking will update when IQ Option review goes live.',
+    },
+    {
+      date: '2026-05-09',
+      methodologyVersion: '1.0',
+      bestRegulated: null,
+      bestForBeginners: 6.0,
+      note: 'Rank updated from "#2 of 2" to "#3 of 3" after IQ Option review (score 6.5) was published the same day. Score itself unchanged at 6.0 — the relative position simply reflects IQ Option now ranking ahead of Quotex on Best for Beginners due to CySEC sister-entity trust signal and lower complaint volume.',
+    },
+  ],
+  lastReviewed: '2026-05-09',
+  publishedAt: '2026-05-09',
+};
+
+# Quotex Review 2026 — Honest Analysis
+
+> **Read this first.** Quotex's only cited license — issued by IFMRRC, a non-governmental self-regulatory body — **expired in 2021**. Quotex is on the **UK FCA Warning List**. Quotex is on the **RBI Alert List of unauthorised forex platforms** in India, which means **Indian residents using Quotex are liable for penal action under FEMA, 1999**. The broker's primary domain `quotex.io` currently redirects to `market-quotex.trade`. None of these facts make Quotex impossible to use for very small speculative positions — but they materially change what "use" means. The rest of this review walks through the evidence, with sources, so you can decide for yourself.
+
+## Regulation & Safety
+
+**This is the section that should drive your decision.** If the regulatory situation does not satisfy you, stop reading and do not deposit.
+
+### What license does Quotex actually hold?
+
+The honest answer: **Quotex does not currently hold a valid financial license issued by any government regulator anywhere in the world.**
+
+The only license Quotex's marketing materials and third-party broker directories cite is registration with the **International Financial Market Relations Regulation Center (IFMRRC)** under license number **TSRF RU 0395 AA V0161**, held by **Awesomo Limited**. Three problems with this:
+
+1. **IFMRRC is not a government regulator.** It is a private self-regulatory body, headquartered in the Seychelles. It is not on the IOSCO membership list. It does not enforce dispute resolution outcomes, has no investor-compensation scheme, and does not have the legal authority to suspend a broker's operations.
+2. **The license expired in 2021.** Multiple independent sources confirm that the IFMRRC registration of Awesomo Limited is no longer valid. Quotex has continued operating under this expired registration without obtaining a replacement license from any regulator.
+3. **The operating-entity disclosure is inconsistent across sources.** Some directories list Awesomo Ltd as registered in the Seychelles. Others place the same entity in Saint Vincent and the Grenadines. A separate operating layer is reportedly **ON SPOT LLC GROUP**, registered in Saint Kitts and Nevis. The Quotex site itself does not consolidate these entities into a single transparent corporate-structure page.
+
+This pattern — multiple legal entities across multiple offshore jurisdictions, a self-regulatory "license" that expired years ago and was never replaced, and an absence of any government regulator on the broker's authorisation page — is the **single most consequential YMYL fact for Quotex traders**. It means there is no ombudsman, no compensation scheme, and no enforcement mechanism if the broker chooses not to honour a withdrawal.
+
+### Domain shuffle and Trustpilot divergence
+
+When you visit `quotex.io`, you are redirected to `market-quotex.trade`. The broker also operates under several mirror domains, each with its own Trustpilot page:
+
+- `qxbroker.com` — sister-brand domain
+- `market-quotex.io` — separate Trustpilot entry from market-quotex.trade
+- `quotex.tr` — Turkey-targeted domain
+- `quotex.com.pk` — Pakistan-targeted domain
+- `quotex.com` — historical entry on the RBI Alert List
+
+Trustpilot scores diverge sharply across these mirrors. Some smaller mirror domains hold scores above 4.5/5 with a few hundred reviews; the main domains hold scores in the mid-1 to mid-3 range, with the negative reviews dominated by withdrawal complaints. As we noted in our Pocket Option review, **score divergence across mirror domains is itself a finding** — it is consistent with selective review-domain promotion. We do not call it fraud in our own voice, but we do not treat the high-rated mirror as representative of the operator's overall track record.
+
+### Regulator warnings (verified)
+
+Two regulator warnings carry the most weight in our scoring methodology because they are issued by government bodies with enforcement authority:
+
+- **UK Financial Conduct Authority (FCA) Warning List** — Quotex appears on the FCA's list of unauthorised firms soliciting UK consumers. The FCA's warning means UK residents using Quotex have **no Financial Ombudsman or Financial Services Compensation Scheme recourse** in any dispute. Retail binary options are also banned for UK consumers under FCA product intervention rules. **UK residents should not use this platform**, period.
+- **Reserve Bank of India (RBI) Alert List of unauthorised forex platforms** — Quotex (under the domain `quotex.com`) is named on the RBI's published Alert List. The RBI Alert List names entities that are "neither authorised to deal in forex under the Foreign Exchange Management Act, 1999 (FEMA) nor authorised to operate electronic trading platform (ETP) for forex transactions in India." Per the RBI, **Indian residents undertaking forex transactions with unauthorised persons are liable for penal action under FEMA**. This is not a soft warning. It is the framework under which the Enforcement Directorate prosecutes unauthorised forex trading, and the maximum penalty is up to three times the amount involved or ₹2 lakh, whichever is higher, plus ongoing daily penalty for continued breach.
+
+Additional regulator warnings have been issued by:
+
+- **Cyprus Securities and Exchange Commission (CySEC)**
+- **Comissão do Mercado de Valores Mobiliários (CMVM)** — Portugal
+- **Comisión Nacional del Mercado de Valores (CNMV)** — Spain
+- **Commissione Nazionale per le Società e la Borsa (CONSOB)** — Italy
+- **The Financial Commission (FinCom)** — international ADR body
+
+We did not, in this review's research window, find a CFTC RED List entry for Quotex (which is one regulatory contrast against Pocket Option, which **is** on the CFTC RED List). However, **absence of a CFTC RED List entry does not authorise solicitation of US residents** — Quotex is unauthorised in the US through the same structural mechanism that makes most offshore binary brokers unauthorised, and US residents face the same legal exposure.
+
+### Restricted countries
+
+According to Quotex's published disclosures, the platform does not serve residents of:
+
+- The United States
+- The United Kingdom
+- Canada
+- The European Economic Area (EEA) — all member states
+- Israel
+- Russia
+- Hong Kong
+- Indonesia (per some sources)
+
+Some third-party reviews additionally cite Singapore and Malaysia restrictions; we treat the wider list as `[verify against live ToS at the time you read this]` because geographic restriction lists change. The safe practical rule: if your country has any meaningful retail-investor protection regime, Quotex is probably restricted there.
+
+### India is the explicit lead market
+
+Despite the RBI Alert List entry, India remains the largest retail traffic source for Quotex. The broker offers extensive Indian payment integration (UPI, Paytm, PhonePe, Google Pay, IMPS), KYC accepts Aadhaar/PAN/Passport, and the marketing copy is heavily India-targeted. **This is the friction point the section above is about**: Quotex's product-market fit in India is excellent; the legal exposure for the trader is also real. Both can be true. Make the decision with the legal facts in front of you.
+
+## Trading Platform & Features
+
+Quotex runs a **proprietary browser-based platform** with a native Android app available on Google Play and an iOS interface delivered as a **progressive web app (PWA)** rather than a native App Store app. This is a real difference from competitors — most binary options brokers offer native iOS apps. The PWA approach is functional but limits push-notification depth, biometric authentication options, and some iOS-specific UX patterns.
+
+### What you actually get on the platform
+
+- **Up to 98% advertised payout** on selected OTC pairs at peak conditions. This is the highest headline figure in our coverage. Realistic range across major pairs and timeframes is **70%–98%**, with 98% reserved for VIP-tier accounts trading specific OTC instruments.
+- **Roughly 98 binary instruments** advertised on third-party directories, though Quotex's own marketing variously cites "100+", "200+", or "400+" depending on which page you read. The discrepancy is significant: **OTC synthetic instruments (broker-controlled price feed) are double-counted across timeframes** in some marketing pages, inflating the apparent asset count. The honest count of distinct underlying assets is closer to 100 than 400.
+- **Trade types**: Up/Down digital options only. There is **no Touch / No-Touch, no boundary, no ladder**. The product is simpler than what Tier-1 brokers like IG or Nadex offer.
+- **Expiries**: from **5 seconds to 4 hours**. The 5-second expiry is the most aggressive in the segment — you click Buy, four seconds later you have a result. Mathematically, sub-minute binary options are extremely punishing for retail traders; the broker's spread plus the structural payout asymmetry make positive expected value extraordinarily difficult.
+- **Charting**: standard candlestick chart, basic indicators (~30), drawing tools. Not competitive with TradingView or MT5.
+- **Demo account**: **unlimited virtual balance** by default (some promotional flows cap it). The demo is genuinely useful for strategy practice.
+- **Languages**: 14+ interface languages including Hindi, Bengali, Tamil, Urdu, Indonesian, Vietnamese, and most major European languages — reflecting the broker's emerging-market focus.
+- **Tournaments**: heavily promoted on the marketing pages. As with Pocket Option, we treat tournament leaderboard prizes as `[unverified]` for scoring purposes — the broker controls the price feed and the leaderboard.
+
+### What the platform lacks
+
+- No native iOS app (PWA only) — affects push-notification reliability and some iOS biometric flows.
+- No independent third-party price feed for OTC assets.
+- No published execution-quality reports.
+- No published trade-quality statistics or audit trail.
+- No early-close (settle-now) feature on most contracts.
+
+## Account Types & Bonuses
+
+Third-party reviews report four account tiers:
+
+| Tier | Min deposit | Headline perks |
+|---|---|---|
+| Demo | $0 | Unlimited virtual balance, full platform access |
+| Standard | $10 | All binary instruments, 48-hour withdrawal processing |
+| Pro | $500 | 24-hour withdrawal processing, deeper analytics |
+| VIP | $1,000+ | Personal manager, tournaments, payouts up to 98% |
+
+The **base minimum deposit** for opening any live account remains **$10**. The $500 / $1,000 thresholds above unlock additional features and faster withdrawals — they are not gates to using the platform.
+
+### Bonus and the turnover trap
+
+Quotex periodically offers a **30% first-deposit bonus**. The bonus is **virtual** and cannot be withdrawn until specific turnover conditions are met. Quotex's exact turnover formula varies by promotion and is buried in the bonus terms — historical examples documented by third-party reviewers cite multipliers in the **x35–x40 range** of the bonus amount.
+
+Concretely: if you accept a $30 bonus on a $100 deposit, you may face **$1,050–$1,200 of trade volume** before the bonus-derived funds become withdrawable. At a typical $10 trade size, that is over 100 round-trip trades on bonus money. The math is structurally unfavourable to most retail accounts — the bonus turnover requirement is more likely to lock your balance than free it.
+
+We **strongly recommend declining bonuses** unless you have a tested edge that justifies the volume requirement. As with Pocket Option, the bonus turnover trap is the single biggest beginner mistake at this broker.
+
+### Inactivity fee — read this carefully
+
+Quotex applies a **1% of daily balance fee (minimum $1/day) after 180 days of account inactivity**. This is uncommon among offshore binary brokers and easily missed in the terms. If you fund an account, trade for a week, and then forget about it for six months with $200 of remaining balance, the inactivity fee will erode your balance to zero within roughly 350 trading days at 1%/day or substantially faster if the $1/day floor binds. **Withdraw your balance fully or close the account if you stop using the platform.**
+
+## Deposits & Withdrawals
+
+### Deposit
+
+- **Minimum**: $10 (varies by method).
+- **Methods (global)**: Visa, Mastercard, Skrill, Neteller, Bitcoin, Ethereum, USDT (TRC-20), regional bank transfer.
+- **Methods (India)**: UPI (via P2P exchangers using PhonePe, Google Pay, BHIM UPI), Paytm, IMPS, NEFT, Indian bank transfer, USDT crypto.
+- **Methods (East Africa)**: M-Pesa.
+- **UPI processing**: deposits typically clear in **5–15 minutes** via P2P exchanger flow.
+- **Fees on the broker's side**: none. Third-party costs (network fees on crypto, P2P-exchanger spreads on UPI, currency conversion on cards) apply.
+
+### Withdrawal — read this section twice
+
+This is where Quotex's structural design diverges sharply from most competitors, and where the bulk of user complaints concentrate.
+
+- **Minimum withdrawal**: ~$10 for bank transfer, ~$6 for card, ~$2.40 for e-wallets.
+- **Advertised processing time**: Standard accounts 48 hours, Pro/VIP 24 hours, with up to 5 business days policy as the broker-side maximum. Crypto and e-wallet methods clear "near-instant" per advertised; bank transfer "hours or more."
+- **Method-matching rule**: Quotex requires withdrawals to be made through the **same method used for the most recent deposit**. The implementation is not always intuitive — for Indian users, **a UPI deposit may force a bank-transfer withdrawal** rather than a UPI withdrawal back, because Quotex routes UPI inflows through P2P exchangers that do not support reverse flow. **Plan your deposit method based on your preferred withdrawal method, not the other way around.**
+- **Reported reality (March–April 2026 surge)**: a notable spike in user reports of withdrawals showing status **"Successful"** on the platform but funds never arriving in the user's bank or wallet. Multiple users describe accounts being frozen at the moment of profit-withdrawal request, with KYC re-verification cycles extending the delay beyond the broker's 5-business-day policy. One Reddit case widely cited from this window: a user grew a balance from $100 to $810, requested a $110 withdrawal, was blocked, and ultimately had the account closed with only the original deposit returned.
+
+If you do trade here, we recommend the following risk-mitigation steps:
+
+1. **Verify your KYC fully before your first deposit.** Indian users in particular: complete Aadhaar/PAN verification immediately, do not let KYC become the post-profit excuse.
+2. **Withdraw early and often.** Do not let a balance accumulate beyond what you would be willing to lose in a frozen-account scenario.
+3. **Use crypto withdrawal where possible** — USDT TRC-20 has the fastest reported settlement and the fewest intermediary failure points. Card withdrawals at higher amounts have a worse track record across all offshore binary brokers, not just Quotex.
+4. **Plan deposit method around withdrawal**, not the other way. UPI deposits in India may force bank-transfer withdrawals — if your bank account name does not match your KYC name exactly, this becomes a delay vector.
+5. **Do not deposit more than you can absorb losing entirely.** This is the standard advice in the segment, and it applies in full at Quotex.
+
+### KYC requirements
+
+- ID and proof-of-address required before first withdrawal globally.
+- India: Aadhaar, PAN, or Passport accepted as ID. Address proof typically utility bill or bank statement.
+- Multiple users describe being asked for additional documentation after the first KYC pass succeeded. We cannot establish intent — but the pattern is recurrent across independent reports.
+
+## Payout Rates & Trade Types
+
+**Advertised maximum payout: up to 98% on Standard tier**, sometimes higher at VIP. Realistic typical fill across major OTC pairs and timeframes is **70%–98%** with the 98% reserved for VIP plus specific OTC instruments at peak hours.
+
+Notes on how payouts actually work:
+
+- The **highest payout rates** are reserved for **OTC synthetic instruments** during the broker's defined peak hours, on VIP-tier accounts. Real-market instruments traded against an external feed during forex market hours typically pay 75–85%.
+- **Payouts update in real time.** The figure displayed when you click Buy may differ from the figure at execution. Quotex's interface displays the current payout, so check it immediately before each trade.
+- **The 98% headline figure is a maximum, not a typical fill.** For expected-value calculations, plan around 80–85% as a working assumption.
+
+### Trade types in detail
+
+- **Up/Down digital options only** — no Touch, no Range, no Ladder.
+- **Expiries**: 5 s, 15 s, 30 s, 60 s, 2 min, 3 min, 5 min, 15 min, 30 min, 1 h, 2 h, 4 h.
+- The **5-second expiry** is unique to Quotex in our coverage and is the most aggressive in the segment. We do not recommend it for any retail trader. The math of sub-minute binary options is structurally negative-expected-value at any retail-relevant payout level: at 80% payout, your win rate must exceed **55.6%** to break even, and consistent 55.6% accuracy on 5-second expiries is achievable by approximately nobody.
+- **No early-close** on most contracts in our test window. Once you enter, you are locked in until expiry.
+
+## Customer Support
+
+Support is offered via **24/7 live chat**, **email**, and a help centre. Response time on routine queries (login issues, deposit confirmation) is reportedly fast. Response time on the queries that actually matter — withdrawal disputes, frozen accounts, KYC re-verification stand-offs — is reportedly substantially worse, with users describing days of escalation cycles before substantive replies during the March–April 2026 complaint surge.
+
+This is a recurring pattern in the offshore binary segment and not unique to Quotex. Live chat speed on easy questions is not a meaningful trust signal; broker support quality is measured at the moment of dispute, not at onboarding.
+
+## Education & Demo Account
+
+The **demo account** is genuinely useful: unlimited virtual balance, full platform access, mirror of the live platform's price feed and asset set. This is among the better demos in the binary segment. As with Pocket Option, the demo is a legitimate reason to consider Quotex for **practice purposes** even if you intend to trade with real capital elsewhere.
+
+The **education content** on the broker's blog covers the basics — what binary options are, how Up/Down works, simple chart reading. It does not address the structural disadvantage of binary options as an instrument class, the long-run negative expected value at typical payout rates, or the regulatory restrictions on the product in major jurisdictions. Educational content from a counterparty broker should be read with that conflict of interest in mind.
+
+For a more honest grounding in the instrument, we recommend reading the **ESMA 2018 product intervention measures on binary options**, the **CFTC consumer alerts on binary options fraud**, and the **RBI Alert List of unauthorised forex platforms** (if you are an Indian resident) before opening any account at any broker in this segment.
+
+## User Complaints — What We Found
+
+We synthesized public complaints from **Trustpilot** (multiple Quotex mirror domains), **Reddit**, **Forex Peace Army**, **WikiFX**, and Indian-focused complaint aggregators. The complaint volume is materially higher than Pocket Option's, and the March–April 2026 surge is the dominant signal in recent data.
+
+### Trustpilot — review-domain divergence
+
+Quotex operates several distinct mirror domains, and Trustpilot scores diverge significantly across them. Our compilation as of 2026-05:
+
+| Domain | Trustpilot positioning |
+|---|---|
+| qxbroker.com | Mid-3 / 5 — mixed reviews concentrated on withdrawal |
+| market-quotex.io | Lower — withdrawal complaints dominate |
+| market-quotex.trade | Recent domain, fewer reviews, mixed |
+| quotex.com.pk (Pakistan) | Mid-range, regional issues |
+| quotex.tr (Turkey) | Variable |
+
+Some third-party broker directories cite a 4.7/5 or 4.8/5 Trustpilot rating for Quotex. We could not corroborate that figure on the canonical domains we checked, and we believe the high rating likely refers to a small mirror domain with a low review count or to a curated review-aggregator page rather than the operator's main Trustpilot presence. **Trustpilot rating divergence across mirror domains is itself a finding** — we report the lower, more representative numbers and flag the inconsistency.
+
+### Recurring complaint themes
+
+Across Reddit, WikiFX, and Forex Peace Army threads in the prior 12 months, three patterns dominate:
+
+1. **Withdrawal blocking after profit accumulation, often with looped KYC re-verification.** Specific recurrent example from 2026-04: users reporting 120+ hour pending withdrawals with no clear timeline. The cited Reddit case ($100 → $810 balance → blocked at $110 withdrawal request → account closed → only initial deposit returned) is representative of the pattern.
+2. **"Withdrawal status: Successful" but funds never arriving.** This is a specific Quotex pattern that surfaced strongly in March–April 2026. Users see the platform indicate a successful payout, the broker's records show payment processed, but the destination account never receives funds. Disputes route through customer support without a clear resolution path.
+3. **OTC chart manipulation suspicions** — last-millisecond price flips on otherwise winning trades, particularly on short expiries. As with Pocket Option, OTC instruments are broker-controlled price feeds, so users have no independent benchmark to verify. We label these reports as user perception rather than confirmed fact, but the volume across multiple platforms is consistent with a structural conflict-of-interest in OTC pricing.
+
+### Recurring praise themes
+
+In the interest of honesty, here are the three positives that appear most consistently:
+
+1. **Indian payment integration.** UPI, Paytm, PhonePe, Google Pay, and IMPS are extensively praised by Indian users — the deposit flow is genuinely smooth and the broker has invested in localising payment for the Indian market more than any competitor in our coverage.
+2. **High advertised payouts (up to 98%).** When the platform pays, the headline rates are real and traders attest to receiving them on small wins.
+3. **Fast small withdrawals (under ~$50–$100) via crypto.** USDT TRC-20 withdrawals at small amounts reportedly clear within hours. As with Pocket Option, the asymmetry between small-withdrawal praise and large-withdrawal complaints is itself the finding.
+
+### How we read this overall
+
+Quotex's complaint pattern matches the structural shape we saw at Pocket Option — small withdrawals work, larger withdrawals encounter friction at the threshold where account balances become economically meaningful — but with two compounding factors: (1) the 2026 surge appears more acute than Pocket Option's baseline, and (2) the "withdrawal Successful but funds never arrived" pattern is more specific and harder to characterise as innocent processing delay. We have lowered the score accordingly. **Whether the 2026 complaint surge is a temporary issue or a structural deterioration is the open question** — we will re-review this score in three months and revise if the pattern resolves.
+
+## Pros & Cons (recap)
+
+**Pros**
+
+- Up to 98% advertised payout — highest in our coverage
+- Native Indian payment rails: UPI, PhonePe, Paytm, Google Pay, IMPS
+- $10 minimum deposit and $1 minimum trade
+- Unlimited demo account
+- 5-second to 4-hour expiry range
+- Crypto deposit and withdrawal supported
+
+**Cons**
+
+- IFMRRC license expired in 2021; no current valid license from any government regulator
+- UK FCA Warning List entry
+- RBI Alert List entry — Indian residents face FEMA exposure
+- Multiple European regulator warnings (CySEC, CMVM, CNMV, CONSOB)
+- Domain shuffle: quotex.io redirects to market-quotex.trade; multiple mirror domains
+- March–April 2026 surge of "withdrawal Successful but funds never arrived" complaints
+- Mandatory deposit-method-matching for withdrawals
+- Inactivity fee (1% of daily balance, $1/day floor) after 180 days
+
+## Final Verdict
+
+**We score Quotex 6.0 / 10 in our Best for Beginners ranking.** It is not eligible for the Best Regulated ranking due to the absence of any Tier-1 license — and uniquely among our coverage, even its self-regulatory IFMRRC registration has been expired since 2021.
+
+The case **for** Quotex is concentrated and real: the highest advertised payout in the segment, the deepest Indian payment integration of any broker we cover, a usable unlimited demo, and accessible $10 entry. If you are an Indian user practicing strategy on the demo, or trading with money you have already mentally written off, the platform's product-market fit for India is genuinely better than its competitors'.
+
+The case **against** Quotex is the regulatory and complaint footprint. An expired license that has not been replaced. A government regulator warning in the UK. A government regulator warning in India that creates **direct legal exposure under FEMA** for Indian residents. A multi-domain redirect and mirror-site pattern that makes the operator's identity hard to pin down. A surge of "withdrawal status Successful but funds never arrived" complaints in the months immediately preceding this review. Together, those add up to a profile we cannot honestly recommend for any meaningful capital, and we recommend even more caution at Quotex than at Pocket Option.
+
+**Our position**: if you are going to use Quotex, use it small, use it short, and withdraw early. Treat it as a sandbox for skill-building or for tiny speculative positions, not as an account where capital accumulates. **For Indian residents specifically**, understand before depositing that you are operating on a platform named on the RBI Alert List, and that this carries FEMA exposure beyond the broker risk that applies to all jurisdictions. **For UK residents specifically**, the FCA Warning List entry combined with the FCA's retail binary options ban means there is no legal path to use this platform.
+
+We will re-review this score in three months. If the 2026 complaint surge resolves and withdrawal track record improves, the score may rise. If the surge persists, the score will fall and we may add a "Caution" warning to the broker page.
+
+## What Assets Can You Actually Trade?
+
+The 100+ asset count is the honest figure (some marketing pages cite 400+ which double-counts OTC synthetics across timeframes). The breakdown:
+
+| Asset class | Approximate count | Notes |
+|---|---|---|
+| Forex pairs (real market) | ~25 | Majors and a handful of minors. Spreads wider than at a dedicated forex broker. |
+| Forex pairs (OTC synthetic) | ~25 | 24/7 including weekends. Broker-controlled price feed. |
+| Cryptocurrency CFDs | ~15 | BTC, ETH, plus rotating altcoins. |
+| Commodity CFDs | ~8 | Gold, silver, oil, basic agricultural. |
+| Equity indices | ~10 | S&P 500, NASDAQ, FTSE, DAX, Nikkei, plus a few regional. |
+| Individual stocks | ~20–30 | US large-caps dominate; Indian and Asian equity coverage shallow. |
+
+If you came for forex, the real-market selection is workable but not deep. If you came for stocks, the US large-cap selection is fine but anything beyond that is sparse. **The OTC synthetic market is where Quotex's marketing focuses heaviest** — it is the highest-payout segment, available 24/7, and the segment with the most user complaints about "last-second price flips". Trade it with the broker-controlled-feed conflict-of-interest in mind.
+
+## How to Verify Our Regulatory Claims Yourself
+
+We do not expect readers to take our word on the FCA and RBI entries — and we do not want them to. Here is exactly how to verify them in under five minutes:
+
+### Verify the UK FCA Warning List entry
+
+1. Open `fca.org.uk/news/warnings` in your browser and search "Quotex".
+2. Confirm the entry exists. Note flagged domains and the publication date.
+3. If the URL changes (the FCA periodically reorganises its warning archive), search "FCA Warning List Quotex" on a search engine — the current location should be the top result.
+
+### Verify the RBI Alert List entry (critical for Indian residents)
+
+1. Open `rbi.org.in/scripts/bs_viewcontent.aspx?Id=4235` (the RBI Alert List landing page).
+2. Download the most recent **Alert List PDF** (updated periodically — at the time of this review, the most recent edition was dated November 2025).
+3. Find "quotex.com" or "Quotex" in the list. The list contains entity names that are not authorised under FEMA, 1999.
+4. Read the RBI's guidance on penalties for transacting with listed entities.
+
+If you are an Indian resident, this verification step is **not optional** before depositing.
+
+### Verify the IFMRRC license status
+
+This one is **harder to verify**, which is itself a finding:
+
+1. IFMRRC is at `ifmrrc.com` but the public license register is incomplete and not authoritative.
+2. The license number cited (TSRF RU 0395 AA V0161) is widely published in third-party broker directories. Multiple independent reviews state the license expired in 2021.
+3. If IFMRRC were a meaningful regulator, this verification would be straightforward. The fact that it is not is the point: IFMRRC is not a substitute for a government regulator, and treating it as one is the broker's marketing framing, not a reflection of the underlying authorisation.
+
+### Verify the operating entity
+
+1. Visit Quotex's "About" or footer pages on the live broker site.
+2. Note the entity name and registration jurisdiction stated there.
+3. Compare against the entity names cited above (Awesomo Ltd / Seychelles or SVG; ON SPOT LLC GROUP / Saint Kitts and Nevis). Inconsistencies between the broker's own stated entity and third-party citations are themselves a finding.
+
+## Frequently Asked Questions
+
+**Is Quotex legitimate?**
+
+Quotex exists, takes deposits, and processes withdrawals at small amounts. It is also operating under an IFMRRC license that expired in 2021, is on the UK FCA Warning List, is on the RBI Alert List of unauthorised forex platforms in India, and has a 2026 surge of complaints around withdrawal-blocking. Whether you call that "legitimate" depends on your tolerance for offshore-binary risk. We do not call it a scam in our own voice — but it is also not a safe place for meaningful capital.
+
+**Is Quotex legal in India?**
+
+Quotex is named on the **RBI Alert List of unauthorised forex platforms**. Per the RBI, **Indian residents undertaking forex transactions with unauthorised persons are liable for penal action under FEMA, 1999**. The maximum FEMA penalty is up to three times the amount involved or ₹2 lakh, whichever is higher, plus daily continuing penalty. **Indian residents trading on Quotex face direct legal exposure under FEMA**, separate from the broker risk that applies to all jurisdictions. We do not recommend Indian residents use Quotex.
+
+**Is Quotex legal in the UK?**
+
+Quotex is on the **UK FCA Warning List** as an unauthorised firm. UK residents using Quotex have **no Financial Ombudsman or FSCS recourse** in any dispute. Retail binary options are banned for UK consumers under FCA product intervention rules. **We do not recommend UK residents use Quotex** for any amount.
+
+**Can US residents use Quotex?**
+
+Quotex is unauthorised in the US. We did not find a CFTC RED List entry in our review window — but absence of a RED List entry is not authorisation. The only CFTC-regulated binary options venue available to US retail clients is **Nadex**.
+
+**What is the minimum deposit and minimum trade?**
+
+$10 minimum deposit and $1 minimum trade. Both are higher than Pocket Option's $5 / $1 but still accessible.
+
+**Why does quotex.io redirect to market-quotex.trade?**
+
+The broker operates a multi-domain structure with several mirror sites — qxbroker.com, market-quotex.trade, market-quotex.io, quotex.tr, quotex.com.pk, and historical quotex.com (which is the entry on the RBI Alert List). The current redirect from quotex.io to market-quotex.trade likely reflects a domain rotation strategy, possibly to maintain access in jurisdictions where one domain is blocked. We treat the multi-domain pattern as part of the entity-shuffle risk profile.
+
+**How long does a withdrawal take at Quotex?**
+
+Advertised: 24 hours for Pro/VIP, 48 hours for Standard, up to 5 business days as the policy maximum. Reported reality during the 2026 complaint surge: substantially longer, often beyond the 5-day policy. Crypto USDT TRC-20 withdrawals under ~$100 reportedly clear within hours.
+
+**Can I withdraw via UPI in India?**
+
+Generally no — Quotex's deposit-method-matching rule combined with the P2P exchanger architecture used for UPI deposits typically forces a **bank-transfer withdrawal** even when you deposited via UPI. This is unique to Quotex among the brokers in our coverage and adds friction for Indian users specifically.
+
+**What is the bonus turnover requirement?**
+
+Bonus terms vary by promotion. Historical examples cite **x35–x40 multipliers** of the bonus amount. Concretely: a $30 bonus on a $100 deposit can require $1,050–$1,200 in trade volume before bonus-derived funds become withdrawable. We strongly recommend declining bonuses unless you have a tested edge.
+
+**What is the inactivity fee?**
+
+1% of daily balance, minimum $1/day, after 180 days of inactivity. Uncommon in the segment and easily missed. Withdraw your balance fully or close the account if you stop trading — the fee can erode a small remaining balance to zero in under a year.
+
+**What happens if Quotex freezes my account?**
+
+The broker's customer support is the only escalation path. There is no government regulator that will adjudicate the dispute (the FCA / RBI / CySEC warning entries do not provide compensation; they only mark the broker as unauthorised). The Financial Commission (FinCom) is the only ADR mechanism affiliated with Quotex through its sister-brand listings, but its enforcement authority over offshore brokers is limited. **Do not deposit funds you would be unwilling to leave behind in a frozen-account scenario.**
+
+**Is Quotex different from qxbroker?**
+
+`qxbroker.com` is a sister-brand domain operated under the same corporate umbrella as Quotex. The platforms appear to share infrastructure but are marketed as distinct brands. Both are listed in the same regulator warnings.
+
+## Methodology & Updates
+
+This review was scored against [BinaryBrokerHub Methodology v1.0](/methodology). Score history is preserved in the timeline below. We re-review every broker on a rolling basis and update warnings as new regulator entries are published. **We have committed to re-reviewing Quotex's score within three months** to assess whether the 2026 withdrawal-complaint surge resolves or persists.
+
+If you spot a factual error, please email **info@binarybrokerhub.com** with the subject line "Correction Request" and we will respond within 5 business days.
+
+**Affiliate disclosure**: We may earn a commission when you sign up with Quotex through links on this page. This does not influence our score. Our scoring and review process are fully described in our methodology and editorial policy.
