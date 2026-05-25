@@ -25,9 +25,9 @@ export default function Header() {
     { href: `/${locale}`, label: t('home') },
     { href: `/${locale}/compare`, label: t('compare') },
     { href: `/${locale}/blog`, label: 'Blog' },
+    { href: `/${locale}/scams`, label: 'Scams' },
     { href: `/${locale}/tools/calculator`, label: t('tools') },
     { href: `/${locale}/about`, label: 'About' },
-    { href: `/${locale}/methodology`, label: t('methodology') },
   ];
 
   return (

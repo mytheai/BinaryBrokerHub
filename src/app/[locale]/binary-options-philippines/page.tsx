@@ -446,9 +446,13 @@ export default function BinaryOptionsPhilippinesPage() {
       {/* Internal Links */}
       <section className="section-container py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6">Related Guides</h2>
+          <h2 className="text-2xl font-bold mb-6">Related & Country Guides</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
+              { title: 'Binary Options in India', href: `/${locale}/binary-options-india`, desc: 'Legal status, best brokers, UPI deposits' },
+              { title: 'Binary Options in USA', href: `/${locale}/binary-options-usa`, desc: 'CFTC regulations, Nadex, legal alternatives' },
+              { title: 'Binary Options in UK', href: `/${locale}/binary-options-uk`, desc: 'FCA ban, legal alternatives, spread betting' },
+              { title: 'Binary Options in Nigeria', href: `/${locale}/binary-options-nigeria`, desc: 'Best brokers, OPay/Palmpay, getting started' },
               { title: 'Compare All Brokers', href: `/${locale}/compare`, desc: 'Side-by-side broker comparison' },
               { title: 'Pocket Option Review', href: `/${locale}/pocket-option`, desc: 'Best broker for Philippines (9.5/10)' },
               { title: 'Quotex Review', href: `/${locale}/quotex`, desc: 'Highest payouts at up to 98%' },

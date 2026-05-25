@@ -1,11 +1,13 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import CtaButton from '@/components/CtaButton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function PocketOptionPage() {
   const cta = useTranslations('cta');
+  const locale = useLocale();
 
   return (
     <div>
@@ -539,6 +541,28 @@ export default function PocketOptionPage() {
                 <div className="text-blue-400 text-xs mt-1">{s.response}</div>
                 <div className="text-gray-500 text-xs mt-1">{s.note}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Guides */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6">Pocket Option Guides</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'Is Pocket Option Legit?', href: `/${locale}/blog/is-pocket-option-legit`, desc: 'Evidence-based verification after 8 months of testing' },
+              { title: 'Withdrawal Guide', href: `/${locale}/blog/pocket-option-withdrawal`, desc: 'All methods, times & proof from 12 test withdrawals' },
+              { title: 'Promo Code 2026', href: `/${locale}/blog/pocket-option-promo-code`, desc: 'Latest deposit bonus codes & terms' },
+              { title: 'Copy Trading Guide', href: `/${locale}/blog/pocket-option-copy-trading`, desc: 'How to copy top traders + 3-month test results' },
+              { title: 'PO vs Quotex', href: `/${locale}/compare/pocket-option-vs-quotex`, desc: '#1 vs #2 — which is better for you?' },
+              { title: '60-Second Strategy', href: `/${locale}/blog/60-second-binary-options-strategy`, desc: 'Best turbo trading strategies (3s min expiry)' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="glass-card p-4 hover:bg-white/[0.05] transition-colors group">
+                <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
+              </Link>
             ))}
           </div>
         </div>

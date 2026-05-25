@@ -347,13 +347,15 @@ export default function BinaryOptionsUKPage() {
       {/* Internal Links */}
       <section className="section-container py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6">Related Guides</h2>
+          <h2 className="text-2xl font-bold mb-6">Related & Country Guides</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
+              { title: 'Binary Options in India', href: `/${locale}/binary-options-india`, desc: 'Legal status, best brokers, UPI deposits' },
+              { title: 'Binary Options in USA', href: `/${locale}/binary-options-usa`, desc: 'CFTC regulations, Nadex, legal alternatives' },
+              { title: 'Binary Options in Nigeria', href: `/${locale}/binary-options-nigeria`, desc: 'Best brokers, OPay/Palmpay, getting started' },
+              { title: 'Binary Options in Philippines', href: `/${locale}/binary-options-philippines`, desc: 'GCash deposits, SEC status, best brokers' },
               { title: 'Compare All Brokers', href: `/${locale}/compare`, desc: 'Side-by-side broker comparison' },
               { title: 'Deriv Review', href: `/${locale}/deriv`, desc: 'MFSA-regulated alternative' },
-              { title: 'Binary Options in India', href: `/${locale}/binary-options-india`, desc: 'India country guide' },
-              { title: 'Binary Options in the USA', href: `/${locale}/binary-options-usa`, desc: 'USA country guide' },
               { title: 'Beginner Trading Guide', href: `/${locale}/blog/binary-options-trading-guide`, desc: 'Learn trading from scratch' },
               { title: 'Scam Avoidance Guide', href: `/${locale}/blog/binary-options-scams`, desc: 'How to identify and avoid scams' },
             ].map((link) => (

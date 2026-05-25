@@ -448,9 +448,13 @@ export default function BinaryOptionsIndiaPage() {
       {/* Internal Links */}
       <section className="section-container py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6">Related Guides</h2>
+          <h2 className="text-2xl font-bold mb-6">Related & Country Guides</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
+              { title: 'Binary Options in USA', href: `/${locale}/binary-options-usa`, desc: 'CFTC regulations, Nadex, legal alternatives' },
+              { title: 'Binary Options in UK', href: `/${locale}/binary-options-uk`, desc: 'FCA ban, legal alternatives, spread betting' },
+              { title: 'Binary Options in Nigeria', href: `/${locale}/binary-options-nigeria`, desc: 'Best brokers, OPay/Palmpay, getting started' },
+              { title: 'Binary Options in Philippines', href: `/${locale}/binary-options-philippines`, desc: 'GCash deposits, SEC status, best brokers' },
               { title: 'Compare All Brokers', href: `/${locale}/compare`, desc: 'Side-by-side broker comparison' },
               { title: 'Olymp Trade Review', href: `/${locale}/olymp-trade`, desc: 'Full review of our #1 India pick' },
               { title: 'Pocket Option Review', href: `/${locale}/pocket-option`, desc: 'Best overall broker (9.5/10)' },

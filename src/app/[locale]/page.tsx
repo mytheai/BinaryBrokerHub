@@ -332,6 +332,55 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Strategy Guides */}
+      <section className="section-container py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Trading Strategies by Timeframe</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Proven strategies for every trading style — from 60-second turbo trades to end-of-day analysis.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {[
+            { slug: '60-second-binary-options-strategy', title: '60-Second Strategy', desc: 'Turbo trading for experienced traders', badge: 'Advanced', badgeClass: 'badge-gold' },
+            { slug: '5-minute-binary-options-strategy', title: '5-Minute Strategy', desc: 'The sweet spot for most traders', badge: 'Popular', badgeClass: 'badge-green' },
+            { slug: '30-minute-binary-options-strategy', title: '30-Minute Strategy', desc: 'Higher win rates, better analysis', badge: 'Recommended', badgeClass: 'badge-green' },
+            { slug: '1-day-binary-options-strategy', title: 'End-of-Day Strategy', desc: 'Perfect for traders with day jobs', badge: 'Beginner', badgeClass: 'badge-blue' },
+          ].map((post) => (
+            <Link key={post.slug} href={`/${locale}/blog/${post.slug}`} className="glass-card p-5 hover:bg-white/[0.04] transition-colors group">
+              <span className={`${post.badgeClass} text-[10px] mb-3`}>{post.badge}</span>
+              <h3 className="font-semibold text-white text-sm group-hover:text-emerald-400 transition-colors mb-1 mt-2">{post.title}</h3>
+              <p className="text-xs text-gray-500">{post.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Country Guides */}
+      <section className="section-container py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Binary Options by Country</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Regulation, legality, and best brokers for traders in your region.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+          {[
+            { slug: 'binary-options-india', country: 'India', status: 'Gray Area', statusColor: 'text-yellow-400', desc: 'SEBI status, UPI deposits, best brokers' },
+            { slug: 'binary-options-usa', country: 'USA', status: 'Regulated', statusColor: 'text-blue-400', desc: 'CFTC rules, Nadex, legal options' },
+            { slug: 'binary-options-uk', country: 'UK', status: 'Banned', statusColor: 'text-red-400', desc: 'FCA ban, alternatives, spread betting' },
+            { slug: 'binary-options-nigeria', country: 'Nigeria', status: 'Unregulated', statusColor: 'text-yellow-400', desc: 'OPay/Palmpay, getting started' },
+            { slug: 'binary-options-philippines', country: 'Philippines', status: 'Not Regulated', statusColor: 'text-yellow-400', desc: 'GCash deposits, SEC status' },
+          ].map((c) => (
+            <Link key={c.slug} href={`/${locale}/${c.slug}`} className="glass-card p-5 hover:bg-white/[0.04] transition-colors group text-center">
+              <h3 className="font-semibold text-white text-sm group-hover:text-emerald-400 transition-colors mb-1">{c.country}</h3>
+              <span className={`text-xs font-semibold ${c.statusColor}`}>{c.status}</span>
+              <p className="text-xs text-gray-500 mt-2">{c.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Latest Guides */}
       <section className="section-container py-20">
         <div className="text-center mb-12">
@@ -357,9 +406,15 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
-        <div className="text-center">
+        <div className="flex flex-wrap justify-center gap-3">
           <Link href={`/${locale}/blog`} className="btn-secondary px-6 py-3 text-sm inline-block">
-            View All 20 Guides →
+            View All Guides →
+          </Link>
+          <Link href={`/${locale}/scams`} className="btn-secondary px-6 py-3 text-sm inline-block">
+            Scam Blacklist →
+          </Link>
+          <Link href={`/${locale}/glossary`} className="btn-secondary px-6 py-3 text-sm inline-block">
+            Glossary (50+ Terms) →
           </Link>
         </div>
       </section>

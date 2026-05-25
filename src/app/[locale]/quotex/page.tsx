@@ -1,11 +1,13 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import CtaButton from '@/components/CtaButton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function QuotexPage() {
   const cta = useTranslations('cta');
+  const locale = useLocale();
 
   return (
     <div>
@@ -451,6 +453,28 @@ export default function QuotexPage() {
             <li>• Built-in signals had mixed accuracy — useful as prompts, not as sole trade entries</li>
             <li>• OTC markets available on weekends but with lower payouts (65-80%)</li>
           </ul>
+        </div>
+      </section>
+
+      {/* Related Guides */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6">Quotex Guides</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'Is Quotex Real or Fake?', href: `/${locale}/blog/is-quotex-real-or-fake`, desc: 'Honest verification after 6 months + $5,000 tested' },
+              { title: 'Deposit & Withdrawal Guide', href: `/${locale}/blog/quotex-deposit-withdrawal`, desc: 'All methods, fees & real processing times' },
+              { title: 'Promo Code 2026', href: `/${locale}/blog/quotex-promo-code`, desc: 'Latest deposit bonus codes & critical terms' },
+              { title: 'Quotex Trading Strategy', href: `/${locale}/blog/quotex-strategy`, desc: '1-min & 5-min proven methods with real win rates' },
+              { title: 'Quotex vs IQ Option', href: `/${locale}/compare/quotex-vs-iq-option`, desc: 'Highest payouts vs best technology' },
+              { title: '5-Minute Strategy', href: `/${locale}/blog/5-minute-binary-options-strategy`, desc: 'The sweet spot — best for Quotex 95% payouts' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="glass-card p-4 hover:bg-white/[0.05] transition-colors group">
+                <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
