@@ -585,6 +585,28 @@ export default function IQOptionPage() {
         </div>
       </section>
 
+      {/* IQ Option Guides */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6">IQ Option Guides</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'IQ Option vs Quotex', href: `/${locale}/compare/quotex-vs-iq-option`, desc: 'Platform depth vs highest payouts — which suits your style?' },
+              { title: 'IQ Option vs Deriv', href: `/${locale}/compare/iq-option-vs-deriv`, desc: 'Two veteran brokers compared on regulation, assets & UX' },
+              { title: 'Pocket Option vs IQ Option', href: `/${locale}/compare/pocket-option-vs-iq-option`, desc: '#1 vs #3 — copy trading & payouts vs platform quality' },
+              { title: 'Strategy for Beginners', href: `/${locale}/blog/binary-options-strategy-beginners`, desc: 'Step-by-step strategies for new binary options traders' },
+              { title: 'Demo Account Guide', href: `/${locale}/blog/binary-options-demo-account`, desc: 'How to use demo accounts effectively before going live' },
+              { title: 'Regulation Guide', href: `/${locale}/blog/binary-options-regulation`, desc: 'Understanding broker licenses, safety & what to look for' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="glass-card p-4 hover:bg-white/[0.05] transition-colors group">
+                <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Risk Disclaimer */}
       <section className="section-container py-12">
         <div className="glass-card p-6 border border-amber-500/20">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import SchemaScript from '@/components/SchemaScript';
-import { articleSchema, breadcrumbSchema } from '@/lib/schema';
+import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 const BASE_URL = 'https://binarybrokerhub.com';
 
@@ -41,6 +41,13 @@ const schemas = [
     { name: 'Home', url: BASE_URL },
     { name: 'Blog', url: `${BASE_URL}/en/blog` },
     { name: '5 Best Binary Options Strategies for Beginners', url: `${BASE_URL}/en/blog/binary-options-strategy-beginners` },
+  ]),
+  faqSchema([
+    { question: 'What is the best binary options strategy for beginners?', answer: 'Support & Resistance Bounce is the best starting strategy. It is visual, requires no indicators, and teaches you to read price action — the foundation of all trading.' },
+    { question: 'What win rate do I need to be profitable in binary options?', answer: 'You need a win rate above 55-56% to break even at typical 80-90% payouts. A target win rate of 58-65% is needed for consistent profit.' },
+    { question: 'Should I use Martingale strategy in binary options?', answer: 'No. Doubling after losses is the fastest way to blow your account. A 6-loss streak can wipe out most of your balance. Use fixed 1-2% risk per trade instead.' },
+    { question: 'Which broker is best for binary options strategies?', answer: 'Pocket Option is best for trend following and MA crossover strategies due to its advanced charting tools. Quotex is best for support/resistance and RSI strategies with payouts up to 95%.' },
+    { question: 'How many trades should I take per day?', answer: 'Take 3-5 high-quality trades per day. Quality over quantity — waiting for perfect setups beats taking many marginal trades.' },
   ]),
 ];
 

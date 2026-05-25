@@ -688,6 +688,28 @@ export default function ExpertOptionPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6">ExpertOption Guides</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'Binary Options Strategy for Beginners', href: `/${locale}/blog/binary-options-strategy-beginners`, desc: 'Essential strategies for new binary options traders' },
+              { title: 'Binary Options Demo Account Guide', href: `/${locale}/blog/binary-options-demo-account`, desc: 'How to practice trading risk-free with demo accounts' },
+              { title: 'Binary Options Copy Trading', href: `/${locale}/blog/binary-options-copy-trading`, desc: 'Learn how copy trading works and which brokers offer it' },
+              { title: 'Binary Options Mobile Trading', href: `/${locale}/blog/binary-options-mobile-trading`, desc: 'Trade on the go — mobile platform tips & best apps' },
+              { title: 'OTC Trading Binary Options', href: `/${locale}/blog/otc-trading-binary-options`, desc: 'How OTC markets work and when to trade them' },
+              { title: 'How to Withdraw from Binary Options', href: `/${locale}/blog/how-to-withdraw-binary-options`, desc: 'Step-by-step withdrawal guide with processing times' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="glass-card p-4 hover:bg-white/[0.05] transition-colors group">
+                <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Risk Disclaimer */}
       <section className="section-container py-8 pb-16">
         <div className="border border-red-500/30 bg-red-500/[0.03] rounded-xl p-6">

@@ -563,6 +563,28 @@ export default function BinomoPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6">Binomo Guides</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'Compare: Pocket Option vs Binomo', href: `/${locale}/compare/pocket-option-vs-binomo`, desc: 'Side-by-side comparison of features, payouts & trust' },
+              { title: 'Compare: Quotex vs Binomo', href: `/${locale}/compare/quotex-vs-binomo`, desc: 'Which platform is better for your trading style?' },
+              { title: 'Binary Options Strategy for Beginners', href: `/${locale}/blog/binary-options-strategy-beginners`, desc: 'Essential strategies for new binary options traders' },
+              { title: 'Binary Options Demo Account Guide', href: `/${locale}/blog/binary-options-demo-account`, desc: 'How to practice trading risk-free with demo accounts' },
+              { title: 'Binary Options Minimum Deposit Guide', href: `/${locale}/blog/binary-options-minimum-deposit`, desc: 'Compare minimum deposits across all major brokers' },
+              { title: 'Binary Options Regulation Guide', href: `/${locale}/blog/binary-options-regulation`, desc: 'Understanding licensing, fund protection & broker safety' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="glass-card p-4 hover:bg-white/[0.05] transition-colors group">
+                <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final Verdict */}
       <section className="section-container py-16">
         <div className="glass-card p-8 md:p-10 border border-amber-500/20">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import SchemaScript from '@/components/SchemaScript';
-import { comparisonSchema, breadcrumbSchema } from '@/lib/schema';
+import { comparisonSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 const BASE_URL = 'https://binarybrokerhub.com';
 
@@ -37,6 +37,14 @@ const schemas = [
     { name: 'Home', url: BASE_URL },
     { name: 'Compare', url: `${BASE_URL}/en/compare` },
     { name: 'Pocket Option vs Quotex', url: `${BASE_URL}/en/compare/pocket-option-vs-quotex` },
+  ]),
+  faqSchema([
+    { question: 'Which has higher payouts, Pocket Option or Quotex?', answer: 'Quotex offers higher payouts with a maximum of 98% compared to Pocket Option\'s 92%. On average, Quotex payouts are 5-8% higher across major currency pairs.' },
+    { question: 'Is Pocket Option safer than Quotex?', answer: 'Pocket Option holds active IFMRRC registration while Quotex\'s certification has expired. Neither holds tier-1 regulation. Pocket Option has a slight edge on regulatory status.' },
+    { question: 'Which is better for beginners?', answer: 'Pocket Option is better for complete beginners thanks to its copy trading feature. Quotex is better for beginners who prefer simplicity and want to learn manual trading.' },
+    { question: 'Can I use both platforms simultaneously?', answer: 'Yes, many traders use both. A common strategy is to use Pocket Option for copy trading and Quotex for high-conviction manual trades where maximum payout matters.' },
+    { question: 'Which has faster withdrawals?', answer: 'Pocket Option is slightly faster with crypto withdrawals processed in 12-45 minutes versus Quotex\'s approximately 47 minutes. Both offer free withdrawals.' },
+    { question: 'Which has a better mobile app?', answer: 'Both offer mobile apps. Pocket Option\'s app mirrors its feature-rich desktop experience. Quotex\'s app is simpler and loads faster. It comes down to preference for features vs simplicity.' },
   ]),
 ];
 

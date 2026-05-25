@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import SchemaScript from '@/components/SchemaScript';
-import { articleSchema, breadcrumbSchema } from '@/lib/schema';
+import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 const BASE_URL = 'https://binarybrokerhub.com';
 
@@ -41,6 +41,11 @@ const schemas = [
     { name: 'Home', url: BASE_URL },
     { name: 'Blog', url: `${BASE_URL}/en/blog` },
     { name: 'Quotex Promo Code 2026', url: `${BASE_URL}/en/blog/quotex-promo-code` },
+  ]),
+  faqSchema([
+    { question: 'What is the latest Quotex promo code?', answer: 'Quotex occasionally releases promo codes through their official social media and email. Using our link automatically applies the 30% first deposit bonus — no code needed. Always check the "Promo" section in your Quotex dashboard.' },
+    { question: 'Can I withdraw the bonus money?', answer: 'No. Bonus funds themselves cannot be withdrawn. Only profits generated from trades using bonus funds can be withdrawn. Your own deposited money can always be withdrawn.' },
+    { question: 'What happens if I withdraw my deposit early?', answer: 'If you withdraw your deposited funds before the bonus funds are used, Quotex reserves the right to cancel all bonus credits and any profits derived from bonus trades.' },
   ]),
 ];
 

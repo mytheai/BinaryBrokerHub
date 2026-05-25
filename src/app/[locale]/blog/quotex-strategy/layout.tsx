@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import SchemaScript from '@/components/SchemaScript';
-import { articleSchema, breadcrumbSchema } from '@/lib/schema';
+import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 const BASE_URL = 'https://binarybrokerhub.com';
 
@@ -41,6 +41,14 @@ const schemas = [
     { name: 'Home', url: BASE_URL },
     { name: 'Blog', url: `${BASE_URL}/en/blog` },
     { name: 'Quotex Trading Strategy 2026', url: `${BASE_URL}/en/blog/quotex-strategy` },
+  ]),
+  faqSchema([
+    { question: 'What is the best strategy for Quotex?', answer: 'For beginners, the Support & Resistance Bounce (5-min) strategy is simplest and showed the highest win rate (62%). For intermediate traders, the EMA + RSI combo (61%) offers more precise entries.' },
+    { question: 'Can I use 1-minute strategies on Quotex?', answer: 'Yes. Quotex supports expiry times from 1 minute to several hours. The momentum strategy is designed for 1-minute trades, though 5-minute strategies tend to be more reliable.' },
+    { question: 'What win rate do I need to be profitable?', answer: 'At 90% payout, you need 52.6% to break even and 56%+ to profit. At 80% payout, you need 55.6% to break even. Aim for 58-65% consistently.' },
+    { question: 'Should I use Martingale on Quotex?', answer: 'No. Martingale (doubling after losses) is the fastest way to blow your account. A 5-loss streak wipes out days of profit. Use fixed trade sizes instead.' },
+    { question: 'What is the best time to trade on Quotex?', answer: 'London/New York overlap (13:00-17:00 UTC) offers highest volatility and best payouts. Asian session (00:00-06:00 UTC) is best for range-trading strategies.' },
+    { question: 'How long should I practice on demo?', answer: 'At least 2-4 weeks. Do not switch to real money until you are consistently profitable on demo for at least 100 trades.' },
   ]),
 ];
 

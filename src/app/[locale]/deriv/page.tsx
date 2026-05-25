@@ -583,26 +583,25 @@ export default function DerivPage() {
         </div>
       </section>
 
-      {/* Related Reviews & Guides */}
+      {/* Related Guides */}
       <section className="section-container py-16">
-        <h2 className="text-3xl font-bold mb-10">Related Reviews & Guides</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            { title: 'Pocket Option Review', desc: 'Top-rated broker with 9.5/10 score, copy trading, and 50+ deposit methods.', href: `/${locale}/pocket-option` },
-            { title: 'Quotex Review', desc: 'Highest payouts (up to 98%) with the cleanest, most beginner-friendly interface.', href: `/${locale}/quotex` },
-            { title: 'IQ Option Review', desc: 'CySEC-regulated broker with 100M+ users and an award-winning platform.', href: `/${locale}/iq-option` },
-            { title: 'IQ Option vs Deriv', desc: 'Head-to-head comparison of two Tier-1 regulated brokers with different strengths.', href: `/${locale}/compare/iq-option-vs-deriv` },
-            { title: 'Compare All Brokers', desc: 'Side-by-side comparison of all 7 brokers we review — scores, features, and payouts.', href: `/${locale}/compare` },
-            { title: 'Deriv Synthetic Indices Guide', desc: 'Deep dive into Volatility, Crash/Boom, Step Index, and how to trade them.', href: `/${locale}/blog/deriv-synthetic-indices-guide` },
-            { title: 'Binary Options Regulation', desc: 'How regulation works, which licenses matter, and how to verify broker legitimacy.', href: `/${locale}/blog/binary-options-regulation` },
-            { title: 'Best Binary Options Brokers', desc: 'Our complete ranking of the top brokers for 2026 with detailed scoring methodology.', href: `/${locale}/blog/best-binary-options-brokers` },
-          ].map((link) => (
-            <Link key={link.href} href={link.href} className="glass-card p-5 hover:border-emerald-500/30 transition-colors group">
-              <h3 className="font-semibold text-white mb-1 group-hover:text-emerald-400 transition-colors">{link.title}</h3>
-              <p className="text-xs text-gray-400">{link.desc}</p>
-              <span className="text-xs text-emerald-400 mt-2 inline-block">Read more →</span>
-            </Link>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6">Related Guides</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'Compare: IQ Option vs Deriv', href: `/${locale}/compare/iq-option-vs-deriv`, desc: 'Head-to-head comparison of two Tier-1 regulated brokers' },
+              { title: 'Deriv Synthetic Indices Guide', href: `/${locale}/blog/deriv-synthetic-indices-guide`, desc: 'Deep dive into Volatility, Crash/Boom, Step Index & more' },
+              { title: 'Binary Options Strategy for Beginners', href: `/${locale}/blog/binary-options-strategy-beginners`, desc: 'Essential strategies to get started with binary trading' },
+              { title: 'Binary Options Demo Account Guide', href: `/${locale}/blog/binary-options-demo-account`, desc: 'How to practice risk-free before trading real money' },
+              { title: 'Binary Options Regulation Guide', href: `/${locale}/blog/binary-options-regulation`, desc: 'How regulation works & how to verify broker legitimacy' },
+              { title: 'How to Withdraw from Binary Options', href: `/${locale}/blog/how-to-withdraw-binary-options`, desc: 'Step-by-step withdrawal process & common pitfalls' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="glass-card p-4 hover:bg-white/[0.05] transition-colors group">
+                <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
