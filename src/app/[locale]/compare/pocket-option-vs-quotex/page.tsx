@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function PocketOptionVsQuotexPage() {
   const locale = useLocale();
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: 'Compare', href: `/${locale}/compare` }, { label: 'Pocket Option vs Quotex' }]} />
       {/* Hero */}
       <section className="relative overflow-hidden py-16 md:py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/10 to-transparent" />

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const comparisonRows = [
   { feature: 'Our Score', quotex: '9.4/10', binomo: '8.2/10', winner: 'quotex' },
@@ -27,6 +28,7 @@ export default function QuotexVsBinomoPage() {
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: 'Compare', href: `/${locale}/compare` }, { label: 'Quotex vs Binomo' }]} />
       {/* Hero Section */}
       <section className="section-container py-16 md:py-24 text-center">
         <span className="badge-gold mb-4">Head-to-Head Comparison</span>

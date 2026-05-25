@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function BinaryOptionsDemoAccountPage() {
   const locale = useLocale();
@@ -110,6 +111,7 @@ export default function BinaryOptionsDemoAccountPage() {
 
   return (
     <article className="section-container py-16 max-w-4xl mx-auto">
+      <Breadcrumbs items={[{ label: 'Blog', href: `/${locale}/blog` }, { label: 'Demo Account Guide' }]} />
       {/* Header */}
       <header className="mb-12">
         <div className="flex items-center gap-2 mb-4">

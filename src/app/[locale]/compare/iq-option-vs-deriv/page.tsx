@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const comparisonRows = [
   { feature: 'Our Score', iq: '9.2/10', deriv: '9.0/10', winner: 'iq' },
@@ -27,6 +28,7 @@ export default function IqOptionVsDerivPage() {
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: 'Compare', href: `/${locale}/compare` }, { label: 'IQ Option vs Deriv' }]} />
       {/* Hero Section */}
       <section className="section-container py-16 md:py-24 text-center">
         <span className="badge-gold mb-4">Regulated Brokers Compared</span>

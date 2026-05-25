@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 /* ------------------------------------------------------------------ */
 /*  Checkmark icon reused throughout the page                         */
@@ -203,6 +204,7 @@ export default function MethodologyPage() {
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: 'Our Methodology' }]} />
       {/* ============================================================ */}
       {/*  HERO                                                        */}
       {/* ============================================================ */}

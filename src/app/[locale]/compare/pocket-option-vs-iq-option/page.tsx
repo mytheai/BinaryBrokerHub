@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const comparisonRows = [
   { feature: 'Our Score', po: '9.5/10', iq: '9.2/10', winner: 'po' },
@@ -37,6 +38,7 @@ export default function PocketOptionVsIqOptionPage() {
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: 'Compare', href: `/${locale}/compare` }, { label: 'Pocket Option vs IQ Option' }]} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-16 md:py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent" />

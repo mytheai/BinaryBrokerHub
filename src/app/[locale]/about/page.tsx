@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const teamMembers = [
   {
@@ -93,6 +94,7 @@ export default function AboutPage() {
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: 'About Us' }]} />
       {/* Hero */}
       <section className="section-container py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
