@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import CtaButton from '@/components/CtaButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function CalculatorPage() {
   const [investment, setInvestment] = useState(100);
@@ -18,6 +19,7 @@ export default function CalculatorPage() {
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: 'Tools', href: undefined }, { label: 'Profit Calculator' }]} />
       <section className="section-container py-16 md:py-24">
         <div className="max-w-5xl mx-auto">
           {/* Header */}

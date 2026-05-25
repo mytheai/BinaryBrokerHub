@@ -4,6 +4,8 @@ import { getMessages } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SchemaScript from '@/components/SchemaScript';
+import { organizationSchema, websiteSchema } from '@/lib/schema';
 import '../globals.css';
 
 export const viewport: Viewport = {
@@ -94,6 +96,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
+        <SchemaScript schema={[organizationSchema(), websiteSchema()]} />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>

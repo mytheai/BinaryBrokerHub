@@ -59,6 +59,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Tools & Utility
     { path: '/tools/calculator', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/methodology', priority: 0.5, changeFrequency: 'monthly' as const },
+
+    // About
+    { path: '/about', priority: 0.7, changeFrequency: 'monthly' as const },
   ];
 
   const entries: MetadataRoute.Sitemap = [];

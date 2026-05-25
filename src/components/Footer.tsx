@@ -69,6 +69,11 @@ export default function Footer() {
                   Trading Guides
                 </Link>
               </li>
+              <li>
+                <Link href={`/${locale}/about`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  About Us
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

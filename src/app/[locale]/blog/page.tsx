@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const blogPosts = [
   // Pillar Content
@@ -182,6 +183,7 @@ export default function BlogPage() {
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: 'Trading Guides & Blog' }]} />
       <section className="section-container py-16 md:py-24">
         {/* Header */}
         <div className="text-center mb-14">
