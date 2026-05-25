@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
@@ -7,6 +8,12 @@ import Footer from '@/components/Footer';
 import SchemaScript from '@/components/SchemaScript';
 import { organizationSchema, websiteSchema } from '@/lib/schema';
 import '../globals.css';
+
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -85,18 +92,12 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="dark" suppressHydrationWarning>
+    <html lang={locale} className={`dark ${inter.variable}`} suppressHydrationWarning>
       <head>
         <meta name="format-detection" content="telephone=no" />
         <script defer data-domain="binarybrokerhub.com" src="https://plausible.io/js/script.js" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className={`${inter.className} min-h-screen flex flex-col antialiased`}>
         <SchemaScript schema={[organizationSchema(), websiteSchema()]} />
         <NextIntlClientProvider messages={messages}>
           <Header />
