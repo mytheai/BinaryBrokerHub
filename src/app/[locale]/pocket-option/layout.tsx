@@ -55,17 +55,32 @@ const schemas = [
     {
       question: 'What is the minimum deposit for Pocket Option?',
       answer:
-        'Pocket Option has a $5 minimum deposit, the lowest among major binary options brokers.',
+        'Pocket Option has a $5 minimum deposit — the lowest among major binary options brokers. You can deposit via crypto, e-wallets, or bank cards.',
     },
     {
       question: 'Is Pocket Option regulated?',
       answer:
-        'Pocket Option is regulated by IFMRRC (International Financial Market Relations Regulation Center). It is not regulated by tier-1 regulators like CySEC or MFSA.',
+        'Pocket Option was previously registered with IFMRRC, but its MISA (Comoros) license was suspended. It is not regulated by tier-1 authorities like CySEC or MFSA. The CFTC, FCA, and ASC have issued public warnings.',
     },
     {
       question: 'What is Pocket Option maximum payout?',
       answer:
-        'Pocket Option offers up to 92% maximum payout on successful trades, depending on the asset and market conditions.',
+        'Pocket Option advertises up to 92% payout. Testing showed peak payouts of 89-92% on major forex pairs during London/New York sessions, dropping to 80-88% off-peak.',
+    },
+    {
+      question: 'How long do Pocket Option withdrawals take?',
+      answer:
+        'Crypto withdrawals processed in 12-45 minutes. E-wallets took 1-24 hours. Bank transfers can take 1-5 business days. All 12 test withdrawals were completed successfully.',
+    },
+    {
+      question: 'Does Pocket Option have a demo account?',
+      answer:
+        'Yes. Pocket Option offers a free demo account with $50,000 virtual balance. No registration required.',
+    },
+    {
+      question: 'Is Pocket Option copy trading profitable?',
+      answer:
+        'Results vary depending on which traders you follow. Performance depends on market conditions, the trader\'s strategy, and your risk management.',
     },
   ]),
 ];

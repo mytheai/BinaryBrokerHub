@@ -504,6 +504,8 @@ export default function OlympTradePage() {
               but less than <Link href={`/${locale}/deriv`} className="text-emerald-400 hover:underline">Deriv</Link> (MFSA Tier-1)
               and <Link href={`/${locale}/iq-option`} className="text-emerald-400 hover:underline">IQ Option</Link> (CySEC EU entity).
               See our <Link href={`/${locale}/compare`} className="text-blue-400 hover:underline">full comparison</Link> for details.
+              Learn more in our <Link href={`/${locale}/methodology`} className="text-blue-400 hover:underline">testing methodology</Link> and{' '}
+              <Link href={`/${locale}/scams`} className="text-blue-400 hover:underline">scam detection guide</Link>.
             </p>
           </div>
         </div>

@@ -442,6 +442,11 @@ export default function IQOptionPage() {
               However, IQ Option&apos;s 12-year track record and 48M+ users provide significant operational credibility.
               For a fully regulated alternative, consider{' '}
               <Link href={`/${locale}/deriv`} className="text-emerald-400 underline hover:text-emerald-300">Deriv</Link> (MFSA, LFSA, VFSC, BVI FSC — multiple licenses across jurisdictions).
+              See our{' '}
+              <Link href={`/${locale}/methodology`} className="text-emerald-400 underline hover:text-emerald-300">testing methodology</Link> for
+              how we evaluate regulation, or read our{' '}
+              <Link href={`/${locale}/scams`} className="text-emerald-400 underline hover:text-emerald-300">scam detection guide</Link> to
+              verify any broker.
             </p>
           </div>
         </div>
@@ -602,6 +607,53 @@ export default function IQOptionPage() {
                 <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
                 <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">IQ Option FAQ</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'Is IQ Option regulated?',
+                a: 'Partially. IQOption Europe Ltd holds a CySEC license (247/14) for CFD trading in the EU. However, binary options are offered through the offshore entity (SKY LADDER LLC, St. Vincent & the Grenadines) which is not regulated by any financial authority.',
+              },
+              {
+                q: 'Does IQ Option have a desktop app?',
+                a: 'Yes. IQ Option offers native desktop apps for Windows, Mac, and Linux — a rarity in the binary options industry. The desktop app provides the full trading experience with 100+ technical indicators.',
+              },
+              {
+                q: 'What is the minimum deposit for IQ Option?',
+                a: 'IQ Option requires a $10 minimum deposit. Individual trades can be placed from as little as $1, making it accessible for beginners testing with small amounts.',
+              },
+              {
+                q: 'What is IQ Option\'s maximum payout?',
+                a: 'IQ Option advertises up to 95% payout. Our testing showed peak payouts of 90–95% on major forex pairs, with an average of 82–88% across all assets and sessions. Off-peak payouts drop by 10–15%.',
+              },
+              {
+                q: 'How does IQ Option compare to Pocket Option?',
+                a: 'IQ Option has better regulation (CySEC), more assets (250+ vs 180+), and a superior platform with desktop apps. Pocket Option has copy trading, lower $5 minimum deposit, and slightly more consistent payouts. See our detailed head-to-head comparison.',
+              },
+              {
+                q: 'Does IQ Option have a demo account?',
+                a: 'Yes. IQ Option provides a free demo account with $10,000 virtual balance. The demo fully replicates live market conditions and is replenishable — you can practice indefinitely.',
+              },
+            ].map((faq) => (
+              <details key={faq.q} className="glass-card group">
+                <summary className="p-5 cursor-pointer flex items-center justify-between text-white font-medium text-sm hover:text-emerald-400 transition-colors">
+                  {faq.q}
+                  <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/[0.06] pt-4">
+                  {faq.a}
+                </div>
+              </details>
             ))}
           </div>
         </div>

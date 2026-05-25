@@ -15,7 +15,7 @@ export default function BinaryOptionsTradingGuidePage() {
       <header className="mb-12">
         <div className="flex items-center gap-2 mb-4">
           <span className="badge-blue">Beginner Guide</span>
-          <span className="text-xs text-gray-600">Updated May 2026 &bull; 15 min read</span>
+          <span className="text-xs text-gray-600">Updated May 2026 &bull; 22 min read</span>
         </div>
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">
           Binary Options Trading for Beginners &mdash; Complete 2026 Guide
@@ -36,10 +36,12 @@ export default function BinaryOptionsTradingGuidePage() {
           <li><a href="#types" className="hover:text-blue-400 transition-colors">3. Types of Binary Options</a></li>
           <li><a href="#assets" className="hover:text-blue-400 transition-colors">4. What Can You Trade?</a></li>
           <li><a href="#risk-management" className="hover:text-blue-400 transition-colors">5. Risk Management Essentials</a></li>
-          <li><a href="#getting-started" className="hover:text-blue-400 transition-colors">6. Getting Started Step by Step</a></li>
-          <li><a href="#common-mistakes" className="hover:text-blue-400 transition-colors">7. Common Beginner Mistakes</a></li>
-          <li><a href="#strategies" className="hover:text-blue-400 transition-colors">8. Basic Trading Strategies</a></li>
-          <li><a href="#faq" className="hover:text-blue-400 transition-colors">9. FAQ</a></li>
+          <li><a href="#payout-math" className="hover:text-blue-400 transition-colors">6. The Math Behind Payouts — Why Most Traders Lose</a></li>
+          <li><a href="#psychology" className="hover:text-blue-400 transition-colors">7. Trading Psychology for Beginners</a></li>
+          <li><a href="#getting-started" className="hover:text-blue-400 transition-colors">8. Getting Started Step by Step</a></li>
+          <li><a href="#common-mistakes" className="hover:text-blue-400 transition-colors">9. Common Beginner Mistakes</a></li>
+          <li><a href="#strategies" className="hover:text-blue-400 transition-colors">10. Basic Trading Strategies</a></li>
+          <li><a href="#faq" className="hover:text-blue-400 transition-colors">11. FAQ</a></li>
         </ol>
       </nav>
 
@@ -283,6 +285,164 @@ export default function BinaryOptionsTradingGuidePage() {
               cause losses. Data beats intuition.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* The Math Behind Payouts */}
+      <section id="payout-math" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">The Math Behind Payouts &mdash; Why Most Traders Lose</h2>
+        <div className="glass-card p-6 mb-6">
+          <p className="text-gray-300 leading-relaxed mb-4">
+            Understanding the math is critical. Binary options are <strong className="text-white">not a 50/50 game</strong>.
+            Even though you&apos;re predicting up or down, the payout structure means you need to win
+            significantly more than half your trades to break even.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            Here&apos;s why: if you win, you get back less than 2x your investment (typically 1.80-1.95x). If you lose,
+            you lose 100%. This asymmetry is how brokers make money &mdash; and why you need a mathematical edge.
+          </p>
+        </div>
+
+        <h3 className="text-lg font-bold text-white mb-4">Break-Even Win Rates by Payout</h3>
+        <div className="glass-card overflow-hidden mb-6">
+          <div className="grid grid-cols-3 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+            <div>Payout %</div>
+            <div className="text-center">Break-Even Win Rate</div>
+            <div className="text-center">What This Means</div>
+          </div>
+          {[
+            { payout: '70%', breakEven: '58.8%', meaning: 'You must win ~6 out of 10 trades just to not lose money' },
+            { payout: '80%', breakEven: '55.6%', meaning: 'Still need to win well above half your trades' },
+            { payout: '85%', breakEven: '54.1%', meaning: 'Typical payout — most traders fail to sustain this win rate' },
+            { payout: '90%', breakEven: '52.6%', meaning: 'Competitive payout — achievable with good strategy' },
+            { payout: '95%', breakEven: '51.3%', meaning: 'Best available — closest to fair odds you\'ll find' },
+          ].map((row, i) => (
+            <div key={row.payout} className={`grid grid-cols-3 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+              <div className="text-emerald-400 font-semibold">{row.payout}</div>
+              <div className="text-center text-white font-medium">{row.breakEven}</div>
+              <div className="text-gray-400 text-xs">{row.meaning}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="glass-card p-5 mb-6 border-amber-500/10 bg-amber-500/[0.02]">
+          <p className="text-sm text-gray-300 leading-relaxed">
+            <span className="text-amber-400 font-semibold">The formula: </span>
+            Break-even win rate = 1 / (1 + payout%). For an 85% payout: 1 / (1 + 0.85) = 54.1%.
+            This means with typical payouts, <strong className="text-white">random trading will lose money over time</strong>.
+            You need a genuine analytical edge to be profitable.
+          </p>
+        </div>
+
+        <h3 className="text-lg font-bold text-white mb-4">Real-World Profit Scenarios</h3>
+        <div className="space-y-3">
+          <div className="glass-card p-5">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-red-400 font-semibold text-sm">Scenario A: 50% Win Rate @ 85% Payout</span>
+              <span className="badge text-xs bg-red-500/10 text-red-400 border border-red-500/20">Losing</span>
+            </div>
+            <p className="text-sm text-gray-400">100 trades × $10 each = $1,000 risked. Win 50 × $8.50 = $425 profit. Lose 50 × $10 = $500 loss. <strong className="text-red-400">Net: -$75</strong></p>
+          </div>
+          <div className="glass-card p-5">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-amber-400 font-semibold text-sm">Scenario B: 55% Win Rate @ 85% Payout</span>
+              <span className="badge text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20">Break-Even</span>
+            </div>
+            <p className="text-sm text-gray-400">100 trades × $10 each. Win 55 × $8.50 = $467.50. Lose 45 × $10 = $450. <strong className="text-amber-400">Net: +$17.50</strong> (barely profitable)</p>
+          </div>
+          <div className="glass-card p-5">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-emerald-400 font-semibold text-sm">Scenario C: 60% Win Rate @ 90% Payout</span>
+              <span className="badge text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Profitable</span>
+            </div>
+            <p className="text-sm text-gray-400">100 trades × $10 each. Win 60 × $9.00 = $540. Lose 40 × $10 = $400. <strong className="text-emerald-400">Net: +$140</strong> (14% return)</p>
+          </div>
+        </div>
+
+        <p className="text-sm text-gray-400 mt-6">
+          <strong className="text-white">Key takeaway:</strong> Payout percentages matter enormously. The difference between
+          an 80% and 90% payout broker can mean the difference between losing and profiting. This is why we rank{' '}
+          <Link href={`/${locale}/quotex`} className="text-blue-400 hover:text-blue-300">Quotex</Link> (90-95% peak) and{' '}
+          <Link href={`/${locale}/pocket-option`} className="text-blue-400 hover:text-blue-300">Pocket Option</Link> (89-92% peak) highly &mdash;
+          higher payouts give you a better mathematical chance.
+        </p>
+      </section>
+
+      {/* Trading Psychology */}
+      <section id="psychology" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Trading Psychology for Beginners</h2>
+        <p className="text-gray-400 leading-relaxed mb-6">
+          Technical skills and strategy knowledge are useless without emotional discipline.
+          Most traders fail not because they can&apos;t analyze charts, but because they can&apos;t manage their own psychology.
+          Here are the mental traps that destroy beginner accounts.
+        </p>
+
+        <div className="space-y-4">
+          <div className="glass-card p-5">
+            <h3 className="font-semibold text-white mb-2">Fear of Missing Out (FOMO)</h3>
+            <p className="text-sm text-gray-400 leading-relaxed mb-2">
+              You see a price moving sharply and jump in without analysis, afraid you&apos;ll miss the move.
+              By the time FOMO kicks in, the best entry is usually gone. The market will always offer new opportunities.
+            </p>
+            <p className="text-xs text-emerald-400">
+              Fix: If you missed the setup, let it go. There will be another trade within the hour.
+            </p>
+          </div>
+
+          <div className="glass-card p-5">
+            <h3 className="font-semibold text-white mb-2">Overconfidence After Winning Streaks</h3>
+            <p className="text-sm text-gray-400 leading-relaxed mb-2">
+              After 5-6 consecutive wins, you feel invincible and start increasing trade sizes or trading outside your strategy.
+              This is exactly when discipline breaks down and large losses occur.
+            </p>
+            <p className="text-xs text-emerald-400">
+              Fix: Stick to your fixed position sizing regardless of recent results. Winning streaks end &mdash; always.
+            </p>
+          </div>
+
+          <div className="glass-card p-5">
+            <h3 className="font-semibold text-white mb-2">Loss Aversion &amp; Revenge Trading</h3>
+            <p className="text-sm text-gray-400 leading-relaxed mb-2">
+              Losing feels roughly 2x more painful than winning feels good (a well-studied psychological bias).
+              After losses, the urge to immediately &quot;win it back&quot; leads to impulsive, oversized trades.
+              This single behavior destroys more accounts than any other.
+            </p>
+            <p className="text-xs text-emerald-400">
+              Fix: Set a hard daily loss limit (e.g., 3 consecutive losses = stop for the day). No exceptions.
+            </p>
+          </div>
+
+          <div className="glass-card p-5">
+            <h3 className="font-semibold text-white mb-2">Analysis Paralysis</h3>
+            <p className="text-sm text-gray-400 leading-relaxed mb-2">
+              Adding too many indicators, watching too many assets, second-guessing every trade.
+              Complexity doesn&apos;t equal accuracy. The most profitable strategies are often the simplest.
+            </p>
+            <p className="text-xs text-emerald-400">
+              Fix: Use 2-3 indicators maximum. Focus on 2-3 assets. Have clear entry criteria you can act on quickly.
+            </p>
+          </div>
+
+          <div className="glass-card p-5">
+            <h3 className="font-semibold text-white mb-2">The Sunk Cost Trap</h3>
+            <p className="text-sm text-gray-400 leading-relaxed mb-2">
+              &quot;I&apos;ve already lost $200, I need to keep trading to get it back.&quot; Past losses
+              should have zero influence on your next trading decision. Each trade is independent.
+              The money is gone &mdash; don&apos;t throw more after it.
+            </p>
+            <p className="text-xs text-emerald-400">
+              Fix: Evaluate each trade on its own merit. If your strategy says &quot;no trade,&quot; don&apos;t trade.
+            </p>
+          </div>
+        </div>
+
+        <div className="glass-card p-5 mt-6 border-blue-500/10">
+          <p className="text-sm text-gray-300 leading-relaxed">
+            <span className="text-blue-400 font-semibold">Pro tip: </span>
+            Start on a demo account not just to learn the platform, but to practice emotional discipline.
+            Many traders find that even demo losses trigger emotional reactions. If you can&apos;t follow your
+            rules with virtual money, you won&apos;t follow them with real money.
+          </p>
         </div>
       </section>
 

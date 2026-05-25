@@ -438,7 +438,11 @@ export default function DerivPage() {
             For more on how regulation impacts your safety, read our{' '}
             <Link href={`/${locale}/blog/binary-options-regulation`} className="text-emerald-400 underline hover:text-emerald-300">
               binary options regulation guide
-            </Link>.
+            </Link>. See our{' '}
+            <Link href={`/${locale}/methodology`} className="text-emerald-400 underline hover:text-emerald-300">testing methodology</Link> for
+            how we score broker safety, or check our{' '}
+            <Link href={`/${locale}/scams`} className="text-emerald-400 underline hover:text-emerald-300">scam detection guide</Link> to
+            verify any broker.
           </p>
         </div>
       </section>

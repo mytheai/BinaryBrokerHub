@@ -84,6 +84,9 @@ export default function ExpertOptionPage() {
             Unlike competitors with FinaCom membership (Binomo, Olymp Trade) or CySEC/MFSA licenses (IQ Option, Deriv),
             ExpertOption provides <strong className="text-red-400">no dispute resolution mechanism and no fund protection</strong>.
             Trade with extreme caution and only risk amounts you can afford to lose entirely.
+            See our <Link href={`/${locale}/methodology`} className="text-red-300 hover:underline">testing methodology</Link> and{' '}
+            <Link href={`/${locale}/scams`} className="text-red-300 hover:underline">scam detection guide</Link> for
+            how to evaluate broker safety.
           </p>
         </div>
       </section>

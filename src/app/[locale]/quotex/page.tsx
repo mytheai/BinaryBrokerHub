@@ -392,6 +392,11 @@ export default function QuotexPage() {
           </div>
           <p className="text-xs text-gray-500 mt-6">
             We recommend using smaller balances and withdrawing regularly to limit exposure. Always test the withdrawal process with a small amount first.
+            Learn how we evaluate broker safety in our{' '}
+            <Link href={`/${locale}/methodology`} className="text-emerald-400 hover:underline">testing methodology</Link>, or
+            check our{' '}
+            <Link href={`/${locale}/scams`} className="text-emerald-400 hover:underline">scam detection guide</Link> to
+            verify any broker before depositing.
           </p>
         </div>
       </section>
@@ -473,6 +478,53 @@ export default function QuotexPage() {
                 <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
                 <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Quotex FAQ</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'What is the maximum payout on Quotex?',
+                a: 'Quotex advertises up to 98% maximum payout. Our real-money testing showed peak payouts of 90–95% on major forex pairs during London/New York sessions, dropping to 75–82% off-peak. Payouts shift dynamically based on market flow and volatility.',
+              },
+              {
+                q: 'Is Quotex regulated?',
+                a: 'Quotex previously held IFMRRC certification via Awesomo Limited, but it expired in 2021. The IFMRRC itself is not a recognized government regulator. Spain\'s CNMV has issued public warnings. Quotex currently operates without active financial regulation.',
+              },
+              {
+                q: 'What is the minimum deposit for Quotex?',
+                a: 'Quotex requires a $10 minimum deposit. A free unlimited demo account is available without any deposit — you can practice as long as you need before committing real funds.',
+              },
+              {
+                q: 'How fast are Quotex withdrawals?',
+                a: 'In our testing, crypto withdrawals (USDT TRC-20) processed within 1 hour. E-wallet withdrawals took 1–24 hours. The first withdrawal requires full KYC verification (ID + selfie); subsequent ones are faster.',
+              },
+              {
+                q: 'Does Quotex have a demo account?',
+                a: 'Yes. Quotex offers a free demo account with unlimited virtual balance. No registration or deposit required — ideal for testing strategies before risking real money.',
+              },
+              {
+                q: 'Is Quotex better than Pocket Option?',
+                a: 'It depends on your priority. Quotex offers higher peak payouts (90–95% vs 89–92%) and faster execution. Pocket Option has copy trading, $5 minimum deposit, and more assets (180+ vs 95+). See our detailed Pocket Option vs Quotex comparison.',
+              },
+            ].map((faq) => (
+              <details key={faq.q} className="glass-card group">
+                <summary className="p-5 cursor-pointer flex items-center justify-between text-white font-medium text-sm hover:text-emerald-400 transition-colors">
+                  {faq.q}
+                  <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/[0.06] pt-4">
+                  {faq.a}
+                </div>
+              </details>
             ))}
           </div>
         </div>

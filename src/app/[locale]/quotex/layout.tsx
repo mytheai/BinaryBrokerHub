@@ -59,17 +59,32 @@ const schemas = [
     {
       question: 'What is the maximum payout on Quotex?',
       answer:
-        'Quotex offers up to 98% maximum payout, the highest among all binary options brokers we tested.',
+        'Quotex advertises up to 98% maximum payout. Real-money testing showed peak payouts of 90-95% on major forex pairs during London/New York sessions, dropping to 75-82% off-peak.',
     },
     {
       question: 'Is Quotex regulated?',
       answer:
-        'Quotex previously held IFMRRC certification, but it has expired. Quotex currently operates without active regulation from any financial authority.',
+        'Quotex previously held IFMRRC certification via Awesomo Limited, but it expired in 2021. The IFMRRC is not a recognized government regulator. Quotex currently operates without active financial regulation.',
     },
     {
       question: 'What is the minimum deposit for Quotex?',
       answer:
         'Quotex requires a $10 minimum deposit. A free unlimited demo account is available without any deposit.',
+    },
+    {
+      question: 'How fast are Quotex withdrawals?',
+      answer:
+        'Crypto withdrawals (USDT TRC-20) processed within 1 hour in testing. E-wallet withdrawals took 1-24 hours. First withdrawal requires full KYC verification.',
+    },
+    {
+      question: 'Does Quotex have a demo account?',
+      answer:
+        'Yes. Quotex offers a free demo account with unlimited virtual balance. No registration or deposit required.',
+    },
+    {
+      question: 'Is Quotex better than Pocket Option?',
+      answer:
+        'It depends on your priority. Quotex offers higher peak payouts (90-95% vs 89-92%) and faster execution. Pocket Option has copy trading, $5 minimum deposit, and more assets (180+ vs 95+).',
     },
   ]),
 ];

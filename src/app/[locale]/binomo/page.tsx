@@ -473,7 +473,9 @@ export default function BinomoPage() {
             For better regulatory protection, consider{' '}
             <Link href={`/${locale}/deriv`} className="text-emerald-400 hover:underline">Deriv (MFSA Tier-1)</Link> or{' '}
             <Link href={`/${locale}/iq-option`} className="text-emerald-400 hover:underline">IQ Option (CySEC)</Link>.
-            See our <Link href={`/${locale}/blog/binary-options-regulation`} className="text-blue-400 hover:underline">regulation guide</Link> for details.
+            See our <Link href={`/${locale}/blog/binary-options-regulation`} className="text-blue-400 hover:underline">regulation guide</Link>,{' '}
+            <Link href={`/${locale}/methodology`} className="text-blue-400 hover:underline">testing methodology</Link>, and{' '}
+            <Link href={`/${locale}/scams`} className="text-blue-400 hover:underline">scam detection guide</Link> for details.
           </p>
         </div>
       </section>

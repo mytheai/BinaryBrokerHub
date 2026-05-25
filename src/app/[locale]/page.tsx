@@ -118,19 +118,19 @@ export default function HomePage() {
             <div>Rank</div>
             <div>Broker</div>
             <div className="text-center">Score</div>
-            <div className="text-center">Max Payout</div>
+            <div className="text-center">Peak Payout*</div>
             <div className="text-center">Min Deposit</div>
             <div className="text-center">Key Feature</div>
             <div className="text-center">Action</div>
           </div>
           {[
-            { rank: 1, name: 'Pocket Option', slug: 'pocket-option', score: '9.5', payout: '92%', deposit: '$5', feature: 'Copy trading + lowest deposit', color: 'text-emerald-400' },
-            { rank: 2, name: 'Quotex', slug: 'quotex', score: '9.4', payout: '98%', deposit: '$10', feature: 'Highest payouts', color: 'text-emerald-400' },
-            { rank: 3, name: 'IQ Option', slug: 'iq-option', score: '9.2', payout: '95%', deposit: '$10', feature: 'Best platform UX', color: 'text-emerald-400' },
-            { rank: 4, name: 'Deriv', slug: 'deriv', score: '9.0', payout: '95%', deposit: '$5', feature: '26 yrs + MFSA Tier-1', color: 'text-emerald-400' },
-            { rank: 5, name: 'Olymp Trade', slug: 'olymp-trade', score: '8.6', payout: '93%', deposit: '$10', feature: '#1 in India/Indonesia', color: 'text-blue-400' },
-            { rank: 6, name: 'Binomo', slug: 'binomo', score: '8.2', payout: '90%', deposit: '$10', feature: 'Daily tournaments', color: 'text-amber-400' },
-            { rank: 7, name: 'ExpertOption', slug: 'expert-option', score: '7.8', payout: '95%', deposit: '$10', feature: 'Social trading', color: 'text-gray-400' },
+            { rank: 1, name: 'Pocket Option', slug: 'pocket-option', score: '9.5', payout: '89–92%', deposit: '$5', feature: 'Copy trading + lowest deposit', color: 'text-emerald-400' },
+            { rank: 2, name: 'Quotex', slug: 'quotex', score: '9.4', payout: '90–95%', deposit: '$10', feature: 'Highest payouts', color: 'text-emerald-400' },
+            { rank: 3, name: 'IQ Option', slug: 'iq-option', score: '9.2', payout: '90–95%', deposit: '$10', feature: 'Best platform UX', color: 'text-emerald-400' },
+            { rank: 4, name: 'Deriv', slug: 'deriv', score: '9.0', payout: '88–95%', deposit: '$5', feature: '26 yrs + MFSA Tier-1', color: 'text-emerald-400' },
+            { rank: 5, name: 'Olymp Trade', slug: 'olymp-trade', score: '8.6', payout: '84–93%', deposit: '$10', feature: '#1 in India/Indonesia', color: 'text-blue-400' },
+            { rank: 6, name: 'Binomo', slug: 'binomo', score: '8.2', payout: '85–90%', deposit: '$10', feature: 'Daily tournaments', color: 'text-amber-400' },
+            { rank: 7, name: 'ExpertOption', slug: 'expert-option', score: '7.8', payout: '84–95%', deposit: '$10', feature: 'Social trading', color: 'text-gray-400' },
           ].map((b, i) => (
             <div key={b.slug} className={`grid grid-cols-7 p-3 items-center text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
               <div className={`font-bold ${b.rank <= 2 ? 'text-emerald-400' : 'text-gray-500'}`}>#{b.rank}</div>
@@ -155,13 +155,13 @@ export default function HomePage() {
         {/* All 7 broker ranking — Mobile cards */}
         <div className="md:hidden space-y-3">
           {[
-            { rank: 1, name: 'Pocket Option', slug: 'pocket-option', score: '9.5', payout: '92%', deposit: '$5', feature: 'Copy trading + lowest deposit', color: 'text-emerald-400' },
-            { rank: 2, name: 'Quotex', slug: 'quotex', score: '9.4', payout: '98%', deposit: '$10', feature: 'Highest payouts', color: 'text-emerald-400' },
-            { rank: 3, name: 'IQ Option', slug: 'iq-option', score: '9.2', payout: '95%', deposit: '$10', feature: 'Best platform UX', color: 'text-emerald-400' },
-            { rank: 4, name: 'Deriv', slug: 'deriv', score: '9.0', payout: '95%', deposit: '$5', feature: '26 yrs + MFSA Tier-1', color: 'text-emerald-400' },
-            { rank: 5, name: 'Olymp Trade', slug: 'olymp-trade', score: '8.6', payout: '93%', deposit: '$10', feature: '#1 in India/Indonesia', color: 'text-blue-400' },
-            { rank: 6, name: 'Binomo', slug: 'binomo', score: '8.2', payout: '90%', deposit: '$10', feature: 'Daily tournaments', color: 'text-amber-400' },
-            { rank: 7, name: 'ExpertOption', slug: 'expert-option', score: '7.8', payout: '95%', deposit: '$10', feature: 'Social trading', color: 'text-gray-400' },
+            { rank: 1, name: 'Pocket Option', slug: 'pocket-option', score: '9.5', payout: '89–92%', deposit: '$5', feature: 'Copy trading + lowest deposit', color: 'text-emerald-400' },
+            { rank: 2, name: 'Quotex', slug: 'quotex', score: '9.4', payout: '90–95%', deposit: '$10', feature: 'Highest payouts', color: 'text-emerald-400' },
+            { rank: 3, name: 'IQ Option', slug: 'iq-option', score: '9.2', payout: '90–95%', deposit: '$10', feature: 'Best platform UX', color: 'text-emerald-400' },
+            { rank: 4, name: 'Deriv', slug: 'deriv', score: '9.0', payout: '88–95%', deposit: '$5', feature: '26 yrs + MFSA Tier-1', color: 'text-emerald-400' },
+            { rank: 5, name: 'Olymp Trade', slug: 'olymp-trade', score: '8.6', payout: '84–93%', deposit: '$10', feature: '#1 in India/Indonesia', color: 'text-blue-400' },
+            { rank: 6, name: 'Binomo', slug: 'binomo', score: '8.2', payout: '85–90%', deposit: '$10', feature: 'Daily tournaments', color: 'text-amber-400' },
+            { rank: 7, name: 'ExpertOption', slug: 'expert-option', score: '7.8', payout: '84–95%', deposit: '$10', feature: 'Social trading', color: 'text-gray-400' },
           ].map((b) => (
             <Link key={b.slug} href={`/${locale}/${b.slug}`} className="glass-card p-4 flex items-center gap-4 hover:bg-white/[0.04] transition-colors block">
               <div className={`text-lg font-bold w-8 flex-shrink-0 ${b.rank <= 2 ? 'text-emerald-400' : 'text-gray-500'}`}>#{b.rank}</div>
@@ -182,6 +182,11 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
+
+        <p className="text-xs text-gray-600 mt-3 hidden md:block">
+          *Peak payouts measured during London/New York session overlap on major forex pairs. Off-peak payouts are typically 10–15% lower.
+          See each broker review for full payout analysis.
+        </p>
 
         <div className="text-center mt-6">
           <Link href={`/${locale}/compare`} className="btn-secondary px-6 py-3 text-sm inline-block">
@@ -223,7 +228,7 @@ export default function HomePage() {
             <div className="space-y-3">
               {[
                 { name: 'Pocket Option', score: 9.5, highlight: 'Best overall — copy trading + $5 deposit' },
-                { name: 'Quotex', score: 9.4, highlight: 'Highest payouts (up to 98%)' },
+                { name: 'Quotex', score: 9.4, highlight: 'Highest peak payouts (90–95% tested)' },
                 { name: 'IQ Option', score: 9.2, highlight: 'Best platform & CySEC regulated' },
                 { name: 'Deriv', score: 9.0, highlight: 'Most trusted — 26 years, MFSA Tier-1' },
                 { name: 'Olymp Trade', score: 8.6, highlight: '#1 in India & Indonesia' },
@@ -437,6 +442,31 @@ export default function HomePage() {
             </div>
             <p className="text-xs text-gray-500 mt-4">No credit card required. Instant access.</p>
           </div>
+        </div>
+      </section>
+
+      {/* Risk Disclaimer */}
+      <section className="section-container pb-16">
+        <div className="border border-white/[0.06] rounded-2xl p-6 md:p-8 bg-white/[0.02]">
+          <h3 className="text-sm font-semibold text-gray-400 mb-3">⚠️ Risk Disclaimer</h3>
+          <p className="text-xs text-gray-500 leading-relaxed mb-3">
+            <strong className="text-gray-400">Binary options trading carries a high level of risk and may not be suitable for all investors.</strong>{' '}
+            You could lose some or all of your invested capital. Before deciding to trade binary options, you should
+            carefully consider your investment objectives, level of experience, and risk appetite. Only trade with money
+            you can afford to lose.
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mb-3">
+            Past performance is not indicative of future results. The scores, ratings, and comparisons on this site
+            are based on our independent testing methodology and do not constitute financial advice.
+            See our <Link href={`/${locale}/methodology`} className="text-emerald-400 hover:underline">methodology page</Link> for
+            how we evaluate brokers.
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed">
+            <strong className="text-gray-400">Affiliate Disclosure:</strong> BinaryBrokerHub may receive compensation
+            from brokers featured on this site. This does not influence our ratings or rankings, which are determined
+            solely by our testing process. Read our full{' '}
+            <Link href={`/${locale}/methodology`} className="text-emerald-400 hover:underline">independence policy</Link>.
+          </p>
         </div>
       </section>
     </div>

@@ -137,7 +137,7 @@ export default function BestBinaryOptionsBrokersPage() {
       <header className="mb-12">
         <div className="flex items-center gap-2 mb-4">
           <span className="badge-blue">Expert Rankings</span>
-          <span className="text-xs text-gray-600">Updated May 2026 &bull; 18 min read</span>
+          <span className="text-xs text-gray-600">Updated May 2026 &bull; 25 min read</span>
         </div>
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">
           7 Best Binary Options Brokers 2026 &mdash; Tested &amp; Ranked
@@ -156,9 +156,11 @@ export default function BestBinaryOptionsBrokersPage() {
           <li><a href="#comparison" className="hover:text-blue-400 transition-colors">1. Quick Comparison Table</a></li>
           <li><a href="#rankings" className="hover:text-blue-400 transition-colors">2. Detailed Broker Rankings</a></li>
           <li><a href="#how-we-rank" className="hover:text-blue-400 transition-colors">3. How We Rank Brokers</a></li>
-          <li><a href="#best-for" className="hover:text-blue-400 transition-colors">4. Best Broker by Trader Type</a></li>
-          <li><a href="#tips" className="hover:text-blue-400 transition-colors">5. Tips for Choosing a Broker</a></li>
-          <li><a href="#faq" className="hover:text-blue-400 transition-colors">6. FAQ</a></li>
+          <li><a href="#regulation" className="hover:text-blue-400 transition-colors">4. Understanding Regulation Tiers</a></li>
+          <li><a href="#best-for" className="hover:text-blue-400 transition-colors">5. Best Broker by Trader Type</a></li>
+          <li><a href="#tips" className="hover:text-blue-400 transition-colors">6. Tips for Choosing a Broker</a></li>
+          <li><a href="#red-flags" className="hover:text-blue-400 transition-colors">7. Red Flags: Brokers to Avoid</a></li>
+          <li><a href="#faq" className="hover:text-blue-400 transition-colors">8. FAQ</a></li>
         </ol>
       </nav>
 
@@ -328,6 +330,82 @@ export default function BestBinaryOptionsBrokersPage() {
         </div>
       </section>
 
+      {/* Regulation Tiers */}
+      <section id="regulation" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Understanding Broker Regulation Tiers</h2>
+        <p className="text-gray-400 leading-relaxed mb-6">
+          Not all regulation is created equal. The binary options industry has a wide spectrum of regulatory oversight &mdash;
+          from fully licensed operators to completely unregulated entities. Understanding these tiers helps you assess
+          the real risk level of any broker.
+        </p>
+
+        <div className="space-y-4 mb-6">
+          <div className="glass-card p-5 border-l-4 border-emerald-500">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-bold text-emerald-400">Tier 1 &mdash; Government-Regulated</h3>
+              <span className="badge text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Strongest Protection</span>
+            </div>
+            <p className="text-sm text-gray-300 leading-relaxed mb-2">
+              Licensed by established financial regulators (CySEC, MFSA, FCA, ASIC). These regulators require capital reserves,
+              client fund segregation, compensation schemes, and regular audits. If the broker fails, you may recover some funds.
+            </p>
+            <p className="text-xs text-gray-500">
+              <strong className="text-white">On our list:</strong>{' '}
+              <Link href={`/${locale}/deriv`} className="text-emerald-400 hover:underline">Deriv</Link> (MFSA Malta) &bull;{' '}
+              <Link href={`/${locale}/iq-option`} className="text-emerald-400 hover:underline">IQ Option</Link> (CySEC &mdash; EU entity only, CFDs only)
+            </p>
+          </div>
+
+          <div className="glass-card p-5 border-l-4 border-blue-500">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-bold text-blue-400">Tier 2 &mdash; Industry Self-Regulation</h3>
+              <span className="badge text-[10px] bg-blue-500/10 text-blue-400 border border-blue-500/20">Moderate Protection</span>
+            </div>
+            <p className="text-sm text-gray-300 leading-relaxed mb-2">
+              Members of industry bodies like the Financial Commission (FinaCom). These provide dispute resolution
+              and compensation funds (up to &euro;20,000 per case) but are <strong className="text-white">not government regulators</strong>.
+              Better than nothing, but enforcement is voluntary.
+            </p>
+            <p className="text-xs text-gray-500">
+              <strong className="text-white">On our list:</strong>{' '}
+              <Link href={`/${locale}/olymp-trade`} className="text-blue-400 hover:underline">Olymp Trade</Link> (FinaCom A) &bull;{' '}
+              <Link href={`/${locale}/binomo`} className="text-blue-400 hover:underline">Binomo</Link> (FinaCom A)
+            </p>
+          </div>
+
+          <div className="glass-card p-5 border-l-4 border-amber-500">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-bold text-amber-400">Tier 3 &mdash; Offshore Registration Only</h3>
+              <span className="badge text-[10px] bg-amber-500/10 text-amber-400 border border-amber-500/20">Minimal Protection</span>
+            </div>
+            <p className="text-sm text-gray-300 leading-relaxed mb-2">
+              Registered in jurisdictions with minimal financial oversight (St. Vincent, Marshall Islands, Comoros).
+              These registrations are essentially business licenses &mdash; they don&apos;t impose capital requirements,
+              fund segregation, or client protections. Your recourse in disputes is extremely limited.
+            </p>
+            <p className="text-xs text-gray-500">
+              <strong className="text-white">On our list:</strong>{' '}
+              <Link href={`/${locale}/pocket-option`} className="text-amber-400 hover:underline">Pocket Option</Link> (Costa Rica) &bull;{' '}
+              <Link href={`/${locale}/quotex`} className="text-amber-400 hover:underline">Quotex</Link> (St. Kitts and Nevis) &bull;{' '}
+              <Link href={`/${locale}/expert-option`} className="text-amber-400 hover:underline">ExpertOption</Link> (SVG)
+            </p>
+          </div>
+        </div>
+
+        <div className="glass-card p-5 border-blue-500/10 bg-blue-500/[0.02]">
+          <p className="text-sm text-gray-300 leading-relaxed">
+            <span className="text-blue-400 font-semibold">Important nuance: </span>
+            Regulation does not eliminate risk. Even CySEC-regulated IQ Option restricts binary options to its offshore entity
+            for non-EU traders. And Pocket Option, despite being offshore, has processed thousands of withdrawals successfully
+            in our testing. Regulation is <em>one signal of trust</em>, not a guarantee.
+            Read our full{' '}
+            <Link href={`/${locale}/scams`} className="text-blue-400 hover:text-blue-300">scam detection guide</Link> and{' '}
+            <Link href={`/${locale}/methodology`} className="text-blue-400 hover:text-blue-300">testing methodology</Link> for
+            how we evaluate broker safety beyond just regulation.
+          </p>
+        </div>
+      </section>
+
       {/* Best Broker by Trader Type */}
       <section id="best-for" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Best Broker by Trader Type</h2>
@@ -437,6 +515,67 @@ export default function BestBinaryOptionsBrokersPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Red Flags */}
+      <section id="red-flags" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Red Flags: Brokers to Avoid</h2>
+        <p className="text-gray-400 leading-relaxed mb-6">
+          The binary options industry has a significant scam problem. For every legitimate broker, there are
+          dozens of fraudulent operations. Here are the warning signs we look for &mdash; if a broker exhibits
+          any of these, we don&apos;t list them on our site.
+        </p>
+
+        <div className="space-y-3">
+          {[
+            {
+              flag: 'Guaranteed profits or "risk-free" trading claims',
+              why: 'No legitimate broker can guarantee profits. Binary options are inherently risky — anyone claiming otherwise is lying to get your deposit.',
+            },
+            {
+              flag: 'Refusing or delaying withdrawals without clear reason',
+              why: 'The #1 scam tactic. Legitimate brokers process withdrawals within their stated timeframe. Repeated excuses or "account manager" calls convincing you to keep trading are red flags.',
+            },
+            {
+              flag: 'Unsolicited calls pressuring you to deposit more',
+              why: 'Legitimate brokers don\'t cold-call. If an "account manager" calls you repeatedly to suggest larger deposits or new trades, this is a high-pressure sales tactic.',
+            },
+            {
+              flag: 'No verifiable company registration or address',
+              why: 'Every legitimate broker has a registered entity you can verify. If the "About" page has no company name, registration number, or physical address, walk away.',
+            },
+            {
+              flag: 'Bonuses with impossible-to-meet turnover requirements',
+              why: 'Some scam brokers auto-apply bonuses with 100x+ turnover requirements, effectively locking your deposit. Read bonus terms carefully — or decline all bonuses.',
+            },
+            {
+              flag: 'Manipulated charts or prices that differ from the real market',
+              why: 'Compare the broker\'s price feeds with TradingView or another independent source. If prices consistently diverge, the broker may be running trades against you.',
+            },
+          ].map((item) => (
+            <div key={item.flag} className="glass-card p-5">
+              <div className="flex items-start gap-3">
+                <span className="text-red-400 mt-0.5 flex-shrink-0 text-lg">&#9888;</span>
+                <div>
+                  <h3 className="font-semibold text-white text-sm mb-1">{item.flag}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.why}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="glass-card p-5 mt-6 border-red-500/10 bg-red-500/[0.02]">
+          <p className="text-sm text-gray-300 leading-relaxed">
+            <span className="text-red-400 font-semibold">Already been scammed? </span>
+            Read our{' '}
+            <Link href={`/${locale}/scams`} className="text-red-400 hover:underline">
+              scam detection and recovery guide
+            </Link>{' '}
+            for steps to take, including how to report to regulators and avoid &quot;recovery scams&quot;
+            that target victims a second time.
+          </p>
         </div>
       </section>
 
