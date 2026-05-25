@@ -58,7 +58,8 @@ export default function Header() {
                 </svg>
               </button>
               {brokersOpen && (
-                <div className="absolute top-full left-0 mt-1 w-56 bg-[#0f1625] border border-white/[0.08] rounded-xl shadow-2xl py-2 z-50">
+                <div className="absolute top-full left-0 pt-2 z-50">
+                <div className="w-56 bg-[#0f1625] border border-white/[0.08] rounded-xl shadow-2xl py-2">
                   {brokerLinks.map((b) => (
                     <Link key={b.href} href={b.href} className="flex items-center justify-between px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.05]">
                       <span>{b.label}</span>
@@ -70,6 +71,7 @@ export default function Header() {
                       Compare All Brokers →
                     </Link>
                   </div>
+                </div>
                 </div>
               )}
             </div>
