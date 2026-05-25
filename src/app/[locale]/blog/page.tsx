@@ -108,6 +108,39 @@ const blogPosts = [
     readTime: '11 min',
     date: 'May 2026',
   },
+  // Timeframe Strategy Guides
+  {
+    slug: '60-second-binary-options-strategy',
+    title: '60-Second Binary Options Strategy 2026 — Fast Trading Guide',
+    excerpt: 'Master turbo trading with 3 proven 60-second strategies. Momentum breakout, S/R bounce, and engulfing candle setups with entry rules and risk management.',
+    category: 'Strategy',
+    readTime: '14 min',
+    date: 'May 2026',
+  },
+  {
+    slug: '5-minute-binary-options-strategy',
+    title: '5-Minute Binary Options Strategy 2026 — The Sweet Spot for Most Traders',
+    excerpt: 'The optimal balance between speed and reliability. EMA crossover, RSI divergence, and MACD histogram strategies with real entry rules.',
+    category: 'Strategy',
+    readTime: '13 min',
+    date: 'May 2026',
+  },
+  {
+    slug: '30-minute-binary-options-strategy',
+    title: '30-Minute Binary Options Strategy 2026 — Higher Win Rate Methods',
+    excerpt: 'Longer timeframes mean better analysis and higher win rates. Trend line bounce, multi-timeframe RSI, and Fibonacci retracement strategies.',
+    category: 'Strategy',
+    readTime: '12 min',
+    date: 'May 2026',
+  },
+  {
+    slug: '1-day-binary-options-strategy',
+    title: 'End-of-Day Binary Options Strategy 2026 — Daily Expiry Trading Guide',
+    excerpt: 'End-of-day trading requires least screen time, perfect for traders with day jobs. Daily trend following, news trading, and S/R strategies.',
+    category: 'Strategy',
+    readTime: '11 min',
+    date: 'May 2026',
+  },
   // Educational Content
   {
     slug: 'binary-options-vs-forex',

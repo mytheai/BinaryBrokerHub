@@ -60,13 +60,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/methodology`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
-                  Our Methodology
+                <Link href={`/${locale}/blog`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Trading Guides
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
-                  Trading Guides
+                <Link href={`/${locale}/glossary`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Glossary
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/scams`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Scam Blacklist
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/methodology`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Our Methodology
                 </Link>
               </li>
               <li>

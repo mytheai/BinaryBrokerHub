@@ -56,6 +56,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog/otc-trading-binary-options', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/blog/deriv-synthetic-indices-guide', priority: 0.7, changeFrequency: 'monthly' as const },
 
+    // Blog — Timeframe Strategies
+    { path: '/blog/60-second-binary-options-strategy', priority: 0.75, changeFrequency: 'monthly' as const },
+    { path: '/blog/5-minute-binary-options-strategy', priority: 0.75, changeFrequency: 'monthly' as const },
+    { path: '/blog/30-minute-binary-options-strategy', priority: 0.75, changeFrequency: 'monthly' as const },
+    { path: '/blog/1-day-binary-options-strategy', priority: 0.75, changeFrequency: 'monthly' as const },
+
+    // Country Guides
+    { path: '/binary-options-india', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/binary-options-usa', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/binary-options-uk', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/binary-options-nigeria', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/binary-options-philippines', priority: 0.8, changeFrequency: 'monthly' as const },
+
+    // Scam Blacklist
+    { path: '/scams', priority: 0.8, changeFrequency: 'weekly' as const },
+
+    // Glossary
+    { path: '/glossary', priority: 0.7, changeFrequency: 'monthly' as const },
+
     // Tools & Utility
     { path: '/tools/calculator', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/methodology', priority: 0.5, changeFrequency: 'monthly' as const },
