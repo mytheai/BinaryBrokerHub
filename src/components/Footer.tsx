@@ -1,95 +1,96 @@
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+'use client';
 
-export function Footer() {
+import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+
+export default function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
 
   return (
-    <footer className="mt-24 border-t border-gray-200 bg-gray-50">
-      <div className="mx-auto max-w-6xl px-6 py-12">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
-          <div className="md:col-span-1">
-            <Link href="/" className="text-lg font-semibold tracking-tight">
-              BinaryBrokerHub
-            </Link>
-            <p className="mt-3 text-sm text-gray-600">{t('tagline')}</p>
+    <footer className="bg-[#060a12] border-t border-white/[0.04] mt-auto">
+      <div className="section-container py-12">
+        {/* Top Section */}
+        <div className="grid md:grid-cols-4 gap-8 mb-10">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center">
+                <span className="text-black font-bold text-sm">BB</span>
+              </div>
+              <span className="font-bold text-lg">
+                BinaryBroker<span className="text-emerald-400">Hub</span>
+              </span>
+            </div>
+            <p className="text-sm text-gray-500 max-w-md leading-relaxed">
+              Independent analysis and reviews of binary options brokers. Our team of experienced
+              traders tests platforms extensively to provide accurate, up-to-date information.
+            </p>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-              {t('sections.rankings')}
-            </h2>
-            <ul className="mt-3 space-y-2 text-sm text-gray-700">
+            <h4 className="text-sm font-semibold text-gray-300 mb-3">Brokers</h4>
+            <ul className="space-y-2">
               <li>
-                <Link href="/brokers" className="hover:text-gray-900">
-                  {t('links.allBrokers')}
+                <Link href={`/${locale}/quotex`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Quotex Review
                 </Link>
               </li>
               <li>
-                <Link href="/brokers" className="hover:text-gray-900">
-                  {t('links.bestForBeginners')}
+                <Link href={`/${locale}/pocket-option`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Pocket Option Review
                 </Link>
               </li>
               <li>
-                <Link href="/brokers" className="hover:text-gray-900">
-                  {t('links.bestRegulated')}
+                <Link href={`/${locale}/compare`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Broker Comparison
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Resources */}
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-              {t('sections.about')}
-            </h2>
-            <ul className="mt-3 space-y-2 text-sm text-gray-700">
+            <h4 className="text-sm font-semibold text-gray-300 mb-3">Resources</h4>
+            <ul className="space-y-2">
               <li>
-                <Link href="/methodology" className="hover:text-gray-900">
-                  {t('links.methodology')}
+                <Link href={`/${locale}/tools/calculator`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Profit Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/editorial-team" className="hover:text-gray-900">
-                  {t('links.editorialTeam')}
+                <Link href={`/${locale}/methodology`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Our Methodology
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-gray-900">
-                  {t('links.contact')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-              {t('sections.legal')}
-            </h2>
-            <ul className="mt-3 space-y-2 text-sm text-gray-700">
-              <li>
-                <Link href="/risk-disclosure" className="hover:text-gray-900">
-                  {t('links.riskDisclosure')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-gray-900">
-                  {t('links.privacy')}
+                <Link href={`/${locale}/blog`} className="text-sm text-gray-500 hover:text-emerald-400 transition-colors">
+                  Trading Guides
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-200 pt-6 text-xs text-gray-600">
-          <p className="font-semibold text-gray-700">Risk warning</p>
-          <p className="mt-1">{t('riskWarning')}</p>
-          <p className="mt-4 font-semibold text-gray-700">
-            Affiliate disclosure
+        {/* Risk Warning */}
+        <div className="border border-amber-500/20 bg-amber-500/[0.03] rounded-xl p-4 mb-8">
+          <div className="flex gap-3">
+            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center mt-0.5">
+              <span className="text-amber-400 text-xs">!</span>
+            </div>
+            <p className="text-xs text-amber-200/70 leading-relaxed">
+              {t('riskWarning')}
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-white/[0.04]">
+          <p className="text-xs text-gray-600">
+            &copy; {new Date().getFullYear()} BinaryBrokerHub. All rights reserved.
           </p>
-          <p className="mt-1">{t('affiliateDisclosure')}</p>
-          <p className="mt-6 text-gray-500">
-            © {new Date().getFullYear()} BinaryBrokerHub. All rights reserved.
-          </p>
+          <p className="text-xs text-gray-600">{t('disclaimer')}</p>
         </div>
       </div>
     </footer>

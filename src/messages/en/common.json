@@ -1,0 +1,76 @@
+{
+  "site": {
+    "name": "BinaryBrokerHub",
+    "tagline": "Find the Best Binary Options Broker"
+  },
+  "nav": {
+    "home": "Home",
+    "quotex": "Quotex",
+    "pocketOption": "Pocket Option",
+    "compare": "Compare",
+    "tools": "Tools",
+    "blog": "Blog",
+    "methodology": "Methodology"
+  },
+  "cta": {
+    "openAccount": "Open Free Account",
+    "tryDemo": "Try Demo Account",
+    "startTrading": "Start Trading Now",
+    "learnMore": "Learn More"
+  },
+  "home": {
+    "heroTitle": "Trade Smarter with the Best Binary Options Brokers",
+    "heroSubtitle": "Quotex & Pocket Option — trusted by millions of traders worldwide. Start with a free demo account today.",
+    "whyTitle": "Why Choose These Brokers?",
+    "feature1Title": "Fast Payouts",
+    "feature1Desc": "Get your profits within 24 hours. No hidden fees, no delays.",
+    "feature2Title": "Free Demo Account",
+    "feature2Desc": "$10,000 virtual balance to practice risk-free before trading real money.",
+    "feature3Title": "Low Minimum Deposit",
+    "feature3Desc": "Start trading with as little as $10. Perfect for beginners.",
+    "feature4Title": "High Returns",
+    "feature4Desc": "Earn up to 95% profit on successful trades in just 60 seconds."
+  },
+  "broker": {
+    "minDeposit": "Min. Deposit",
+    "maxPayout": "Max. Payout",
+    "demoAccount": "Demo Account",
+    "regulation": "Regulation",
+    "platforms": "Platforms",
+    "assets": "Assets",
+    "yes": "Yes",
+    "free": "Free"
+  },
+  "quotex": {
+    "title": "Quotex Review 2026",
+    "subtitle": "Trade digital options with up to 95% returns. Lightning-fast platform with 1-second trades.",
+    "highlight1": "Up to 95% payout per trade",
+    "highlight2": "Minimum deposit only $10",
+    "highlight3": "Free $10,000 demo account",
+    "highlight4": "400+ trading assets",
+    "highlight5": "Instant withdrawals (crypto)",
+    "description": "Quotex is a modern digital options platform known for its sleek interface, high payouts, and lightning-fast execution. Popular among traders in Asia, CIS, and Latin America."
+  },
+  "pocketOption": {
+    "title": "Pocket Option Review 2026",
+    "subtitle": "The social trading platform with copy-trading, tournaments, and achievements.",
+    "highlight1": "Up to 92% payout per trade",
+    "highlight2": "Minimum deposit only $5",
+    "highlight3": "Free $50,000 demo account",
+    "highlight4": "100+ trading assets",
+    "highlight5": "Social & copy trading features",
+    "description": "Pocket Option combines binary options trading with social features like copy-trading, tournaments, and achievement systems. A favorite among beginner traders."
+  },
+  "compare": {
+    "title": "Quotex vs Pocket Option — Which is Better?",
+    "subtitle": "Side-by-side comparison to help you choose the right broker for your trading style."
+  },
+  "tools": {
+    "calculatorTitle": "Profit Calculator",
+    "calculatorDesc": "Calculate your potential profits before placing a trade."
+  },
+  "footer": {
+    "riskWarning": "Risk Warning: Binary options trading involves significant risk. You may lose your entire investment. Only trade with money you can afford to lose.",
+    "disclaimer": "This site contains affiliate links. We may earn a commission when you sign up through our links at no extra cost to you."
+  }
+}

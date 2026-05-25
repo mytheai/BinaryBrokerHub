@@ -1,0 +1,76 @@
+{
+  "site": {
+    "name": "BinaryBrokerHub",
+    "tagline": "Los Mejores Brokers de Opciones Binarias"
+  },
+  "nav": {
+    "home": "Inicio",
+    "quotex": "Quotex",
+    "pocketOption": "Pocket Option",
+    "compare": "Comparar",
+    "tools": "Herramientas",
+    "blog": "Blog",
+    "methodology": "Metodología"
+  },
+  "cta": {
+    "openAccount": "Abrir Cuenta Gratis",
+    "tryDemo": "Probar Cuenta Demo",
+    "startTrading": "Empezar a Operar",
+    "learnMore": "Más Información"
+  },
+  "home": {
+    "heroTitle": "Opera de Forma Inteligente con los Mejores Brokers de Opciones Binarias",
+    "heroSubtitle": "Quotex y Pocket Option — la confianza de millones de traders en todo el mundo. Comienza con una cuenta demo gratis hoy.",
+    "whyTitle": "¿Por Qué Elegir Estos Brokers?",
+    "feature1Title": "Pagos Rápidos",
+    "feature1Desc": "Obtén tus ganancias en 24 horas. Sin comisiones ocultas, sin retrasos.",
+    "feature2Title": "Cuenta Demo Gratis",
+    "feature2Desc": "$10,000 de saldo virtual para practicar sin riesgo antes de operar con dinero real.",
+    "feature3Title": "Depósito Mínimo Bajo",
+    "feature3Desc": "Empieza a operar desde $10. Perfecto para principiantes.",
+    "feature4Title": "Altos Retornos",
+    "feature4Desc": "Gana hasta 95% de beneficio en operaciones exitosas en solo 60 segundos."
+  },
+  "broker": {
+    "minDeposit": "Depósito Mín.",
+    "maxPayout": "Pago Máx.",
+    "demoAccount": "Cuenta Demo",
+    "regulation": "Regulación",
+    "platforms": "Plataformas",
+    "assets": "Activos",
+    "yes": "Sí",
+    "free": "Gratis"
+  },
+  "quotex": {
+    "title": "Reseña de Quotex 2026",
+    "subtitle": "Opera opciones digitales con hasta 95% de retorno. Plataforma ultrarrápida con operaciones de 1 segundo.",
+    "highlight1": "Hasta 95% de pago por operación",
+    "highlight2": "Depósito mínimo de solo $10",
+    "highlight3": "Cuenta demo gratis de $10,000",
+    "highlight4": "400+ activos de trading",
+    "highlight5": "Retiros instantáneos (cripto)",
+    "description": "Quotex es una plataforma moderna de opciones digitales conocida por su interfaz elegante, altos pagos y ejecución ultrarrápida. Popular entre traders de Asia, CIS y Latinoamérica."
+  },
+  "pocketOption": {
+    "title": "Reseña de Pocket Option 2026",
+    "subtitle": "La plataforma de trading social con copy-trading, torneos y logros.",
+    "highlight1": "Hasta 92% de pago por operación",
+    "highlight2": "Depósito mínimo de solo $5",
+    "highlight3": "Cuenta demo gratis de $50,000",
+    "highlight4": "100+ activos de trading",
+    "highlight5": "Trading social y copy-trading",
+    "description": "Pocket Option combina el trading de opciones binarias con funciones sociales como copy-trading, torneos y sistemas de logros. Favorito entre traders principiantes."
+  },
+  "compare": {
+    "title": "Quotex vs Pocket Option — ¿Cuál es Mejor?",
+    "subtitle": "Comparación lado a lado para ayudarte a elegir el broker adecuado para tu estilo de trading."
+  },
+  "tools": {
+    "calculatorTitle": "Calculadora de Beneficios",
+    "calculatorDesc": "Calcula tus ganancias potenciales antes de abrir una operación."
+  },
+  "footer": {
+    "riskWarning": "Advertencia de riesgo: El trading de opciones binarias implica un riesgo significativo. Puedes perder toda tu inversión. Opera solo con dinero que puedas permitirte perder.",
+    "disclaimer": "Este sitio contiene enlaces de afiliados. Podemos recibir una comisión cuando te registras a través de nuestros enlaces sin costo adicional para ti."
+  }
+}
