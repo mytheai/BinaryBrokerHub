@@ -191,6 +191,35 @@ export default function ComparePage() {
         </div>
       </section>
 
+      {/* Head-to-Head Comparisons */}
+      <section className="section-container pb-16">
+        <h2 className="text-2xl font-bold mb-8 text-center">Head-to-Head Comparisons</h2>
+        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-8">
+          Deep-dive comparisons between the most popular broker pairs. Each comparison includes detailed analysis
+          of payouts, features, regulation, and our recommendation.
+        </p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { slug: 'pocket-option-vs-quotex', a: 'Pocket Option', b: 'Quotex', highlight: '#1 vs #2 — the most popular comparison' },
+            { slug: 'pocket-option-vs-iq-option', a: 'Pocket Option', b: 'IQ Option', highlight: 'Copy trading vs professional platform' },
+            { slug: 'quotex-vs-iq-option', a: 'Quotex', b: 'IQ Option', highlight: 'Highest payouts vs best technology' },
+            { slug: 'pocket-option-vs-binomo', a: 'Pocket Option', b: 'Binomo', highlight: 'Features vs gamification' },
+            { slug: 'quotex-vs-binomo', a: 'Quotex', b: 'Binomo', highlight: 'Max payouts vs tournaments' },
+            { slug: 'iq-option-vs-deriv', a: 'IQ Option', b: 'Deriv', highlight: 'CySEC vs MFSA — regulated showdown' },
+          ].map((comp) => (
+            <Link key={comp.slug} href={`/${locale}/compare/${comp.slug}`} className="glass-card p-5 hover:bg-white/[0.04] transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-white font-semibold text-sm">{comp.a}</span>
+                <span className="text-gray-500 text-xs">vs</span>
+                <span className="text-white font-semibold text-sm">{comp.b}</span>
+              </div>
+              <p className="text-xs text-gray-500">{comp.highlight}</p>
+              <span className="text-xs text-emerald-400 font-medium mt-2 inline-block group-hover:underline">Read comparison →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Our Recommendation */}
       <section className="section-container pb-16">
         <div className="glass-card p-8 md:p-10 border border-emerald-500/20">

@@ -266,6 +266,73 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Popular Comparisons */}
+      <section className="section-container py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Popular Broker Comparisons</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Can&apos;t decide between two brokers? Our head-to-head comparisons break down every difference.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {[
+            { slug: 'pocket-option-vs-quotex', a: 'Pocket Option', b: 'Quotex', desc: 'Our #1 vs #2 — features vs payouts' },
+            { slug: 'pocket-option-vs-iq-option', a: 'Pocket Option', b: 'IQ Option', desc: 'Copy trading vs pro platform' },
+            { slug: 'quotex-vs-iq-option', a: 'Quotex', b: 'IQ Option', desc: '98% payouts vs best technology' },
+            { slug: 'pocket-option-vs-binomo', a: 'Pocket Option', b: 'Binomo', desc: 'All-rounder vs tournament king' },
+            { slug: 'quotex-vs-binomo', a: 'Quotex', b: 'Binomo', desc: 'High payouts vs gamified experience' },
+            { slug: 'iq-option-vs-deriv', a: 'IQ Option', b: 'Deriv', desc: 'CySEC vs MFSA — regulated showdown' },
+          ].map((comp) => (
+            <Link key={comp.slug} href={`/${locale}/compare/${comp.slug}`} className="glass-card p-5 hover:bg-white/[0.04] transition-colors group">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-white font-semibold text-sm">{comp.a}</span>
+                <span className="text-gray-500 text-xs">vs</span>
+                <span className="text-white font-semibold text-sm">{comp.b}</span>
+              </div>
+              <p className="text-xs text-gray-500">{comp.desc}</p>
+              <span className="text-xs text-emerald-400 font-medium mt-2 inline-block group-hover:underline">Compare →</span>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center">
+          <Link href={`/${locale}/compare`} className="btn-secondary px-6 py-3 text-sm inline-block">
+            View All Comparisons →
+          </Link>
+        </div>
+      </section>
+
+      {/* Latest Guides */}
+      <section className="section-container py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Trading Guides &amp; Education</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Expert guides to help you trade smarter. From beginner basics to advanced strategies.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {[
+            { slug: 'best-binary-options-brokers', title: '7 Best Brokers 2026', desc: 'Complete ranking with mini-reviews' },
+            { slug: 'binary-options-trading-guide', title: 'Beginner Guide', desc: 'Everything you need to start trading' },
+            { slug: 'binary-options-strategy-beginners', title: '5 Best Strategies', desc: 'Proven methods for beginners' },
+            { slug: 'binary-options-regulation', title: 'Regulation Guide', desc: 'Which brokers are actually licensed?' },
+            { slug: 'binary-options-demo-account', title: 'Demo Account Guide', desc: 'Compare free demo accounts' },
+            { slug: 'binary-options-minimum-deposit', title: 'Min Deposit Comparison', desc: 'Start trading from just $5' },
+            { slug: 'how-to-withdraw-binary-options', title: 'Withdrawal Guide', desc: 'How to withdraw from any broker' },
+            { slug: 'binary-options-vs-forex', title: 'Binary vs Forex', desc: 'Key differences explained' },
+          ].map((post) => (
+            <Link key={post.slug} href={`/${locale}/blog/${post.slug}`} className="glass-card p-4 hover:bg-white/[0.04] transition-colors group">
+              <h3 className="font-semibold text-white text-sm group-hover:text-emerald-400 transition-colors mb-1">{post.title}</h3>
+              <p className="text-xs text-gray-500">{post.desc}</p>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center">
+          <Link href={`/${locale}/blog`} className="btn-secondary px-6 py-3 text-sm inline-block">
+            View All 20 Guides →
+          </Link>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="section-container py-20">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-900/40 to-green-900/40 border border-emerald-500/20 p-8 md:p-16 text-center">
