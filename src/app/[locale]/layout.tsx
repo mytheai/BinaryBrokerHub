@@ -88,6 +88,7 @@ export default async function LocaleLayout({
     <html lang={locale} className="dark" suppressHydrationWarning>
       <head>
         <meta name="format-detection" content="telephone=no" />
+        <script defer data-domain="binarybrokerhub.com" src="https://plausible.io/js/script.js" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
