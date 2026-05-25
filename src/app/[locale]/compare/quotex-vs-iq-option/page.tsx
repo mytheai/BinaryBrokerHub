@@ -605,6 +605,25 @@ export default function QuotexVsIqOptionPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="section-container">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {[
+            { q: 'Which has higher payouts, Quotex or IQ Option?', a: 'Quotex offers up to 98% payouts — the highest in the industry. IQ Option offers up to 95%. Quotex has a clear advantage on maximum payouts.' },
+            { q: 'Is IQ Option safer than Quotex?', a: 'Yes. IQ Option holds CySEC regulation (EU tier-1) with ICF investor compensation fund. Quotex has IFMRRC certification which has expired. IQ Option offers significantly stronger regulatory protection.' },
+            { q: 'Which platform is easier to use?', a: 'Quotex has a cleaner, more minimalist interface that is easier for beginners. IQ Option has more features and tools but a steeper learning curve.' },
+            { q: 'Can I use both from the EU?', a: 'IQ Option is available in the EU but does not offer binary options there (ESMA ban). Quotex accepts EU traders for binary options as it operates offshore. IQ Option offers CFDs instead for EU users.' },
+            { q: 'Which has faster withdrawals?', a: 'Quotex processes crypto withdrawals in about 47 minutes on average. IQ Option takes 1-3 business days for most methods. Quotex is faster for crypto; IQ Option supports more traditional banking methods.' },
+          ].map((faq, i) => (
+            <div key={i} className="glass-card p-5">
+              <h3 className="font-bold text-white text-sm mb-2">{faq.q}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ═══════════════════════════════════════════════════ */}
       {/* INTERNAL LINKS                                     */}
       {/* ═══════════════════════════════════════════════════ */}

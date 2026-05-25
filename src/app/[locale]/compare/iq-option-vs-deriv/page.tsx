@@ -431,6 +431,26 @@ export default function IqOptionVsDerivPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="section-container">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {[
+            { q: 'Which is more regulated, IQ Option or Deriv?', a: 'Both have strong regulation. IQ Option holds CySEC (EU). Deriv holds MFSA (Malta/EU), LFSA, VFSC, and BVI FSC across multiple jurisdictions. Deriv has broader global regulatory coverage.' },
+            { q: 'Which has more trading instruments?', a: 'Deriv offers significantly more variety — forex, synthetics, commodities, stocks, and indices. IQ Option focuses on binary options (non-EU), forex, stocks, and crypto CFDs.' },
+            { q: 'Can I trade on weekends?', a: 'Yes, with Deriv. Their synthetic indices trade 24/7 including weekends and holidays. IQ Option only offers trading during standard market hours.' },
+            { q: 'Which is better for binary options?', a: 'IQ Option has a more polished binary options interface with better charting tools and 100+ indicators. Deriv offers binary options through Deriv Trader with competitive payouts.' },
+            { q: 'Which has a lower minimum deposit?', a: 'Deriv requires just $5 minimum deposit. IQ Option requires $10. Both offer $1 minimum trade sizes.' },
+            { q: 'Which has better educational resources?', a: 'IQ Option has a comprehensive learning academy with video courses and quizzes built into the platform. Deriv has a knowledge base and Deriv Academy but it is less interactive.' },
+          ].map((faq, i) => (
+            <div key={i} className="glass-card p-5">
+              <h3 className="font-bold text-white text-sm mb-2">{faq.q}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Internal Links */}
       <section className="section-container pb-12">
         <h2 className="text-xl font-bold mb-6">Read Our Full Reviews</h2>

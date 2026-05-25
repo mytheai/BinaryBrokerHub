@@ -392,6 +392,25 @@ export default function PocketOptionVsBinomoPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="section-container">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {[
+            { q: 'Which has a lower minimum deposit?', a: 'Pocket Option requires just $5 minimum deposit, while Binomo requires $10. For the lowest entry barrier, Pocket Option wins.' },
+            { q: 'Which is better for beginners?', a: 'Binomo has a simpler interface with a gentler learning curve, making it easier for absolute beginners. Pocket Option offers more features including copy trading which helps beginners learn from experienced traders.' },
+            { q: 'Which has higher payouts?', a: 'Pocket Option offers up to 92% payouts compared to Binomo\'s maximum of 90%. Pocket Option consistently offers higher payouts across most asset pairs.' },
+            { q: 'Is Pocket Option or Binomo more trustworthy?', a: 'Pocket Option has active IFMRRC certification and higher user ratings. Binomo has faced regulatory warnings in some countries. Overall, Pocket Option has a stronger trust profile.' },
+            { q: 'Which has better withdrawal speeds?', a: 'Pocket Option processes crypto withdrawals in 12-45 minutes. Binomo typically takes 1-3 business days for most methods. Pocket Option is significantly faster.' },
+          ].map((faq, i) => (
+            <div key={i} className="glass-card p-5">
+              <h3 className="font-bold text-white text-sm mb-2">{faq.q}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Internal Links */}
       <section className="section-container pb-12">
         <h2 className="text-xl font-bold mb-6">Read Our Full Reviews</h2>

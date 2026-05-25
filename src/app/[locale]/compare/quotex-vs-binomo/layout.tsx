@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import SchemaScript from '@/components/SchemaScript';
-import { comparisonSchema, breadcrumbSchema } from '@/lib/schema';
+import { comparisonSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 const BASE_URL = 'https://binarybrokerhub.com';
 
@@ -37,6 +37,13 @@ const schemas = [
     { name: 'Home', url: BASE_URL },
     { name: 'Compare', url: `${BASE_URL}/en/compare` },
     { name: 'Quotex vs Binomo', url: `${BASE_URL}/en/compare/quotex-vs-binomo` },
+  ]),
+  faqSchema([
+    { question: 'Which has higher payouts, Quotex or Binomo?', answer: 'Quotex offers up to 98% payouts versus Binomo\'s maximum of 90%. Quotex has a significant advantage on payout percentages.' },
+    { question: 'Which has a lower minimum deposit?', answer: 'Both require a $10 minimum deposit and offer $1 minimum trade sizes, making them equal on minimum entry.' },
+    { question: 'Which is better for beginners?', answer: 'Binomo has a simpler interface and better structured educational content. Quotex has a cleaner design but fewer learning resources.' },
+    { question: 'Which is more trustworthy?', answer: 'Quotex has IFMRRC certification (though expired). Binomo has faced regulatory warnings in several countries. Quotex has a slightly better trust profile.' },
+    { question: 'Which has faster withdrawals?', answer: 'Quotex processes crypto withdrawals in about 47 minutes. Binomo typically takes 1-3 business days. Quotex is significantly faster.' },
   ]),
 ];
 

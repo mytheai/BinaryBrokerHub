@@ -620,6 +620,25 @@ export default function PocketOptionVsIqOptionPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="section-container">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {[
+            { q: 'Which has higher payouts, Pocket Option or IQ Option?', a: 'Pocket Option offers up to 92% payouts on standard trades, while IQ Option offers up to 95% on binary options. IQ Option has a slight edge on maximum payouts for major currency pairs.' },
+            { q: 'Is IQ Option more regulated than Pocket Option?', a: 'Yes. IQ Option holds CySEC regulation (EU tier-1), while Pocket Option has IFMRRC certification (non-EU). IQ Option offers stronger regulatory protection including the ICF compensation fund.' },
+            { q: 'Which is better for beginners?', a: 'IQ Option has a better educational platform with free courses and a polished interface. Pocket Option offers copy trading which lets beginners follow experienced traders while learning.' },
+            { q: 'Can I trade binary options on IQ Option from the EU?', a: 'No. IQ Option complies with ESMA regulations and does not offer binary options to EU/EEA residents. Pocket Option, being offshore, does not enforce this restriction.' },
+            { q: 'Which has a better mobile app?', a: 'IQ Option has native iOS and Android apps with 100+ indicators — widely considered the best mobile trading app. Pocket Option offers Android native but iOS only as a PWA.' },
+          ].map((faq, i) => (
+            <div key={i} className="glass-card p-5">
+              <h3 className="font-bold text-white text-sm mb-2">{faq.q}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Internal Links */}
       <section className="section-container pb-16">
         <h2 className="text-xl font-bold mb-6 text-center">Continue Your Research</h2>
