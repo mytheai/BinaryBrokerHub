@@ -1,12 +1,12 @@
-// Replace these with your actual affiliate links
+// TODO: Replace with affiliate links once approved
 export const AFFILIATE_LINKS = {
   quotex: {
-    signup: 'https://quotex.com/?lid=YOUR_AFFILIATE_ID',
-    demo: 'https://quotex.com/demo/?lid=YOUR_AFFILIATE_ID',
+    signup: 'https://quotex.com/',
+    demo: 'https://quotex.com/demo/',
   },
   pocketOption: {
-    signup: 'https://pocketoption.com/?ref=YOUR_AFFILIATE_ID',
-    demo: 'https://pocketoption.com/demo/?ref=YOUR_AFFILIATE_ID',
+    signup: 'https://pocketoption.com/',
+    demo: 'https://pocketoption.com/demo/',
   },
 } as const;
 
