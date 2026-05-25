@@ -12,8 +12,8 @@ export default function Header() {
   const [brokersOpen, setBrokersOpen] = useState(false);
 
   const brokerLinks = [
+    { href: `/${locale}/pocket-option`, label: 'Pocket Option', badge: '9.5' },
     { href: `/${locale}/quotex`, label: 'Quotex', badge: '9.4' },
-    { href: `/${locale}/pocket-option`, label: 'Pocket Option', badge: '9.1' },
     { href: `/${locale}/iq-option`, label: 'IQ Option', badge: '9.2' },
     { href: `/${locale}/deriv`, label: 'Deriv', badge: '9.0' },
     { href: `/${locale}/olymp-trade`, label: 'Olymp Trade', badge: '8.6' },

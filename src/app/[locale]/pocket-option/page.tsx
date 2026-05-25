@@ -14,7 +14,7 @@ export default function PocketOptionPage() {
         <div className="relative section-container">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex flex-wrap justify-center gap-2 mb-6">
-              <span className="badge-blue">Score: 9.1/10</span>
+              <span className="badge-blue">Score: 9.5/10</span>
               <span className="badge-gold">Best Overall Binary Broker 2025</span>
               <span className="badge text-xs bg-white/[0.05] text-gray-300 border border-white/[0.1]">Last Updated: May 2026</span>
             </div>

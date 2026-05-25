@@ -5,9 +5,9 @@ import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
 
 const brokers = [
+  { key: 'pocketOption', name: 'Pocket Option', slug: 'pocket-option', score: 9.5, color: 'text-emerald-400' },
   { key: 'quotex', name: 'Quotex', slug: 'quotex', score: 9.4, color: 'text-emerald-400' },
   { key: 'iqOption', name: 'IQ Option', slug: 'iq-option', score: 9.2, color: 'text-emerald-400' },
-  { key: 'pocketOption', name: 'Pocket Option', slug: 'pocket-option', score: 9.1, color: 'text-emerald-400' },
   { key: 'deriv', name: 'Deriv', slug: 'deriv', score: 9.0, color: 'text-emerald-400' },
   { key: 'olympTrade', name: 'Olymp Trade', slug: 'olymp-trade', score: 8.6, color: 'text-blue-400' },
   { key: 'binomo', name: 'Binomo', slug: 'binomo', score: 8.2, color: 'text-amber-400' },
@@ -19,8 +19,8 @@ type BrokerKey = typeof brokers[number]['key'];
 const comparisonData: { feature: string; values: Record<BrokerKey, string>; best?: BrokerKey | BrokerKey[] }[] = [
   {
     feature: 'Our Score',
-    values: { quotex: '9.4/10', iqOption: '9.2/10', pocketOption: '9.1/10', deriv: '9.0/10', olympTrade: '8.6/10', binomo: '8.2/10', expertOption: '7.8/10' },
-    best: 'quotex',
+    values: { pocketOption: '9.5/10', quotex: '9.4/10', iqOption: '9.2/10', deriv: '9.0/10', olympTrade: '8.6/10', binomo: '8.2/10', expertOption: '7.8/10' },
+    best: 'pocketOption',
   },
   {
     feature: 'Founded',
@@ -171,9 +171,9 @@ export default function ComparePage() {
         <h2 className="text-2xl font-bold mb-8 text-center">Which Broker Is Right for You?</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
+            { title: 'Best Overall', broker: 'Pocket Option', score: '9.5', slug: 'pocket-option', desc: 'Copy trading, $5 min deposit, 180+ assets. Best all-round platform for beginners & pros.' },
             { title: 'Highest Payouts', broker: 'Quotex', score: '9.4', slug: 'quotex', desc: 'Up to 98% payout. Best for traders who want maximum return per trade.' },
             { title: 'Best Platform', broker: 'IQ Option', score: '9.2', slug: 'iq-option', desc: 'Award-winning UX, 250+ assets, CySEC-regulated EU entity.' },
-            { title: 'Best Copy Trading', broker: 'Pocket Option', score: '9.1', slug: 'pocket-option', desc: 'Full-featured copy trading. Ideal for beginners who want passive income.' },
             { title: 'Most Trusted', broker: 'Deriv', score: '9.0', slug: 'deriv', desc: '26 years operating, MFSA Tier-1. The trust benchmark of the industry.' },
             { title: 'Best for India/SEA', broker: 'Olymp Trade', score: '8.6', slug: 'olymp-trade', desc: 'Local language, UPI/local bank support, FinaCom €20K protection.' },
             { title: 'Best Tournaments', broker: 'Binomo', score: '8.2', slug: 'binomo', desc: 'Daily cash tournaments, gamified experience. Great starter platform.' },
