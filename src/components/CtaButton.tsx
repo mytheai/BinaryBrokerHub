@@ -3,7 +3,7 @@
 import { AFFILIATE_LINKS, withUtm } from '@/lib/affiliateLinks';
 
 interface CtaButtonProps {
-  broker: 'quotex' | 'pocketOption';
+  broker: 'quotex' | 'pocketOption' | 'iqOption' | 'deriv' | 'olympTrade' | 'binomo' | 'expertOption';
   type?: 'signup' | 'demo';
   label: string;
   variant?: 'primary' | 'secondary';

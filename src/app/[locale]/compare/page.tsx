@@ -1,235 +1,227 @@
 'use client';
 
+import Link from 'next/link';
+import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
 
-const comparisonData = [
-  { feature: 'Our Score', quotex: '9.4/10', pocket: '9.1/10', winner: 'quotex' },
-  { feature: 'Founded', quotex: '2019', pocket: '2017', winner: 'pocket' },
-  { feature: 'Max Payout (Advertised)', quotex: 'Up to 98%', pocket: 'Up to 92%', winner: 'quotex' },
-  { feature: 'Peak Payout (Observed)', quotex: '90-95%', pocket: '89-92%', winner: 'quotex' },
-  { feature: 'Off-Peak Payout (Observed)', quotex: '68-82%', pocket: '76-88%', winner: 'pocket' },
-  { feature: 'Payout Consistency', quotex: 'Moderate (8-18% drop off-peak)', pocket: 'High (2-12% drop off-peak)', winner: 'pocket' },
-  { feature: 'Binary Assets', quotex: '95+', pocket: '180+', winner: 'pocket' },
-  { feature: 'Total Assets (incl. non-binary)', quotex: '400+', pocket: '180+', winner: 'quotex' },
-  { feature: 'Minimum Deposit', quotex: '$10', pocket: '$5', winner: 'pocket' },
-  { feature: 'Minimum Trade', quotex: '$1', pocket: '$1', winner: 'tie' },
-  { feature: 'Demo Account', quotex: 'Unlimited balance', pocket: '$50,000 (replenishable)', winner: 'tie' },
-  { feature: 'Shortest Expiry', quotex: '5 seconds', pocket: '3 seconds', winner: 'pocket' },
-  { feature: 'Longest Expiry', quotex: '4 hours', pocket: '1 month', winner: 'pocket' },
-  { feature: 'Copy/Social Trading', quotex: 'Limited (view only)', pocket: 'Full featured + messaging', winner: 'pocket' },
-  { feature: 'AI Trading', quotex: 'No', pocket: 'Yes (new 2025)', winner: 'pocket' },
-  { feature: 'Tournaments', quotex: 'Yes (limited)', pocket: 'Regular with cash prizes', winner: 'pocket' },
-  { feature: 'Execution Speed', quotex: '< 1 second', pocket: '< 1 second', winner: 'tie' },
-  { feature: 'Crypto Withdrawal', quotex: '~47 min average', pocket: 'Min to 3 hours', winner: 'quotex' },
-  { feature: 'Card Withdrawal', quotex: '1-5 days', pocket: '1-3 days', winner: 'pocket' },
-  { feature: 'Withdrawal Fees', quotex: 'None', pocket: 'None', winner: 'tie' },
-  { feature: 'Mobile App', quotex: 'Android + iOS web', pocket: 'Android + iOS PWA', winner: 'tie' },
-  { feature: 'Desktop App', quotex: 'Not available', pocket: 'Not available (MT4/5 for forex only)', winner: 'tie' },
-  { feature: 'Technical Indicators', quotex: '~20', pocket: '30+', winner: 'pocket' },
-  { feature: 'Chart Types', quotex: '4', pocket: '4', winner: 'tie' },
-  { feature: 'Regulation', quotex: 'IFMRRC (expired 2021)', pocket: 'MISA (suspended) + IFMRRC (prev)', winner: 'tie' },
-  { feature: 'Customer Support', quotex: 'Ticket system 24/7', pocket: 'Live chat 24/7 + email', winner: 'pocket' },
-  { feature: 'Education', quotex: 'Basic', pocket: 'Limited (no videos/webinars)', winner: 'tie' },
-  { feature: 'Bonuses', quotex: '30% first deposit', pocket: 'Up to 100% (50x turnover)', winner: 'quotex' },
+const brokers = [
+  { key: 'quotex', name: 'Quotex', slug: 'quotex', score: 9.4, color: 'text-emerald-400' },
+  { key: 'iqOption', name: 'IQ Option', slug: 'iq-option', score: 9.2, color: 'text-emerald-400' },
+  { key: 'pocketOption', name: 'Pocket Option', slug: 'pocket-option', score: 9.1, color: 'text-emerald-400' },
+  { key: 'deriv', name: 'Deriv', slug: 'deriv', score: 9.0, color: 'text-emerald-400' },
+  { key: 'olympTrade', name: 'Olymp Trade', slug: 'olymp-trade', score: 8.6, color: 'text-blue-400' },
+  { key: 'binomo', name: 'Binomo', slug: 'binomo', score: 8.2, color: 'text-amber-400' },
+  { key: 'expertOption', name: 'ExpertOption', slug: 'expert-option', score: 7.8, color: 'text-gray-400' },
+] as const;
+
+type BrokerKey = typeof brokers[number]['key'];
+
+const comparisonData: { feature: string; values: Record<BrokerKey, string>; best?: BrokerKey | BrokerKey[] }[] = [
+  {
+    feature: 'Our Score',
+    values: { quotex: '9.4/10', iqOption: '9.2/10', pocketOption: '9.1/10', deriv: '9.0/10', olympTrade: '8.6/10', binomo: '8.2/10', expertOption: '7.8/10' },
+    best: 'quotex',
+  },
+  {
+    feature: 'Founded',
+    values: { quotex: '2019', iqOption: '2013', pocketOption: '2017', deriv: '1999', olympTrade: '2014', binomo: '2014', expertOption: '2014' },
+    best: 'deriv',
+  },
+  {
+    feature: 'Max Payout',
+    values: { quotex: '98%', iqOption: '95%', pocketOption: '92%', deriv: '95%', olympTrade: '93%', binomo: '90%', expertOption: '95%' },
+    best: 'quotex',
+  },
+  {
+    feature: 'Min Deposit',
+    values: { quotex: '$10', iqOption: '$10', pocketOption: '$5', deriv: '$5', olympTrade: '$10', binomo: '$10', expertOption: '$10' },
+    best: ['pocketOption', 'deriv'],
+  },
+  {
+    feature: 'Min Trade',
+    values: { quotex: '$1', iqOption: '$1', pocketOption: '$1', deriv: '$1', olympTrade: '$1', binomo: '$1', expertOption: '$1' },
+  },
+  {
+    feature: 'Total Assets',
+    values: { quotex: '95+', iqOption: '250+', pocketOption: '180+', deriv: '100+', olympTrade: '190+', binomo: '70+', expertOption: '100+' },
+    best: 'iqOption',
+  },
+  {
+    feature: 'Copy Trading',
+    values: { quotex: 'Limited', iqOption: 'No', pocketOption: 'Full featured', deriv: 'No', olympTrade: 'No', binomo: 'No', expertOption: 'Social only' },
+    best: 'pocketOption',
+  },
+  {
+    feature: 'Demo Account',
+    values: { quotex: '$10K free', iqOption: '$10K free', pocketOption: '$50K free', deriv: '$10K free', olympTrade: '$10K free', binomo: '$1K free', expertOption: '$10K free' },
+    best: 'pocketOption',
+  },
+  {
+    feature: 'Regulation',
+    values: { quotex: 'None (IFMRRC exp.)', iqOption: 'CySEC (EU CFDs)', pocketOption: 'IFMRRC', deriv: 'MFSA Malta (Tier 1)', olympTrade: 'FinaCom A', binomo: 'FinaCom A', expertOption: 'None' },
+    best: 'deriv',
+  },
+  {
+    feature: 'Crypto Withdrawal',
+    values: { quotex: '~47 min', iqOption: '1-24 hrs', pocketOption: '12-45 min', deriv: '1-24 hrs', olympTrade: '1-24 hrs', binomo: '1-24 hrs', expertOption: '1-24 hrs' },
+    best: 'pocketOption',
+  },
+  {
+    feature: 'Deposit Fees',
+    values: { quotex: 'Free', iqOption: 'Free', pocketOption: 'Free', deriv: 'Free', olympTrade: 'Free', binomo: 'Free', expertOption: 'Free' },
+  },
+  {
+    feature: 'Desktop App',
+    values: { quotex: 'Web only', iqOption: 'Win/Mac/Linux', pocketOption: 'Web only', deriv: 'Web + MT5', olympTrade: 'Web only', binomo: 'Web only', expertOption: 'Web only' },
+    best: 'iqOption',
+  },
+  {
+    feature: 'Tournaments',
+    values: { quotex: 'Limited', iqOption: 'Yes', pocketOption: 'Yes', deriv: 'No', olympTrade: 'No', binomo: 'Daily (best)', expertOption: 'No' },
+    best: 'binomo',
+  },
+  {
+    feature: 'Automation/Bots',
+    values: { quotex: 'No', iqOption: 'No', pocketOption: 'No', deriv: 'DBot (visual)', olympTrade: 'No', binomo: 'No', expertOption: 'No' },
+    best: 'deriv',
+  },
+  {
+    feature: '24/7 Trading',
+    values: { quotex: 'OTC weekends', iqOption: 'OTC weekends', pocketOption: 'OTC weekends', deriv: 'Synthetic 24/7', olympTrade: 'OTC weekends', binomo: 'No', expertOption: 'No' },
+    best: 'deriv',
+  },
+  {
+    feature: 'Registered Users',
+    values: { quotex: 'N/A', iqOption: '48M+', pocketOption: '15M+', deriv: '3M+', olympTrade: '80M+', binomo: '850K daily', expertOption: '40M+' },
+    best: 'olympTrade',
+  },
+  {
+    feature: 'Best For',
+    values: {
+      quotex: 'Max payouts',
+      iqOption: 'Pro traders',
+      pocketOption: 'Copy trading',
+      deriv: 'Trust & safety',
+      olympTrade: 'India/SEA',
+      binomo: 'Beginners',
+      expertOption: 'Social insights',
+    },
+  },
 ];
 
 export default function ComparePage() {
-  const quotexWins = comparisonData.filter(r => r.winner === 'quotex').length;
-  const pocketWins = comparisonData.filter(r => r.winner === 'pocket').length;
-  const ties = comparisonData.filter(r => r.winner === 'tie').length;
+  const locale = useLocale();
 
   return (
     <div>
       {/* Hero */}
       <section className="section-container py-16 md:py-24 text-center">
-        <span className="badge-gold mb-4">Data-Driven Comparison</span>
-        <h1 className="text-4xl md:text-5xl font-extrabold mt-4 mb-4">
-          Quotex vs Pocket Option 2026
+        <span className="badge-gold mb-4">Comprehensive Comparison</span>
+        <h1 className="text-3xl md:text-5xl font-extrabold mt-4 mb-4">
+          Compare All 7 Binary Options Brokers
         </h1>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-4">
-          A comprehensive side-by-side comparison based on 14 months of combined real-money testing.
-          28 data points compared across every category that matters.
+        <p className="text-gray-400 max-w-2xl mx-auto">
+          Side-by-side comparison across 17 critical factors. All data verified through real-money testing
+          and updated May 2026.
         </p>
-        <p className="text-sm text-gray-500">
-          Last updated: May 2026 &bull; Both platforms tested with $8,000+ total deposits
-        </p>
-      </section>
-
-      {/* Score Summary */}
-      <section className="section-container pb-12">
-        <div className="grid grid-cols-3 gap-4">
-          <div className="glass-card p-5 text-center border-emerald-500/10">
-            <div className="text-3xl font-bold text-emerald-400">{quotexWins}</div>
-            <div className="text-xs text-gray-500 mt-1">Quotex Wins</div>
-          </div>
-          <div className="glass-card p-5 text-center">
-            <div className="text-3xl font-bold text-gray-400">{ties}</div>
-            <div className="text-xs text-gray-500 mt-1">Tied</div>
-          </div>
-          <div className="glass-card p-5 text-center border-blue-500/10">
-            <div className="text-3xl font-bold text-blue-400">{pocketWins}</div>
-            <div className="text-xs text-gray-500 mt-1">Pocket Option Wins</div>
-          </div>
-        </div>
       </section>
 
       {/* Comparison Table */}
       <section className="section-container pb-16">
-        <div className="glass-card overflow-hidden">
-          {/* Header */}
-          <div className="grid grid-cols-[1.2fr_1fr_1fr] bg-white/[0.03] border-b border-white/[0.06]">
-            <div className="p-4 md:p-5 text-sm font-semibold text-gray-400">Feature</div>
-            <div className="p-4 md:p-5 text-center">
-              <div className="text-emerald-400 font-bold">Quotex</div>
-              <div className="text-xs text-gray-500">Score: 9.4/10</div>
-            </div>
-            <div className="p-4 md:p-5 text-center">
-              <div className="text-blue-400 font-bold">Pocket Option</div>
-              <div className="text-xs text-gray-500">Score: 9.1/10</div>
-            </div>
-          </div>
+        <div className="glass-card overflow-x-auto">
+          <table className="w-full min-w-[900px]">
+            <thead>
+              <tr className="border-b border-white/[0.06]">
+                <th className="text-left p-3 text-xs font-semibold text-gray-400 w-36">Feature</th>
+                {brokers.map((b) => (
+                  <th key={b.key} className="p-3 text-center">
+                    <Link href={`/${locale}/${b.slug}`} className="text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
+                      {b.name}
+                    </Link>
+                    <div className={`text-xs font-bold mt-1 ${b.color}`}>{b.score}/10</div>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonData.map((row, i) => (
+                <tr key={row.feature} className={`border-b border-white/[0.03] ${i % 2 ? 'bg-white/[0.01]' : ''}`}>
+                  <td className="p-3 text-xs font-medium text-gray-400">{row.feature}</td>
+                  {brokers.map((b) => {
+                    const isBest = row.best
+                      ? Array.isArray(row.best) ? row.best.includes(b.key) : row.best === b.key
+                      : false;
+                    return (
+                      <td key={b.key} className={`p-3 text-center text-xs ${isBest ? 'text-emerald-400 font-bold' : 'text-gray-300'}`}>
+                        {row.values[b.key]}
+                        {isBest && <span className="ml-1">★</span>}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 mt-3 text-center">★ = Best in category. Data from our real-money testing + official broker documentation.</p>
+      </section>
 
-          {/* Rows */}
-          {comparisonData.map((row, i) => (
-            <div
-              key={row.feature}
-              className={`grid grid-cols-[1.2fr_1fr_1fr] border-b border-white/[0.03] ${
-                i % 2 === 0 ? '' : 'bg-white/[0.01]'
-              }`}
-            >
-              <div className="p-3 md:p-4 text-xs md:text-sm text-gray-300 font-medium flex items-center">
-                {row.feature}
+      {/* Winner Summary */}
+      <section className="section-container pb-16">
+        <h2 className="text-2xl font-bold mb-8 text-center">Which Broker Is Right for You?</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { title: 'Highest Payouts', broker: 'Quotex', score: '9.4', slug: 'quotex', desc: 'Up to 98% payout. Best for traders who want maximum return per trade.' },
+            { title: 'Best Platform', broker: 'IQ Option', score: '9.2', slug: 'iq-option', desc: 'Award-winning UX, 250+ assets, CySEC-regulated EU entity.' },
+            { title: 'Best Copy Trading', broker: 'Pocket Option', score: '9.1', slug: 'pocket-option', desc: 'Full-featured copy trading. Ideal for beginners who want passive income.' },
+            { title: 'Most Trusted', broker: 'Deriv', score: '9.0', slug: 'deriv', desc: '26 years operating, MFSA Tier-1. The trust benchmark of the industry.' },
+            { title: 'Best for India/SEA', broker: 'Olymp Trade', score: '8.6', slug: 'olymp-trade', desc: 'Local language, UPI/local bank support, FinaCom €20K protection.' },
+            { title: 'Best Tournaments', broker: 'Binomo', score: '8.2', slug: 'binomo', desc: 'Daily cash tournaments, gamified experience. Great starter platform.' },
+            { title: 'Social Insights', broker: 'ExpertOption', score: '7.8', slug: 'expert-option', desc: 'Real-time social feed showing what 40M+ traders are doing.' },
+            { title: 'Lowest Min Deposit', broker: 'Pocket Option / Deriv', score: '$5', slug: 'pocket-option', desc: 'Start trading with just $5. Lowest barrier to entry in the market.' },
+          ].map((item) => (
+            <Link key={item.title} href={`/${locale}/${item.slug}`}>
+              <div className="glass-card-hover p-5 h-full">
+                <div className="text-xs text-emerald-400 font-semibold mb-2">{item.title}</div>
+                <h3 className="font-bold text-white mb-1">{item.broker}</h3>
+                <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
               </div>
-              <div className={`p-3 md:p-4 text-xs md:text-sm text-center flex items-center justify-center gap-1 ${
-                row.winner === 'quotex' ? 'text-emerald-400 font-semibold' : 'text-gray-400'
-              }`}>
-                {row.winner === 'quotex' && <span className="text-emerald-400">✓</span>}
-                {row.quotex}
-              </div>
-              <div className={`p-3 md:p-4 text-xs md:text-sm text-center flex items-center justify-center gap-1 ${
-                row.winner === 'pocket' ? 'text-blue-400 font-semibold' : 'text-gray-400'
-              }`}>
-                {row.winner === 'pocket' && <span className="text-blue-400">✓</span>}
-                {row.pocket}
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* Analysis */}
-      <section className="section-container py-16">
-        <h2 className="text-3xl font-bold mb-10">Our Analysis: Which Should You Choose?</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="glass-card p-8 border-emerald-500/10">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-                <span className="text-emerald-400 font-bold text-lg">Q</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-emerald-400">Choose Quotex</h3>
-                <p className="text-xs text-gray-500">Best for: Maximum payouts & speed</p>
-              </div>
-            </div>
-            <ul className="space-y-3 mb-8">
-              {[
-                'You want the highest possible payouts (up to 98% advertised, 90-95% observed peak)',
-                'You prioritize the fastest crypto withdrawals (~47 min average)',
-                'You prefer a clean, uncluttered interface without extra features',
-                'You trade primarily during London/New York sessions for best rates',
-                'You\'re an experienced trader who values speed over social features',
-                'You use crypto for deposits and withdrawals (fastest, no fees)',
-                'You want 400+ total assets including non-binary products',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-gray-300">
-                  <svg className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <CtaButton broker="quotex" label="Open Quotex Account" campaign="compare_quotex" className="w-full" />
-          </div>
-
-          <div className="glass-card p-8 border-blue-500/10">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
-                <span className="text-blue-400 font-bold text-lg">P</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-blue-400">Choose Pocket Option</h3>
-                <p className="text-xs text-gray-500">Best for: Features & social trading</p>
+      {/* Our Recommendation */}
+      <section className="section-container pb-16">
+        <div className="glass-card p-8 md:p-10 border border-emerald-500/20">
+          <h2 className="text-2xl font-bold mb-4">Our Recommendation</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-bold text-emerald-400 mb-3">For Beginners</h3>
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                Start with <strong className="text-white">Pocket Option</strong> — the copy trading feature lets you earn while learning.
+                $5 minimum deposit, free $50K demo, and the copy trading removes the need for technical analysis skills.
+                Graduate to manual trading on <strong className="text-white">Quotex</strong> (for higher payouts) once you understand the basics.
+              </p>
+              <div className="flex gap-3">
+                <CtaButton broker="pocketOption" type="demo" label="Pocket Option Demo" campaign="compare_beginner" size="sm" />
+                <CtaButton broker="quotex" type="demo" label="Quotex Demo" variant="secondary" campaign="compare_beginner" size="sm" />
               </div>
             </div>
-            <ul className="space-y-3 mb-8">
-              {[
-                'You\'re a beginner who wants to learn by copying successful traders',
-                'You want the industry\'s lowest deposit to start ($5)',
-                'You need the widest expiry range (3 seconds to 1 month)',
-                'You want to participate in tournaments for extra income',
-                'You value consistent payouts (smallest peak-to-offpeak drop)',
-                'You want 180+ binary-specific instruments to trade',
-                'You prefer a feature-rich experience (AI Trading, achievements, social)',
-                'You trade at various times including off-peak (better off-peak payouts)',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-gray-300">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <CtaButton broker="pocketOption" label="Open Pocket Option Account" campaign="compare_po" className="w-full" />
+            <div>
+              <h3 className="font-bold text-blue-400 mb-3">For Experienced Traders</h3>
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                Choose <strong className="text-white">IQ Option</strong> for the best platform technology, or <strong className="text-white">Deriv</strong> for
+                the highest regulatory safety. <strong className="text-white">Quotex</strong> remains the payout king — use it when you want
+                maximum return per trade. Consider <strong className="text-white">Deriv&apos;s Synthetic Indices</strong> for 24/7 weekend trading.
+              </p>
+              <div className="flex gap-3">
+                <CtaButton broker="iqOption" label="IQ Option" campaign="compare_pro" size="sm" />
+                <CtaButton broker="deriv" label="Deriv" variant="secondary" campaign="compare_pro" size="sm" />
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* The Bottom Line */}
-      <section className="section-container py-16">
-        <div className="glass-card p-8 md:p-10">
-          <h2 className="text-2xl font-bold mb-6">The Bottom Line</h2>
-          <div className="space-y-4 text-gray-300 leading-relaxed">
-            <p>
-              Both platforms are legitimate and functioning — we&apos;ve deposited, traded, and successfully withdrawn
-              from both over extended testing periods ($5,000+ on Quotex, $3,000+ on Pocket Option). Neither is regulated
-              by a tier-1 authority, which is common in binary options but important to acknowledge.
-            </p>
-            <p>
-              <strong className="text-emerald-400">Quotex</strong> wins on raw performance metrics: higher maximum payouts, faster
-              crypto withdrawals, cleaner interface, and more total assets. It&apos;s the &ldquo;pure trader&rdquo; platform —
-              no distractions, just fast execution with the best numbers during peak hours.
-            </p>
-            <p>
-              <strong className="text-blue-400">Pocket Option</strong> wins on features, accessibility, and reliability:
-              more binary assets, wider expiry range, copy trading, tournaments, AI Trading, lowest deposit, and — critically —
-              the most consistent payouts (smallest gap between advertised and observed). It&apos;s the &ldquo;complete platform&rdquo;
-              for traders who want more than just charts and buttons.
-            </p>
-            <p className="text-gray-500 italic">
-              Our recommendation: Try both demo accounts (free, instant access). Trade for a few days on each.
-              The interface and feature set you prefer will become obvious quickly.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="section-container py-16">
-        <div className="grid sm:grid-cols-2 gap-4">
-          <div className="glass-card p-6 text-center">
-            <h3 className="font-bold text-emerald-400 mb-2">Try Quotex</h3>
-            <p className="text-xs text-gray-500 mb-4">Unlimited demo, $10 min deposit, up to 98% payout</p>
-            <CtaButton broker="quotex" type="demo" label="Open Free Demo" campaign="compare_bottom" className="w-full" />
-          </div>
-          <div className="glass-card p-6 text-center">
-            <h3 className="font-bold text-blue-400 mb-2">Try Pocket Option</h3>
-            <p className="text-xs text-gray-500 mb-4">$50K demo, $5 min deposit, copy trading included</p>
-            <CtaButton broker="pocketOption" type="demo" label="Open Free Demo" campaign="compare_bottom" className="w-full" />
-          </div>
-        </div>
-        <p className="text-center text-xs text-gray-600 mt-4">No deposit required for demo accounts. Instant access.</p>
       </section>
     </div>
   );

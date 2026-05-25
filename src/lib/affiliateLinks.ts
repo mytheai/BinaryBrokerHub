@@ -8,6 +8,26 @@ export const AFFILIATE_LINKS = {
     signup: 'https://pocketoption.com/',
     demo: 'https://pocketoption.com/demo/',
   },
+  iqOption: {
+    signup: 'https://iqoption.com/',
+    demo: 'https://iqoption.com/demo/',
+  },
+  deriv: {
+    signup: 'https://deriv.com/',
+    demo: 'https://deriv.com/demo/',
+  },
+  olympTrade: {
+    signup: 'https://olymptrade.com/',
+    demo: 'https://olymptrade.com/demo/',
+  },
+  binomo: {
+    signup: 'https://binomo.com/',
+    demo: 'https://binomo.com/demo/',
+  },
+  expertOption: {
+    signup: 'https://expertoption.com/',
+    demo: 'https://expertoption.com/demo/',
+  },
 } as const;
 
 // UTM helper
