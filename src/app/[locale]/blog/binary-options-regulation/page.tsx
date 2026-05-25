@@ -213,31 +213,33 @@ export default function BinaryOptionsRegulationPage() {
           Below is a comparison of the regulatory status of the major binary options brokers we&apos;ve reviewed.
           Rankings are ordered by trust and regulatory strength:
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Rank</div>
-            <div>Broker</div>
-            <div className="text-center">Regulator</div>
-            <div className="text-center">Tier</div>
-            <div className="text-center">Trust Score</div>
-          </div>
-          {[
-            { rank: '1', name: 'Deriv', reg: 'MFSA, VFSC, Labuan FSA', tier: 'Tier 1', score: '9.0/10', color: 'text-emerald-400' },
-            { rank: '2', name: 'IQ Option', reg: 'CySEC', tier: 'Tier 1', score: '9.2/10', color: 'text-emerald-400' },
-            { rank: '3', name: 'Pocket Option', reg: 'IFMRRC', tier: 'Tier 2', score: '9.5/10', color: 'text-blue-400' },
-            { rank: '4', name: 'Quotex', reg: 'IFMRRC', tier: 'Tier 2', score: '9.4/10', color: 'text-blue-400' },
-            { rank: '5', name: 'Olymp Trade', reg: 'FinaCom', tier: 'Tier 2', score: '8.6/10', color: 'text-blue-400' },
-            { rank: '6', name: 'Binomo', reg: 'FinaCom', tier: 'Tier 2', score: '8.2/10', color: 'text-blue-400' },
-            { rank: '7', name: 'ExpertOption', reg: 'VFSC', tier: 'Tier 3', score: '7.8/10', color: 'text-amber-400' },
-          ].map((broker, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-white font-bold">{broker.rank}</div>
-              <div className="text-white font-medium">{broker.name}</div>
-              <div className="text-center text-gray-300 text-xs">{broker.reg}</div>
-              <div className={`text-center font-medium ${broker.color}`}>{broker.tier}</div>
-              <div className="text-center text-gray-300">{broker.score}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[650px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Rank</div>
+              <div>Broker</div>
+              <div className="text-center">Regulator</div>
+              <div className="text-center">Tier</div>
+              <div className="text-center">Trust Score</div>
             </div>
-          ))}
+            {[
+              { rank: '1', name: 'Deriv', reg: 'MFSA, VFSC, Labuan FSA', tier: 'Tier 1', score: '9.0/10', color: 'text-emerald-400' },
+              { rank: '2', name: 'IQ Option', reg: 'CySEC', tier: 'Tier 1', score: '9.2/10', color: 'text-emerald-400' },
+              { rank: '3', name: 'Pocket Option', reg: 'IFMRRC', tier: 'Tier 2', score: '9.5/10', color: 'text-blue-400' },
+              { rank: '4', name: 'Quotex', reg: 'IFMRRC', tier: 'Tier 2', score: '9.4/10', color: 'text-blue-400' },
+              { rank: '5', name: 'Olymp Trade', reg: 'FinaCom', tier: 'Tier 2', score: '8.6/10', color: 'text-blue-400' },
+              { rank: '6', name: 'Binomo', reg: 'FinaCom', tier: 'Tier 2', score: '8.2/10', color: 'text-blue-400' },
+              { rank: '7', name: 'ExpertOption', reg: 'VFSC', tier: 'Tier 3', score: '7.8/10', color: 'text-amber-400' },
+            ].map((broker, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-white font-bold">{broker.rank}</div>
+                <div className="text-white font-medium">{broker.name}</div>
+                <div className="text-center text-gray-300 text-xs">{broker.reg}</div>
+                <div className={`text-center font-medium ${broker.color}`}>{broker.tier}</div>
+                <div className="text-center text-gray-300">{broker.score}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">
           * Rankings are by trust/regulation strength, not overall broker score. A broker can score high

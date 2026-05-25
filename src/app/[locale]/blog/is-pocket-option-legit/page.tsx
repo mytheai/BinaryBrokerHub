@@ -112,28 +112,30 @@ export default function IsPocketOptionLegitPage() {
       {/* Withdrawal Proof */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Our Withdrawal Test Results</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Method</div>
-            <div className="text-center">Amount</div>
-            <div className="text-center">Processing</div>
-            <div className="text-center">Status</div>
-          </div>
-          {[
-            { method: 'USDT (TRC-20)', amount: '$200', time: '12 minutes', status: 'Success' },
-            { method: 'USDT (TRC-20)', amount: '$800', time: '45 minutes', status: 'Success' },
-            { method: 'Bitcoin', amount: '$500', time: '1.5 hours', status: 'Success' },
-            { method: 'Visa Card', amount: '$300', time: '1 day', status: 'Success' },
-            { method: 'USDT (TRC-20)', amount: '$1,500', time: '2 hours', status: 'Success' },
-            { method: 'Neteller', amount: '$250', time: '3 hours', status: 'Success' },
-          ].map((w, i) => (
-            <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300">{w.method}</div>
-              <div className="text-center text-white font-medium">{w.amount}</div>
-              <div className="text-center text-gray-400">{w.time}</div>
-              <div className="text-center text-emerald-400 font-medium">{w.status}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[550px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Method</div>
+              <div className="text-center">Amount</div>
+              <div className="text-center">Processing</div>
+              <div className="text-center">Status</div>
             </div>
-          ))}
+            {[
+              { method: 'USDT (TRC-20)', amount: '$200', time: '12 minutes', status: 'Success' },
+              { method: 'USDT (TRC-20)', amount: '$800', time: '45 minutes', status: 'Success' },
+              { method: 'Bitcoin', amount: '$500', time: '1.5 hours', status: 'Success' },
+              { method: 'Visa Card', amount: '$300', time: '1 day', status: 'Success' },
+              { method: 'USDT (TRC-20)', amount: '$1,500', time: '2 hours', status: 'Success' },
+              { method: 'Neteller', amount: '$250', time: '3 hours', status: 'Success' },
+            ].map((w, i) => (
+              <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300">{w.method}</div>
+                <div className="text-center text-white font-medium">{w.amount}</div>
+                <div className="text-center text-gray-400">{w.time}</div>
+                <div className="text-center text-emerald-400 font-medium">{w.status}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -230,27 +230,29 @@ export default function BinomoPage() {
           Binomo&apos;s payouts are tiered by account type. Standard accounts get the lowest payouts (up to 85%),
           while VIP accounts get up to 90%. Here&apos;s how they compare across asset classes.
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-4 text-xs font-semibold text-gray-400">
-            <div>Asset</div>
-            <div className="text-center">Standard</div>
-            <div className="text-center">Gold</div>
-            <div className="text-center">VIP</div>
-          </div>
-          {[
-            { asset: 'EUR/USD (Forex)', std: '78-85%', gold: '80-86%', vip: '84-90%' },
-            { asset: 'Gold (Commodity)', std: '75-82%', gold: '78-84%', vip: '80-87%' },
-            { asset: 'BTC (Crypto)', std: '72-80%', gold: '75-82%', vip: '78-85%' },
-            { asset: 'Indices', std: '70-78%', gold: '73-80%', vip: '76-84%' },
-            { asset: 'OTC Instruments', std: '65-75%', gold: '68-78%', vip: '72-82%' },
-          ].map((row, i) => (
-            <div key={row.asset} className={`grid grid-cols-4 p-4 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-white font-medium">{row.asset}</div>
-              <div className="text-center text-gray-400">{row.std}</div>
-              <div className="text-center text-yellow-500">{row.gold}</div>
-              <div className="text-center text-amber-400 font-medium">{row.vip}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[600px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-4 text-xs font-semibold text-gray-400">
+              <div>Asset</div>
+              <div className="text-center">Standard</div>
+              <div className="text-center">Gold</div>
+              <div className="text-center">VIP</div>
             </div>
-          ))}
+            {[
+              { asset: 'EUR/USD (Forex)', std: '78-85%', gold: '80-86%', vip: '84-90%' },
+              { asset: 'Gold (Commodity)', std: '75-82%', gold: '78-84%', vip: '80-87%' },
+              { asset: 'BTC (Crypto)', std: '72-80%', gold: '75-82%', vip: '78-85%' },
+              { asset: 'Indices', std: '70-78%', gold: '73-80%', vip: '76-84%' },
+              { asset: 'OTC Instruments', std: '65-75%', gold: '68-78%', vip: '72-82%' },
+            ].map((row, i) => (
+              <div key={row.asset} className={`grid grid-cols-4 p-4 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-white font-medium">{row.asset}</div>
+                <div className="text-center text-gray-400">{row.std}</div>
+                <div className="text-center text-yellow-500">{row.gold}</div>
+                <div className="text-center text-amber-400 font-medium">{row.vip}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="mt-4 border border-amber-500/20 rounded-lg p-4">
           <p className="text-xs text-gray-400">
@@ -477,32 +479,34 @@ export default function BinomoPage() {
       {/* Binomo vs Competitors */}
       <section className="section-container py-16">
         <h2 className="text-3xl font-bold mb-6">How Binomo Compares</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Feature</div>
-            <div className="text-center">Binomo</div>
-            <div className="text-center">Pocket Option</div>
-            <div className="text-center">Quotex</div>
-            <div className="text-center">Olymp Trade</div>
-          </div>
-          {[
-            { feature: 'Score', bn: '8.2/10', po: '9.5/10', qt: '9.4/10', ot: '8.6/10' },
-            { feature: 'Min Deposit', bn: '$10', po: '$5', qt: '$10', ot: '$10' },
-            { feature: 'Max Payout', bn: '90%', po: '92%', qt: '98%', ot: '93%' },
-            { feature: 'Assets', bn: '70+', po: '180+', qt: '95+', ot: '190+' },
-            { feature: 'Tournaments', bn: 'Best', po: 'Good', qt: 'Limited', ot: 'None' },
-            { feature: 'Demo Balance', bn: '$1K', po: '$50K', qt: 'Unlimited', ot: '$10K' },
-            { feature: 'Regulation', bn: 'FinaCom', po: 'IFMRRC', qt: 'None', ot: 'FinaCom' },
-            { feature: 'Copy Trading', bn: 'No', po: 'Yes', qt: 'Limited', ot: 'No' },
-          ].map((row, i) => (
-            <div key={row.feature} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-400 font-medium">{row.feature}</div>
-              <div className="text-center text-amber-400 font-medium">{row.bn}</div>
-              <div className="text-center text-gray-300">{row.po}</div>
-              <div className="text-center text-gray-300">{row.qt}</div>
-              <div className="text-center text-gray-300">{row.ot}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[700px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Feature</div>
+              <div className="text-center">Binomo</div>
+              <div className="text-center">Pocket Option</div>
+              <div className="text-center">Quotex</div>
+              <div className="text-center">Olymp Trade</div>
             </div>
-          ))}
+            {[
+              { feature: 'Score', bn: '8.2/10', po: '9.5/10', qt: '9.4/10', ot: '8.6/10' },
+              { feature: 'Min Deposit', bn: '$10', po: '$5', qt: '$10', ot: '$10' },
+              { feature: 'Max Payout', bn: '90%', po: '92%', qt: '98%', ot: '93%' },
+              { feature: 'Assets', bn: '70+', po: '180+', qt: '95+', ot: '190+' },
+              { feature: 'Tournaments', bn: 'Best', po: 'Good', qt: 'Limited', ot: 'None' },
+              { feature: 'Demo Balance', bn: '$1K', po: '$50K', qt: 'Unlimited', ot: '$10K' },
+              { feature: 'Regulation', bn: 'FinaCom', po: 'IFMRRC', qt: 'None', ot: 'FinaCom' },
+              { feature: 'Copy Trading', bn: 'No', po: 'Yes', qt: 'Limited', ot: 'No' },
+            ].map((row, i) => (
+              <div key={row.feature} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-400 font-medium">{row.feature}</div>
+                <div className="text-center text-amber-400 font-medium">{row.bn}</div>
+                <div className="text-center text-gray-300">{row.po}</div>
+                <div className="text-center text-gray-300">{row.qt}</div>
+                <div className="text-center text-gray-300">{row.ot}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="flex flex-wrap gap-3 mt-4">
           <Link href={`/${locale}/compare/pocket-option-vs-binomo`} className="text-xs text-amber-400 hover:underline">Pocket Option vs Binomo →</Link>

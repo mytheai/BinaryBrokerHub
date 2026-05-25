@@ -11,9 +11,9 @@ export default function Footer() {
     <footer className="bg-[#060a12] border-t border-white/[0.04] mt-auto">
       <div className="section-container py-12">
         {/* Top Section */}
-        <div className="grid md:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-10">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center">
                 <span className="text-black font-bold text-sm">BB</span>
@@ -79,7 +79,7 @@ export default function Footer() {
             <div className="flex-shrink-0 w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center mt-0.5">
               <span className="text-amber-400 text-xs">!</span>
             </div>
-            <p className="text-xs text-amber-200/70 leading-relaxed">
+            <p className="text-xs sm:text-sm text-amber-200/70 leading-relaxed">
               {t('riskWarning')}
             </p>
           </div>

@@ -198,15 +198,15 @@ export default function BlogPage() {
         {/* Featured Posts */}
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-            <span className="badge-gold text-[10px]">Essential Reading</span>
+            <span className="badge-gold text-xs sm:text-[10px]">Essential Reading</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {featured.map((post) => (
               <Link href={`/${locale}/blog/${post.slug}`} key={post.slug}>
                 <article className="glass-card p-6 flex flex-col cursor-pointer h-full border border-emerald-500/10 hover:border-emerald-500/30 transition-colors">
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="badge-gold text-[10px]">{post.category}</span>
-                    <span className="text-[10px] text-gray-600">{post.readTime} read</span>
+                    <span className="badge-gold text-xs sm:text-[10px]">{post.category}</span>
+                    <span className="text-xs sm:text-[10px] text-gray-600">{post.readTime} read</span>
                   </div>
                   <h2 className="text-lg font-semibold text-white mb-3 flex-1 leading-snug">
                     {post.title}
@@ -234,8 +234,8 @@ export default function BlogPage() {
               <Link href={`/${locale}/blog/${post.slug}`} key={post.slug}>
                 <article className="glass-card-hover p-6 flex flex-col cursor-pointer h-full">
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="badge-green text-[10px]">{post.category}</span>
-                    <span className="text-[10px] text-gray-600">{post.readTime} read</span>
+                    <span className="badge-green text-xs sm:text-[10px]">{post.category}</span>
+                    <span className="text-xs sm:text-[10px] text-gray-600">{post.readTime} read</span>
                   </div>
                   <h2 className="text-lg font-semibold text-white mb-3 flex-1 leading-snug">
                     {post.title}

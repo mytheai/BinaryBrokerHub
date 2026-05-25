@@ -266,28 +266,30 @@ export default function OlympTradePage() {
           <Link href={`/${locale}/quotex`} className="text-emerald-400 hover:underline">Quotex (98% max)</Link> and{' '}
           <Link href={`/${locale}/pocket-option`} className="text-blue-400 hover:underline">Pocket Option (92% max)</Link>.
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-4 text-xs font-semibold text-gray-400">
-            <div>Asset Class</div>
-            <div className="text-center">Starter</div>
-            <div className="text-center">Advanced</div>
-            <div className="text-center">Expert</div>
-          </div>
-          {[
-            { asset: 'EUR/USD (Forex)', starter: '78-82%', advanced: '84-86%', expert: '90-93%' },
-            { asset: 'Gold (Commodities)', starter: '75-80%', advanced: '82-85%', expert: '88-91%' },
-            { asset: 'BTC (Crypto)', starter: '72-78%', advanced: '80-84%', expert: '85-90%' },
-            { asset: 'S&P 500 (Indices)', starter: '70-76%', advanced: '78-82%', expert: '84-88%' },
-            { asset: 'Tesla (Stocks)', starter: '68-75%', advanced: '76-80%', expert: '82-87%' },
-            { asset: 'OTC Instruments', starter: '65-72%', advanced: '72-78%', expert: '78-85%' },
-          ].map((row, i) => (
-            <div key={row.asset} className={`grid grid-cols-4 p-4 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-white font-medium">{row.asset}</div>
-              <div className="text-center text-gray-400">{row.starter}</div>
-              <div className="text-center text-blue-400">{row.advanced}</div>
-              <div className="text-center text-amber-400 font-medium">{row.expert}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[600px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-4 text-xs font-semibold text-gray-400">
+              <div>Asset Class</div>
+              <div className="text-center">Starter</div>
+              <div className="text-center">Advanced</div>
+              <div className="text-center">Expert</div>
             </div>
-          ))}
+            {[
+              { asset: 'EUR/USD (Forex)', starter: '78-82%', advanced: '84-86%', expert: '90-93%' },
+              { asset: 'Gold (Commodities)', starter: '75-80%', advanced: '82-85%', expert: '88-91%' },
+              { asset: 'BTC (Crypto)', starter: '72-78%', advanced: '80-84%', expert: '85-90%' },
+              { asset: 'S&P 500 (Indices)', starter: '70-76%', advanced: '78-82%', expert: '84-88%' },
+              { asset: 'Tesla (Stocks)', starter: '68-75%', advanced: '76-80%', expert: '82-87%' },
+              { asset: 'OTC Instruments', starter: '65-72%', advanced: '72-78%', expert: '78-85%' },
+            ].map((row, i) => (
+              <div key={row.asset} className={`grid grid-cols-4 p-4 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-white font-medium">{row.asset}</div>
+                <div className="text-center text-gray-400">{row.starter}</div>
+                <div className="text-center text-blue-400">{row.advanced}</div>
+                <div className="text-center text-amber-400 font-medium">{row.expert}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-4">
           * Payouts are approximate and vary by market conditions. Peak payouts during high-liquidity sessions.
@@ -534,32 +536,34 @@ export default function OlympTradePage() {
       {/* Olymp Trade vs Competitors */}
       <section className="section-container py-16">
         <h2 className="text-3xl font-bold mb-6">How Olymp Trade Compares</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Feature</div>
-            <div className="text-center">Olymp Trade</div>
-            <div className="text-center">Pocket Option</div>
-            <div className="text-center">Quotex</div>
-            <div className="text-center">IQ Option</div>
-          </div>
-          {[
-            { feature: 'Score', ot: '8.6/10', po: '9.5/10', qt: '9.4/10', iq: '9.2/10' },
-            { feature: 'Min Deposit', ot: '$10', po: '$5', qt: '$10', iq: '$10' },
-            { feature: 'Max Payout', ot: '93%', po: '92%', qt: '98%', iq: '95%' },
-            { feature: 'Assets', ot: '190+', po: '180+', qt: '95+', iq: '250+' },
-            { feature: 'Regulation', ot: 'FinaCom A', po: 'IFMRRC', qt: 'None', iq: 'CySEC' },
-            { feature: 'Copy Trading', ot: 'No', po: 'Yes', qt: 'Limited', iq: 'No' },
-            { feature: 'Education', ot: 'Excellent', po: 'Limited', qt: 'Basic', iq: 'Good' },
-            { feature: 'Localization', ot: 'Best', po: 'Good', qt: 'Basic', iq: 'Good' },
-          ].map((row, i) => (
-            <div key={row.feature} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-400 font-medium">{row.feature}</div>
-              <div className="text-center text-blue-400 font-medium">{row.ot}</div>
-              <div className="text-center text-gray-300">{row.po}</div>
-              <div className="text-center text-gray-300">{row.qt}</div>
-              <div className="text-center text-gray-300">{row.iq}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[700px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Feature</div>
+              <div className="text-center">Olymp Trade</div>
+              <div className="text-center">Pocket Option</div>
+              <div className="text-center">Quotex</div>
+              <div className="text-center">IQ Option</div>
             </div>
-          ))}
+            {[
+              { feature: 'Score', ot: '8.6/10', po: '9.5/10', qt: '9.4/10', iq: '9.2/10' },
+              { feature: 'Min Deposit', ot: '$10', po: '$5', qt: '$10', iq: '$10' },
+              { feature: 'Max Payout', ot: '93%', po: '92%', qt: '98%', iq: '95%' },
+              { feature: 'Assets', ot: '190+', po: '180+', qt: '95+', iq: '250+' },
+              { feature: 'Regulation', ot: 'FinaCom A', po: 'IFMRRC', qt: 'None', iq: 'CySEC' },
+              { feature: 'Copy Trading', ot: 'No', po: 'Yes', qt: 'Limited', iq: 'No' },
+              { feature: 'Education', ot: 'Excellent', po: 'Limited', qt: 'Basic', iq: 'Good' },
+              { feature: 'Localization', ot: 'Best', po: 'Good', qt: 'Basic', iq: 'Good' },
+            ].map((row, i) => (
+              <div key={row.feature} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-400 font-medium">{row.feature}</div>
+                <div className="text-center text-blue-400 font-medium">{row.ot}</div>
+                <div className="text-center text-gray-300">{row.po}</div>
+                <div className="text-center text-gray-300">{row.qt}</div>
+                <div className="text-center text-gray-300">{row.iq}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="flex flex-wrap gap-3 mt-4">
           <Link href={`/${locale}/compare/pocket-option-vs-binomo`} className="text-xs text-blue-400 hover:underline">Pocket Option vs Binomo →</Link>

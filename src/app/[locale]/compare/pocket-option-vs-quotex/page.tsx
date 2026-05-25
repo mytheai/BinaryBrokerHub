@@ -61,7 +61,7 @@ export default function PocketOptionVsQuotexPage() {
         <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Quick Comparison Table</h2>
         <p className="text-gray-400 text-sm text-center mb-8">Side-by-side across every key metric that matters</p>
         <div className="glass-card overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full min-w-[600px]">
             <thead>
               <tr className="border-b border-white/[0.06]">
                 <th className="text-left p-4 text-xs font-semibold text-gray-400 w-44">Feature</th>

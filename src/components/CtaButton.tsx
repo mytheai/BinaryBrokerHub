@@ -25,9 +25,9 @@ export default function CtaButton({
   const url = withUtm(baseUrl, 'binarybrokerhub', 'cta', campaign);
 
   const sizeStyles = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3.5 text-sm',
-    lg: 'px-8 py-4 text-base',
+    sm: 'px-4 py-2.5 text-sm min-h-[44px]',
+    md: 'px-6 py-3 text-sm min-h-[44px]',
+    lg: 'px-8 py-3.5 text-base min-h-[48px]',
   };
 
   const baseStyle = variant === 'primary' ? 'btn-primary' : 'btn-secondary';

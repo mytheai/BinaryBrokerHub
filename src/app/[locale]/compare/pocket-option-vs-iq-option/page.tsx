@@ -100,7 +100,7 @@ export default function PocketOptionVsIqOptionPage() {
           Every critical metric compared. Green highlighting shows the winner in each category.
         </p>
         <div className="glass-card overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full min-w-[500px]">
             <thead>
               <tr className="border-b border-white/[0.06]">
                 <th className="text-left p-4 text-xs font-semibold text-gray-400 w-40">Feature</th>
@@ -232,7 +232,7 @@ export default function PocketOptionVsIqOptionPage() {
           time of day, and expiry length.
         </p>
         <div className="glass-card overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full min-w-[600px]">
             <thead>
               <tr className="border-b border-white/[0.06]">
                 <th className="text-left p-4 text-xs font-semibold text-gray-400">Asset</th>

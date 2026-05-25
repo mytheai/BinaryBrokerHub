@@ -309,7 +309,7 @@ export default function BinaryOptionsMobileTradingPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Mobile App Feature Comparison</h2>
         <div className="glass-card overflow-hidden overflow-x-auto">
-          <div className="min-w-[600px]">
+          <div className="min-w-[750px]">
             <div className="grid grid-cols-6 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
               <div>Feature</div>
               <div className="text-center">IQ Option</div>

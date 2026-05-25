@@ -130,15 +130,15 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.05] rounded-lg"
+                className="flex items-center px-3 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/[0.05] rounded-lg min-h-[44px]"
               >
                 {link.label}
               </Link>
             ))}
             <div className="px-3 py-2">
-              <p className="text-xs text-gray-600 font-semibold uppercase mb-2">Broker Reviews</p>
+              <p className="text-xs text-gray-600 font-semibold uppercase mb-3">Broker Reviews</p>
               {brokerLinks.map((b) => (
-                <Link key={b.href} href={b.href} onClick={() => setMobileOpen(false)} className="flex items-center justify-between py-1.5 text-sm text-gray-400 hover:text-white">
+                <Link key={b.href} href={b.href} onClick={() => setMobileOpen(false)} className="flex items-center justify-between py-2.5 text-sm text-gray-400 hover:text-white min-h-[44px]">
                   <span>{b.label}</span>
                   <span className="text-xs text-emerald-400">{b.badge}</span>
                 </Link>
@@ -149,7 +149,7 @@ export default function Header() {
                 <Link
                   key={lang}
                   href={`/${lang}`}
-                  className={`px-3 py-1.5 rounded-md text-xs font-medium ${
+                  className={`px-4 py-2.5 rounded-md text-sm font-medium min-h-[44px] flex items-center ${
                     locale === lang
                       ? 'bg-emerald-500 text-black'
                       : 'text-gray-500 bg-white/[0.05]'

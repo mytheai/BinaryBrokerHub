@@ -41,32 +41,34 @@ export default function PocketOptionWithdrawalPage() {
       {/* Deposit Methods */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Deposit Methods & Limits</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Method</div>
-            <div className="text-center">Minimum</div>
-            <div className="text-center">Processing</div>
-            <div className="text-center">Fee</div>
-          </div>
-          {[
-            { method: 'USDT (TRC-20)', min: '$5', time: '1-5 min', fee: 'Free' },
-            { method: 'Bitcoin (BTC)', min: '$5', time: '10-30 min', fee: 'Free' },
-            { method: 'Ethereum (ETH)', min: '$5', time: '5-15 min', fee: 'Free' },
-            { method: 'Visa/Mastercard', min: '$5', time: 'Instant', fee: 'Free' },
-            { method: 'Perfect Money', min: '$5', time: 'Instant', fee: 'Free' },
-            { method: 'Skrill', min: '$5', time: 'Instant', fee: 'Free' },
-            { method: 'Neteller', min: '$5', time: 'Instant', fee: 'Free' },
-            { method: 'UPI (India)', min: '$5', time: 'Instant', fee: 'Free' },
-            { method: 'PIX (Brazil)', min: '$5', time: 'Instant', fee: 'Free' },
-            { method: 'GCash (PH)', min: '$5', time: 'Instant', fee: 'Free' },
-          ].map((d, i) => (
-            <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{d.method}</div>
-              <div className="text-center text-white">{d.min}</div>
-              <div className="text-center text-gray-400">{d.time}</div>
-              <div className="text-center text-emerald-400">{d.fee}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[550px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Method</div>
+              <div className="text-center">Minimum</div>
+              <div className="text-center">Processing</div>
+              <div className="text-center">Fee</div>
             </div>
-          ))}
+            {[
+              { method: 'USDT (TRC-20)', min: '$5', time: '1-5 min', fee: 'Free' },
+              { method: 'Bitcoin (BTC)', min: '$5', time: '10-30 min', fee: 'Free' },
+              { method: 'Ethereum (ETH)', min: '$5', time: '5-15 min', fee: 'Free' },
+              { method: 'Visa/Mastercard', min: '$5', time: 'Instant', fee: 'Free' },
+              { method: 'Perfect Money', min: '$5', time: 'Instant', fee: 'Free' },
+              { method: 'Skrill', min: '$5', time: 'Instant', fee: 'Free' },
+              { method: 'Neteller', min: '$5', time: 'Instant', fee: 'Free' },
+              { method: 'UPI (India)', min: '$5', time: 'Instant', fee: 'Free' },
+              { method: 'PIX (Brazil)', min: '$5', time: 'Instant', fee: 'Free' },
+              { method: 'GCash (PH)', min: '$5', time: 'Instant', fee: 'Free' },
+            ].map((d, i) => (
+              <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{d.method}</div>
+                <div className="text-center text-white">{d.min}</div>
+                <div className="text-center text-gray-400">{d.time}</div>
+                <div className="text-center text-emerald-400">{d.fee}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">* Pocket Option has one of the lowest minimum deposits in the industry at just $5.</p>
       </section>
@@ -74,30 +76,32 @@ export default function PocketOptionWithdrawalPage() {
       {/* Withdrawal Methods */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Withdrawal Methods & Real Processing Times</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Method</div>
-            <div className="text-center">Minimum</div>
-            <div className="text-center">Our Test</div>
-            <div className="text-center">Official</div>
-            <div className="text-center">Fee</div>
-          </div>
-          {[
-            { method: 'USDT (TRC-20)', min: '$10', tested: '12-45 min', official: 'Up to 3 days', fee: 'Free' },
-            { method: 'Bitcoin', min: '$50', tested: '30 min - 2 hrs', official: 'Up to 3 days', fee: 'Free' },
-            { method: 'Visa/Mastercard', min: '$10', tested: '1-3 days', official: 'Up to 7 days', fee: 'Free' },
-            { method: 'Perfect Money', min: '$10', tested: '1-4 hours', official: 'Up to 3 days', fee: 'Free' },
-            { method: 'Skrill', min: '$10', tested: '2-6 hours', official: 'Up to 3 days', fee: 'Free' },
-            { method: 'Neteller', min: '$10', tested: '3 hours', official: 'Up to 3 days', fee: 'Free' },
-          ].map((w, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{w.method}</div>
-              <div className="text-center text-white">{w.min}</div>
-              <div className="text-center text-emerald-400">{w.tested}</div>
-              <div className="text-center text-gray-400">{w.official}</div>
-              <div className="text-center text-emerald-400">{w.fee}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[650px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Method</div>
+              <div className="text-center">Minimum</div>
+              <div className="text-center">Our Test</div>
+              <div className="text-center">Official</div>
+              <div className="text-center">Fee</div>
             </div>
-          ))}
+            {[
+              { method: 'USDT (TRC-20)', min: '$10', tested: '12-45 min', official: 'Up to 3 days', fee: 'Free' },
+              { method: 'Bitcoin', min: '$50', tested: '30 min - 2 hrs', official: 'Up to 3 days', fee: 'Free' },
+              { method: 'Visa/Mastercard', min: '$10', tested: '1-3 days', official: 'Up to 7 days', fee: 'Free' },
+              { method: 'Perfect Money', min: '$10', tested: '1-4 hours', official: 'Up to 3 days', fee: 'Free' },
+              { method: 'Skrill', min: '$10', tested: '2-6 hours', official: 'Up to 3 days', fee: 'Free' },
+              { method: 'Neteller', min: '$10', tested: '3 hours', official: 'Up to 3 days', fee: 'Free' },
+            ].map((w, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{w.method}</div>
+                <div className="text-center text-white">{w.min}</div>
+                <div className="text-center text-emerald-400">{w.tested}</div>
+                <div className="text-center text-gray-400">{w.official}</div>
+                <div className="text-center text-emerald-400">{w.fee}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -107,30 +111,32 @@ export default function PocketOptionWithdrawalPage() {
         <p className="text-gray-400 text-sm mb-4">
           12 real withdrawals over 8 months of testing. All successful, zero rejections:
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Date</div>
-            <div className="text-center">Amount</div>
-            <div className="text-center">Method</div>
-            <div className="text-center">Received In</div>
-          </div>
-          {[
-            { date: 'Oct 2025', amount: '$200', method: 'USDT TRC-20', time: '12 minutes' },
-            { date: 'Nov 2025', amount: '$450', method: 'USDT TRC-20', time: '28 minutes' },
-            { date: 'Dec 2025', amount: '$800', method: 'USDT TRC-20', time: '45 minutes' },
-            { date: 'Dec 2025', amount: '$300', method: 'Visa Card', time: '1 day' },
-            { date: 'Jan 2026', amount: '$500', method: 'Bitcoin', time: '1.5 hours' },
-            { date: 'Feb 2026', amount: '$1,500', method: 'USDT TRC-20', time: '38 minutes' },
-            { date: 'Mar 2026', amount: '$250', method: 'Neteller', time: '3 hours' },
-            { date: 'Apr 2026', amount: '$1,000', method: 'USDT TRC-20', time: '22 minutes' },
-          ].map((w, i) => (
-            <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-400">{w.date}</div>
-              <div className="text-center text-white font-medium">{w.amount}</div>
-              <div className="text-center text-gray-300">{w.method}</div>
-              <div className="text-center text-emerald-400 font-medium">{w.time}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[550px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Date</div>
+              <div className="text-center">Amount</div>
+              <div className="text-center">Method</div>
+              <div className="text-center">Received In</div>
             </div>
-          ))}
+            {[
+              { date: 'Oct 2025', amount: '$200', method: 'USDT TRC-20', time: '12 minutes' },
+              { date: 'Nov 2025', amount: '$450', method: 'USDT TRC-20', time: '28 minutes' },
+              { date: 'Dec 2025', amount: '$800', method: 'USDT TRC-20', time: '45 minutes' },
+              { date: 'Dec 2025', amount: '$300', method: 'Visa Card', time: '1 day' },
+              { date: 'Jan 2026', amount: '$500', method: 'Bitcoin', time: '1.5 hours' },
+              { date: 'Feb 2026', amount: '$1,500', method: 'USDT TRC-20', time: '38 minutes' },
+              { date: 'Mar 2026', amount: '$250', method: 'Neteller', time: '3 hours' },
+              { date: 'Apr 2026', amount: '$1,000', method: 'USDT TRC-20', time: '22 minutes' },
+            ].map((w, i) => (
+              <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-400">{w.date}</div>
+                <div className="text-center text-white font-medium">{w.amount}</div>
+                <div className="text-center text-gray-300">{w.method}</div>
+                <div className="text-center text-emerald-400 font-medium">{w.time}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">Total withdrawn: $5,000+ across 12 requests. Success rate: 100%.</p>
       </section>

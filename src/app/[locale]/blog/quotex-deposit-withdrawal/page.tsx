@@ -47,36 +47,38 @@ export default function QuotexDepositWithdrawalPage() {
       {/* Deposit Methods */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">All Deposit Methods</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Method</div>
-            <div className="text-center">Min Deposit</div>
-            <div className="text-center">Processing</div>
-            <div className="text-center">Fee</div>
-            <div className="text-center">Availability</div>
-          </div>
-          {[
-            { method: 'USDT (TRC-20)', min: '$10', time: '1-5 min', fee: 'Free', avail: 'Global' },
-            { method: 'USDT (ERC-20)', min: '$10', time: '5-15 min', fee: 'Free', avail: 'Global' },
-            { method: 'Bitcoin (BTC)', min: '$10', time: '10-30 min', fee: 'Free', avail: 'Global' },
-            { method: 'Ethereum (ETH)', min: '$10', time: '5-15 min', fee: 'Free', avail: 'Global' },
-            { method: 'Visa/Mastercard', min: '$10', time: 'Instant', fee: 'Free', avail: 'Most countries' },
-            { method: 'UPI', min: '₹800', time: 'Instant', fee: 'Free', avail: 'India' },
-            { method: 'Perfect Money', min: '$10', time: 'Instant', fee: 'Free', avail: 'Global' },
-            { method: 'Bank Transfer', min: '$50', time: '1-3 days', fee: 'Free', avail: 'Select countries' },
-            { method: 'Skrill', min: '$10', time: 'Instant', fee: 'Free', avail: 'Most countries' },
-            { method: 'Neteller', min: '$10', time: 'Instant', fee: 'Free', avail: 'Most countries' },
-            { method: 'AstroPay', min: '$10', time: 'Instant', fee: 'Free', avail: 'LATAM' },
-            { method: 'GCash/GrabPay', min: '$10', time: 'Instant', fee: 'Free', avail: 'Philippines' },
-          ].map((d, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{d.method}</div>
-              <div className="text-center text-white">{d.min}</div>
-              <div className="text-center text-gray-400">{d.time}</div>
-              <div className="text-center text-emerald-400">{d.fee}</div>
-              <div className="text-center text-gray-400 text-xs">{d.avail}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[650px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Method</div>
+              <div className="text-center">Min Deposit</div>
+              <div className="text-center">Processing</div>
+              <div className="text-center">Fee</div>
+              <div className="text-center">Availability</div>
             </div>
-          ))}
+            {[
+              { method: 'USDT (TRC-20)', min: '$10', time: '1-5 min', fee: 'Free', avail: 'Global' },
+              { method: 'USDT (ERC-20)', min: '$10', time: '5-15 min', fee: 'Free', avail: 'Global' },
+              { method: 'Bitcoin (BTC)', min: '$10', time: '10-30 min', fee: 'Free', avail: 'Global' },
+              { method: 'Ethereum (ETH)', min: '$10', time: '5-15 min', fee: 'Free', avail: 'Global' },
+              { method: 'Visa/Mastercard', min: '$10', time: 'Instant', fee: 'Free', avail: 'Most countries' },
+              { method: 'UPI', min: '₹800', time: 'Instant', fee: 'Free', avail: 'India' },
+              { method: 'Perfect Money', min: '$10', time: 'Instant', fee: 'Free', avail: 'Global' },
+              { method: 'Bank Transfer', min: '$50', time: '1-3 days', fee: 'Free', avail: 'Select countries' },
+              { method: 'Skrill', min: '$10', time: 'Instant', fee: 'Free', avail: 'Most countries' },
+              { method: 'Neteller', min: '$10', time: 'Instant', fee: 'Free', avail: 'Most countries' },
+              { method: 'AstroPay', min: '$10', time: 'Instant', fee: 'Free', avail: 'LATAM' },
+              { method: 'GCash/GrabPay', min: '$10', time: 'Instant', fee: 'Free', avail: 'Philippines' },
+            ].map((d, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{d.method}</div>
+                <div className="text-center text-white">{d.min}</div>
+                <div className="text-center text-gray-400">{d.time}</div>
+                <div className="text-center text-emerald-400">{d.fee}</div>
+                <div className="text-center text-gray-400 text-xs">{d.avail}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">* Quotex charges zero deposit fees. Your payment provider may charge network/transaction fees separately.</p>
       </section>
@@ -109,30 +111,32 @@ export default function QuotexDepositWithdrawalPage() {
       {/* Withdrawal Methods */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Withdrawal Methods & Processing Times</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Method</div>
-            <div className="text-center">Min Withdrawal</div>
-            <div className="text-center">Our Test Time</div>
-            <div className="text-center">Official Time</div>
-            <div className="text-center">Fee</div>
-          </div>
-          {[
-            { method: 'USDT (TRC-20)', min: '$10', tested: '35-52 min', official: '1-5 days', fee: 'Free' },
-            { method: 'Bitcoin', min: '$50', tested: '1-3 hours', official: '1-5 days', fee: 'Free' },
-            { method: 'Visa/Mastercard', min: '$10', tested: '2-4 days', official: '1-5 days', fee: 'Free' },
-            { method: 'Perfect Money', min: '$10', tested: '3 hours', official: '1-5 days', fee: 'Free' },
-            { method: 'Skrill', min: '$10', tested: '4-8 hours', official: '1-5 days', fee: 'Free' },
-            { method: 'Bank Transfer', min: '$50', tested: '3-5 days', official: '3-7 days', fee: 'Free' },
-          ].map((w, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{w.method}</div>
-              <div className="text-center text-white">{w.min}</div>
-              <div className="text-center text-emerald-400">{w.tested}</div>
-              <div className="text-center text-gray-400">{w.official}</div>
-              <div className="text-center text-emerald-400">{w.fee}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[650px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Method</div>
+              <div className="text-center">Min Withdrawal</div>
+              <div className="text-center">Our Test Time</div>
+              <div className="text-center">Official Time</div>
+              <div className="text-center">Fee</div>
             </div>
-          ))}
+            {[
+              { method: 'USDT (TRC-20)', min: '$10', tested: '35-52 min', official: '1-5 days', fee: 'Free' },
+              { method: 'Bitcoin', min: '$50', tested: '1-3 hours', official: '1-5 days', fee: 'Free' },
+              { method: 'Visa/Mastercard', min: '$10', tested: '2-4 days', official: '1-5 days', fee: 'Free' },
+              { method: 'Perfect Money', min: '$10', tested: '3 hours', official: '1-5 days', fee: 'Free' },
+              { method: 'Skrill', min: '$10', tested: '4-8 hours', official: '1-5 days', fee: 'Free' },
+              { method: 'Bank Transfer', min: '$50', tested: '3-5 days', official: '3-7 days', fee: 'Free' },
+            ].map((w, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{w.method}</div>
+                <div className="text-center text-white">{w.min}</div>
+                <div className="text-center text-emerald-400">{w.tested}</div>
+                <div className="text-center text-gray-400">{w.official}</div>
+                <div className="text-center text-emerald-400">{w.fee}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">* "Our Test Time" = actual time we experienced. "Official Time" = what Quotex states in their T&C. Actual may vary.</p>
       </section>
@@ -143,29 +147,31 @@ export default function QuotexDepositWithdrawalPage() {
         <p className="text-gray-400 text-sm mb-4">
           We made 15 withdrawal requests over 6 months of testing. Here are representative results:
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Date</div>
-            <div className="text-center">Amount</div>
-            <div className="text-center">Method</div>
-            <div className="text-center">Time to Receive</div>
-          </div>
-          {[
-            { date: 'Dec 2025', amount: '$500', method: 'USDT TRC-20', time: '35 minutes' },
-            { date: 'Jan 2026', amount: '$1,200', method: 'USDT TRC-20', time: '52 minutes' },
-            { date: 'Jan 2026', amount: '$300', method: 'Visa Card', time: '2 days' },
-            { date: 'Feb 2026', amount: '$800', method: 'USDT TRC-20', time: '41 minutes' },
-            { date: 'Mar 2026', amount: '$500', method: 'Visa Card', time: '4 days' },
-            { date: 'Mar 2026', amount: '$2,000', method: 'USDT TRC-20', time: '1 hr 10 min' },
-            { date: 'Apr 2026', amount: '$400', method: 'Perfect Money', time: '3 hours' },
-          ].map((w, i) => (
-            <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-400">{w.date}</div>
-              <div className="text-center text-white font-medium">{w.amount}</div>
-              <div className="text-center text-gray-300">{w.method}</div>
-              <div className="text-center text-emerald-400">{w.time}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[550px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Date</div>
+              <div className="text-center">Amount</div>
+              <div className="text-center">Method</div>
+              <div className="text-center">Time to Receive</div>
             </div>
-          ))}
+            {[
+              { date: 'Dec 2025', amount: '$500', method: 'USDT TRC-20', time: '35 minutes' },
+              { date: 'Jan 2026', amount: '$1,200', method: 'USDT TRC-20', time: '52 minutes' },
+              { date: 'Jan 2026', amount: '$300', method: 'Visa Card', time: '2 days' },
+              { date: 'Feb 2026', amount: '$800', method: 'USDT TRC-20', time: '41 minutes' },
+              { date: 'Mar 2026', amount: '$500', method: 'Visa Card', time: '4 days' },
+              { date: 'Mar 2026', amount: '$2,000', method: 'USDT TRC-20', time: '1 hr 10 min' },
+              { date: 'Apr 2026', amount: '$400', method: 'Perfect Money', time: '3 hours' },
+            ].map((w, i) => (
+              <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-400">{w.date}</div>
+                <div className="text-center text-white font-medium">{w.amount}</div>
+                <div className="text-center text-gray-300">{w.method}</div>
+                <div className="text-center text-emerald-400">{w.time}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">Total withdrawn: $5,700+ over 15 requests. Zero rejections. First withdrawal required KYC (ID + selfie).</p>
       </section>

@@ -73,29 +73,31 @@ export default function PocketOptionCopyTradingPage() {
         <p className="text-gray-400 text-sm mb-4">
           We copied 5 different traders over 3 months with a $500 starting balance. Here&apos;s what happened:
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Trader</div>
-            <div className="text-center">Win Rate</div>
-            <div className="text-center">Trades Copied</div>
-            <div className="text-center">Our Result</div>
-            <div className="text-center">Status</div>
-          </div>
-          {[
-            { trader: 'Trader A', winRate: '72%', trades: '89', result: '+$142', status: 'Profitable' },
-            { trader: 'Trader B', winRate: '68%', trades: '124', result: '+$87', status: 'Profitable' },
-            { trader: 'Trader C', winRate: '65%', trades: '56', result: '+$23', status: 'Break-even' },
-            { trader: 'Trader D', winRate: '61%', trades: '203', result: '-$34', status: 'Slight loss' },
-            { trader: 'Trader E', winRate: '58%', trades: '45', result: '-$67', status: 'Stopped early' },
-          ].map((t, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300">{t.trader}</div>
-              <div className="text-center text-white">{t.winRate}</div>
-              <div className="text-center text-gray-400">{t.trades}</div>
-              <div className={`text-center font-medium ${t.result.startsWith('+') ? 'text-emerald-400' : 'text-red-400'}`}>{t.result}</div>
-              <div className={`text-center text-xs ${t.status === 'Profitable' ? 'text-emerald-400' : t.status === 'Break-even' ? 'text-gray-400' : 'text-red-400'}`}>{t.status}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[650px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Trader</div>
+              <div className="text-center">Win Rate</div>
+              <div className="text-center">Trades Copied</div>
+              <div className="text-center">Our Result</div>
+              <div className="text-center">Status</div>
             </div>
-          ))}
+            {[
+              { trader: 'Trader A', winRate: '72%', trades: '89', result: '+$142', status: 'Profitable' },
+              { trader: 'Trader B', winRate: '68%', trades: '124', result: '+$87', status: 'Profitable' },
+              { trader: 'Trader C', winRate: '65%', trades: '56', result: '+$23', status: 'Break-even' },
+              { trader: 'Trader D', winRate: '61%', trades: '203', result: '-$34', status: 'Slight loss' },
+              { trader: 'Trader E', winRate: '58%', trades: '45', result: '-$67', status: 'Stopped early' },
+            ].map((t, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300">{t.trader}</div>
+                <div className="text-center text-white">{t.winRate}</div>
+                <div className="text-center text-gray-400">{t.trades}</div>
+                <div className={`text-center font-medium ${t.result.startsWith('+') ? 'text-emerald-400' : 'text-red-400'}`}>{t.result}</div>
+                <div className={`text-center text-xs ${t.status === 'Profitable' ? 'text-emerald-400' : t.status === 'Break-even' ? 'text-gray-400' : 'text-red-400'}`}>{t.status}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="mt-4 bg-white/[0.03] rounded-lg p-4">
           <p className="text-sm text-gray-300">

@@ -77,7 +77,7 @@ export default function BrokerCard({ broker }: BrokerCardProps) {
           ].map((s) => (
             <div key={s.label} className="bg-white/[0.03] rounded-lg p-3 text-center">
               <div className="text-lg font-bold text-white">{s.value}</div>
-              <div className="text-[10px] text-gray-500 uppercase">{s.label}</div>
+              <div className="text-xs sm:text-[10px] text-gray-500 uppercase">{s.label}</div>
             </div>
           ))}
         </div>

@@ -281,26 +281,28 @@ export default function QuotexStrategyPage() {
       {/* Best Times to Trade */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Best Times to Trade on Quotex</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Session</div>
-            <div className="text-center">Time (UTC)</div>
-            <div className="text-center">Best For</div>
-            <div className="text-center">Payout</div>
-          </div>
-          {[
-            { session: 'London Open', time: '07:00-09:00', best: 'Trend trading', payout: '85-92%' },
-            { session: 'London/NY Overlap', time: '13:00-17:00', best: 'High volatility', payout: '90-95%' },
-            { session: 'Asian Session', time: '00:00-06:00', best: 'Range trading', payout: '80-88%' },
-            { session: 'NY Close', time: '19:00-21:00', best: 'Reversals', payout: '82-90%' },
-          ].map((s, i) => (
-            <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-white font-medium">{s.session}</div>
-              <div className="text-center text-gray-400">{s.time}</div>
-              <div className="text-center text-gray-300">{s.best}</div>
-              <div className="text-center text-emerald-400">{s.payout}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[550px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Session</div>
+              <div className="text-center">Time (UTC)</div>
+              <div className="text-center">Best For</div>
+              <div className="text-center">Payout</div>
             </div>
-          ))}
+            {[
+              { session: 'London Open', time: '07:00-09:00', best: 'Trend trading', payout: '85-92%' },
+              { session: 'London/NY Overlap', time: '13:00-17:00', best: 'High volatility', payout: '90-95%' },
+              { session: 'Asian Session', time: '00:00-06:00', best: 'Range trading', payout: '80-88%' },
+              { session: 'NY Close', time: '19:00-21:00', best: 'Reversals', payout: '82-90%' },
+            ].map((s, i) => (
+              <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-white font-medium">{s.session}</div>
+                <div className="text-center text-gray-400">{s.time}</div>
+                <div className="text-center text-gray-300">{s.best}</div>
+                <div className="text-center text-emerald-400">{s.payout}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">* Payouts are higher during high-volume sessions. Avoid trading during major news releases (check economic calendar).</p>
       </section>

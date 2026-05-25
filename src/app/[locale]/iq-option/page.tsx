@@ -167,37 +167,39 @@ export default function IQOptionPage() {
           IQ Option&apos;s binary payouts vary by asset class, time of day, and market volatility. We tracked payout percentages across
           200+ trades over 6 weeks. Here&apos;s the breakdown by asset class during peak (London/NY overlap) and off-peak sessions.
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Asset Class</div>
-            <div className="text-center">Peak Payout</div>
-            <div className="text-center">Off-Peak Payout</div>
-            <div className="text-center">Avg. Observed</div>
-            <div className="text-center">Verdict</div>
-          </div>
-          {[
-            { asset: 'Major Forex (EUR/USD, GBP/USD)', peak: '90-95%', offPeak: '78-85%', avg: '86%', verdict: 'Good' },
-            { asset: 'Minor Forex (AUD/NZD, EUR/GBP)', peak: '85-90%', offPeak: '72-80%', avg: '82%', verdict: 'Average' },
-            { asset: 'Crypto (BTC, ETH)', peak: '80-88%', offPeak: '70-78%', avg: '79%', verdict: 'Below Avg' },
-            { asset: 'Commodities (Gold, Oil)', peak: '85-92%', offPeak: '75-82%', avg: '83%', verdict: 'Good' },
-            { asset: 'Stocks (Tesla, Apple)', peak: '82-88%', offPeak: '70-76%', avg: '78%', verdict: 'Below Avg' },
-            { asset: 'Indices (NASDAQ, DAX)', peak: '84-90%', offPeak: '74-80%', avg: '81%', verdict: 'Average' },
-            { asset: 'OTC (Weekend)', peak: 'N/A', offPeak: '75-85%', avg: '80%', verdict: 'Average' },
-          ].map((row, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{row.asset}</div>
-              <div className="text-center text-emerald-400 font-semibold">{row.peak}</div>
-              <div className="text-center text-amber-400">{row.offPeak}</div>
-              <div className="text-center text-white font-bold">{row.avg}</div>
-              <div className="text-center">
-                <span className={`text-xs px-2 py-0.5 rounded-full ${
-                  row.verdict === 'Good' ? 'bg-emerald-500/20 text-emerald-400' :
-                  row.verdict === 'Average' ? 'bg-amber-500/20 text-amber-400' :
-                  'bg-red-500/20 text-red-400'
-                }`}>{row.verdict}</span>
-              </div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[700px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Asset Class</div>
+              <div className="text-center">Peak Payout</div>
+              <div className="text-center">Off-Peak Payout</div>
+              <div className="text-center">Avg. Observed</div>
+              <div className="text-center">Verdict</div>
             </div>
-          ))}
+            {[
+              { asset: 'Major Forex (EUR/USD, GBP/USD)', peak: '90-95%', offPeak: '78-85%', avg: '86%', verdict: 'Good' },
+              { asset: 'Minor Forex (AUD/NZD, EUR/GBP)', peak: '85-90%', offPeak: '72-80%', avg: '82%', verdict: 'Average' },
+              { asset: 'Crypto (BTC, ETH)', peak: '80-88%', offPeak: '70-78%', avg: '79%', verdict: 'Below Avg' },
+              { asset: 'Commodities (Gold, Oil)', peak: '85-92%', offPeak: '75-82%', avg: '83%', verdict: 'Good' },
+              { asset: 'Stocks (Tesla, Apple)', peak: '82-88%', offPeak: '70-76%', avg: '78%', verdict: 'Below Avg' },
+              { asset: 'Indices (NASDAQ, DAX)', peak: '84-90%', offPeak: '74-80%', avg: '81%', verdict: 'Average' },
+              { asset: 'OTC (Weekend)', peak: 'N/A', offPeak: '75-85%', avg: '80%', verdict: 'Average' },
+            ].map((row, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{row.asset}</div>
+                <div className="text-center text-emerald-400 font-semibold">{row.peak}</div>
+                <div className="text-center text-amber-400">{row.offPeak}</div>
+                <div className="text-center text-white font-bold">{row.avg}</div>
+                <div className="text-center">
+                  <span className={`text-xs px-2 py-0.5 rounded-full ${
+                    row.verdict === 'Good' ? 'bg-emerald-500/20 text-emerald-400' :
+                    row.verdict === 'Average' ? 'bg-amber-500/20 text-amber-400' :
+                    'bg-red-500/20 text-red-400'
+                  }`}>{row.verdict}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="glass-card p-5 mt-4">
           <p className="text-sm text-gray-400 leading-relaxed">
@@ -302,38 +304,40 @@ export default function IQOptionPage() {
           IQ Option supports a wide range of payment methods with a $10 minimum deposit across all options. The broker charges zero
           deposit fees on its end, though your payment provider may apply their own charges. Withdrawal processing varies by method.
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-6 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Method</div>
-            <div className="text-center">Type</div>
-            <div className="text-center">Min Deposit</div>
-            <div className="text-center">Deposit Speed</div>
-            <div className="text-center">Withdrawal Speed</div>
-            <div className="text-center">Fee</div>
-          </div>
-          {[
-            { method: 'Visa / Mastercard', type: 'Card', minDep: '$10', depSpeed: 'Instant', wdSpeed: '1-3 business days', fee: 'Free' },
-            { method: 'Skrill', type: 'E-Wallet', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
-            { method: 'Neteller', type: 'E-Wallet', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
-            { method: 'Perfect Money', type: 'E-Wallet', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
-            { method: 'WebMoney', type: 'E-Wallet', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
-            { method: 'Bitcoin (BTC)', type: 'Crypto', minDep: '$10', depSpeed: '1-30 min', wdSpeed: 'Up to 3 days', fee: 'Free' },
-            { method: 'Ethereum (ETH)', type: 'Crypto', minDep: '$10', depSpeed: '1-15 min', wdSpeed: 'Up to 3 days', fee: 'Free' },
-            { method: 'USDT (Tether)', type: 'Crypto', minDep: '$10', depSpeed: '1-5 min', wdSpeed: 'Up to 24 hours', fee: 'Free' },
-            { method: 'UPI (India)', type: 'Local', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Varies by bank', fee: 'Free' },
-            { method: 'PIX (Brazil)', type: 'Local', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
-            { method: 'GCash (Philippines)', type: 'Local', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Varies', fee: 'Free' },
-            { method: 'Bank Transfer', type: 'Wire', minDep: '$50', depSpeed: '2-5 days', wdSpeed: '3-7 business days', fee: 'Free*' },
-          ].map((d, i) => (
-            <div key={i} className={`grid grid-cols-6 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{d.method}</div>
-              <div className="text-center text-gray-500 text-xs">{d.type}</div>
-              <div className="text-center text-white">{d.minDep}</div>
-              <div className="text-center text-emerald-400">{d.depSpeed}</div>
-              <div className="text-center text-amber-400">{d.wdSpeed}</div>
-              <div className="text-center text-emerald-400">{d.fee}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[800px]">
+            <div className="grid grid-cols-6 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Method</div>
+              <div className="text-center">Type</div>
+              <div className="text-center">Min Deposit</div>
+              <div className="text-center">Deposit Speed</div>
+              <div className="text-center">Withdrawal Speed</div>
+              <div className="text-center">Fee</div>
             </div>
-          ))}
+            {[
+              { method: 'Visa / Mastercard', type: 'Card', minDep: '$10', depSpeed: 'Instant', wdSpeed: '1-3 business days', fee: 'Free' },
+              { method: 'Skrill', type: 'E-Wallet', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
+              { method: 'Neteller', type: 'E-Wallet', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
+              { method: 'Perfect Money', type: 'E-Wallet', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
+              { method: 'WebMoney', type: 'E-Wallet', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
+              { method: 'Bitcoin (BTC)', type: 'Crypto', minDep: '$10', depSpeed: '1-30 min', wdSpeed: 'Up to 3 days', fee: 'Free' },
+              { method: 'Ethereum (ETH)', type: 'Crypto', minDep: '$10', depSpeed: '1-15 min', wdSpeed: 'Up to 3 days', fee: 'Free' },
+              { method: 'USDT (Tether)', type: 'Crypto', minDep: '$10', depSpeed: '1-5 min', wdSpeed: 'Up to 24 hours', fee: 'Free' },
+              { method: 'UPI (India)', type: 'Local', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Varies by bank', fee: 'Free' },
+              { method: 'PIX (Brazil)', type: 'Local', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Up to 24 hours', fee: 'Free' },
+              { method: 'GCash (Philippines)', type: 'Local', minDep: '$10', depSpeed: 'Instant', wdSpeed: 'Varies', fee: 'Free' },
+              { method: 'Bank Transfer', type: 'Wire', minDep: '$50', depSpeed: '2-5 days', wdSpeed: '3-7 business days', fee: 'Free*' },
+            ].map((d, i) => (
+              <div key={i} className={`grid grid-cols-6 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{d.method}</div>
+                <div className="text-center text-gray-500 text-xs">{d.type}</div>
+                <div className="text-center text-white">{d.minDep}</div>
+                <div className="text-center text-emerald-400">{d.depSpeed}</div>
+                <div className="text-center text-amber-400">{d.wdSpeed}</div>
+                <div className="text-center text-emerald-400">{d.fee}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">
           *Bank transfers may incur intermediary bank fees. IQ Option charges no fees on its end for any deposit or withdrawal method.
@@ -468,36 +472,38 @@ export default function IQOptionPage() {
           How does IQ Option stack up against the other top binary options brokers? Here&apos;s a side-by-side comparison across the
           key factors that matter most to traders.
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Feature</div>
-            <div className="text-center">IQ Option</div>
-            <div className="text-center">Pocket Option</div>
-            <div className="text-center">Quotex</div>
-            <div className="text-center">Deriv</div>
-          </div>
-          {[
-            { feature: 'Our Score', iq: '9.2/10', po: '9.5/10', qt: '9.4/10', dv: '9.0/10' },
-            { feature: 'Min Deposit', iq: '$10', po: '$5', qt: '$10', dv: '$5' },
-            { feature: 'Max Payout', iq: 'Up to 95%', po: 'Up to 95%', qt: 'Up to 98%', dv: 'Up to 100%' },
-            { feature: 'Total Assets', iq: '250+', po: '100+', qt: '400+', dv: '100+' },
-            { feature: 'Min Trade', iq: '$1', po: '$1', qt: '$1', dv: '$0.35' },
-            { feature: 'Demo Account', iq: '$10,000', po: '$50,000', qt: '$10,000', dv: '$10,000' },
-            { feature: 'Platform', iq: 'Proprietary (Best)', po: 'Proprietary', qt: 'Web Only', dv: 'DTrader/DBot' },
-            { feature: 'Copy Trading', iq: 'No', po: 'Yes', qt: 'No', dv: 'No' },
-            { feature: 'Regulation', iq: 'CySEC (EU only)', po: 'Costa Rica', qt: 'None', dv: 'MFSA + Others' },
-            { feature: 'Founded', iq: '2013', po: '2017', qt: '2019', dv: '1999' },
-            { feature: 'Mobile App', iq: 'iOS + Android', po: 'iOS + Android', qt: 'Android + PWA', dv: 'iOS + Android' },
-            { feature: 'Tournaments', iq: 'Yes', po: 'Yes', qt: 'Yes', dv: 'No' },
-          ].map((row, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{row.feature}</div>
-              <div className="text-center text-emerald-400 font-semibold">{row.iq}</div>
-              <div className="text-center text-white">{row.po}</div>
-              <div className="text-center text-white">{row.qt}</div>
-              <div className="text-center text-white">{row.dv}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[700px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Feature</div>
+              <div className="text-center">IQ Option</div>
+              <div className="text-center">Pocket Option</div>
+              <div className="text-center">Quotex</div>
+              <div className="text-center">Deriv</div>
             </div>
-          ))}
+            {[
+              { feature: 'Our Score', iq: '9.2/10', po: '9.5/10', qt: '9.4/10', dv: '9.0/10' },
+              { feature: 'Min Deposit', iq: '$10', po: '$5', qt: '$10', dv: '$5' },
+              { feature: 'Max Payout', iq: 'Up to 95%', po: 'Up to 95%', qt: 'Up to 98%', dv: 'Up to 100%' },
+              { feature: 'Total Assets', iq: '250+', po: '100+', qt: '400+', dv: '100+' },
+              { feature: 'Min Trade', iq: '$1', po: '$1', qt: '$1', dv: '$0.35' },
+              { feature: 'Demo Account', iq: '$10,000', po: '$50,000', qt: '$10,000', dv: '$10,000' },
+              { feature: 'Platform', iq: 'Proprietary (Best)', po: 'Proprietary', qt: 'Web Only', dv: 'DTrader/DBot' },
+              { feature: 'Copy Trading', iq: 'No', po: 'Yes', qt: 'No', dv: 'No' },
+              { feature: 'Regulation', iq: 'CySEC (EU only)', po: 'Costa Rica', qt: 'None', dv: 'MFSA + Others' },
+              { feature: 'Founded', iq: '2013', po: '2017', qt: '2019', dv: '1999' },
+              { feature: 'Mobile App', iq: 'iOS + Android', po: 'iOS + Android', qt: 'Android + PWA', dv: 'iOS + Android' },
+              { feature: 'Tournaments', iq: 'Yes', po: 'Yes', qt: 'Yes', dv: 'No' },
+            ].map((row, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{row.feature}</div>
+                <div className="text-center text-emerald-400 font-semibold">{row.iq}</div>
+                <div className="text-center text-white">{row.po}</div>
+                <div className="text-center text-white">{row.qt}</div>
+                <div className="text-center text-white">{row.dv}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="glass-card p-5 mt-4">
           <p className="text-sm text-gray-400 leading-relaxed mb-3">

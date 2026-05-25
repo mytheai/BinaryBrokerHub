@@ -32,7 +32,7 @@ export default function CalculatorPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
             {/* Inputs — 3 cols */}
             <div className="lg:col-span-3 glass-card p-6 md:p-8 space-y-8">
               <h3 className="font-semibold text-white">Adjust Parameters</h3>
@@ -50,9 +50,9 @@ export default function CalculatorPage() {
                   step={5}
                   value={investment}
                   onChange={(e) => setInvestment(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-800 rounded-full appearance-none cursor-pointer accent-emerald-500"
+                  className="w-full h-3 sm:h-2 bg-gray-800 rounded-full appearance-none cursor-pointer accent-emerald-500"
                 />
-                <div className="flex justify-between text-[10px] text-gray-600 mt-1">
+                <div className="flex justify-between text-xs sm:text-[10px] text-gray-600 mt-1">
                   <span>$1</span><span>$1,000</span>
                 </div>
               </div>
@@ -69,9 +69,9 @@ export default function CalculatorPage() {
                   max={95}
                   value={payout}
                   onChange={(e) => setPayout(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-800 rounded-full appearance-none cursor-pointer accent-emerald-500"
+                  className="w-full h-3 sm:h-2 bg-gray-800 rounded-full appearance-none cursor-pointer accent-emerald-500"
                 />
-                <div className="flex justify-between text-[10px] text-gray-600 mt-1">
+                <div className="flex justify-between text-xs sm:text-[10px] text-gray-600 mt-1">
                   <span>60%</span>
                   <span className="text-emerald-600">Quotex: 95% | PO: 92%</span>
                   <span>95%</span>
@@ -91,9 +91,9 @@ export default function CalculatorPage() {
                   step={5}
                   value={trades}
                   onChange={(e) => setTrades(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-800 rounded-full appearance-none cursor-pointer accent-emerald-500"
+                  className="w-full h-3 sm:h-2 bg-gray-800 rounded-full appearance-none cursor-pointer accent-emerald-500"
                 />
-                <div className="flex justify-between text-[10px] text-gray-600 mt-1">
+                <div className="flex justify-between text-xs sm:text-[10px] text-gray-600 mt-1">
                   <span>5</span><span>200</span>
                 </div>
               </div>
@@ -110,9 +110,9 @@ export default function CalculatorPage() {
                   max={85}
                   value={winRate}
                   onChange={(e) => setWinRate(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-800 rounded-full appearance-none cursor-pointer accent-emerald-500"
+                  className="w-full h-3 sm:h-2 bg-gray-800 rounded-full appearance-none cursor-pointer accent-emerald-500"
                 />
-                <div className="flex justify-between text-[10px] text-gray-600 mt-1">
+                <div className="flex justify-between text-xs sm:text-[10px] text-gray-600 mt-1">
                   <span>30%</span>
                   <span className="text-gray-500">Avg beginner: 55-60%</span>
                   <span>85%</span>

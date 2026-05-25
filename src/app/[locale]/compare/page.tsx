@@ -128,11 +128,12 @@ export default function ComparePage() {
 
       {/* Comparison Table */}
       <section className="section-container pb-16">
-        <div className="glass-card overflow-x-auto">
+        <p className="text-xs text-gray-500 mb-2 md:hidden text-center">← Swipe to see all brokers →</p>
+        <div className="glass-card overflow-x-auto -mx-4 sm:mx-0 rounded-none sm:rounded-2xl">
           <table className="w-full min-w-[900px]">
             <thead>
               <tr className="border-b border-white/[0.06]">
-                <th className="text-left p-3 text-xs font-semibold text-gray-400 w-36">Feature</th>
+                <th className="text-left p-3 text-xs font-semibold text-gray-400 w-28 sm:w-36 sticky left-0 bg-[#0a0f1a]/95 backdrop-blur-sm z-10">Feature</th>
                 {brokers.map((b) => (
                   <th key={b.key} className="p-3 text-center">
                     <Link href={`/${locale}/${b.slug}`} className="text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
@@ -146,7 +147,7 @@ export default function ComparePage() {
             <tbody>
               {comparisonData.map((row, i) => (
                 <tr key={row.feature} className={`border-b border-white/[0.03] ${i % 2 ? 'bg-white/[0.01]' : ''}`}>
-                  <td className="p-3 text-xs font-medium text-gray-400">{row.feature}</td>
+                  <td className="p-3 text-xs font-medium text-gray-400 sticky left-0 bg-[#0a0f1a]/95 backdrop-blur-sm z-10">{row.feature}</td>
                   {brokers.map((b) => {
                     const isBest = row.best
                       ? Array.isArray(row.best) ? row.best.includes(b.key) : row.best === b.key
@@ -169,7 +170,7 @@ export default function ComparePage() {
       {/* Winner Summary */}
       <section className="section-container pb-16">
         <h2 className="text-2xl font-bold mb-8 text-center">Which Broker Is Right for You?</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {[
             { title: 'Best Overall', broker: 'Pocket Option', score: '9.5', slug: 'pocket-option', desc: 'Copy trading, $5 min deposit, 180+ assets. Best all-round platform for beginners & pros.' },
             { title: 'Highest Payouts', broker: 'Quotex', score: '9.4', slug: 'quotex', desc: 'Up to 98% payout. Best for traders who want maximum return per trade.' },

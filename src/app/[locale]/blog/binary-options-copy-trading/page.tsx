@@ -324,30 +324,32 @@ export default function BinaryOptionsCopyTradingPage() {
       {/* Copy Trading vs Other Approaches */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Copy Trading vs Other Trading Approaches</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Factor</div>
-            <div className="text-center">Copy Trading</div>
-            <div className="text-center">Manual Trading</div>
-            <div className="text-center">Signal Bots</div>
-          </div>
-          {[
-            { factor: 'Skill Required', copy: 'Low', manual: 'High', bot: 'Medium' },
-            { factor: 'Time Investment', copy: '10 min/week', manual: '2-4 hrs/day', bot: '30 min/day' },
-            { factor: 'Automation', copy: 'Full', manual: 'None', bot: 'Partial' },
-            { factor: 'Control', copy: 'Limited', manual: 'Full', bot: 'Moderate' },
-            { factor: 'Learning Value', copy: 'Good (observe)', manual: 'Excellent', bot: 'Low' },
-            { factor: 'Risk Level', copy: 'Medium', manual: 'High (beginners)', bot: 'High' },
-            { factor: 'Monthly Return', copy: '5-15%', manual: '10-30% (skilled)', bot: 'Varies wildly' },
-            { factor: 'Best For', copy: 'Beginners', manual: 'Experienced', bot: 'Tech-savvy' },
-          ].map((row, i) => (
-            <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-white font-medium">{row.factor}</div>
-              <div className="text-center text-blue-400">{row.copy}</div>
-              <div className="text-center text-gray-400">{row.manual}</div>
-              <div className="text-center text-gray-400">{row.bot}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[550px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Factor</div>
+              <div className="text-center">Copy Trading</div>
+              <div className="text-center">Manual Trading</div>
+              <div className="text-center">Signal Bots</div>
             </div>
-          ))}
+            {[
+              { factor: 'Skill Required', copy: 'Low', manual: 'High', bot: 'Medium' },
+              { factor: 'Time Investment', copy: '10 min/week', manual: '2-4 hrs/day', bot: '30 min/day' },
+              { factor: 'Automation', copy: 'Full', manual: 'None', bot: 'Partial' },
+              { factor: 'Control', copy: 'Limited', manual: 'Full', bot: 'Moderate' },
+              { factor: 'Learning Value', copy: 'Good (observe)', manual: 'Excellent', bot: 'Low' },
+              { factor: 'Risk Level', copy: 'Medium', manual: 'High (beginners)', bot: 'High' },
+              { factor: 'Monthly Return', copy: '5-15%', manual: '10-30% (skilled)', bot: 'Varies wildly' },
+              { factor: 'Best For', copy: 'Beginners', manual: 'Experienced', bot: 'Tech-savvy' },
+            ].map((row, i) => (
+              <div key={i} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-white font-medium">{row.factor}</div>
+                <div className="text-center text-blue-400">{row.copy}</div>
+                <div className="text-center text-gray-400">{row.manual}</div>
+                <div className="text-center text-gray-400">{row.bot}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -30,8 +30,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-center text-balance leading-tight mb-6">
-            The Most Trusted<br />
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-center text-balance leading-tight mb-6">
+            The Most Trusted {' '}
             <span className="gradient-text">Binary Options</span> Broker Reviews
           </h1>
 
@@ -107,13 +107,13 @@ export default function HomePage() {
         </div>
 
         {/* Primary brokers */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
           <BrokerCard broker="pocketOption" />
           <BrokerCard broker="quotex" />
         </div>
 
-        {/* All 7 broker ranking table */}
-        <div className="glass-card overflow-hidden">
+        {/* All 7 broker ranking — Desktop table */}
+        <div className="hidden md:block glass-card overflow-hidden">
           <div className="grid grid-cols-7 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
             <div>Rank</div>
             <div>Broker</div>
@@ -149,6 +149,37 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* All 7 broker ranking — Mobile cards */}
+        <div className="md:hidden space-y-3">
+          {[
+            { rank: 1, name: 'Pocket Option', slug: 'pocket-option', score: '9.5', payout: '92%', deposit: '$5', feature: 'Copy trading + lowest deposit', color: 'text-emerald-400' },
+            { rank: 2, name: 'Quotex', slug: 'quotex', score: '9.4', payout: '98%', deposit: '$10', feature: 'Highest payouts', color: 'text-emerald-400' },
+            { rank: 3, name: 'IQ Option', slug: 'iq-option', score: '9.2', payout: '95%', deposit: '$10', feature: 'Best platform UX', color: 'text-emerald-400' },
+            { rank: 4, name: 'Deriv', slug: 'deriv', score: '9.0', payout: '95%', deposit: '$5', feature: '26 yrs + MFSA Tier-1', color: 'text-emerald-400' },
+            { rank: 5, name: 'Olymp Trade', slug: 'olymp-trade', score: '8.6', payout: '93%', deposit: '$10', feature: '#1 in India/Indonesia', color: 'text-blue-400' },
+            { rank: 6, name: 'Binomo', slug: 'binomo', score: '8.2', payout: '90%', deposit: '$10', feature: 'Daily tournaments', color: 'text-amber-400' },
+            { rank: 7, name: 'ExpertOption', slug: 'expert-option', score: '7.8', payout: '95%', deposit: '$10', feature: 'Social trading', color: 'text-gray-400' },
+          ].map((b) => (
+            <Link key={b.slug} href={`/${locale}/${b.slug}`} className="glass-card p-4 flex items-center gap-4 hover:bg-white/[0.04] transition-colors block">
+              <div className={`text-lg font-bold w-8 flex-shrink-0 ${b.rank <= 2 ? 'text-emerald-400' : 'text-gray-500'}`}>#{b.rank}</div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-white font-semibold text-sm">{b.name}</span>
+                  <span className={`font-bold ${b.color}`}>{b.score}/10</span>
+                </div>
+                <div className="flex items-center gap-3 text-xs text-gray-400">
+                  <span>Payout {b.payout}</span>
+                  <span>Min {b.deposit}</span>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">{b.feature}</p>
+              </div>
+              <svg className="w-4 h-4 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           ))}
         </div>
 
@@ -224,7 +255,7 @@ export default function HomePage() {
       {/* Testimonials / Social Proof */}
       <section className="section-container py-20">
         <h2 className="text-3xl font-bold text-center mb-12">What Traders Say</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {[
             {
               quote: 'Switched to Quotex after reading this review. The 95% payout is real — I verified it across 50+ trades. Withdrawals hit my crypto wallet in under an hour.',

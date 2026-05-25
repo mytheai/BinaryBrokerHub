@@ -66,29 +66,31 @@ export default function BinaryOptionsStrategyBeginnersPage() {
       {/* Quick Comparison Table */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Strategy Comparison at a Glance</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Strategy</div>
-            <div className="text-center">Difficulty</div>
-            <div className="text-center">Best Timeframe</div>
-            <div className="text-center">Market Type</div>
-            <div className="text-center">Best Broker</div>
-          </div>
-          {[
-            { name: 'Trend Following', diff: 'Easy', time: '5-15 min', market: 'Trending', broker: 'Pocket Option' },
-            { name: 'Support/Resistance', diff: 'Easy', time: '5 min', market: 'Ranging', broker: 'Quotex' },
-            { name: 'News Trading', diff: 'Medium', time: '15-30 min', market: 'Volatile', broker: 'IQ Option' },
-            { name: 'RSI Overbought/Oversold', diff: 'Easy', time: '5 min', market: 'Ranging', broker: 'Quotex' },
-            { name: 'MA Crossover', diff: 'Medium', time: '1-5 min', market: 'Trending', broker: 'Pocket Option' },
-          ].map((s, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-white font-medium text-xs">{s.name}</div>
-              <div className="text-center text-gray-300 text-xs">{s.diff}</div>
-              <div className="text-center text-gray-400 text-xs">{s.time}</div>
-              <div className="text-center text-gray-400 text-xs">{s.market}</div>
-              <div className="text-center text-blue-400 text-xs">{s.broker}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[650px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Strategy</div>
+              <div className="text-center">Difficulty</div>
+              <div className="text-center">Best Timeframe</div>
+              <div className="text-center">Market Type</div>
+              <div className="text-center">Best Broker</div>
             </div>
-          ))}
+            {[
+              { name: 'Trend Following', diff: 'Easy', time: '5-15 min', market: 'Trending', broker: 'Pocket Option' },
+              { name: 'Support/Resistance', diff: 'Easy', time: '5 min', market: 'Ranging', broker: 'Quotex' },
+              { name: 'News Trading', diff: 'Medium', time: '15-30 min', market: 'Volatile', broker: 'IQ Option' },
+              { name: 'RSI Overbought/Oversold', diff: 'Easy', time: '5 min', market: 'Ranging', broker: 'Quotex' },
+              { name: 'MA Crossover', diff: 'Medium', time: '1-5 min', market: 'Trending', broker: 'Pocket Option' },
+            ].map((s, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-white font-medium text-xs">{s.name}</div>
+                <div className="text-center text-gray-300 text-xs">{s.diff}</div>
+                <div className="text-center text-gray-400 text-xs">{s.time}</div>
+                <div className="text-center text-gray-400 text-xs">{s.market}</div>
+                <div className="text-center text-blue-400 text-xs">{s.broker}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

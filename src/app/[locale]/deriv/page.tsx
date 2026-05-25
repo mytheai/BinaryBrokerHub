@@ -174,29 +174,31 @@ export default function DerivPage() {
           <Link href={`/${locale}/quotex`} className="text-emerald-400 underline hover:text-emerald-300">Quotex</Link>{' '}
           up to 98%, Deriv&apos;s payouts reach up to 95% on Synthetic Indices — with the advantage of 24/7 availability.
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Asset Class</div>
-            <div className="text-center">Rise/Fall</div>
-            <div className="text-center">Higher/Lower</div>
-            <div className="text-center">Touch/No Touch</div>
-          </div>
-          {[
-            { asset: 'Volatility Indices', riseFall: '80–95%', higherLower: '70–90%', touch: '75–95%' },
-            { asset: 'Crash/Boom', riseFall: '75–90%', higherLower: '65–85%', touch: 'N/A' },
-            { asset: 'Forex Majors', riseFall: '70–88%', higherLower: '65–82%', touch: '70–90%' },
-            { asset: 'Forex Minors', riseFall: '65–82%', higherLower: '60–78%', touch: '65–85%' },
-            { asset: 'Commodities', riseFall: '65–85%', higherLower: '60–80%', touch: '65–85%' },
-            { asset: 'Stock Indices', riseFall: '60–80%', higherLower: '55–75%', touch: '60–80%' },
-            { asset: 'Step Index', riseFall: '85–95%', higherLower: 'N/A', touch: 'N/A' },
-          ].map((row, i) => (
-            <div key={row.asset} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{row.asset}</div>
-              <div className="text-center text-white">{row.riseFall}</div>
-              <div className="text-center text-gray-400">{row.higherLower}</div>
-              <div className="text-center text-gray-400">{row.touch}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[600px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Asset Class</div>
+              <div className="text-center">Rise/Fall</div>
+              <div className="text-center">Higher/Lower</div>
+              <div className="text-center">Touch/No Touch</div>
             </div>
-          ))}
+            {[
+              { asset: 'Volatility Indices', riseFall: '80–95%', higherLower: '70–90%', touch: '75–95%' },
+              { asset: 'Crash/Boom', riseFall: '75–90%', higherLower: '65–85%', touch: 'N/A' },
+              { asset: 'Forex Majors', riseFall: '70–88%', higherLower: '65–82%', touch: '70–90%' },
+              { asset: 'Forex Minors', riseFall: '65–82%', higherLower: '60–78%', touch: '65–85%' },
+              { asset: 'Commodities', riseFall: '65–85%', higherLower: '60–80%', touch: '65–85%' },
+              { asset: 'Stock Indices', riseFall: '60–80%', higherLower: '55–75%', touch: '60–80%' },
+              { asset: 'Step Index', riseFall: '85–95%', higherLower: 'N/A', touch: 'N/A' },
+            ].map((row, i) => (
+              <div key={row.asset} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{row.asset}</div>
+                <div className="text-center text-white">{row.riseFall}</div>
+                <div className="text-center text-gray-400">{row.higherLower}</div>
+                <div className="text-center text-gray-400">{row.touch}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="mt-4 border border-amber-500/20 rounded-lg p-4">
           <p className="text-xs text-gray-400">
@@ -325,36 +327,38 @@ export default function DerivPage() {
       {/* Deposits & Withdrawals — Expanded */}
       <section className="section-container py-16">
         <h2 className="text-3xl font-bold mb-10">Deposits & Withdrawals</h2>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
-            <div>Method</div>
-            <div className="text-center">Min Deposit</div>
-            <div className="text-center">Deposit Speed</div>
-            <div className="text-center">Withdrawal Speed</div>
-            <div className="text-center">Fee</div>
-          </div>
-          {[
-            { method: 'Visa/Mastercard', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
-            { method: 'Skrill', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
-            { method: 'Neteller', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
-            { method: 'Fasapay', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
-            { method: 'Perfect Money', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
-            { method: 'Bitcoin (BTC)', min: '$5', depositSpeed: '10–30 min', withdrawSpeed: 'Up to 24 hrs', fee: 'Free' },
-            { method: 'Ethereum (ETH)', min: '$5', depositSpeed: '5–15 min', withdrawSpeed: 'Up to 24 hrs', fee: 'Free' },
-            { method: 'Tether (USDT)', min: '$5', depositSpeed: '1–10 min (TRC20)', withdrawSpeed: 'Up to 24 hrs', fee: 'Free' },
-            { method: 'Bank Transfer', min: '$5', depositSpeed: '1 business day', withdrawSpeed: '1–3 business days', fee: 'Free' },
-            { method: 'UPI (India)', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
-            { method: 'AstroPay', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
-            { method: 'Jeton', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
-          ].map((d, i) => (
-            <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-gray-300 font-medium">{d.method}</div>
-              <div className="text-center text-white">{d.min}</div>
-              <div className="text-center text-emerald-400">{d.depositSpeed}</div>
-              <div className="text-center text-gray-400">{d.withdrawSpeed}</div>
-              <div className="text-center text-emerald-400">{d.fee}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[700px]">
+            <div className="grid grid-cols-5 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+              <div>Method</div>
+              <div className="text-center">Min Deposit</div>
+              <div className="text-center">Deposit Speed</div>
+              <div className="text-center">Withdrawal Speed</div>
+              <div className="text-center">Fee</div>
             </div>
-          ))}
+            {[
+              { method: 'Visa/Mastercard', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
+              { method: 'Skrill', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
+              { method: 'Neteller', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
+              { method: 'Fasapay', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
+              { method: 'Perfect Money', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
+              { method: 'Bitcoin (BTC)', min: '$5', depositSpeed: '10–30 min', withdrawSpeed: 'Up to 24 hrs', fee: 'Free' },
+              { method: 'Ethereum (ETH)', min: '$5', depositSpeed: '5–15 min', withdrawSpeed: 'Up to 24 hrs', fee: 'Free' },
+              { method: 'Tether (USDT)', min: '$5', depositSpeed: '1–10 min (TRC20)', withdrawSpeed: 'Up to 24 hrs', fee: 'Free' },
+              { method: 'Bank Transfer', min: '$5', depositSpeed: '1 business day', withdrawSpeed: '1–3 business days', fee: 'Free' },
+              { method: 'UPI (India)', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
+              { method: 'AstroPay', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
+              { method: 'Jeton', min: '$5', depositSpeed: 'Instant', withdrawSpeed: '1 business day', fee: 'Free' },
+            ].map((d, i) => (
+              <div key={i} className={`grid grid-cols-5 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-gray-300 font-medium">{d.method}</div>
+                <div className="text-center text-white">{d.min}</div>
+                <div className="text-center text-emerald-400">{d.depositSpeed}</div>
+                <div className="text-center text-gray-400">{d.withdrawSpeed}</div>
+                <div className="text-center text-emerald-400">{d.fee}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">
           * All deposits and withdrawals are fee-free from Deriv&apos;s side. 30+ payment methods available depending on region.

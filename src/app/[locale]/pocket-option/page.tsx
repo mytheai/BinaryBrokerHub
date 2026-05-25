@@ -202,26 +202,28 @@ export default function PocketOptionPage() {
           Pocket Option excels in payout reliability. Our live tests showed peak payouts within 0-2% of advertised rates — the smallest
           discrepancy of any broker we&apos;ve tested. Off-peak drops are smaller too (2-12% vs competitors&apos; 8-18%).
         </p>
-        <div className="glass-card overflow-hidden">
-          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-4 text-xs font-semibold text-gray-400">
-            <div>Asset</div>
-            <div className="text-center">Advertised</div>
-            <div className="text-center">Peak (Observed)</div>
-            <div className="text-center">Off-Peak (Observed)</div>
-          </div>
-          {[
-            { asset: 'EUR/USD', adv: '90-92%', peak: '89-92%', offpeak: '80-88%' },
-            { asset: 'Bitcoin', adv: '88-92%', peak: '87-91%', offpeak: '78-85%' },
-            { asset: 'S&P 500', adv: '85-88%', peak: '83-87%', offpeak: '76-82%' },
-            { asset: 'Gold (OTC)', adv: '85-88%', peak: '83-87%', offpeak: '77-83%' },
-          ].map((row, i) => (
-            <div key={row.asset} className={`grid grid-cols-4 p-4 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
-              <div className="text-white font-medium">{row.asset}</div>
-              <div className="text-center text-gray-400">{row.adv}</div>
-              <div className="text-center text-blue-400 font-medium">{row.peak}</div>
-              <div className="text-center text-gray-400">{row.offpeak}</div>
+        <div className="glass-card overflow-x-auto">
+          <div className="min-w-[600px]">
+            <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-4 text-xs font-semibold text-gray-400">
+              <div>Asset</div>
+              <div className="text-center">Advertised</div>
+              <div className="text-center">Peak (Observed)</div>
+              <div className="text-center">Off-Peak (Observed)</div>
             </div>
-          ))}
+            {[
+              { asset: 'EUR/USD', adv: '90-92%', peak: '89-92%', offpeak: '80-88%' },
+              { asset: 'Bitcoin', adv: '88-92%', peak: '87-91%', offpeak: '78-85%' },
+              { asset: 'S&P 500', adv: '85-88%', peak: '83-87%', offpeak: '76-82%' },
+              { asset: 'Gold (OTC)', adv: '85-88%', peak: '83-87%', offpeak: '77-83%' },
+            ].map((row, i) => (
+              <div key={row.asset} className={`grid grid-cols-4 p-4 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                <div className="text-white font-medium">{row.asset}</div>
+                <div className="text-center text-gray-400">{row.adv}</div>
+                <div className="text-center text-blue-400 font-medium">{row.peak}</div>
+                <div className="text-center text-gray-400">{row.offpeak}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-500 mt-4">
           * EUR/USD and BTC showed the steadiest payouts. SPX and Gold had the largest off-peak drift.

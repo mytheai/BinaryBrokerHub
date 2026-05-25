@@ -97,7 +97,7 @@ export default function QuotexVsIqOptionPage() {
         </p>
 
         <div className="glass-card overflow-x-auto">
-          <table className="w-full text-left">
+          <table className="w-full min-w-[600px] text-left">
             <thead>
               <tr className="border-b border-gray-700/50">
                 <th className="px-4 py-3 text-gray-400 text-sm font-medium uppercase tracking-wider">
