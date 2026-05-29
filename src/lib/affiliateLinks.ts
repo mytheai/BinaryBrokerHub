@@ -1,12 +1,11 @@
-// TODO: Replace with affiliate links once approved
 export const AFFILIATE_LINKS = {
   quotex: {
-    signup: 'https://quotex.com/',
-    demo: 'https://quotex.com/demo/',
+    signup: 'https://broker-qx.pro/sign-up/?lid=2135323',
+    demo: 'https://broker-qx.pro/sign-up/?lid=2135323',
   },
   pocketOption: {
-    signup: 'https://pocketoption.com/',
-    demo: 'https://pocketoption.com/demo/',
+    signup: 'https://u3.shortink.io/register?utm_campaign=847168&utm_source=affiliate&utm_medium=sr&a=Maxhgt61byfDAT&al=1765171&ac=binarybrokerhub&cid=957220&code=WELCOME50',
+    demo: 'https://u3.shortink.io/register?utm_campaign=847168&utm_source=affiliate&utm_medium=sr&a=Maxhgt61byfDAT&al=1765171&ac=binarybrokerhub&cid=957220&code=WELCOME50',
   },
   iqOption: {
     signup: 'https://iqoption.com/',
@@ -30,8 +29,9 @@ export const AFFILIATE_LINKS = {
   },
 } as const;
 
-// UTM helper
+// UTM helper — skips if the URL already contains UTM parameters
 export function withUtm(url: string, source: string, medium: string, campaign: string) {
+  if (url.includes('utm_source=') || url.includes('utm_campaign=')) return url;
   const separator = url.includes('?') ? '&' : '?';
   return `${url}${separator}utm_source=${source}&utm_medium=${medium}&utm_campaign=${campaign}`;
 }
