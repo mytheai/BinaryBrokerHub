@@ -36,6 +36,11 @@ yarn-error.log*
 .env.local
 .env.*.local
 
+# Sensitive files
+*.keys
+*.secret
+API Keys*
+
 # Vercel
 .vercel
 
@@ -47,3 +52,5 @@ yarn-error.log*
 
 # Claude Code
 .claude/
+
+.vercel
