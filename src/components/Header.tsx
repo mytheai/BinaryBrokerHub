@@ -36,9 +36,22 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center">
-              <span className="text-black font-bold text-sm">BB</span>
-            </div>
+            <svg className="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="header-bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#0f172a"/>
+                  <stop offset="100%" stopColor="#1e293b"/>
+                </linearGradient>
+                <linearGradient id="header-accent" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#34d399"/>
+                  <stop offset="100%" stopColor="#10b981"/>
+                </linearGradient>
+              </defs>
+              <rect width="32" height="32" rx="8" fill="url(#header-bg)"/>
+              <text x="12" y="23" fontFamily="system-ui,-apple-system,sans-serif" fontSize="20" fontWeight="800" fill="url(#header-accent)">B</text>
+              <polyline points="19,20 22,14 25,16 28,8" fill="none" stroke="#34d399" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <polygon points="28,8 28,12 24,10" fill="#34d399"/>
+            </svg>
             <span className="font-bold text-lg text-white hidden sm:block">
               BinaryBroker<span className="text-emerald-400">Hub</span>
             </span>
