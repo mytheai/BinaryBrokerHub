@@ -14,7 +14,7 @@ export default function BinaryOptionsStrategyBeginnersPage() {
       <header className="mb-12">
         <div className="flex items-center gap-2 mb-4">
           <span className="badge-green">Trading Guide</span>
-          <span className="text-xs text-gray-600">Updated May 2026 &bull; 16 min read</span>
+          <span className="text-xs text-gray-600">Updated May 2026 &bull; 22 min read</span>
         </div>
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">
           5 Best Binary Options Strategies for Beginners (2026)
@@ -36,8 +36,25 @@ export default function BinaryOptionsStrategyBeginnersPage() {
         </p>
       </section>
 
+      {/* Table of Contents */}
+      <nav className="glass-card p-6 mb-10">
+        <h2 className="text-lg font-bold mb-4 text-blue-400">Table of Contents</h2>
+        <ol className="space-y-2 text-sm text-gray-300">
+          <li><a href="#why-strategy" className="hover:text-blue-400 transition-colors">1. Why You Need a Strategy</a></li>
+          <li><a href="#comparison" className="hover:text-blue-400 transition-colors">2. Strategy Comparison at a Glance</a></li>
+          <li><a href="#trend" className="hover:text-blue-400 transition-colors">3. Strategy 1: Trend Following</a></li>
+          <li><a href="#support-resistance" className="hover:text-blue-400 transition-colors">4. Strategy 2: Support & Resistance Bounce</a></li>
+          <li><a href="#news" className="hover:text-blue-400 transition-colors">5. Strategy 3: News Trading</a></li>
+          <li><a href="#rsi" className="hover:text-blue-400 transition-colors">6. Strategy 4: RSI Overbought/Oversold</a></li>
+          <li><a href="#ma-crossover" className="hover:text-blue-400 transition-colors">7. Strategy 5: Moving Average Crossover</a></li>
+          <li><a href="#money-management" className="hover:text-blue-400 transition-colors">8. Money Management Rules</a></li>
+          <li><a href="#which-start" className="hover:text-blue-400 transition-colors">9. Which Strategy Should You Start With?</a></li>
+          <li><a href="#faq" className="hover:text-blue-400 transition-colors">10. FAQ</a></li>
+        </ol>
+      </nav>
+
       {/* Overview */}
-      <section className="mb-12">
+      <section id="why-strategy" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Why You Need a Strategy Before Trading</h2>
         <div className="glass-card p-6">
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
@@ -630,6 +647,58 @@ export default function BinaryOptionsStrategyBeginnersPage() {
             <p className="text-gray-400 text-xs">Advanced 1-minute and 5-minute strategies for Quotex.</p>
           </Link>
         </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {[
+            {
+              q: 'What is the best binary options strategy for beginners?',
+              a: 'Support & Resistance Bounce (Strategy 2) is the best starting point. It\'s visual, requires no indicators, and teaches price action reading — the foundation of all trading. Once comfortable, add RSI (Strategy 4) as confirmation.',
+            },
+            {
+              q: 'Can I use these strategies on any broker?',
+              a: 'Yes. All 5 strategies work on any platform with charting tools. Pocket Option and Quotex are recommended because they offer the best charting + highest payouts. IQ Option has the most advanced platform if you want 100+ indicators.',
+            },
+            {
+              q: 'What win rate do I need to be profitable?',
+              a: 'At 85% payout, you need above 54.1% win rate to break even. At 90% payout, you need 52.6%. Strategies 2 and 4 (S/R + RSI) can achieve 58-65% win rates with practice. See our trading guide for the full math breakdown.',
+            },
+            {
+              q: 'How long should I practice on demo before going live?',
+              a: 'Minimum 2-4 weeks and 100+ trades. Ideally, demonstrate consistent profitability over 2 full weeks on demo. Don\'t rush — demo trading is free and there\'s no deadline to go live.',
+            },
+            {
+              q: 'Is the Martingale strategy a good idea?',
+              a: 'No. Martingale (doubling after each loss) is mathematically dangerous. A 7-loss streak turns a $1 trade into $128. It requires infinite capital to guarantee profitability. Use fixed 1-2% position sizing instead.',
+            },
+            {
+              q: 'What timeframe should beginners use?',
+              a: '5-minute charts with 15-minute expiry. This gives enough time for analysis while keeping trades short enough to learn quickly. Avoid 30-second or 1-minute expiries — they\'re too unpredictable for beginners.',
+            },
+          ].map((faq) => (
+            <details key={faq.q} className="glass-card group">
+              <summary className="p-5 cursor-pointer flex items-center justify-between text-white font-medium text-sm hover:text-emerald-400 transition-colors">
+                {faq.q}
+                <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/[0.06] pt-4">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+        <p className="text-xs text-gray-500 mt-4">
+          For complete beginner education, read our{' '}
+          <Link href={`/${locale}/blog/binary-options-trading-guide`} className="text-emerald-400 hover:underline">full trading guide</Link>.
+          To understand broker safety before depositing, check our{' '}
+          <Link href={`/${locale}/scams`} className="text-emerald-400 hover:underline">scam detection guide</Link> and{' '}
+          <Link href={`/${locale}/methodology`} className="text-emerald-400 hover:underline">testing methodology</Link>.
+        </p>
       </section>
 
       {/* CTA */}
