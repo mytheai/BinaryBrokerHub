@@ -14,7 +14,7 @@ export default function BinaryOptionsRegulationPage() {
       <header className="mb-12">
         <div className="flex items-center gap-2 mb-4">
           <span className="badge-blue">Regulation Guide</span>
-          <span className="text-xs text-gray-600">Updated May 2026 &bull; 14 min read</span>
+          <span className="text-xs text-gray-600">Updated May 2026 &bull; 20 min read</span>
         </div>
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">
           Binary Options Regulation Guide 2026 — Which Brokers Are Licensed?
@@ -36,8 +36,24 @@ export default function BinaryOptionsRegulationPage() {
         </p>
       </section>
 
+      {/* Table of Contents */}
+      <nav className="glass-card p-6 mb-10">
+        <h2 className="text-lg font-bold mb-4 text-blue-400">Table of Contents</h2>
+        <ol className="space-y-2 text-sm text-gray-300">
+          <li><a href="#why" className="hover:text-blue-400 transition-colors">1. Why Binary Options Regulation Matters</a></li>
+          <li><a href="#regulators" className="hover:text-blue-400 transition-colors">2. Major Regulatory Bodies (Tier 1, 2, 3)</a></li>
+          <li><a href="#comparison" className="hover:text-blue-400 transition-colors">3. Which Brokers Are Licensed? — 2026 Table</a></li>
+          <li><a href="#deep-dive" className="hover:text-blue-400 transition-colors">4. Broker-by-Broker Regulatory Deep Dive</a></li>
+          <li><a href="#regulated-vs-unregulated" className="hover:text-blue-400 transition-colors">5. Regulated vs. Unregulated — Key Differences</a></li>
+          <li><a href="#verify" className="hover:text-blue-400 transition-colors">6. How to Verify a Broker&apos;s License</a></li>
+          <li><a href="#banned" className="hover:text-blue-400 transition-colors">7. Countries Where Binary Options Are Banned or Restricted</a></li>
+          <li><a href="#recommendation" className="hover:text-blue-400 transition-colors">8. Our Recommendation</a></li>
+          <li><a href="#faq" className="hover:text-blue-400 transition-colors">9. FAQ</a></li>
+        </ol>
+      </nav>
+
       {/* Why Regulation Matters */}
-      <section className="mb-12">
+      <section id="why" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Why Binary Options Regulation Matters</h2>
         <div className="glass-card p-6">
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
@@ -97,7 +113,7 @@ export default function BinaryOptionsRegulationPage() {
       </section>
 
       {/* Regulatory Bodies Overview */}
-      <section className="mb-12">
+      <section id="regulators" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Major Regulatory Bodies for Binary Options</h2>
         <p className="text-gray-400 text-sm mb-6">
           Not all regulators are created equal. Tier 1 regulators impose strict requirements and offer
@@ -209,7 +225,7 @@ export default function BinaryOptionsRegulationPage() {
       </section>
 
       {/* Broker Regulation Comparison Table */}
-      <section className="mb-12">
+      <section id="comparison" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Which Brokers Are Licensed? — 2026 Comparison</h2>
         <p className="text-gray-400 text-sm mb-4">
           Below is a comparison of the regulatory status of the major binary options brokers we&apos;ve reviewed.
@@ -250,7 +266,7 @@ export default function BinaryOptionsRegulationPage() {
       </section>
 
       {/* Deep Dive: Each Broker */}
-      <section className="mb-12">
+      <section id="deep-dive" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Broker-by-Broker Regulatory Deep Dive</h2>
 
         <div className="space-y-6">
@@ -393,7 +409,7 @@ export default function BinaryOptionsRegulationPage() {
       </section>
 
       {/* Regulated vs Unregulated */}
-      <section className="mb-12">
+      <section id="regulated-vs-unregulated" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Regulated vs. Unregulated Brokers — Key Differences</h2>
         <div className="glass-card overflow-hidden">
           <div className="grid grid-cols-3 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
@@ -420,7 +436,7 @@ export default function BinaryOptionsRegulationPage() {
       </section>
 
       {/* How to Verify */}
-      <section className="mb-12">
+      <section id="verify" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">How to Verify a Broker&apos;s License</h2>
         <div className="glass-card p-6">
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
@@ -461,40 +477,96 @@ export default function BinaryOptionsRegulationPage() {
         </div>
       </section>
 
-      {/* Country-Specific Regulations */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Binary Options Regulation by Region</h2>
+      {/* Countries Where BO Are Banned or Restricted */}
+      <section id="banned" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Countries Where Binary Options Are Banned or Restricted</h2>
+        <p className="text-gray-400 text-sm mb-6">
+          Binary options have been banned or restricted in several major markets after regulators found widespread
+          fraud and investor harm. Here is the current status by region as of May 2026:
+        </p>
+
+        <div className="glass-card overflow-hidden mb-6">
+          <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+            <div>Country/Region</div>
+            <div className="text-center">Status</div>
+            <div className="text-center">Regulator</div>
+            <div className="text-center">Since</div>
+          </div>
+          {[
+            { country: 'EU/EEA (27 countries)', status: 'Banned for retail', color: 'text-red-400', reg: 'ESMA', since: '2018' },
+            { country: 'United Kingdom', status: 'Permanently banned', color: 'text-red-400', reg: 'FCA', since: 'Apr 2019' },
+            { country: 'Australia', status: 'Banned for retail', color: 'text-red-400', reg: 'ASIC', since: 'May 2021' },
+            { country: 'Israel', status: 'Completely banned', color: 'text-red-400', reg: 'ISA', since: '2017' },
+            { country: 'Canada', status: 'Banned in most provinces', color: 'text-red-400', reg: 'CSA', since: '2017' },
+            { country: 'USA', status: 'Heavily regulated', color: 'text-amber-400', reg: 'CFTC/SEC', since: 'Ongoing' },
+            { country: 'India', status: 'Gray area (no ban)', color: 'text-yellow-400', reg: 'SEBI/RBI', since: 'N/A' },
+            { country: 'Nigeria', status: 'Unregulated (allowed)', color: 'text-yellow-400', reg: 'SEC Nigeria', since: 'N/A' },
+            { country: 'Philippines', status: 'Not regulated (allowed)', color: 'text-yellow-400', reg: 'SEC PH', since: 'N/A' },
+            { country: 'Indonesia', status: 'Banned (Binomo blocked)', color: 'text-red-400', reg: 'OJK/Bappebti', since: 'Feb 2022' },
+          ].map((row, i) => (
+            <div key={row.country} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+              <div className="text-white text-xs font-medium">{row.country}</div>
+              <div className={`text-center text-xs font-medium ${row.color}`}>{row.status}</div>
+              <div className="text-center text-gray-400 text-xs">{row.reg}</div>
+              <div className="text-center text-gray-400 text-xs">{row.since}</div>
+            </div>
+          ))}
+        </div>
+
         <div className="space-y-4">
           <div className="glass-card p-6">
             <h3 className="font-bold text-white mb-2">European Union (EU/EEA)</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              ESMA (European Securities and Markets Authority) banned the marketing, distribution, and sale
-              of binary options to retail clients in the EU in 2018. This ban has been extended and made
-              permanent in most EU countries. Only professional traders can access binary options from
-              EU-regulated platforms. Brokers like IQ Option offer alternative products (digital options,
-              CFDs) to EU retail clients.
+              ESMA banned binary options for retail clients in 2018. The ban covers marketing, distribution, and sale
+              across all 27 EU member states + EEA. Only classified professional traders can access binary options.
+              Brokers like <Link href={`/${locale}/iq-option`} className="text-blue-400 hover:underline">IQ Option</Link> offer
+              CFDs and digital options as alternatives to EU retail clients.
             </p>
           </div>
           <div className="glass-card p-6">
             <h3 className="font-bold text-white mb-2">United Kingdom</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              The FCA (Financial Conduct Authority) permanently banned binary options for UK retail consumers
-              in April 2019. No legitimate broker offers binary options to UK residents.
+              The FCA permanently banned binary options in April 2019. Any broker offering binary options to UK residents
+              is operating illegally. Alternatives include spread betting (tax-free in the UK) and CFD trading. Read our{' '}
+              <Link href={`/${locale}/binary-options-uk`} className="text-blue-400 hover:underline">UK guide</Link> for legal alternatives.
             </p>
           </div>
           <div className="glass-card p-6">
-            <h3 className="font-bold text-white mb-2">Asia & Rest of World</h3>
+            <h3 className="font-bold text-white mb-2">United States</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Binary options remain available to traders in many Asian, African, and South American countries.
-              Most brokers serving these regions operate under offshore licenses (VFSC, IFMRRC, FinaCom).
-              Local regulation varies significantly — always check your country&apos;s specific rules.
+              Binary options are legal in the US but heavily regulated. Only CFTC-regulated exchanges (Nadex) can legally
+              offer binary options to US residents. All offshore brokers serving US traders are operating illegally. The CFTC
+              actively prosecutes fraud cases. Read our{' '}
+              <Link href={`/${locale}/binary-options-usa`} className="text-blue-400 hover:underline">USA guide</Link> for details.
             </p>
           </div>
+          <div className="glass-card p-6">
+            <h3 className="font-bold text-white mb-2">Asia, Africa & South America</h3>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Binary options remain available in most Asian, African, and South American countries. Local regulation varies
+              significantly. India, Nigeria, and the Philippines have no specific binary options ban, but also no dedicated
+              regulation — meaning traders have limited legal protection. See our country guides:{' '}
+              <Link href={`/${locale}/binary-options-india`} className="text-blue-400 hover:underline">India</Link>,{' '}
+              <Link href={`/${locale}/binary-options-nigeria`} className="text-blue-400 hover:underline">Nigeria</Link>,{' '}
+              <Link href={`/${locale}/binary-options-philippines`} className="text-blue-400 hover:underline">Philippines</Link>.
+            </p>
+          </div>
+        </div>
+
+        <div className="glass-card p-5 mt-6 border-amber-500/10 bg-amber-500/[0.02]">
+          <p className="text-sm text-gray-300 leading-relaxed">
+            <span className="text-amber-400 font-semibold">How to protect yourself: </span>
+            Regardless of your country, always verify a broker before depositing. Check our{' '}
+            <Link href={`/${locale}/scams`} className="text-amber-300 hover:underline">scam detection guide</Link> for
+            a step-by-step verification checklist, and read our{' '}
+            <Link href={`/${locale}/methodology`} className="text-amber-300 hover:underline">testing methodology</Link> for
+            how we evaluate broker safety.
+          </p>
         </div>
       </section>
 
       {/* Our Recommendation */}
-      <section className="mb-12">
+      <section id="recommendation" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Our Recommendation: Balance Regulation & Features</h2>
         <div className="glass-card p-6">
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
@@ -546,6 +618,51 @@ export default function BinaryOptionsRegulationPage() {
             <h3 className="font-semibold text-white text-sm mb-1">Is Pocket Option Legit?</h3>
             <p className="text-gray-400 text-xs">Our honest assessment of Pocket Option&apos;s legitimacy.</p>
           </Link>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {[
+            {
+              q: 'Are binary options legal?',
+              a: 'It depends on your country. Binary options are banned in the EU, UK, Australia, Israel, and Canada for retail traders. They are heavily regulated in the US (only Nadex is legal). They remain available and unregulated in most Asian, African, and South American countries.',
+            },
+            {
+              q: 'Which binary options broker is the most regulated?',
+              a: 'Deriv is the most regulated, holding an MFSA Malta Tier-1 license plus Labuan FSA, VFSC, and BVI FSC licenses. IQ Option holds a CySEC license for its EU entity. Both provide the strongest regulatory protection available.',
+            },
+            {
+              q: 'Does regulation guarantee my money is safe?',
+              a: 'Regulation reduces risk but does not eliminate it. Even regulated brokers can fail. Regulation provides mechanisms like segregated accounts, compensation funds (up to €20,000 in the EU), and dispute resolution — but binary options remain inherently high-risk instruments.',
+            },
+            {
+              q: 'What is IFMRRC and is it a real regulator?',
+              a: 'IFMRRC is an independent self-regulatory organization, NOT a government regulator. It provides compensation funds and audit programs for member brokers, but lacks the enforcement power of government bodies like CySEC or MFSA.',
+            },
+            {
+              q: 'Can I use offshore brokers from banned countries?',
+              a: 'While technically possible via VPNs, it is illegal in most banned jurisdictions and removes all legal protection. If something goes wrong, you have zero recourse. We strongly advise against this.',
+            },
+            {
+              q: 'How do I check if a broker is legitimately regulated?',
+              a: 'Never trust a broker\'s claim alone. Visit the regulator\'s official website (CySEC, MFSA, VFSC, etc.) and search their public registry by company name or license number. Verify the license is active and matches the exact entity operating the platform.',
+            },
+          ].map((faq) => (
+            <details key={faq.q} className="glass-card group">
+              <summary className="p-5 cursor-pointer flex items-center justify-between text-white font-medium text-sm hover:text-emerald-400 transition-colors">
+                {faq.q}
+                <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/[0.06] pt-4">
+                {faq.a}
+              </div>
+            </details>
+          ))}
         </div>
       </section>
 
