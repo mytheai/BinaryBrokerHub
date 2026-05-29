@@ -45,7 +45,7 @@ export default function IQOptionPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: 'Min. Deposit', value: '$10' },
-            { label: 'Max. Payout', value: 'Up to 95%' },
+            { label: 'Peak Payout', value: '90–95%' },
             { label: 'Total Assets', value: '250+' },
             { label: 'Founded', value: '2013 (12+ yrs)' },
           ].map((s) => (
@@ -491,7 +491,7 @@ export default function IQOptionPage() {
             {[
               { feature: 'Our Score', iq: '9.2/10', po: '9.5/10', qt: '9.4/10', dv: '9.0/10' },
               { feature: 'Min Deposit', iq: '$10', po: '$5', qt: '$10', dv: '$5' },
-              { feature: 'Max Payout', iq: 'Up to 95%', po: 'Up to 95%', qt: 'Up to 98%', dv: 'Up to 100%' },
+              { feature: 'Peak Payout', iq: '90–95%', po: '89–92%', qt: '90–95%', dv: '88–95%' },
               { feature: 'Total Assets', iq: '250+', po: '100+', qt: '400+', dv: '100+' },
               { feature: 'Min Trade', iq: '$1', po: '$1', qt: '$1', dv: '$0.35' },
               { feature: 'Demo Account', iq: '$10,000', po: '$50,000', qt: '$10,000', dv: '$10,000' },

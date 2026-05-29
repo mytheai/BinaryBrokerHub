@@ -45,7 +45,7 @@ export default function ExpertOptionPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: 'Min. Deposit', value: '$10' },
-            { label: 'Max. Payout', value: 'Up to 95%' },
+            { label: 'Peak Payout', value: '80–95%' },
             { label: 'Registered Users', value: '40M+' },
             { label: 'Total Assets', value: '100+' },
           ].map((s) => (
@@ -569,7 +569,7 @@ export default function ExpertOptionPage() {
               {[
                 { feature: 'Our Score', expert: '7.8/10', pocket: '9.5/10', quotex: '9.4/10', iq: '9.2/10' },
                 { feature: 'Min. Deposit', expert: '$10', pocket: '$5', quotex: '$10', iq: '$10' },
-                { feature: 'Max. Payout', expert: 'Up to 95%', pocket: 'Up to 92%', quotex: 'Up to 98%', iq: 'Up to 95%' },
+                { feature: 'Peak Payout', expert: '80–95%', pocket: '89–92%', quotex: '90–95%', iq: '90–95%' },
                 { feature: 'Total Assets', expert: '100+', pocket: '180+', quotex: '400+', iq: '250+' },
                 { feature: 'Regulation', expert: 'None ❌', pocket: 'IFMRRC', quotex: 'None', iq: 'CySEC ✓' },
                 { feature: 'Copy Trading', expert: 'No (social only)', pocket: 'Yes (auto-copy)', quotex: 'No', iq: 'No' },
@@ -688,6 +688,53 @@ export default function ExpertOptionPage() {
               <p className="text-xs text-gray-500">{link.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">ExpertOption FAQ</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'Is ExpertOption regulated?',
+                a: 'No. ExpertOption (EOLabs LLC) is completely unregulated by any financial authority. No FinaCom membership, no government license, no fund protection. This is the highest risk tier among brokers we review.',
+              },
+              {
+                q: 'What is ExpertOption social trading?',
+                a: 'ExpertOption shows a real-time feed of trades from other users on the chart. You can see what direction others are trading. However, it is observation-only — you cannot automatically copy trades like on Pocket Option.',
+              },
+              {
+                q: 'What is the minimum deposit for ExpertOption?',
+                a: 'ExpertOption requires a $10 minimum deposit for the Basic tier. Higher tiers (Silver $500, Gold $2,500, Exclusive $5,000+) unlock more assets and better payouts.',
+              },
+              {
+                q: 'What are ExpertOption payout rates?',
+                a: 'Payouts are tiered by account level: Basic 80%, Silver 84%, Gold 88%, Exclusive up to 95%. The advertised 95% max requires a $5,000+ deposit commitment.',
+              },
+              {
+                q: 'How does ExpertOption compare to Pocket Option?',
+                a: 'Pocket Option has real copy trading (auto-copy), better regulation (IFMRRC), lower $5 deposit, and more consistent payouts. ExpertOption has observation-only social trading and zero regulation. We recommend Pocket Option over ExpertOption.',
+              },
+              {
+                q: 'Does ExpertOption have a demo account?',
+                a: 'Yes. ExpertOption provides a free demo account with $10,000 virtual balance. No registration required for initial access.',
+              },
+            ].map((faq) => (
+              <details key={faq.q} className="glass-card group">
+                <summary className="p-5 cursor-pointer flex items-center justify-between text-white font-medium text-sm hover:text-emerald-400 transition-colors">
+                  {faq.q}
+                  <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/[0.06] pt-4">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -59,17 +59,32 @@ const schemas = [
     {
       question: 'Is ExpertOption regulated?',
       answer:
-        'No, ExpertOption currently operates without regulation from any recognized financial authority. This is a significant risk factor to consider.',
+        'No. ExpertOption (EOLabs LLC) is completely unregulated. No FinaCom membership, no government license, no fund protection. Highest risk tier among brokers we review.',
     },
     {
       question: 'What is ExpertOption social trading?',
       answer:
-        'ExpertOption offers a social trading feed where you can observe what other traders are doing. However, it is observation-only — you cannot automatically copy their trades like with Pocket Option\'s copy trading.',
+        'ExpertOption shows real-time trades from other users on the chart. Observation-only — you cannot automatically copy trades like on Pocket Option.',
     },
     {
       question: 'What is ExpertOption minimum deposit?',
       answer:
-        'ExpertOption requires a $10 minimum deposit for the basic account tier. Higher tiers with additional features require larger deposits.',
+        'ExpertOption requires a $10 minimum deposit for Basic tier. Silver $500, Gold $2,500, Exclusive $5,000+.',
+    },
+    {
+      question: 'What are ExpertOption payout rates?',
+      answer:
+        'Payouts are tiered: Basic 80%, Silver 84%, Gold 88%, Exclusive up to 95%. The 95% max requires a $5,000+ deposit.',
+    },
+    {
+      question: 'How does ExpertOption compare to Pocket Option?',
+      answer:
+        'Pocket Option has real copy trading, better regulation, lower $5 deposit, and more consistent payouts. ExpertOption has observation-only social trading and zero regulation.',
+    },
+    {
+      question: 'Does ExpertOption have a demo account?',
+      answer:
+        'Yes. Free demo account with $10,000 virtual balance. No registration required for initial access.',
     },
   ]),
 ];

@@ -46,7 +46,7 @@ export default function OlympTradePage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: 'Min. Deposit', value: '$10' },
-            { label: 'Max. Payout', value: 'Up to 93%' },
+            { label: 'Peak Payout', value: '80–93%' },
             { label: 'Total Assets', value: '190+' },
             { label: 'Registered Users', value: '80M+' },
           ].map((s) => (
@@ -552,7 +552,7 @@ export default function OlympTradePage() {
             {[
               { feature: 'Score', ot: '8.6/10', po: '9.5/10', qt: '9.4/10', iq: '9.2/10' },
               { feature: 'Min Deposit', ot: '$10', po: '$5', qt: '$10', iq: '$10' },
-              { feature: 'Max Payout', ot: '93%', po: '92%', qt: '98%', iq: '95%' },
+              { feature: 'Peak Payout', ot: '80–93%', po: '89–92%', qt: '90–95%', iq: '90–95%' },
               { feature: 'Assets', ot: '190+', po: '180+', qt: '95+', iq: '250+' },
               { feature: 'Regulation', ot: 'FinaCom A', po: 'IFMRRC', qt: 'None', iq: 'CySEC' },
               { feature: 'Copy Trading', ot: 'No', po: 'Yes', qt: 'Limited', iq: 'No' },
@@ -613,6 +613,53 @@ export default function OlympTradePage() {
               <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Olymp Trade FAQ</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'Is Olymp Trade available in India?',
+                a: 'Yes. Olymp Trade is one of the most popular trading platforms in India, supporting UPI, Net Banking, Paytm, and local bank transfers in INR. Hindi interface and support available.',
+              },
+              {
+                q: 'What is FTT (Fixed Time Trades)?',
+                a: 'FTT is Olymp Trade\'s version of binary options. You predict whether an asset price will go up or down within a fixed time period. Same concept as classic binary, different branding.',
+              },
+              {
+                q: 'What is the minimum deposit for Olymp Trade?',
+                a: 'Olymp Trade requires a $10 minimum deposit. Individual trades start from $1, making it accessible for beginners testing with small amounts.',
+              },
+              {
+                q: 'Is Olymp Trade regulated?',
+                a: 'Olymp Trade is a FinaCom Category A member, providing up to €20,000 compensation per dispute. It also has VFSC Vanuatu offshore registration. Not Tier-1 regulated like Deriv (MFSA) or IQ Option (CySEC).',
+              },
+              {
+                q: 'What are Olymp Trade payout rates?',
+                a: 'Olymp Trade payouts are tiered by account level: Starter 80–82%, Advanced 84–86%, Expert 90–93%. You need higher trading volume to unlock better payouts.',
+              },
+              {
+                q: 'Does Olymp Trade have a demo account?',
+                a: 'Yes. Olymp Trade offers a free demo account with $10,000 virtual balance. Replenishable — practice as long as you need.',
+              },
+            ].map((faq) => (
+              <details key={faq.q} className="glass-card group">
+                <summary className="p-5 cursor-pointer flex items-center justify-between text-white font-medium text-sm hover:text-emerald-400 transition-colors">
+                  {faq.q}
+                  <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/[0.06] pt-4">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

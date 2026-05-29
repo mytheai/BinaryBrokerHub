@@ -59,17 +59,32 @@ const schemas = [
     {
       question: 'What are Binomo tournaments?',
       answer:
-        'Binomo offers daily trading tournaments where traders compete for prize pools. Tournaments are free or low-cost to enter and add a competitive, gamified element to trading.',
+        'Binomo runs daily and weekly trading tournaments with prize pools from $300 to $50,000+. Free or low-cost entry. Compete for the highest balance within a set timeframe.',
     },
     {
       question: 'Is Binomo good for beginners?',
       answer:
-        'Yes, Binomo is one of the most beginner-friendly brokers with a gamified interface, simple trade mechanics, and a free demo account with $10,000 virtual funds.',
+        'Yes. Binomo has one of the simplest interfaces — gamified design, clear trade buttons, minimal complexity. Free demo, $1 minimum trades.',
     },
     {
       question: 'What is Binomo minimum deposit?',
       answer:
-        'Binomo requires a $10 minimum deposit to start trading with real money.',
+        'Binomo requires a $10 minimum deposit. Trades start from $1.',
+    },
+    {
+      question: 'Is Binomo regulated?',
+      answer:
+        'Binomo is a FinaCom Category A member (€20,000 dispute compensation) but has no government financial license. Listed on RBI (India) Alert List. Banned in Indonesia since 2022.',
+    },
+    {
+      question: 'What are Binomo payout rates?',
+      answer:
+        'Payouts are tiered: Standard up to 85%, Gold up to 86%, VIP up to 90%. Lower than Quotex (90-95%) and Pocket Option (89-92%).',
+    },
+    {
+      question: 'Does Binomo have a demo account?',
+      answer:
+        'Yes. Free demo with $1,000 virtual balance. Smaller than competitors but replenishable.',
     },
   ]),
 ];

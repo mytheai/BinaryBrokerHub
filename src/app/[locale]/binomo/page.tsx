@@ -46,7 +46,7 @@ export default function BinomoPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: 'Min. Deposit', value: '$10' },
-            { label: 'Max. Payout', value: 'Up to 90%' },
+            { label: 'Peak Payout', value: '85–90%' },
             { label: 'Daily Active', value: '850K+' },
             { label: 'Min. Trade', value: '$1' },
           ].map((s) => (
@@ -495,7 +495,7 @@ export default function BinomoPage() {
             {[
               { feature: 'Score', bn: '8.2/10', po: '9.5/10', qt: '9.4/10', ot: '8.6/10' },
               { feature: 'Min Deposit', bn: '$10', po: '$5', qt: '$10', ot: '$10' },
-              { feature: 'Max Payout', bn: '90%', po: '92%', qt: '98%', ot: '93%' },
+              { feature: 'Peak Payout', bn: '85–90%', po: '89–92%', qt: '90–95%', ot: '80–93%' },
               { feature: 'Assets', bn: '70+', po: '180+', qt: '95+', ot: '190+' },
               { feature: 'Tournaments', bn: 'Best', po: 'Good', qt: 'Limited', ot: 'None' },
               { feature: 'Demo Balance', bn: '$1K', po: '$50K', qt: 'Unlimited', ot: '$10K' },
@@ -562,6 +562,53 @@ export default function BinomoPage() {
               <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Binomo FAQ</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'What are Binomo tournaments?',
+                a: 'Binomo runs daily and weekly trading tournaments where traders compete for prize pools. Entry is free or low-cost. You trade within a set timeframe and the highest balance wins. Prize pools range from $300 to $50,000+.',
+              },
+              {
+                q: 'Is Binomo good for beginners?',
+                a: 'Yes. Binomo has one of the simplest interfaces in the industry — gamified design, clear trade buttons, and minimal complexity. Free demo with $1,000 balance. $1 minimum trades. Ideal first platform.',
+              },
+              {
+                q: 'What is the minimum deposit for Binomo?',
+                a: 'Binomo requires a $10 minimum deposit. Trades start from $1. Account tiers (Standard, Gold, VIP) unlock at higher deposit thresholds.',
+              },
+              {
+                q: 'Is Binomo regulated?',
+                a: 'Binomo is a FinaCom Category A member (€20,000 dispute compensation) but has no government financial license. It is on the RBI (India) Alert List as unauthorized and was banned in Indonesia in 2022.',
+              },
+              {
+                q: 'What are Binomo payout rates?',
+                a: 'Payouts are tiered: Standard up to 85%, Gold up to 86%, VIP up to 90%. Lower than competitors like Quotex (90–95%) and Pocket Option (89–92%). The 85%→90% jump requires $30K+ in total deposits.',
+              },
+              {
+                q: 'Does Binomo have a demo account?',
+                a: 'Yes. Binomo offers a free demo with $1,000 virtual balance. Smaller than competitors ($10K–$50K) but replenishable. Good for learning the interface basics.',
+              },
+            ].map((faq) => (
+              <details key={faq.q} className="glass-card group">
+                <summary className="p-5 cursor-pointer flex items-center justify-between text-white font-medium text-sm hover:text-emerald-400 transition-colors">
+                  {faq.q}
+                  <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/[0.06] pt-4">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -58,17 +58,32 @@ const schemas = [
     {
       question: 'Is Deriv regulated?',
       answer:
-        'Yes, Deriv is regulated by the MFSA (Malta Financial Services Authority), a Tier-1 EU regulator. This makes Deriv the most heavily regulated binary options broker we reviewed.',
+        'Yes. Deriv holds an MFSA Malta license (Tier-1 EU regulator), plus Labuan FSA, VFSC Vanuatu, and BVI FSC licenses. It is the most regulated binary options broker we reviewed.',
     },
     {
       question: 'What are Deriv synthetic indices?',
       answer:
-        'Synthetic indices are simulated markets offered by Deriv that are available for trading 24/7, including weekends. They are not tied to real-world assets and provide continuous trading opportunities.',
+        'Synthetic indices are simulated markets available 24/7, including weekends. They are not tied to real-world assets and provide continuous trading opportunities with consistent volatility.',
     },
     {
       question: 'What is Deriv minimum deposit?',
       answer:
-        'Deriv requires a $5 minimum deposit, making it one of the most accessible brokers alongside Pocket Option.',
+        'Deriv requires just $5 minimum deposit — tied with Pocket Option for the lowest in the industry.',
+    },
+    {
+      question: 'What is DBot on Deriv?',
+      answer:
+        'DBot is Deriv\'s drag-and-drop automated trading tool. Build trading bots without coding by connecting strategy blocks visually. Free to use on any Deriv account.',
+    },
+    {
+      question: 'How does Deriv compare to Pocket Option?',
+      answer:
+        'Deriv has far stronger regulation (MFSA Tier-1 vs offshore) and 26 years of track record. Pocket Option has copy trading, more binary assets, and a more beginner-friendly interface.',
+    },
+    {
+      question: 'Does Deriv have a demo account?',
+      answer:
+        'Yes. Deriv offers a free demo account with $10,000 virtual balance across all its platforms (DTrader, DBot, Deriv MT5).',
     },
   ]),
 ];

@@ -45,7 +45,7 @@ export default function QuotexPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: 'Min. Deposit', value: '$10' },
-            { label: 'Max. Payout', value: 'Up to 98%' },
+            { label: 'Peak Payout', value: '90–95%' },
             { label: 'Binary Assets', value: '95+' },
             { label: 'Expiry Times', value: '5s — 4 hours' },
           ].map((s) => (

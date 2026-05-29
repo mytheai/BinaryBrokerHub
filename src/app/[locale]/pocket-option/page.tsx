@@ -46,7 +46,7 @@ export default function PocketOptionPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: 'Min. Deposit', value: '$5' },
-            { label: 'Max. Payout', value: 'Up to 92%' },
+            { label: 'Peak Payout', value: '89–92%' },
             { label: 'Binary Assets', value: '180+' },
             { label: 'Expiry Times', value: '3s — 1 month' },
           ].map((s) => (

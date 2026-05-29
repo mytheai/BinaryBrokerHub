@@ -49,7 +49,7 @@ export default function DerivPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: 'Min. Deposit', value: '$5' },
-            { label: 'Max. Payout', value: 'Up to 95%' },
+            { label: 'Peak Payout', value: '88–95%' },
             { label: 'Years Operating', value: '26 years' },
             { label: 'Regulation', value: 'MFSA (Tier 1)' },
           ].map((s) => (
@@ -475,7 +475,7 @@ export default function DerivPage() {
                 { feature: 'Founded', deriv: '1999', pocket: '2017', quotex: '2019', iq: '2013' },
                 { feature: 'Top Regulation', deriv: 'MFSA (Tier 1)', pocket: 'MISA (Offshore)', quotex: 'Unregulated', iq: 'CySEC (Tier 1)' },
                 { feature: 'Min Deposit', deriv: '$5', pocket: '$5', quotex: '$10', iq: '$10' },
-                { feature: 'Max Payout', deriv: 'Up to 95%', pocket: 'Up to 92%', quotex: 'Up to 98%', iq: 'Up to 95%' },
+                { feature: 'Peak Payout', deriv: '88–95%', pocket: '89–92%', quotex: '90–95%', iq: '90–95%' },
                 { feature: 'Demo Account', deriv: '$10,000', pocket: '$50,000', quotex: '$10,000', iq: '$10,000' },
                 { feature: '24/7 Trading', deriv: 'Yes (Synthetics)', pocket: 'OTC only', quotex: 'OTC only', iq: 'No' },
                 { feature: 'Automated Trading', deriv: 'DBot (visual)', pocket: 'Copy trading', quotex: 'No', iq: 'No' },
@@ -604,6 +604,53 @@ export default function DerivPage() {
                 <h3 className="font-semibold text-sm text-white group-hover:text-emerald-400 transition-colors">{link.title}</h3>
                 <p className="text-xs text-gray-500 mt-1">{link.desc}</p>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-container py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Deriv FAQ</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'Is Deriv regulated?',
+                a: 'Yes. Deriv holds an MFSA Malta license (Tier-1 EU regulator), plus Labuan FSA, VFSC Vanuatu, and BVI FSC licenses. It is the most regulated binary options broker we reviewed.',
+              },
+              {
+                q: 'What are Deriv synthetic indices?',
+                a: 'Synthetic indices are simulated markets available 24/7, including weekends. They are not tied to real-world assets and provide continuous trading opportunities with consistent volatility. Unique to Deriv.',
+              },
+              {
+                q: 'What is the minimum deposit for Deriv?',
+                a: 'Deriv requires just $5 minimum deposit — tied with Pocket Option for the lowest in the industry.',
+              },
+              {
+                q: 'What is DBot on Deriv?',
+                a: 'DBot is Deriv\'s drag-and-drop automated trading tool. You can build trading bots without coding by connecting strategy blocks visually. Free to use on any Deriv account.',
+              },
+              {
+                q: 'How does Deriv compare to Pocket Option?',
+                a: 'Deriv has far stronger regulation (MFSA Tier-1 vs offshore) and 26 years of track record. Pocket Option has copy trading, more binary assets, and a more beginner-friendly interface. Choose Deriv for trust, Pocket Option for features.',
+              },
+              {
+                q: 'Does Deriv have a demo account?',
+                a: 'Yes. Deriv offers a free demo account with $10,000 virtual balance across all its platforms (DTrader, DBot, Deriv MT5).',
+              },
+            ].map((faq) => (
+              <details key={faq.q} className="glass-card group">
+                <summary className="p-5 cursor-pointer flex items-center justify-between text-white font-medium text-sm hover:text-emerald-400 transition-colors">
+                  {faq.q}
+                  <svg className="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-white/[0.06] pt-4">
+                  {faq.a}
+                </div>
+              </details>
             ))}
           </div>
         </div>

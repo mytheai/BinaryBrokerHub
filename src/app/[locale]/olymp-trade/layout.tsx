@@ -58,17 +58,32 @@ const schemas = [
     {
       question: 'Is Olymp Trade available in India?',
       answer:
-        'Yes, Olymp Trade is one of the most popular trading platforms in India, offering local payment methods including UPI and local bank transfers.',
+        'Yes. Olymp Trade is one of the most popular trading platforms in India, supporting UPI, Net Banking, Paytm, and local bank transfers in INR.',
     },
     {
       question: 'What is Olymp Trade FTT trading?',
       answer:
-        'FTT (Fixed Time Trades) is Olymp Trade\'s version of binary options. You predict whether an asset price will go up or down within a fixed time period, similar to classic binary options.',
+        'FTT (Fixed Time Trades) is Olymp Trade\'s version of binary options. You predict whether an asset price will go up or down within a fixed time period.',
     },
     {
       question: 'What is Olymp Trade minimum deposit?',
       answer:
-        'Olymp Trade requires a $10 minimum deposit to start trading with real money.',
+        'Olymp Trade requires a $10 minimum deposit. Individual trades start from $1.',
+    },
+    {
+      question: 'Is Olymp Trade regulated?',
+      answer:
+        'Olymp Trade is a FinaCom Category A member (up to €20,000 compensation per dispute) with VFSC Vanuatu offshore registration. Not Tier-1 regulated.',
+    },
+    {
+      question: 'What are Olymp Trade payout rates?',
+      answer:
+        'Payouts are tiered: Starter 80-82%, Advanced 84-86%, Expert 90-93%. Higher tiers require more trading volume.',
+    },
+    {
+      question: 'Does Olymp Trade have a demo account?',
+      answer:
+        'Yes. Olymp Trade offers a free demo account with $10,000 virtual balance. Replenishable.',
     },
   ]),
 ];
