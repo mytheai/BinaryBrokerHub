@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     'binary broker comparison',
     'binary options trading',
   ],
-  metadataBase: new URL('https://binarybrokerhub.com'),
+  metadataBase: new URL('https://www.binarybrokerhub.com'),
   openGraph: {
     type: 'website',
     siteName: 'BinaryBrokerHub',
@@ -65,11 +65,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://binarybrokerhub.com',
+    canonical: 'https://www.binarybrokerhub.com/en',
     languages: {
-      en: 'https://binarybrokerhub.com/en',
-      ru: 'https://binarybrokerhub.com/ru',
-      es: 'https://binarybrokerhub.com/es',
+      en: 'https://www.binarybrokerhub.com/en',
+      ru: 'https://www.binarybrokerhub.com/ru',
+      es: 'https://www.binarybrokerhub.com/es',
     },
   },
   verification: {

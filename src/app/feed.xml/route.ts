@@ -1,4 +1,4 @@
-const BASE_URL = 'https://binarybrokerhub.com';
+const BASE_URL = 'https://www.binarybrokerhub.com';
 
 const blogPosts = [
   { slug: 'best-binary-options-brokers', title: '7 Best Binary Options Brokers 2026 — Tested & Ranked', desc: 'We tested all 7 brokers with real money over 8+ months. Honest ranking based on payouts, platform quality, regulation, and actual user experience.' },

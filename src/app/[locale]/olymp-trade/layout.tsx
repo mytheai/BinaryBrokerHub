@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SchemaScript from '@/components/SchemaScript';
 import { reviewSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 
-const BASE_URL = 'https://binarybrokerhub.com';
+const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
   title: 'Olymp Trade Review 2026 — Score 8.6/10 | Best for India & SEA',

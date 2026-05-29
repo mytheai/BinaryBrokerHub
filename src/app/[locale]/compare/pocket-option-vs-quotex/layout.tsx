@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SchemaScript from '@/components/SchemaScript';
 import { comparisonSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 
-const BASE_URL = 'https://binarybrokerhub.com';
+const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
   title: 'Pocket Option vs Quotex 2026 — Which Broker Is Better?',

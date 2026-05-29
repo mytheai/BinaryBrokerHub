@@ -1,4 +1,4 @@
-const BASE_URL = 'https://binarybrokerhub.com/en';
+const BASE_URL = 'https://www.binarybrokerhub.com/en';
 
 export interface TweetTemplate {
   text: string;

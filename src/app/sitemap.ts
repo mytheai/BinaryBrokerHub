@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://binarybrokerhub.com';
-  const locales = ['en', 'ru', 'es'];
+  const baseUrl = 'https://www.binarybrokerhub.com';
+  const locales = ['en']; // EN-only focus: consolidate crawl budget; ru/es canonical → en
   const lastModified = new Date();
 
   const pages = [

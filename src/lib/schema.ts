@@ -31,7 +31,7 @@ export interface ArticleSchemaProps {
   category?: string;
 }
 
-const BASE_URL = 'https://binarybrokerhub.com';
+const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export function organizationSchema() {
   return {

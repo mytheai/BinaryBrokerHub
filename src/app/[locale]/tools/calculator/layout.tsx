@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SchemaScript from '@/components/SchemaScript';
 import { breadcrumbSchema } from '@/lib/schema';
 
-const BASE_URL = 'https://binarybrokerhub.com';
+const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
   title: 'Binary Options Profit Calculator — Free Trading Tool',
