@@ -99,7 +99,7 @@ export default function BinaryOptionsIndiaPage() {
                   <th className="px-4 py-3 text-gray-400 font-semibold">Broker</th>
                   <th className="px-4 py-3 text-gray-400 font-semibold">Our Score</th>
                   <th className="px-4 py-3 text-gray-400 font-semibold">Min. Deposit</th>
-                  <th className="px-4 py-3 text-gray-400 font-semibold">Max. Payout</th>
+                  <th className="px-4 py-3 text-gray-400 font-semibold">Peak Payout</th>
                   <th className="px-4 py-3 text-gray-400 font-semibold">INR Deposits</th>
                   <th className="px-4 py-3 text-gray-400 font-semibold">UPI/Paytm</th>
                 </tr>
@@ -109,7 +109,7 @@ export default function BinaryOptionsIndiaPage() {
                   <td className="px-4 py-3 font-semibold text-white">Olymp Trade</td>
                   <td className="px-4 py-3"><span className="badge-green">8.6/10</span></td>
                   <td className="px-4 py-3">$10 / ₹350</td>
-                  <td className="px-4 py-3">Up to 92%</td>
+                  <td className="px-4 py-3">80–93%</td>
                   <td className="px-4 py-3 text-emerald-400">Yes</td>
                   <td className="px-4 py-3 text-emerald-400">Yes</td>
                 </tr>
@@ -117,7 +117,7 @@ export default function BinaryOptionsIndiaPage() {
                   <td className="px-4 py-3 font-semibold text-white">Pocket Option</td>
                   <td className="px-4 py-3"><span className="badge-blue">9.5/10</span></td>
                   <td className="px-4 py-3">$5</td>
-                  <td className="px-4 py-3">Up to 92%</td>
+                  <td className="px-4 py-3">89–92%</td>
                   <td className="px-4 py-3 text-emerald-400">Yes</td>
                   <td className="px-4 py-3 text-emerald-400">Yes</td>
                 </tr>
@@ -125,7 +125,7 @@ export default function BinaryOptionsIndiaPage() {
                   <td className="px-4 py-3 font-semibold text-white">Quotex</td>
                   <td className="px-4 py-3"><span className="badge-blue">9.4/10</span></td>
                   <td className="px-4 py-3">$10</td>
-                  <td className="px-4 py-3">Up to 98%</td>
+                  <td className="px-4 py-3">90–95%</td>
                   <td className="px-4 py-3 text-emerald-400">Yes</td>
                   <td className="px-4 py-3 text-yellow-400">Limited</td>
                 </tr>
@@ -133,7 +133,7 @@ export default function BinaryOptionsIndiaPage() {
                   <td className="px-4 py-3 font-semibold text-white">IQ Option</td>
                   <td className="px-4 py-3"><span className="badge-blue">9.2/10</span></td>
                   <td className="px-4 py-3">$10</td>
-                  <td className="px-4 py-3">Up to 95%</td>
+                  <td className="px-4 py-3">90–95%</td>
                   <td className="px-4 py-3 text-emerald-400">Yes</td>
                   <td className="px-4 py-3 text-emerald-400">Yes</td>
                 </tr>
@@ -401,6 +401,11 @@ export default function BinaryOptionsIndiaPage() {
                 </li>
               ))}
             </ul>
+            <p className="text-sm text-gray-400 mt-4">
+              Read our full <Link href={`/${locale}/scams`} className="text-emerald-400 hover:underline">scam detection guide</Link> for
+              a complete checklist, and see our <Link href={`/${locale}/methodology`} className="text-emerald-400 hover:underline">testing methodology</Link> for
+              how we evaluate broker safety.
+            </p>
           </div>
         </div>
       </section>

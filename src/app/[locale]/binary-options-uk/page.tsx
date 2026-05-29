@@ -300,6 +300,11 @@ export default function BinaryOptionsUKPage() {
                 </li>
               ))}
             </ul>
+            <p className="text-sm text-gray-400 mt-4">
+              Read our full <Link href={`/${locale}/scams`} className="text-emerald-400 hover:underline">scam detection guide</Link> for
+              a complete checklist, and see our <Link href={`/${locale}/methodology`} className="text-emerald-400 hover:underline">testing methodology</Link> for
+              how we evaluate broker safety.
+            </p>
           </div>
         </div>
       </section>
