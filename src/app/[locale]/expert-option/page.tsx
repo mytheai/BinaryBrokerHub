@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function ExpertOptionPage() {
@@ -21,9 +22,12 @@ export default function ExpertOptionPage() {
               <span className="badge-gold">Social Trading</span>
               <span className="badge text-xs bg-white/[0.05] text-gray-300 border border-white/[0.1]">Last Updated: May 2026</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
-              ExpertOption Review 2026
-            </h1>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <BrokerLogo broker="expert-option" size={56} />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                ExpertOption Review 2026
+              </h1>
+            </div>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">
               ExpertOption is a social trading-focused binary options platform with 40M+ registered users.
               Up to 95% payouts, 100+ assets, and a built-in social feed showing what other traders are doing in real-time.

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function OlympTradePage() {
@@ -21,9 +22,12 @@ export default function OlympTradePage() {
               <span className="badge-gold">#1 in India &amp; Indonesia</span>
               <span className="badge text-xs bg-white/[0.05] text-gray-300 border border-white/[0.1]">Last Updated: May 2026</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
-              Olymp Trade Review 2026
-            </h1>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <BrokerLogo broker="olymp-trade" size={56} />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                Olymp Trade Review 2026
+              </h1>
+            </div>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">
               Olymp Trade dominates emerging markets with 80M+ registered users across India, Indonesia, Brazil and MENA.
               Fixed Time Trading (FTT) with up to 93% payouts, 190+ assets, and the best localized trading experience

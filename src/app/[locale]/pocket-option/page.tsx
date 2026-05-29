@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function PocketOptionPage() {
@@ -22,9 +23,12 @@ export default function PocketOptionPage() {
               <span className="badge-gold">Best Overall Binary Broker 2025</span>
               <span className="badge text-xs bg-white/[0.05] text-gray-300 border border-white/[0.1]">Last Updated: May 2026</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
-              Pocket Option Review 2026
-            </h1>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <BrokerLogo broker="pocket-option" size={56} />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                Pocket Option Review 2026
+              </h1>
+            </div>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">
               180+ binary assets, 3-second expiry times, social/copy trading, tournaments, and AI Trading.
               After 8 months of testing with $3,000+ deposited and 250+ trades, here&apos;s our full assessment.

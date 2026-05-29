@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 const comparisonRows = [
@@ -48,6 +49,11 @@ export default function QuotexVsIqOptionPage() {
           <p className="text-emerald-400 font-semibold tracking-wide uppercase text-sm mb-4">
             Head-to-Head Broker Comparison
           </p>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <BrokerLogo broker="quotex" size={40} />
+            <span className="text-gray-500 text-xl font-bold">vs</span>
+            <BrokerLogo broker="iq-option" size={40} />
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
             Quotex vs IQ Option 2026
             <br />

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function PocketOptionVsQuotexPage() {
@@ -19,6 +20,11 @@ export default function PocketOptionVsQuotexPage() {
             <span className="badge-gold">Head-to-Head Comparison</span>
             <span className="badge-green">Updated May 2026</span>
             <span className="badge text-xs bg-white/[0.05] text-gray-300 border border-white/[0.1]">Real-Money Tested</span>
+          </div>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <BrokerLogo broker="pocket-option" size={40} />
+            <span className="text-gray-500 text-xl font-bold">vs</span>
+            <BrokerLogo broker="quotex" size={40} />
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4">
             Pocket Option vs Quotex 2026 — Full Comparison
@@ -42,14 +48,16 @@ export default function PocketOptionVsQuotexPage() {
       <section className="section-container pb-12">
         <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
           <Link href={`/${locale}/pocket-option`}>
-            <div className="glass-card-hover p-6 text-center">
+            <div className="glass-card-hover p-6 text-center flex flex-col items-center">
+              <BrokerLogo broker="pocket-option" size={40} className="mb-2" />
               <div className="text-3xl md:text-4xl font-extrabold text-emerald-400 mb-1">9.5<span className="text-lg text-gray-500">/10</span></div>
               <div className="text-sm font-bold text-white">Pocket Option</div>
               <div className="text-xs text-gray-500 mt-1">Best Overall</div>
             </div>
           </Link>
           <Link href={`/${locale}/quotex`}>
-            <div className="glass-card-hover p-6 text-center">
+            <div className="glass-card-hover p-6 text-center flex flex-col items-center">
+              <BrokerLogo broker="quotex" size={40} className="mb-2" />
               <div className="text-3xl md:text-4xl font-extrabold text-emerald-400 mb-1">9.4<span className="text-lg text-gray-500">/10</span></div>
               <div className="text-sm font-bold text-white">Quotex</div>
               <div className="text-xs text-gray-500 mt-1">Highest Payouts</div>

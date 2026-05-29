@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 const comparisonRows = [
@@ -32,7 +33,12 @@ export default function PocketOptionVsBinomoPage() {
       {/* Hero Section */}
       <section className="section-container py-16 md:py-24 text-center">
         <span className="badge-gold mb-4">Head-to-Head Comparison</span>
-        <h1 className="text-3xl md:text-5xl font-extrabold mt-4 mb-4">
+        <div className="flex items-center justify-center gap-3 mt-4 mb-4">
+          <BrokerLogo broker="pocket-option" size={40} />
+          <span className="text-gray-500 text-xl font-bold">vs</span>
+          <BrokerLogo broker="binomo" size={40} />
+        </div>
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
           Pocket Option vs Binomo: Which Broker Is Better in 2026?
         </h1>
         <p className="text-gray-400 max-w-2xl mx-auto mb-6">

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function DerivPage() {
@@ -21,9 +22,12 @@ export default function DerivPage() {
               <span className="badge-gold">Most Trusted — 26 Years</span>
               <span className="badge text-xs bg-white/[0.05] text-gray-300 border border-white/[0.1]">Last Updated: May 2026</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
-              Deriv Review 2026
-            </h1>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <BrokerLogo broker="deriv" size={56} />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                Deriv Review 2026
+              </h1>
+            </div>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">
               Formerly Binary.com (est. 1999), Deriv is the longest-operating binary options broker in the world with
               MFSA Malta (Tier-1) regulation. Home of unique Synthetic Indices tradeable 24/7 — even on weekends.

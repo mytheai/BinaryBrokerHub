@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 const brokers = [
@@ -138,8 +139,9 @@ export default function ComparePage() {
                 <th className="text-left p-3 text-xs font-semibold text-gray-400 w-28 sm:w-36 sticky left-0 bg-[#0a0f1a]/95 backdrop-blur-sm z-10">Feature</th>
                 {brokers.map((b) => (
                   <th key={b.key} className="p-3 text-center">
-                    <Link href={`/${locale}/${b.slug}`} className="text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
-                      {b.name}
+                    <Link href={`/${locale}/${b.slug}`} className="inline-flex flex-col items-center gap-1 hover:text-emerald-400 transition-colors">
+                      <BrokerLogo broker={b.slug as 'pocket-option' | 'quotex' | 'iq-option' | 'deriv' | 'olymp-trade' | 'binomo' | 'expert-option'} size={28} />
+                      <span className="text-sm font-semibold text-white">{b.name}</span>
                     </Link>
                     <div className={`text-xs font-bold mt-1 ${b.color}`}>{b.score}/10</div>
                   </th>
@@ -186,7 +188,10 @@ export default function ComparePage() {
             <Link key={item.title} href={`/${locale}/${item.slug}`}>
               <div className="glass-card-hover p-5 h-full">
                 <div className="text-xs text-emerald-400 font-semibold mb-2">{item.title}</div>
-                <h3 className="font-bold text-white mb-1">{item.broker}</h3>
+                <div className="flex items-center gap-2 mb-1">
+                  <BrokerLogo broker={item.slug as 'pocket-option' | 'quotex' | 'iq-option' | 'deriv' | 'olymp-trade' | 'binomo' | 'expert-option'} size={22} />
+                  <h3 className="font-bold text-white">{item.broker}</h3>
+                </div>
                 <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
               </div>
             </Link>

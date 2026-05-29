@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function QuotexPage() {
@@ -22,9 +23,12 @@ export default function QuotexPage() {
               <span className="badge-gold">Best Payouts 2026</span>
               <span className="badge text-xs bg-white/[0.05] text-gray-300 border border-white/[0.1]">Last Updated: May 2026</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
-              Quotex Review 2026
-            </h1>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <BrokerLogo broker="quotex" size={56} />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                Quotex Review 2026
+              </h1>
+            </div>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">
               Quotex is a digital options platform offering up to 98% payouts on 95+ binary instruments with execution under 1 second. After 6 months of real-money testing with $5,000+ deposited and 300+ trades executed, here&apos;s our comprehensive assessment.
             </p>

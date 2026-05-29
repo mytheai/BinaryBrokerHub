@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import CtaButton from './CtaButton';
+import BrokerLogo from './BrokerLogo';
 
 interface BrokerCardProps {
   broker: 'quotex' | 'pocketOption';
@@ -57,7 +58,10 @@ export default function BrokerCard({ broker }: BrokerCardProps) {
           <span className={`badge ${meta.color === 'emerald' ? 'badge-green' : 'badge-blue'} mb-2`}>
             {meta.badge}
           </span>
-          <h3 className="text-xl font-bold text-white">{t('title')}</h3>
+          <div className="flex items-center gap-3">
+            <BrokerLogo broker={meta.slug as 'pocket-option' | 'quotex' | 'iq-option' | 'deriv' | 'olymp-trade' | 'binomo' | 'expert-option'} size={36} />
+            <h3 className="text-xl font-bold text-white">{t('title')}</h3>
+          </div>
         </div>
         <div className="text-right">
           <div className="text-3xl font-bold text-emerald-400">{meta.score}</div>

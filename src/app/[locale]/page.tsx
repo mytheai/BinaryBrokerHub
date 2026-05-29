@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
 import BrokerCard from '@/components/BrokerCard';
+import BrokerLogo from '@/components/BrokerLogo';
 import TrustBanner from '@/components/TrustBanner';
 
 export default function HomePage() {
@@ -135,7 +136,8 @@ export default function HomePage() {
             <div key={b.slug} className={`grid grid-cols-7 p-3 items-center text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
               <div className={`font-bold ${b.rank <= 2 ? 'text-emerald-400' : 'text-gray-500'}`}>#{b.rank}</div>
               <div>
-                <Link href={`/${locale}/${b.slug}`} className="text-white font-medium hover:text-emerald-400 transition-colors">
+                <Link href={`/${locale}/${b.slug}`} className="flex items-center gap-2 text-white font-medium hover:text-emerald-400 transition-colors">
+                  <BrokerLogo broker={b.slug as 'pocket-option' | 'quotex' | 'iq-option' | 'deriv' | 'olymp-trade' | 'binomo' | 'expert-option'} size={24} />
                   {b.name}
                 </Link>
               </div>
@@ -165,6 +167,7 @@ export default function HomePage() {
           ].map((b) => (
             <Link key={b.slug} href={`/${locale}/${b.slug}`} className="glass-card p-4 flex items-center gap-4 hover:bg-white/[0.04] transition-colors block">
               <div className={`text-lg font-bold w-8 flex-shrink-0 ${b.rank <= 2 ? 'text-emerald-400' : 'text-gray-500'}`}>#{b.rank}</div>
+              <BrokerLogo broker={b.slug as 'pocket-option' | 'quotex' | 'iq-option' | 'deriv' | 'olymp-trade' | 'binomo' | 'expert-option'} size={28} className="flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-white font-semibold text-sm">{b.name}</span>

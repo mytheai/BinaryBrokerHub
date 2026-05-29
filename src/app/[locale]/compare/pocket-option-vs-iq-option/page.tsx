@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import CtaButton from '@/components/CtaButton';
+import BrokerLogo from '@/components/BrokerLogo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 const comparisonRows = [
@@ -46,6 +47,11 @@ export default function PocketOptionVsIqOptionPage() {
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             <span className="badge-gold">Head-to-Head Comparison</span>
             <span className="badge-green">Updated May 2026</span>
+          </div>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <BrokerLogo broker="pocket-option" size={40} />
+            <span className="text-gray-500 text-xl font-bold">vs</span>
+            <BrokerLogo broker="iq-option" size={40} />
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4">
             Pocket Option vs IQ Option 2026
