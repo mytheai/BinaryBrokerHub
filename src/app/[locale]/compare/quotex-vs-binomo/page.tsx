@@ -10,7 +10,7 @@ const comparisonRows = [
   { feature: 'Founded', quotex: '2019', binomo: '2014', winner: 'binomo' },
   { feature: 'Min Deposit', quotex: '$10', binomo: '$10', winner: 'tie' },
   { feature: 'Min Trade', quotex: '$1', binomo: '$1', winner: 'tie' },
-  { feature: 'Max Payout', quotex: '98%', binomo: '90%', winner: 'quotex' },
+  { feature: 'Peak Payout', quotex: '90–95%', binomo: '85–90%', winner: 'quotex' },
   { feature: 'Total Assets', quotex: '95+', binomo: '70+', winner: 'quotex' },
   { feature: 'Demo Account', quotex: '$10,000 free', binomo: '$1,000 free', winner: 'quotex' },
   { feature: 'Copy Trading', quotex: 'Limited', binomo: 'Not available', winner: 'quotex' },

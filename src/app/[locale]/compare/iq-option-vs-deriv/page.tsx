@@ -11,7 +11,7 @@ const comparisonRows = [
   { feature: 'Years Operating', iq: '13 years', deriv: '26 years', winner: 'deriv' },
   { feature: 'Min Deposit', iq: '$10', deriv: '$5', winner: 'deriv' },
   { feature: 'Min Trade', iq: '$1', deriv: '$1', winner: 'tie' },
-  { feature: 'Max Payout', iq: '95%', deriv: '95%', winner: 'tie' },
+  { feature: 'Peak Payout', iq: '90–95%', deriv: '88–95%', winner: 'iq' },
   { feature: 'Total Assets', iq: '250+ (real markets)', deriv: '100+ real + synthetics', winner: 'iq' },
   { feature: 'Regulation', iq: 'CySEC (EU CFDs)', deriv: 'MFSA Malta (Tier-1)', winner: 'deriv' },
   { feature: 'Demo Account', iq: '$10,000 free', deriv: '$10,000 free', winner: 'tie' },

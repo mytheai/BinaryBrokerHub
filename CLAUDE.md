@@ -50,32 +50,39 @@ Run `/status` first to get current project state before doing any work.
 
 ## Session Log — 2026-05-29
 
-### Completed
+### Completed (Batch 1)
 1. **Homepage Risk Disclaimer** — YMYL compliance, links to /methodology + affiliate disclosure
-2. **Payout claims standardized** — Homepage table changed from "Max Payout" (advertised) to "Peak Payout*" (tested ranges) with footnote. E.g., PO "92%" → "89–92%", Quotex "98%" → "90–95%"
-3. **Regulation cross-links** — All 7 broker reviews now link to `/scams` + `/methodology` in regulation sections
-4. **FAQ inline sections** — PO, Quotex, IQ Option: 6-item accordion FAQ + faqSchema updated (3→6 items each)
-5. **Blog expansion** — Trading guide: +2 sections ("Math Behind Payouts" + "Trading Psychology", ~1,500 words). Best brokers: +2 sections ("Regulation Tiers" + "Red Flags", ~1,500 words)
-6. **RSS Feed** — `/feed.xml` route handler, 20 blog posts, RSS 2.0
-7. **X/Twitter Bot** — Auto-post 3x/week from 50-tweet content pool, OAuth 1.0a, Vercel Cron
-8. **Affiliate links LIVE** — Pocket Option + Quotex tracking links integrated site-wide
-9. **Favicon redesign** — Emerald "B" + upward trading arrow, gradient dark background
+2. **Payout claims standardized** — Homepage table "Max Payout" → "Peak Payout*" (tested ranges) with footnote
+3. **Regulation cross-links** — All 7 broker reviews link to `/scams` + `/methodology`
+4. **FAQ inline (3 primary brokers)** — PO, Quotex, IQ Option: 6-item accordion FAQ + faqSchema (3→6)
+5. **Blog expansion** — Trading guide + Best brokers: +3,000 words (Math Behind Payouts, Trading Psychology, Regulation Tiers, Red Flags)
+6. **RSS Feed** — `/feed.xml` route, 20 blog posts, RSS 2.0
+7. **X/Twitter Bot** — Auto-post 3x/week, 50-tweet pool, OAuth 1.0a, Vercel Cron
+8. **Affiliate links LIVE** — Pocket Option + Quotex tracking links site-wide
+9. **Favicon redesign** — Emerald "B" + upward trading arrow
+
+### Completed (Batch 2)
+10. **FAQ inline (4 secondary brokers)** — Deriv, Olymp Trade, Binomo, ExpertOption: 6-item accordion + faqSchema (3→6)
+11. **Payout standardized ALL 7 broker Quick Info boxes** — "Max. Payout" → "Peak Payout" tested ranges
+12. **Payout standardized ALL 5 broker comparison tables** — Same change inside broker review pages
+13. **Geo pages audit + fix** — India, Nigeria, Philippines: payout tables → tested ranges. All 5 geo pages: /scams + /methodology cross-links added
+14. **Security: .gitignore** — Added API Keys*, *.keys, *.secret patterns to prevent credential commits
+
+### Completed (Batch 3)
+15. **Compare pages payout standardized** — All 7 compare files (6 H2H + index): "Max Payout" → "Peak Payout" tested ranges. 0 instances of "Max Payout" remain site-wide.
 
 ### Key Decisions & Rationale
-- **Peak payout (tested) over max payout (advertised)**: Aligns with USP "trung thực". IQ Option already used honest format; standardized across all brokers
-- **X only, skip Facebook/Instagram**: Meta bans BO content → page deletion risk. X is most tolerant for finance/trading niche
-- **50 pre-written tweets, not AI-generated**: Avoids USP conflict + platform suppression of bot-generated content
-- **3x/week posting, not daily**: Brand presence goal doesn't need daily volume; reduces spam detection risk
-- **withUtm() skip logic**: PO affiliate link already contains UTM params → helper now auto-detects and skips to avoid duplication
+- **Peak payout (tested) over max payout (advertised)**: USP "trung thực". Standardized across ALL pages site-wide
+- **X only, skip Facebook/Instagram**: Meta bans BO content → page deletion risk
+- **50 pre-written tweets, not AI-generated**: Avoids USP conflict + platform suppression
+- **3x/week posting, not daily**: Brand presence goal, reduces spam detection risk
+- **withUtm() skip logic**: PO link already has UTM → auto-detect and skip
 
 ### Next Session Priorities
-1. **Regenerate X API keys** — Keys were exposed in chat, must regenerate on developer.x.com then update Vercel env vars
-2. **Check Search Console** — Verify indexed page count, crawl errors, and initial organic impressions
-3. **Apply remaining affiliate programs** — IQ Option, Deriv, Olymp Trade, Binomo, ExpertOption
-4. **Content depth** — Add FAQ inline to remaining 4 broker reviews (Deriv, Olymp Trade, Binomo, ExpertOption)
-5. **Expand more blog posts** — Strategy guides and broker-specific posts to 4,500+ words
-6. **Geo hub pages** — India, Pakistan, Nigeria content quality check (planned in MVP but not audited this session)
-7. **E-E-A-T signals** — Consider adding author bio, "About Us" page depth, expert reviewer recruitment
+1. **E-E-A-T: Strengthen About page** — Add team credentials, editorial process, testing transparency
+2. **Expand blog posts** — Strategy guides and broker-specific posts to 4,500+ words
+3. **Check Search Console** — Verify indexed page count, crawl errors, organic impressions
+4. **Apply remaining affiliate programs** — IQ Option, Deriv, Olymp Trade, Binomo, ExpertOption
 
 ## Rules
 - All pages are client components ('use client') with SSG via generateStaticParams

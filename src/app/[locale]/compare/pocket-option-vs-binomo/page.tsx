@@ -10,7 +10,7 @@ const comparisonRows = [
   { feature: 'Founded', po: '2017', binomo: '2014', winner: 'binomo' },
   { feature: 'Min Deposit', po: '$5', binomo: '$10', winner: 'po' },
   { feature: 'Min Trade', po: '$1', binomo: '$1', winner: 'tie' },
-  { feature: 'Max Payout', po: '92%', binomo: '90%', winner: 'po' },
+  { feature: 'Peak Payout', po: '89–92%', binomo: '85–90%', winner: 'po' },
   { feature: 'Total Assets', po: '180+', binomo: '70+', winner: 'po' },
   { feature: 'Demo Account', po: '$50,000 free', binomo: '$1,000 free', winner: 'po' },
   { feature: 'Copy Trading', po: 'Full featured', binomo: 'Not available', winner: 'po' },

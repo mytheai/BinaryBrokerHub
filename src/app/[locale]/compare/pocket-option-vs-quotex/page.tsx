@@ -85,7 +85,7 @@ export default function PocketOptionVsQuotexPage() {
                 { feature: 'Our Score', po: '9.5/10', qx: '9.4/10', winner: 'Pocket Option' },
                 { feature: 'Founded', po: '2017', qx: '2019', winner: 'Pocket Option' },
                 { feature: 'Min Deposit', po: '$5', qx: '$10', winner: 'Pocket Option' },
-                { feature: 'Max Payout', po: '92%', qx: '98%', winner: 'Quotex' },
+                { feature: 'Peak Payout', po: '89–92%', qx: '90–95%', winner: 'Quotex' },
                 { feature: 'Total Assets', po: '180+', qx: '95+', winner: 'Pocket Option' },
                 { feature: 'Regulation', po: 'IFMRRC', qx: 'None', winner: 'Pocket Option' },
                 { feature: 'Copy Trading', po: 'Full featured', qx: 'Limited', winner: 'Pocket Option' },

@@ -29,8 +29,8 @@ const comparisonData: { feature: string; values: Record<BrokerKey, string>; best
     best: 'deriv',
   },
   {
-    feature: 'Max Payout',
-    values: { quotex: '98%', iqOption: '95%', pocketOption: '92%', deriv: '95%', olympTrade: '93%', binomo: '90%', expertOption: '95%' },
+    feature: 'Peak Payout',
+    values: { quotex: '90–95%', iqOption: '90–95%', pocketOption: '89–92%', deriv: '88–95%', olympTrade: '80–93%', binomo: '85–90%', expertOption: '80–95%' },
     best: 'quotex',
   },
   {

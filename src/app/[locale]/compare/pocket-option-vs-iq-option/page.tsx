@@ -9,7 +9,7 @@ const comparisonRows = [
   { feature: 'Our Score', po: '9.5/10', iq: '9.2/10', winner: 'po' },
   { feature: 'Founded', po: '2017', iq: '2013', winner: 'iq' },
   { feature: 'Min Deposit', po: '$5', iq: '$10', winner: 'po' },
-  { feature: 'Max Payout', po: '92%', iq: '95%', winner: 'iq' },
+  { feature: 'Peak Payout', po: '89–92%', iq: '90–95%', winner: 'iq' },
   { feature: 'Total Assets', po: '180+', iq: '250+', winner: 'iq' },
   { feature: 'Regulation', po: 'IFMRRC', iq: 'CySEC (EU) + offshore', winner: 'iq' },
   { feature: 'Copy Trading', po: 'Yes (full featured)', iq: 'No', winner: 'po' },

@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 const comparisonRows = [
   { feature: 'Our Score', quotex: '9.4/10', iq: '9.2/10', winner: 'quotex' },
   { feature: 'Founded', quotex: '2019', iq: '2013', winner: 'iq' },
-  { feature: 'Max Payout', quotex: '98%', iq: '95%', winner: 'quotex' },
+  { feature: 'Peak Payout', quotex: '90–95%', iq: '90–95%', winner: 'tie' },
   { feature: 'Min Deposit', quotex: '$10', iq: '$10', winner: 'tie' },
   { feature: 'Min Trade', quotex: '$1', iq: '$1', winner: 'tie' },
   { feature: 'Total Assets', quotex: '95+', iq: '250+', winner: 'iq' },

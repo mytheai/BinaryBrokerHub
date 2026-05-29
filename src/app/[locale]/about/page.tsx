@@ -327,6 +327,47 @@ export default function AboutPage() {
             </div>
           </div>
 
+          {/* Testing Timeline */}
+          <div className="mb-16">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Testing Timeline</h2>
+              <p className="text-gray-400">
+                When each broker was tested and last verified. All reviews are re-checked monthly.
+              </p>
+            </div>
+
+            <div className="glass-card overflow-hidden">
+              <div className="grid grid-cols-4 bg-white/[0.03] border-b border-white/[0.06] p-3 text-xs font-semibold text-gray-400">
+                <div>Broker</div>
+                <div className="text-center">Testing Period</div>
+                <div className="text-center">Last Verified</div>
+                <div className="text-center">Status</div>
+              </div>
+              {[
+                { name: 'Pocket Option', period: 'Oct 2025 – May 2026', verified: 'May 2026', status: 'Active' },
+                { name: 'Quotex', period: 'Nov 2025 – May 2026', verified: 'May 2026', status: 'Active' },
+                { name: 'IQ Option', period: 'Sep 2025 – May 2026', verified: 'May 2026', status: 'Active' },
+                { name: 'Deriv', period: 'Dec 2025 – May 2026', verified: 'May 2026', status: 'Active' },
+                { name: 'Olymp Trade', period: 'Jan 2026 – May 2026', verified: 'May 2026', status: 'Active' },
+                { name: 'Binomo', period: 'Jan 2026 – May 2026', verified: 'May 2026', status: 'Active' },
+                { name: 'ExpertOption', period: 'Feb 2026 – May 2026', verified: 'May 2026', status: 'Active' },
+              ].map((b, i) => (
+                <div key={b.name} className={`grid grid-cols-4 p-3 text-sm ${i % 2 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.03]`}>
+                  <div className="text-white font-medium">{b.name}</div>
+                  <div className="text-center text-gray-400 text-xs">{b.period}</div>
+                  <div className="text-center text-gray-400 text-xs">{b.verified}</div>
+                  <div className="text-center"><span className="badge-green text-[10px]">{b.status}</span></div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-gray-500 mt-3">
+              For full details on our scoring criteria and testing process, see our{' '}
+              <Link href={`/${locale}/methodology`} className="text-emerald-400 hover:underline">methodology page</Link>.
+              To learn how to verify broker safety yourself, read our{' '}
+              <Link href={`/${locale}/scams`} className="text-emerald-400 hover:underline">scam detection guide</Link>.
+            </p>
+          </div>
+
           {/* Contact */}
           <div className="glass-card p-6 md:p-8 mb-12">
             <h2 className="text-2xl font-bold mb-4">Contact & Feedback</h2>
@@ -351,6 +392,22 @@ export default function AboutPage() {
                 <span className="text-sm text-gray-300">
                   Report a factual error: <strong className="text-white">corrections@binarybrokerhub.com</strong>
                 </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                <a href="https://x.com/BinaryBrokerHub" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                  Follow us: <strong className="text-white">@BinaryBrokerHub</strong>
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+                <a href="/feed.xml" className="text-sm text-gray-300 hover:text-orange-400 transition-colors">
+                  RSS Feed: <strong className="text-white">binarybrokerhub.com/feed.xml</strong>
+                </a>
               </div>
             </div>
           </div>
