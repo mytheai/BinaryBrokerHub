@@ -97,6 +97,15 @@ const JURISDICTIONS: Jurisdiction[] = [
     sourceUrl: 'https://www.bappebti.go.id',
   },
   {
+    country: 'Vietnam',
+    status: 'bannedTotal',
+    regulator: 'SBV / SSC',
+    rule: 'Authorities deem binary options illegal under the 2005 Foreign-Exchange Ordinance; it is not a permitted financial product.',
+    meaning: 'Not legally offered; police have warned it breaches foreign-exchange law. No protection or recourse.',
+    source: 'SBV',
+    sourceUrl: 'https://www.sbv.gov.vn',
+  },
+  {
     country: 'United States',
     status: 'restricted',
     regulator: 'CFTC / SEC',
@@ -104,6 +113,24 @@ const JURISDICTIONS: Jurisdiction[] = [
     meaning: 'One main regulated venue. Using offshore brokers violates federal law.',
     source: 'CFTC',
     sourceUrl: 'https://www.cftc.gov',
+  },
+  {
+    country: 'South Africa',
+    status: 'restricted',
+    regulator: 'FSCA',
+    rule: 'Legal, but providers must hold an Over-the-Counter Derivatives Provider (ODP) licence under the Financial Markets Act.',
+    meaning: 'A regulated regime — use only FSCA-authorised / ODP-licensed firms; offshore platforms give no local protection.',
+    source: 'FSCA',
+    sourceUrl: 'https://www.fsca.co.za',
+  },
+  {
+    country: 'United Arab Emirates',
+    status: 'restricted',
+    regulator: 'SCA',
+    rule: 'Legal only through SCA / Central Bank-licensed brokers; unlicensed platforms are illegal and the SCA warns against them.',
+    meaning: 'Use only SCA-licensed firms; unlicensed or offshore platforms are illegal and unprotected.',
+    source: 'SCA',
+    sourceUrl: 'https://www.sca.gov.ae',
   },
   {
     country: 'India',
@@ -131,6 +158,60 @@ const JURISDICTIONS: Jurisdiction[] = [
     meaning: 'Accessible offshore; some platforms flagged by the SEC; no local protection.',
     source: 'SEC PH',
     sourceUrl: 'https://www.sec.gov.ph',
+  },
+  {
+    country: 'Brazil',
+    status: 'gray',
+    regulator: 'CVM',
+    rule: 'CVM does not authorise binary options for local distribution; not explicitly illegal, but it curbs offshore marketing and warns investors.',
+    meaning: 'Accessible via offshore brokers; unregulated, no local recourse; CVM warns against unlicensed offers.',
+    source: 'CVM',
+    sourceUrl: 'https://www.gov.br/cvm',
+  },
+  {
+    country: 'Malaysia',
+    status: 'gray',
+    regulator: 'Securities Commission (SC)',
+    rule: 'SC does not license binary options and treats promoting offshore brokers as an offence, but does not ban individuals from trading.',
+    meaning: 'Unregulated; accessible offshore; SC warns of fraud; no local recourse.',
+    source: 'SC',
+    sourceUrl: 'https://www.sc.com.my',
+  },
+  {
+    country: 'Singapore',
+    status: 'gray',
+    regulator: 'MAS',
+    rule: 'Not prohibited but unregulated; MAS has warned investors (since 2017) and lists suspect platforms on its Investor Alert List.',
+    meaning: 'Accessible but unregulated; flagged platforms appear on the MAS Alert List; little recourse.',
+    source: 'MAS',
+    sourceUrl: 'https://www.mas.gov.sg',
+  },
+  {
+    country: 'Pakistan',
+    status: 'gray',
+    regulator: 'SECP',
+    rule: 'SECP does not regulate binary options and there is no explicit ban — a regulatory gray area.',
+    meaning: 'Accessible offshore; unregulated; no local recourse.',
+    source: 'SECP',
+    sourceUrl: 'https://www.secp.gov.pk',
+  },
+  {
+    country: 'Kenya',
+    status: 'gray',
+    regulator: 'CMA',
+    rule: 'CMA does not license binary options, and CMA-licensed online forex brokers are expressly barred from offering them.',
+    meaning: 'Accessible offshore; not offered by any CMA-licensed broker; no local recourse.',
+    source: 'CMA',
+    sourceUrl: 'https://www.cma.or.ke',
+  },
+  {
+    country: 'Bangladesh',
+    status: 'gray',
+    regulator: 'BSEC / Bangladesh Bank',
+    rule: 'No specific binary options law, but BSEC and Bangladesh Bank treat it as unauthorised and gambling-like, and strict foreign-exchange controls restrict sending money to offshore brokers.',
+    meaning: 'A gray-to-restrictive zone: accessible offshore but officially discouraged, with foreign-exchange exposure and no recourse.',
+    source: 'Bangladesh Bank',
+    sourceUrl: 'https://www.bb.org.bd',
   },
 ];
 
@@ -287,8 +368,9 @@ export default function BinaryOptionsLegalityPage() {
           <div className="glass-card p-8 space-y-4 text-sm text-gray-300 leading-relaxed">
             <p>
               <strong className="text-white">Primary sources only.</strong> Each status is taken from the relevant
-              national financial regulator (ESMA, FCA, ASIC, CFTC, CSA, ISA, BAPPEBTI, AMF, BaFin, RBI/SEBI, SEC Nigeria,
-              SEC Philippines) and linked in the table above. We do not report legal status based on broker marketing.
+              national financial regulator (ESMA, FCA, ASIC, CFTC, CSA, ISA, BAPPEBTI, SBV, AMF, BaFin, RBI/SEBI,
+              FSCA, SCA, CVM, SC, MAS, SECP, CMA, BSEC, SEC Nigeria, SEC Philippines) and linked in the table above.
+              We do not report legal status based on broker marketing.
             </p>
             <p>
               <strong className="text-white">Independence.</strong> BinaryBrokerHub earns affiliate commissions from some
