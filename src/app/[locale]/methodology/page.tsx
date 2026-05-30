@@ -504,6 +504,12 @@ export default function MethodologyPage() {
                 Read Our Blog
               </Link>
               <Link
+                href={`/${locale}/binary-options-legality`}
+                className="text-sm py-2.5 px-5 border border-white/[0.1] rounded-xl text-gray-300 hover:text-white hover:border-white/[0.2] transition-colors"
+              >
+                Legality Tracker
+              </Link>
+              <Link
                 href={`/${locale}/blog/how-to-choose-binary-options-broker`}
                 className="text-sm py-2.5 px-5 border border-white/[0.1] rounded-xl text-gray-300 hover:text-white hover:border-white/[0.2] transition-colors"
               >

@@ -689,6 +689,11 @@ export default function ScamsPage() {
               href: `/${locale}/blog/binary-options-regulation`,
             },
             {
+              title: 'Binary Options Legality Tracker',
+              desc: 'Banned, restricted or unregulated? Legal status by country, sourced to regulators.',
+              href: `/${locale}/binary-options-legality`,
+            },
+            {
               title: 'Our Testing Methodology',
               desc: '47-point verification process explained in detail.',
               href: `/${locale}/methodology`,
