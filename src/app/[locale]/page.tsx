@@ -389,7 +389,7 @@ export default function HomePage() {
         </div>
         <div className="text-center">
           <Link href={`/${locale}/binary-options-legality`} className="btn-secondary px-6 py-3 text-sm inline-block">
-            See the Full Binary Options Legality Tracker — 20+ Countries →
+            See the Full Binary Options Legality Tracker — 30+ Countries →
           </Link>
         </div>
       </section>

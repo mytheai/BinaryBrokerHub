@@ -70,6 +70,42 @@ const JURISDICTIONS: Jurisdiction[] = [
     sourceUrl: 'https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2022-releases/22-243mr-asic-s-binary-options-ban-extended-until-2031/',
   },
   {
+    country: 'Italy',
+    status: 'banned',
+    regulator: 'CONSOB',
+    rule: 'Banned for retail clients under CONSOB national product intervention, following the ESMA measure.',
+    meaning: 'Cannot be marketed or sold to retail clients.',
+    source: 'CONSOB',
+    sourceUrl: 'https://www.consob.it',
+  },
+  {
+    country: 'Spain',
+    status: 'banned',
+    regulator: 'CNMV',
+    rule: 'Banned for retail clients by the CNMV under national product intervention, following the ESMA measure.',
+    meaning: 'Cannot be marketed or sold to retail clients.',
+    source: 'CNMV',
+    sourceUrl: 'https://www.cnmv.es',
+  },
+  {
+    country: 'South Korea',
+    status: 'banned',
+    regulator: 'FSC / FSS',
+    rule: 'Marketing, sale and distribution of binary options to retail investors restricted since 2017; the FSC disfavours retail derivative offerings.',
+    meaning: 'Effectively off-limits to retail; offshore use is unregulated and unprotected.',
+    source: 'FSC',
+    sourceUrl: 'https://www.fsc.go.kr',
+  },
+  {
+    country: 'Russia',
+    status: 'banned',
+    regulator: 'Bank of Russia',
+    rule: 'No domestic licence to offer binaries to retail; the Bank of Russia bars licensed firms from offering them and blacklists or blocks unlicensed sites.',
+    meaning: 'Effectively off-limits via licensed firms; offshore sites are blocked or blacklisted, with little recourse.',
+    source: 'Bank of Russia',
+    sourceUrl: 'https://www.cbr.ru',
+  },
+  {
     country: 'Canada',
     status: 'bannedTotal',
     regulator: 'CSA',
@@ -106,6 +142,15 @@ const JURISDICTIONS: Jurisdiction[] = [
     sourceUrl: 'https://www.sbv.gov.vn',
   },
   {
+    country: 'Turkey',
+    status: 'bannedTotal',
+    regulator: 'CMB (SPK)',
+    rule: 'The CMB banned binary options in 2017, treats them as gambling, has moved to criminalise them and blocks offshore sites; banks are barred from processing payments.',
+    meaning: 'Banned; offshore sites blocked and card/bank payments restricted.',
+    source: 'CMB',
+    sourceUrl: 'https://www.spk.gov.tr',
+  },
+  {
     country: 'United States',
     status: 'restricted',
     regulator: 'CFTC / SEC',
@@ -131,6 +176,33 @@ const JURISDICTIONS: Jurisdiction[] = [
     meaning: 'Use only SCA-licensed firms; unlicensed or offshore platforms are illegal and unprotected.',
     source: 'SCA',
     sourceUrl: 'https://www.sca.gov.ae',
+  },
+  {
+    country: 'Japan',
+    status: 'restricted',
+    regulator: 'FSA / FFAJ',
+    rule: 'Legal only via FSA-registered providers under FFAJ rules (e.g. a minimum ~2-hour expiry; very-short expiries are banned). Offshore brokers are not licensed.',
+    meaning: 'Legal on regulated domestic platforms only; offshore brokers are unlicensed and unprotected.',
+    source: 'FSA',
+    sourceUrl: 'https://www.fsa.go.jp',
+  },
+  {
+    country: 'Switzerland',
+    status: 'restricted',
+    regulator: 'FINMA',
+    rule: 'Legal, but providers require FINMA authorisation; FINMA maintains a warning list of unauthorised firms.',
+    meaning: 'Legal via FINMA-licensed providers; offshore unlicensed firms are warned against.',
+    source: 'FINMA',
+    sourceUrl: 'https://www.finma.ch',
+  },
+  {
+    country: 'New Zealand',
+    status: 'restricted',
+    regulator: 'FMA',
+    rule: 'Legal, but providers must be FMA-licensed; the FMA warns against unlicensed/offshore brokers and maintains a public caution list.',
+    meaning: 'Use only FMA-licensed providers; offshore brokers are unlicensed and unprotected.',
+    source: 'FMA',
+    sourceUrl: 'https://www.fma.govt.nz',
   },
   {
     country: 'India',
@@ -212,6 +284,15 @@ const JURISDICTIONS: Jurisdiction[] = [
     meaning: 'A gray-to-restrictive zone: accessible offshore but officially discouraged, with foreign-exchange exposure and no recourse.',
     source: 'Bangladesh Bank',
     sourceUrl: 'https://www.bb.org.bd',
+  },
+  {
+    country: 'Mexico',
+    status: 'gray',
+    regulator: 'CNBV',
+    rule: 'CNBV does not recognise or license binary options; not explicitly banned but unregulated; the CNBV warns about unregistered platforms.',
+    meaning: 'Accessible offshore; unregulated; no local recourse; the CNBV warns against unlicensed platforms.',
+    source: 'CNBV',
+    sourceUrl: 'https://www.gob.mx/cnbv',
   },
 ];
 
@@ -368,9 +449,10 @@ export default function BinaryOptionsLegalityPage() {
           <div className="glass-card p-8 space-y-4 text-sm text-gray-300 leading-relaxed">
             <p>
               <strong className="text-white">Primary sources only.</strong> Each status is taken from the relevant
-              national financial regulator (ESMA, FCA, ASIC, CFTC, CSA, ISA, BAPPEBTI, SBV, AMF, BaFin, RBI/SEBI,
-              FSCA, SCA, CVM, SC, MAS, SECP, CMA, BSEC, SEC Nigeria, SEC Philippines) and linked in the table above.
-              We do not report legal status based on broker marketing.
+              national financial regulator (ESMA, FCA, ASIC, CFTC, CSA, ISA, BAPPEBTI, SBV, CMB, AMF, BaFin, CONSOB,
+              CNMV, FSC, Bank of Russia, RBI/SEBI, FSCA, SCA, FSA, FINMA, FMA, CVM, SC, MAS, SECP, CMA, BSEC, CNBV,
+              SEC Nigeria, SEC Philippines) and linked in the table above. We do not report legal status based on
+              broker marketing.
             </p>
             <p>
               <strong className="text-white">Independence.</strong> BinaryBrokerHub earns affiliate commissions from some
