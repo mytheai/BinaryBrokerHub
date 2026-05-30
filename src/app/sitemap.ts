@@ -62,6 +62,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog/30-minute-binary-options-strategy', priority: 0.75, changeFrequency: 'monthly' as const },
     { path: '/blog/1-day-binary-options-strategy', priority: 0.75, changeFrequency: 'monthly' as const },
 
+    // Legality Tracker (linkable asset / reference hub)
+    { path: '/binary-options-legality', priority: 0.9, changeFrequency: 'monthly' as const },
+
     // Country Guides
     { path: '/binary-options-india', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/binary-options-usa', priority: 0.8, changeFrequency: 'monthly' as const },

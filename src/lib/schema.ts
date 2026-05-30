@@ -153,6 +153,27 @@ export function articleSchema({ title, description, url, datePublished, dateModi
   };
 }
 
+export function datasetSchema({ name, description, url, dateModified }: { name: string; description: string; url: string; dateModified: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name,
+    description,
+    url,
+    creator: { '@type': 'Organization', name: 'BinaryBrokerHub', url: BASE_URL },
+    publisher: { '@type': 'Organization', name: 'BinaryBrokerHub', url: BASE_URL },
+    license: `${BASE_URL}/en/methodology`,
+    dateModified,
+    isAccessibleForFree: true,
+    keywords: [
+      'binary options legality',
+      'binary options regulation by country',
+      'binary options ban',
+      'is binary options legal',
+    ],
+  };
+}
+
 export function comparisonSchema(brokerA: string, brokerB: string, url: string) {
   return {
     '@context': 'https://schema.org',

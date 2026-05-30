@@ -430,6 +430,7 @@ export default function BinaryOptionsUSAPage() {
           <h2 className="text-2xl font-bold mb-6">Related & Country Guides</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
+              { title: 'Binary Options Legality Tracker', href: `/${locale}/binary-options-legality`, desc: 'Banned, restricted & unregulated by country' },
               { title: 'Binary Options in India', href: `/${locale}/binary-options-india`, desc: 'Legal status, best brokers, UPI deposits' },
               { title: 'Binary Options in UK', href: `/${locale}/binary-options-uk`, desc: 'FCA ban, legal alternatives, spread betting' },
               { title: 'Binary Options in Nigeria', href: `/${locale}/binary-options-nigeria`, desc: 'Best brokers, OPay/Palmpay, getting started' },
