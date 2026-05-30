@@ -63,9 +63,11 @@ export default function BinaryOptionsIndiaPage() {
               </p>
               <p>
                 <strong className="text-white">The RBI angle:</strong> The Reserve Bank of India (RBI) regulates foreign
-                exchange transactions under FEMA (Foreign Exchange Management Act). While RBI restricts forex trading
-                to recognized exchanges, binary options on non-forex assets (commodities, indices, stocks) fall outside
-                this purview.
+                exchange under FEMA (Foreign Exchange Management Act). Several offshore binary options brokers appear on
+                the <strong className="text-white">RBI&apos;s Alert List</strong> of unauthorised entities, and remitting
+                money abroad to trade them can fall under FEMA / Liberalised Remittance Scheme (LRS) restrictions. This
+                does not make individual trading a criminal offence, but it does mean there is real regulatory and tax
+                exposure to be aware of.
               </p>
               <p>
                 <strong className="text-white">Practical reality:</strong> Millions of Indian traders actively use offshore
@@ -74,9 +76,10 @@ export default function BinaryOptionsIndiaPage() {
                 domestic legal recourse</strong> if a dispute arises with an offshore broker.
               </p>
               <p>
-                <strong className="text-white">Our recommendation:</strong> While not illegal, proceed with caution.
-                Use only well-established brokers with international regulation, start with small amounts, and keep
-                detailed records of all transactions for tax purposes.
+                <strong className="text-white">Our recommendation:</strong> There is no specific law banning individuals
+                from trading, but given the RBI Alert List and FEMA considerations, proceed with caution. Use only
+                well-established brokers with international regulation, start with small amounts, and keep detailed
+                records of all transactions for tax purposes.
               </p>
             </div>
           </div>
