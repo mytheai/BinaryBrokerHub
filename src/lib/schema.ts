@@ -71,7 +71,7 @@ export function reviewSchema({ brokerName, score, maxScore = 10, description, ur
     '@context': 'https://schema.org',
     '@type': 'Review',
     itemReviewed: {
-      '@type': 'FinancialProduct',
+      '@type': 'Product',
       name: brokerName,
       category: 'Binary Options Trading Platform',
     },
@@ -203,7 +203,7 @@ export function itemListSchema(brokers: { name: string; score: number; url: stri
       name: b.name,
       url: b.url,
       item: {
-        '@type': 'FinancialProduct',
+        '@type': 'Product',
         name: b.name,
         url: b.url,
         aggregateRating: {
