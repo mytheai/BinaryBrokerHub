@@ -5,7 +5,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Our Testing Methodology — 47-Point Binary Options Broker Review Process',
+  title: 'Binary Options Broker Review — Our 47-Point Methodology',
   description:
     'How we test and score binary options brokers. $25,000+ deposited, 500+ trades, 200+ withdrawals across 7 platforms. Our 47-point methodology explained in full.',
   openGraph: {

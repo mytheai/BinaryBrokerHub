@@ -5,7 +5,7 @@ import { reviewSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'ExpertOption Review 2026 — Score 7.8/10 | Social Trading with 40M+ Users',
+  title: 'ExpertOption Review 2026 — Score 7.8/10, Social Trading',
   description:
     'ExpertOption review: social trading feed with 40M+ users, 100+ assets, 95% max payout, multiple account tiers. Unregulated. Real-money testing with honest analysis.',
   openGraph: {

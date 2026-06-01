@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: '5-Minute Binary Options Strategy 2026 — The Sweet Spot for Most Traders',
+  title: '5-Minute Binary Options Strategy 2026 — EMA, RSI & MACD',
   description: 'Learn 3 proven 5-minute binary options strategies: EMA Crossover, RSI Divergence, and MACD Histogram. Step-by-step entry rules, best indicators, and money management for consistent results.',
   openGraph: {
     title: '5-Minute Binary Options Strategy 2026 — The Sweet Spot for Most Traders',

@@ -5,7 +5,7 @@ import { reviewSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Quotex Review 2026 — Score 9.4/10 | Highest Payouts Up to 98%',
+  title: 'Quotex Review 2026 — Score 9.4/10, Payouts Up to 98%',
   description:
     'Quotex review with real-money testing results. 98% max payout, $10 min deposit, fast execution, free unlimited demo. Honest pros, cons, and payout analysis.',
   openGraph: {

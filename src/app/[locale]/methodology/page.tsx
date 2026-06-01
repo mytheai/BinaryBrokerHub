@@ -510,7 +510,7 @@ export default function MethodologyPage() {
                 Legality Tracker
               </Link>
               <Link
-                href={`/${locale}/blog/how-to-choose-binary-options-broker`}
+                href={`/${locale}/blog/best-binary-options-brokers`}
                 className="text-sm py-2.5 px-5 border border-white/[0.1] rounded-xl text-gray-300 hover:text-white hover:border-white/[0.2] transition-colors"
               >
                 How to Choose a Broker

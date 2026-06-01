@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Pocket Option Copy Trading Guide 2026 — How to Copy Top Traders',
+  title: 'Pocket Option Copy Trading 2026 — How to Copy Top Traders',
   description: 'Learn Pocket Option copy trading: how to find top traders, set copy amounts, manage risk, and maximize returns. Step-by-step guide with real results.',
   openGraph: {
     title: 'Pocket Option Copy Trading Guide 2026 — How to Copy Top Traders',

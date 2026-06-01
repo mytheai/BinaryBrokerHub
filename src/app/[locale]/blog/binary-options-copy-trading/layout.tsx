@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options Copy Trading Guide 2026 — How to Copy Top Traders',
+  title: 'Binary Options Copy Trading 2026 — How to Copy Top Traders',
   description: 'Complete guide to binary options copy trading. Compare platforms, learn how to pick profitable traders, and manage risk. Real data from 6 months of testing.',
   openGraph: {
     title: 'Binary Options Copy Trading Guide 2026 — How to Copy Top Traders',

@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options Regulation Guide 2026 — Which Brokers Are Licensed?',
+  title: 'Binary Options Regulation 2026 — Which Brokers Are Licensed?',
   description: 'Understand binary options regulation worldwide. Which countries ban them, which allow trading, and how to verify broker licenses. Updated for 2026.',
   openGraph: {
     title: 'Binary Options Regulation Guide 2026 — Which Brokers Are Licensed?',

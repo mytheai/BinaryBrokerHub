@@ -5,7 +5,7 @@ import { reviewSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'IQ Option Review 2026 — Score 9.2/10 | CySEC Regulated Broker',
+  title: 'IQ Option Review 2026 — Score 9.2/10, CySEC Regulated',
   description:
     'IQ Option review: CySEC regulated, 250+ assets, 95% max payout, desktop app for Win/Mac/Linux. Real-money testing with honest pros and cons.',
   openGraph: {

@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options in the UK 2026 — FCA Ban, Alternatives & Guide',
+  title: 'Binary Options in the UK 2026 — FCA Ban & Alternatives',
   description:
     'Binary options are banned for retail traders in the UK since April 2019. Learn about the FCA ban, professional trader exemptions, legal alternatives like spread betting and CFDs, and how to avoid scams.',
   openGraph: {

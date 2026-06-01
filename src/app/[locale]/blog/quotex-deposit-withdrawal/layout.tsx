@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Quotex Deposit & Withdrawal Guide 2026 — Methods, Fees & Times',
+  title: 'Quotex Deposit & Withdrawal 2026 — Methods, Fees & Times',
   description: 'Complete Quotex deposit and withdrawal guide. All payment methods, processing times, fees, and step-by-step instructions tested with real money.',
   openGraph: {
     title: 'Quotex Deposit & Withdrawal Guide 2026 — Methods, Fees & Times',

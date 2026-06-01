@@ -5,7 +5,7 @@ import { reviewSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Olymp Trade Review 2026 — Score 8.6/10 | Best for India & SEA',
+  title: 'Olymp Trade Review 2026 — Score 8.6/10, Best for India',
   description:
     'Olymp Trade review: #1 in India and Southeast Asia, 190+ assets, 93% max payout, FinaCom A protection. FTT trading, local payment methods. Real-money tested.',
   openGraph: {

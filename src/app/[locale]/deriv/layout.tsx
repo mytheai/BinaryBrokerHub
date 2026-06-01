@@ -5,7 +5,7 @@ import { reviewSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Deriv Review 2026 — Score 9.0/10 | MFSA Tier-1 Regulated, 26 Years',
+  title: 'Deriv Review 2026 — Score 9.0/10, MFSA Tier-1 Regulated',
   description:
     'Deriv review: MFSA Malta Tier-1 regulated, 26 years operating, DBot automation, synthetic indices 24/7. $5 min deposit. Honest real-money testing results.',
   openGraph: {

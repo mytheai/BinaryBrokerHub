@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'End-of-Day Binary Options Strategy 2026 — Daily Expiry Trading Guide',
+  title: 'End-of-Day Binary Options Strategy 2026 — Daily Expiry',
   description: 'Learn 3 proven end-of-day binary options strategies: Daily Trend Following, News/Economic Calendar Trading, and Daily Support/Resistance. Requires least screen time, ideal for traders with day jobs.',
   openGraph: {
     title: 'End-of-Day Binary Options Strategy 2026 — Daily Expiry Trading Guide',

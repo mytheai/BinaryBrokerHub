@@ -439,7 +439,7 @@ export default function BinaryOptionsUSAPage() {
               { title: 'Deriv Review', href: `/${locale}/deriv`, desc: 'Regulated alternative for US traders' },
               { title: 'Beginner Trading Guide', href: `/${locale}/blog/binary-options-trading-guide`, desc: 'Learn binary options from scratch' },
               { title: 'Demo Account Guide', href: `/${locale}/blog/binary-options-demo-account`, desc: 'How to practice risk-free' },
-              { title: 'Scam Avoidance Guide', href: `/${locale}/blog/binary-options-scams`, desc: 'How to identify and avoid scams' },
+              { title: 'Scam Avoidance Guide', href: `/${locale}/scams`, desc: 'How to identify and avoid scams' },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="glass-card p-4 hover:bg-white/[0.05] transition-colors group">
                 <h3 className="font-semibold text-sm text-white group-hover:text-blue-400 transition-colors">{link.title}</h3>

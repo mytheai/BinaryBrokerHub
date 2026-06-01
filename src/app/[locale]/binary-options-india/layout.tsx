@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options in India 2026 — Legal Status, Best Brokers & Guide',
+  title: 'Binary Options in India 2026 — Legal Status & Brokers',
   description:
     'Is binary options trading legal in India? Complete guide covering SEBI regulations, best brokers accepting Indian traders (UPI/Paytm), tax implications, and how to start safely.',
   openGraph: {

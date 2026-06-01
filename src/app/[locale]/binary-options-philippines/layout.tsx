@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options in the Philippines 2026 — Legal Status, Best Brokers & Guide',
+  title: 'Binary Options in the Philippines — Legal Status & Brokers',
   description:
     'Is binary options trading legal in the Philippines? Complete guide covering SEC Philippines advisories, best brokers with GCash/Maya support, PHP deposits, and tax implications.',
   openGraph: {

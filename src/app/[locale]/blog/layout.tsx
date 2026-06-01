@@ -5,7 +5,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options Trading Guides & Education — BinaryBrokerHub',
+  title: 'Binary Options Trading Guides & Education',
   description:
     'Free binary options trading guides, strategies, and educational articles. Learn about regulation, risk management, demo accounts, and broker features from real testers.',
   openGraph: {

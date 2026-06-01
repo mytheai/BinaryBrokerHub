@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options in Nigeria 2026 — Legal Status, Best Brokers & Guide',
+  title: 'Binary Options in Nigeria 2026 — Legal Status & Brokers',
   description:
     'Is binary options trading legal in Nigeria? Complete guide covering SEC Nigeria regulations, best brokers accepting Nigerian traders, Naira deposits, OPay/crypto support, and tax implications.',
   openGraph: {

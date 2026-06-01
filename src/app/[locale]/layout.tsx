@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     default: 'BinaryBrokerHub — Expert Binary Options Broker Reviews 2026',
-    template: '%s | BinaryBrokerHub',
+    template: '%s', // brand suffix dropped; child titles render verbatim (kept <= 60 chars for SERP)
   },
   description:
     'Independent reviews of 7 binary options brokers: Quotex, IQ Option, Pocket Option, Deriv, Olymp Trade, Binomo & ExpertOption. Real-money testing, verified data, honest scores.',

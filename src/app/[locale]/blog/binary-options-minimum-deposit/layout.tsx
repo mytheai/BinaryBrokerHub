@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options Minimum Deposit Comparison 2026 — Start from $5',
+  title: 'Binary Options Minimum Deposit 2026 — Brokers from $5',
   description: 'Compare minimum deposits across 7 binary options brokers. Start trading from just $5. Full breakdown of deposit methods, fees, and processing times.',
   openGraph: {
     title: 'Binary Options Minimum Deposit Comparison 2026 — Start from $5',

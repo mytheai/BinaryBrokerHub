@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: '30-Minute Binary Options Strategy 2026 — Higher Win Rate Methods',
+  title: '30-Minute Binary Options Strategy 2026 — Higher Win Rates',
   description: 'Learn 3 proven 30-minute binary options strategies: Trend Line Bounce, Multi-Timeframe RSI, and Fibonacci Retracement. Higher win rates with better analysis time for consistent profits.',
   openGraph: {
     title: '30-Minute Binary Options Strategy 2026 — Higher Win Rate Methods',

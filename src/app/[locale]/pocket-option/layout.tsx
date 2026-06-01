@@ -5,7 +5,7 @@ import { reviewSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Pocket Option Review 2026 — Score 9.5/10 | Real-Money Testing',
+  title: 'Pocket Option Review 2026 — Score 9.5/10, Real-Money Tested',
   description:
     'Pocket Option review after 8 months of real-money testing. $5 min deposit, 92% max payout, copy trading. Honest analysis with pros, cons, and withdrawal proof.',
   openGraph: {

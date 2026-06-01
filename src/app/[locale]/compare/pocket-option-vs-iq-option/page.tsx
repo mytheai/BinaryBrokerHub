@@ -665,11 +665,11 @@ export default function PocketOptionVsIqOptionPage() {
             <h3 className="font-bold text-white text-sm mb-1">Quotex Review (9.4/10)</h3>
             <p className="text-xs text-gray-400">Highest payouts in the industry — up to 98%.</p>
           </Link>
-          <Link href={`/${locale}/blog/best-binary-options-brokers-2025`} className="glass-card p-5 hover:border-white/20 border border-transparent transition-colors">
+          <Link href={`/${locale}/blog/best-binary-options-brokers`} className="glass-card p-5 hover:border-white/20 border border-transparent transition-colors">
             <h3 className="font-bold text-white text-sm mb-1">Best Binary Brokers 2026</h3>
             <p className="text-xs text-gray-400">Our complete ranking of the top brokers this year.</p>
           </Link>
-          <Link href={`/${locale}/blog/copy-trading-binary-options`} className="glass-card p-5 hover:border-white/20 border border-transparent transition-colors">
+          <Link href={`/${locale}/blog/binary-options-copy-trading`} className="glass-card p-5 hover:border-white/20 border border-transparent transition-colors">
             <h3 className="font-bold text-white text-sm mb-1">Copy Trading Guide</h3>
             <p className="text-xs text-gray-400">How to profit from copy trading on Pocket Option.</p>
           </Link>

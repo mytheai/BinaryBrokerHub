@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options in the USA 2026 — Legal Status, CFTC Rules & Guide',
+  title: 'Binary Options in the USA 2026 — Legal Status & CFTC Rules',
   description:
     'Are binary options legal in the United States? Complete guide to CFTC/SEC regulations, Nadex as the only legal exchange, risks of offshore brokers, and legal alternatives for US traders.',
   openGraph: {

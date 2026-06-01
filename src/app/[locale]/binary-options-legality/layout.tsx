@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema, datasetSchema } from '@/lib
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binary Options Legality Tracker 2026 — Banned, Restricted & Unregulated by Country',
+  title: 'Binary Options Legality Tracker 2026 — Banned by Country',
   description:
     'Independent, sourced tracker of binary options legal status by country. Banned across the EU, UK, Australia, Canada and Israel; restricted in the US; unregulated in India, Nigeria and the Philippines. Every status linked to its regulator.',
   openGraph: {

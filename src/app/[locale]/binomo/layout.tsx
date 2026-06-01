@@ -5,7 +5,7 @@ import { reviewSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Binomo Review 2026 — Score 8.2/10 | Best Tournaments & Gamified Trading',
+  title: 'Binomo Review 2026 — Score 8.2/10, Tournaments & Gamified',
   description:
     'Binomo review: daily tournaments, beginner-friendly gamified interface, 70+ assets, 90% max payout. FinaCom A member. Real-money testing with honest pros and cons.',
   openGraph: {

@@ -5,7 +5,7 @@ import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
 export const metadata: Metadata = {
-  title: 'Best Binary Options Demo Accounts 2026 — Free Practice Trading',
+  title: 'Best Binary Options Demo Accounts 2026 — Free Practice',
   description: 'Compare the best binary options demo accounts. All 7 brokers tested — no deposit required. Find unlimited free practice with virtual funds up to $50K.',
   openGraph: {
     title: 'Best Binary Options Demo Accounts 2026 — Free Practice Trading',
