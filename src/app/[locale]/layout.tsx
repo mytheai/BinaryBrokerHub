@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
+import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SchemaScript from '@/components/SchemaScript';
@@ -77,6 +78,12 @@ export const metadata: Metadata = {
   },
 };
 
+// Only en/ru/es are valid locales — never statically generate any others.
+// The hard 404 for junk prefixes (/cs/, /de/, ...) is enforced in LocaleLayout below:
+// the middleware matcher doesn't cover unknown prefixes, so they reach this segment at
+// runtime, and dynamicParams=false alone doesn't stop that once a middleware is present.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -89,6 +96,9 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
   const messages = await getMessages();
 
   return (
