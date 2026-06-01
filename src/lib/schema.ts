@@ -33,6 +33,17 @@ export interface ArticleSchemaProps {
 
 const BASE_URL = 'https://www.binarybrokerhub.com';
 
+// Broker display name -> review page slug (for building canonical item URLs in schema)
+const BROKER_SLUGS: Record<string, string> = {
+  'Pocket Option': 'pocket-option',
+  Quotex: 'quotex',
+  'IQ Option': 'iq-option',
+  Deriv: 'deriv',
+  'Olymp Trade': 'olymp-trade',
+  Binomo: 'binomo',
+  ExpertOption: 'expert-option',
+};
+
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
@@ -69,34 +80,29 @@ export function websiteSchema() {
 export function reviewSchema({ brokerName, score, maxScore = 10, description, url, pros, cons }: ReviewSchemaProps) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: {
-      '@type': 'Product',
-      name: brokerName,
-      category: 'Binary Options Trading Platform',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: score,
-      bestRating: maxScore,
-      worstRating: 1,
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'BinaryBrokerHub',
-      url: BASE_URL,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'BinaryBrokerHub',
-      url: BASE_URL,
-    },
+    '@type': 'Product',
+    name: brokerName,
+    category: 'Binary Options Trading Platform',
     description,
     url,
-    datePublished: '2025-12-01',
-    dateModified: '2026-05-25',
-    ...(pros && { positiveNotes: { '@type': 'ItemList', itemListElement: pros.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p })) } }),
-    ...(cons && { negativeNotes: { '@type': 'ItemList', itemListElement: cons.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c })) } }),
+    review: {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: score,
+        bestRating: maxScore,
+        worstRating: 1,
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'BinaryBrokerHub',
+        url: BASE_URL,
+      },
+      datePublished: '2025-12-01',
+      dateModified: '2026-05-25',
+      ...(pros && { positiveNotes: { '@type': 'ItemList', itemListElement: pros.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p })) } }),
+      ...(cons && { negativeNotes: { '@type': 'ItemList', itemListElement: cons.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c })) } }),
+    },
   };
 }
 
@@ -175,6 +181,8 @@ export function datasetSchema({ name, description, url, dateModified }: { name: 
 }
 
 export function comparisonSchema(brokerA: string, brokerB: string, url: string) {
+  const reviewUrl = (name: string) =>
+    `${BASE_URL}/en/${BROKER_SLUGS[name] ?? name.toLowerCase().replace(/\s+/g, '-')}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -184,8 +192,8 @@ export function comparisonSchema(brokerA: string, brokerB: string, url: string) 
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: brokerA },
-        { '@type': 'ListItem', position: 2, name: brokerB },
+        { '@type': 'ListItem', position: 1, name: brokerA, url: reviewUrl(brokerA) },
+        { '@type': 'ListItem', position: 2, name: brokerB, url: reviewUrl(brokerB) },
       ],
     },
   };
@@ -202,17 +210,6 @@ export function itemListSchema(brokers: { name: string; score: number; url: stri
       position: i + 1,
       name: b.name,
       url: b.url,
-      item: {
-        '@type': 'Product',
-        name: b.name,
-        url: b.url,
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: b.score,
-          bestRating: 10,
-          ratingCount: 1,
-        },
-      },
     })),
   };
 }
